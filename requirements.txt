@@ -1,0 +1,8 @@
+# Direct runtime dependencies for the complete pipeline.
+numpy==1.26.4
+Pillow==12.3.0
+tfrecord==1.14.6
+torch==2.2.2
+torchvision==0.17.2
+scikit-learn==1.7.1
+joblib==1.5.1

@@ -1,0 +1,36 @@
+{
+  "counts": {
+    "eligible": 92,
+    "inventory": 250,
+    "selected": 50,
+    "splits": {
+      "dev": 10,
+      "test": 10,
+      "train": 30
+    }
+  },
+  "input_inventory": "/Users/ceci/Documents/Codex/2026-07-27/ple/outputs/movi_a_selection_results/movi_a_validation_inventory.jsonl",
+  "input_sha256": "ef7b213b0f2f46285b389199fc35b594dce3b0c2aa450c37c701c3751d004ed4",
+  "outputs": [
+    "selection_audit.jsonl",
+    "selected_50.jsonl",
+    "video_splits.jsonl",
+    "strata_summary.csv"
+  ],
+  "pipeline": "movi_a_video_selection.py",
+  "pipeline_version": "1.1.0",
+  "seed": 20260727,
+  "selection_rules": {
+    "max_frame_gap": 23,
+    "min_frame_gap": 2,
+    "min_hard_negative_candidates": 20,
+    "min_positive_candidates": 20,
+    "min_visible_pixels": 32,
+    "selection_method": "proportional stratified random sample",
+    "selection_strata": [
+      "object_bin",
+      "pair_capacity_tertile"
+    ],
+    "split_method": "object-count-stratified video-disjoint assignment; capacity tertile audited"
+  }
+}

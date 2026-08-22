@@ -1,0 +1,4 @@
+split,pairs,positives,hard_negatives,easy_negatives,max_pairs_per_video,max_hard_control_smd,max_easy_control_smd
+train,6000,3000,1500,1500,250,0.010511211395,0.01029309436
+dev,2000,1000,500,500,249,0.008173020457,0.008226431968
+test,2000,1000,500,500,250,0.039033846046,0.038527834558

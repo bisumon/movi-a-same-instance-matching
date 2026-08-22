@@ -1,0 +1,76 @@
+{
+  "checks": {
+    "all_50_videos_assigned_once": true,
+    "observation_counts": {
+      "dev": 1539,
+      "test": 1698,
+      "train": 4955
+    },
+    "pair_targets": {
+      "dev": 2000,
+      "test": 2000,
+      "train": 6000
+    },
+    "pairwise_video_intersections": {
+      "dev_test": [],
+      "train_dev": [],
+      "train_test": []
+    },
+    "phase1_split_labels_match": true,
+    "video_counts": {
+      "dev": 10,
+      "test": 10,
+      "train": 30
+    },
+    "video_disjoint": true
+  },
+  "inputs": {
+    "phase1_observation_index": {
+      "path": "/Users/ceci/Documents/Codex/2026-07-27/ple/outputs/movi_a_phase1/observation_index.jsonl",
+      "sha256": "3bdb827a59096dc746d4077670971c33f128615ed0931a646c43d106ee941941"
+    },
+    "selected_videos": {
+      "path": "/Users/ceci/Documents/Codex/2026-07-27/ple/outputs/movi_a_selection_results/selected_50.jsonl",
+      "sha256": "fa5b0665fdec119a5bf8b26f65265fb99e92af9779972206057e399628ab0816"
+    },
+    "video_splits": {
+      "path": "/Users/ceci/Documents/Codex/2026-07-27/ple/outputs/movi_a_selection_results/video_splits.jsonl",
+      "sha256": "d3aa1e202c701567647992e129de43a642d73ca585a6091743a8f780cb46baa9"
+    }
+  },
+  "locked_split": {
+    "filename": "locked_video_splits.jsonl",
+    "files": {
+      "dev": {
+        "filename": "dev_videos.jsonl",
+        "pair_target": 2000,
+        "sha256": "c8514ea9bb5d57344c2879dc66cc4a67a3a8f70dc6d9335446b328366a322635",
+        "video_count": 10
+      },
+      "test": {
+        "filename": "test_videos.jsonl",
+        "pair_target": 2000,
+        "sha256": "9f858def04b24d36d408aee942a133c4d01b9763dad5f573999268ba108819d3",
+        "video_count": 10
+      },
+      "train": {
+        "filename": "train_videos.jsonl",
+        "pair_target": 6000,
+        "sha256": "f4d774988dbcd22a28b509dea18af9f50f28c64c7f8c09c461aeb7df9fbcdd8b",
+        "video_count": 30
+      }
+    },
+    "sha256": "f1446a30ee074cf139d864359043cf7ef7b02f7870896880802a0819b320b713"
+  },
+  "next_stage_constraints": {
+    "cross_video_pairs": "Excluded from the primary benchmark; optional scene-rejection stress test only.",
+    "dev_pair_target": 2000,
+    "pair_generation_must_not_cross_split_pools": true,
+    "primary_pairs_must_be_within_video": true,
+    "test_pair_target": 2000,
+    "train_pair_target": 6000
+  },
+  "pipeline": "MOVi-A Phase 2 split lock",
+  "rule": "Split videos before pair generation; generate pairs independently within each locked video pool.",
+  "version": "1.0.0"
+}

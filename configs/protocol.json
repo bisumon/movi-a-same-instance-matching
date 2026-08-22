@@ -1,0 +1,52 @@
+{
+  "dataset": {
+    "name": "MOVi-A 128x128 validation",
+    "selected_videos": 50,
+    "source_bucket": "gs://kubric-public/tfds/movi_a/128x128/1.0.0/",
+    "video_split_counts": {
+      "dev": 10,
+      "test": 10,
+      "train": 30
+    }
+  },
+  "phase1": {
+    "crop_padding": 0.15,
+    "crop_size": 96,
+    "min_mask_area": 32,
+    "min_visibility_pixels": 32
+  },
+  "phase2": {
+    "pair_counts": {
+      "dev": 2000,
+      "test": 2000,
+      "train": 6000
+    },
+    "pair_mix": {
+      "easy_negative": 0.25,
+      "hard_negative": 0.25,
+      "positive": 0.5
+    },
+    "within_video_only": true
+  },
+  "phase3": {
+    "classifier": "standardized logistic regression",
+    "encoder": "torchvision ResNet18_Weights.IMAGENET1K_V1, frozen",
+    "operating_threshold": "maximum dev F1",
+    "regularization_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ]
+  },
+  "phase4": {
+    "bootstrap_replicates": 10000,
+    "bootstrap_unit": "test video",
+    "confidence_level": 0.95
+  },
+  "phase5": {
+    "selected_unique_pairs": 24
+  },
+  "seed": 20260727
+}

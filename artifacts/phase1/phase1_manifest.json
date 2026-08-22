@@ -1,0 +1,163 @@
+{
+  "counts": {
+    "excluded_observations": 1072,
+    "exclusions_by_reason": {
+      "mask_area_below_threshold": 1072,
+      "visibility_below_threshold": 690
+    },
+    "included_observations": 8192,
+    "included_observations_by_split": {
+      "dev": 1539,
+      "test": 1698,
+      "train": 4955
+    },
+    "instances": 386,
+    "videos": 50,
+    "videos_by_split": {
+      "dev": 10,
+      "test": 10,
+      "train": 30
+    }
+  },
+  "leakage_boundaries": {
+    "diagnostics.jsonl": "Ground-truth positions, velocities, and reconstruction errors; diagnostics only and forbidden as model features.",
+    "instance_metadata.jsonl": "Shape/color/material/size labels for hard/easy-negative sampling only; never pass labels to a scorer.",
+    "model_inputs.jsonl": "Inference-available opaque RGB/mask paths, 2D controls, masked depth, intrinsics, and camera-space geometry only.",
+    "observation_index.jsonl": "Video/split/instance identity for pair construction; never pass these identifiers to a scorer."
+  },
+  "output_sha256": {
+    "diagnostics.jsonl": "06530f25e6f28410e0c77f031e9c5ae149ba4735d051b70163436db97db1e056",
+    "exclusions.jsonl": "aee340f88b7e426bd48dc7a856f8941672742c13bdfafe683dc83908884de7cf",
+    "instance_metadata.jsonl": "34cf5e6343da3511288ac9b9ad5c23156c0b951586c5ba5245fd505c5e2b5ffe",
+    "model_inputs.jsonl": "a24c92f14be16ec1d1ee33d378708d59701f5178b60ba9374ac08644055b0114",
+    "observation_index.jsonl": "3bdb827a59096dc746d4077670971c33f128615ed0931a646c43d106ee941941",
+    "video_summary.csv": "ea39872df9d799b2cb36f0fef5c30642d8044184e0cff0660d8b9b90b933b619"
+  },
+  "parameters": {
+    "camera_space_convention": "x right, y down, z forward",
+    "centroid_estimator": "coordinate-wise median over visible masked surface",
+    "crop_padding_fraction_per_side": 0.15,
+    "crop_size": [
+      96,
+      96
+    ],
+    "depth_decode": "uint16 / 65535 * (depth_max - depth_min) + depth_min",
+    "depth_semantics": "radial distance from camera center in scene units",
+    "extent_estimator": "coordinate-wise q95 minus q05 over visible masked surface",
+    "min_mask_area_at_128x128": 32,
+    "min_visibility_pixels": 32,
+    "pixel_center_convention": "(column + 0.5, row + 0.5)"
+  },
+  "pipeline": "MOVi-A Phase 1 object crop and geometry extraction",
+  "quality_checks": {
+    "diagnostic_error_scene_units": {
+      "radial_depth_error": {
+        "maximum": 0.7752097196001451,
+        "median": 0.4739535958567789,
+        "p95": 0.6134169028671452
+      },
+      "visible_extent_error_l2": {
+        "maximum": 3.287072274986212,
+        "median": 1.2889563434555518,
+        "p95": 2.4190152004763896
+      },
+      "visible_surface_center_error_l2": {
+        "maximum": 0.9701956520767425,
+        "median": 0.4975397731775094,
+        "p95": 0.6630809652089307
+      }
+    },
+    "forbidden_model_key_fragments_checked": [
+      "gt_",
+      "ground_truth",
+      "world_position",
+      "velocity",
+      "quaternion",
+      "instance_index",
+      "shape_label",
+      "color_label",
+      "material_label",
+      "size_label"
+    ],
+    "model_diagnostic_ids_match": true,
+    "model_index_ids_match": true,
+    "visibility_to_decoded_mask_area_ratio": {
+      "median": 4.0,
+      "note": "MOVi-A 128x128 visibility annotations are commonly about 4x decoded mask area; both thresholds are enforced independently.",
+      "p05": 3.9,
+      "p95": 4.116764069264069
+    }
+  },
+  "source": {
+    "tfrecord_directory": "/Users/ceci/Documents/Codex/2026-07-27/ple/work/movi_a_validation",
+    "validation_shards": [
+      {
+        "filename": "movi_a-validation.tfrecord-00000-of-00016",
+        "size_bytes": 101996121
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00001-of-00016",
+        "size_bytes": 98508910
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00002-of-00016",
+        "size_bytes": 103961531
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00003-of-00016",
+        "size_bytes": 95081983
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00004-of-00016",
+        "size_bytes": 104210917
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00005-of-00016",
+        "size_bytes": 103954483
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00006-of-00016",
+        "size_bytes": 97676300
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00007-of-00016",
+        "size_bytes": 104151164
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00008-of-00016",
+        "size_bytes": 103318714
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00009-of-00016",
+        "size_bytes": 92332917
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00010-of-00016",
+        "size_bytes": 103324781
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00011-of-00016",
+        "size_bytes": 100520127
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00012-of-00016",
+        "size_bytes": 95046675
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00013-of-00016",
+        "size_bytes": 104529827
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00014-of-00016",
+        "size_bytes": 96853015
+      },
+      {
+        "filename": "movi_a-validation.tfrecord-00015-of-00016",
+        "size_bytes": 103610979
+      }
+    ],
+    "video_splits": "/Users/ceci/Documents/Codex/2026-07-27/ple/outputs/movi_a_selection_results/video_splits.jsonl",
+    "video_splits_sha256": "d3aa1e202c701567647992e129de43a642d73ca585a6091743a8f780cb46baa9"
+  },
+  "version": "1.0.0"
+}

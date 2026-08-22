@@ -1,0 +1,14 @@
+selection_stratum,eligible,ineligible,selected,train,dev,test
+03-04|high,3,0,2,0,1,1
+03-04|low,1,0,0,0,0,0
+03-04|medium,2,0,1,1,0,0
+05-06|high,4,0,2,0,1,1
+05-06|low,7,0,4,4,0,0
+05-06|medium,8,0,4,2,1,1
+07-08|high,7,0,4,4,0,0
+07-08|low,10,0,5,3,1,1
+07-08|medium,14,0,8,3,3,2
+09-10|high,16,0,9,6,1,2
+09-10|low,13,0,7,3,2,2
+09-10|medium,7,0,4,4,0,0
+ineligible,0,158,0,0,0,0

@@ -1,0 +1,70 @@
+{
+  "encoder": {
+    "architecture": "torchvision.models.resnet18",
+    "embedding_dimension": 512,
+    "frozen": true,
+    "output_layer": "global average pool; classification fc replaced by identity",
+    "preprocessing": {
+      "center_crop": [
+        224,
+        224
+      ],
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "pixel_scale": "uint8 RGB to [0,1]",
+      "resize_shorter_side": 256,
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "weights": "ResNet18_Weights.IMAGENET1K_V1",
+    "weights_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+    "weights_url": "https://download.pytorch.org/models/resnet18-f37072fd.pth"
+  },
+  "input": {
+    "model_inputs": "/Users/ceci/Documents/Codex/2026-07-27/ple/outputs/movi_a_phase1/model_inputs.jsonl",
+    "model_inputs_sha256": "a24c92f14be16ec1d1ee33d378708d59701f5178b60ba9374ac08644055b0114",
+    "observation_count": 8192,
+    "phase1_directory": "/Users/ceci/Documents/Codex/2026-07-27/ple/outputs/movi_a_phase1"
+  },
+  "latency": {
+    "forward_ms_per_crop_mean": 21.401218923568166,
+    "forward_ms_per_crop_p50": 21.401039874945127,
+    "forward_ms_per_crop_p95": 23.072443187629688,
+    "note": "Forward timings divide batch duration by batch size; wall time includes decoding and preprocessing.",
+    "wall_ms_per_crop": 24.701612620727786,
+    "wall_seconds": 202.35561058900203
+  },
+  "output": {
+    "filename": "rgb_embeddings.npz",
+    "sha256": "e8db89d47a4f46e6601dcb62178480dfc86c9802f9fc3712f68096bfb4dc3b38"
+  },
+  "pipeline": "MOVi-A Phase 3 frozen RGB embedding extraction",
+  "quality_checks": {
+    "all_finite": true,
+    "embedding_norm_max": 33.742332458496094,
+    "embedding_norm_median": 22.834186553955078,
+    "embedding_norm_min": 12.263260841369629,
+    "shape": [
+      8192,
+      512
+    ],
+    "unique_observation_ids": 8192
+  },
+  "runtime": {
+    "batch_size": 64,
+    "device": "cpu",
+    "num_workers": 0,
+    "numpy": "1.26.4",
+    "platform": "macOS-14.4-x86_64-i386-64bit",
+    "python": "3.12.13",
+    "torch": "2.2.2",
+    "torchvision": "0.17.2"
+  },
+  "version": "1.0.0"
+}

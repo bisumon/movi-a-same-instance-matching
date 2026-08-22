@@ -1,0 +1,6 @@
+baseline_configuration,augmented_configuration,metric,favorable_direction,delta_definition,point_delta,bootstrap_mean_delta,ci_lower,ci_upper,confidence_level,method,replicates,ci_excludes_zero
+B_rgb_2d,C_rgb_2d_3d,auroc,higher,augmented_minus_baseline,0.060671,0.060751645723,0.04271476785,0.082230100927,0.95,paired percentile video-cluster bootstrap,10000,True
+B_rgb_2d,C_rgb_2d_3d,pr_auc,higher,augmented_minus_baseline,0.077351069459,0.076212816143,0.050300860448,0.101461644973,0.95,paired percentile video-cluster bootstrap,10000,True
+B_rgb_2d,C_rgb_2d_3d,f1_at_locked_threshold,higher,augmented_minus_baseline,0.03495441966,0.035083881266,0.017539799765,0.053815639571,0.95,paired percentile video-cluster bootstrap,10000,True
+B_rgb_2d,C_rgb_2d_3d,false_match_rate_at_locked_90_recall_threshold,lower,augmented_minus_baseline,-0.079,-0.079197484948,-0.121979596904,-0.03489502423,0.95,paired percentile video-cluster bootstrap,10000,True
+B_rgb_2d,C_rgb_2d_3d,achieved_recall_at_locked_90_recall_threshold,higher,augmented_minus_baseline,0.024,0.0242729,-0.01,0.056,0.95,paired percentile video-cluster bootstrap,10000,False

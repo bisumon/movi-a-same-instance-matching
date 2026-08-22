@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "all_prediction_scores_finite": true,
+    "dev_pairs": 2000,
+    "model_count": 4,
+    "test_pairs": 2000,
+    "test_scored_after_locked_config_written": true,
+    "train_pairs": 6000
+  },
+  "inputs": {
+    "feature_manifest_sha256": "2d6584b9bc513f96763a63a15968c89f9c399efc0b23994423846332683ccb80",
+    "features_sha256": "42b6679cb9c94c39d401d9bd2c5c7a746ee22c1811d0bc5cbfe6a8858f4ee5d2",
+    "pairs_sha256": "25b7d6e9b680864e2f6fa4859158b9de50fd15d9866b9f3ee9d5993c48eb3402"
+  },
+  "outputs": {
+    "phase3_locked_config.json": "4c99da251dcf6ce47e065a27feaa69a001d61be5007fb4df8313a3a7a0dc112a",
+    "phase3_models.joblib": "f1a6d34e7627cf3a5d84414bca1db7ba09678d7868580c32c134ffa30018af56",
+    "phase3_predictions.jsonl": "9b3cdc350544863e4420740042ef536017f66fbdfe207f45d5adfeb240b3b171",
+    "phase3_results.json": "3475f15beb8a2c1fe935354827272e264a9d60b4f9de1ac31ea98a665d46d0a5"
+  },
+  "pipeline": "MOVi-A Phase 3 train/dev/test logistic baselines",
+  "runtime": {
+    "joblib": "1.5.1",
+    "numpy": "1.26.4",
+    "platform": "macOS-14.4-x86_64-i386-64bit",
+    "python": "3.12.13",
+    "scikit_learn": "1.7.1"
+  },
+  "version": "1.0.1"
+}

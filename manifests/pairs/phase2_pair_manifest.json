@@ -1,0 +1,374 @@
+{
+  "candidate_capacity": {
+    "dev": {
+      "easy": {
+        "by_gap_bin": {
+          "long": 27264,
+          "medium": 32491,
+          "short": 28599
+        },
+        "total": 88354
+      },
+      "hard": {
+        "by_gap_bin": {
+          "long": 1872,
+          "medium": 2157,
+          "short": 1893
+        },
+        "total": 5922
+      },
+      "positive": {
+        "by_gap_bin": {
+          "long": 4542,
+          "medium": 5596,
+          "short": 5085
+        },
+        "total": 15223
+      }
+    },
+    "test": {
+      "easy": {
+        "by_gap_bin": {
+          "long": 33010,
+          "medium": 40861,
+          "short": 35983
+        },
+        "total": 109854
+      },
+      "hard": {
+        "by_gap_bin": {
+          "long": 1807,
+          "medium": 2233,
+          "short": 1979
+        },
+        "total": 6019
+      },
+      "positive": {
+        "by_gap_bin": {
+          "long": 4908,
+          "medium": 6123,
+          "short": 5517
+        },
+        "total": 16548
+      }
+    },
+    "train": {
+      "easy": {
+        "by_gap_bin": {
+          "long": 95323,
+          "medium": 116668,
+          "short": 102866
+        },
+        "total": 314857
+      },
+      "hard": {
+        "by_gap_bin": {
+          "long": 4973,
+          "medium": 6357,
+          "short": 5608
+        },
+        "total": 16938
+      },
+      "positive": {
+        "by_gap_bin": {
+          "long": 14021,
+          "medium": 17633,
+          "short": 16143
+        },
+        "total": 47797
+      }
+    }
+  },
+  "global_checks": {
+    "all_pairs_within_video": true,
+    "cross_split_pair_intersections": {
+      "dev_test": 0,
+      "train_dev": 0,
+      "train_test": 0
+    },
+    "total_pairs": 10000,
+    "unique_pair_ids": 10000,
+    "video_split_membership_locked": true
+  },
+  "inputs": {
+    "instance_metadata": {
+      "path": "/Users/ceci/Documents/Codex/2026-07-27/ple/outputs/movi_a_phase1/instance_metadata.jsonl",
+      "sha256": "34cf5e6343da3511288ac9b9ad5c23156c0b951586c5ba5245fd505c5e2b5ffe"
+    },
+    "locked_video_splits": {
+      "path": "/Users/ceci/Documents/Codex/2026-07-27/ple/outputs/movi_a_phase2/locked_video_splits.jsonl",
+      "sha256": "f1446a30ee074cf139d864359043cf7ef7b02f7870896880802a0819b320b713"
+    },
+    "model_inputs": {
+      "path": "/Users/ceci/Documents/Codex/2026-07-27/ple/outputs/movi_a_phase1/model_inputs.jsonl",
+      "sha256": "a24c92f14be16ec1d1ee33d378708d59701f5178b60ba9374ac08644055b0114"
+    },
+    "observation_index": {
+      "path": "/Users/ceci/Documents/Codex/2026-07-27/ple/outputs/movi_a_phase1/observation_index.jsonl",
+      "sha256": "3bdb827a59096dc746d4077670971c33f128615ed0931a646c43d106ee941941"
+    }
+  },
+  "output_sha256": {
+    "all_pairs.jsonl": "25b7d6e9b680864e2f6fa4859158b9de50fd15d9866b9f3ee9d5993c48eb3402",
+    "dev_pairs.jsonl": "3c3ea6df32db9069764105620ad4986456eca7b2b57331c6cfb95b0df164f7f6",
+    "pair_summary.csv": "e3fde0cb7f43fa5b312414370531c017b98297ada38dfcf761b6e4d5367f3d55",
+    "test_pairs.jsonl": "fffc9ea6f0d427080334a40a6ef1f8dcc225b5aae1f50b6b63b4017c04c4bdeb",
+    "train_pairs.jsonl": "a41b8ff2e3c07c59828acca0fe7ea2a52f79532d929aa1d56703a5a57d991e08"
+  },
+  "pipeline": "MOVi-A Phase 2 within-video matched pair generation",
+  "protocol": {
+    "cross_video_pairs": "Not included in the primary benchmark.",
+    "easy_negative_definition": "Different instances in the same video with at least one mismatched shape/color/material attribute.",
+    "hard_negative_definition": "Different instances in the same video matching shape, color, and material.",
+    "label_mix": {
+      "easy_negative": 0.25,
+      "hard_negative": 0.25,
+      "positive": 0.5
+    },
+    "max_allowed_absolute_standardized_mean_difference": 0.1,
+    "max_pairs_per_video": 250,
+    "negative_matching": "Greedy nearest match to a unique positive template on frame indices, visibility, mask area, and padded crop width/height.",
+    "negative_mean_balance_weight": 50.0,
+    "negative_rebalance_passes": 8,
+    "positive_definition": "Same instance, different frames, same video.",
+    "split_pair_targets": {
+      "dev": 2000,
+      "test": 2000,
+      "train": 6000
+    },
+    "temporal_gap_bins": {
+      "long": [
+        12,
+        23
+      ],
+      "medium": [
+        6,
+        11
+      ],
+      "short": [
+        2,
+        5
+      ]
+    }
+  },
+  "results": {
+    "dev": {
+      "control_matching_smd": {
+        "easy": {
+          "by_control": {
+            "frame_a": 0.000964266391,
+            "frame_b": 0.007484764765,
+            "log_crop_height_a": 2.1782427e-05,
+            "log_crop_height_b": 0.000107708301,
+            "log_crop_width_a": 0.000177873398,
+            "log_crop_width_b": 0.000116975278,
+            "log_mask_area_a": 0.000223179921,
+            "log_mask_area_b": 0.000424668028,
+            "log_visibility_a": 0.000289407981,
+            "log_visibility_b": 0.000386425088,
+            "temporal_gap": 0.008226431968
+          },
+          "max_abs_smd": 0.008226431968
+        },
+        "hard": {
+          "by_control": {
+            "frame_a": 0.000956601598,
+            "frame_b": 0.007441262365,
+            "log_crop_height_a": 4.8853e-06,
+            "log_crop_height_b": 0.000205186641,
+            "log_crop_width_a": 0.000229491297,
+            "log_crop_width_b": 0.000135237984,
+            "log_mask_area_a": 0.000302604333,
+            "log_mask_area_b": 0.000794235342,
+            "log_visibility_a": 0.00056799071,
+            "log_visibility_b": 0.000968959422,
+            "temporal_gap": 0.008173020457
+          },
+          "max_abs_smd": 0.008173020457
+        }
+      },
+      "exact_frame_index_matches": {
+        "easy": 500,
+        "hard": 500
+      },
+      "labels": {
+        "0": 1000,
+        "1": 1000
+      },
+      "negative_difficulty": {
+        "easy": 500,
+        "hard": 500
+      },
+      "target": 2000,
+      "temporal_gap_bins": {
+        "easy": {
+          "long": 166,
+          "medium": 167,
+          "short": 167
+        },
+        "hard": {
+          "long": 167,
+          "medium": 166,
+          "short": 167
+        },
+        "positive": {
+          "long": 333,
+          "medium": 333,
+          "short": 334
+        }
+      },
+      "video_pair_counts": {
+        "maximum": 249,
+        "median": 192.5,
+        "minimum": 163,
+        "videos_represented": 10
+      }
+    },
+    "test": {
+      "control_matching_smd": {
+        "easy": {
+          "by_control": {
+            "frame_a": 0.038527834558,
+            "frame_b": 0.030305406136,
+            "log_crop_height_a": 4.7811905e-05,
+            "log_crop_height_b": 8.5041021e-05,
+            "log_crop_width_a": 5.2392437e-05,
+            "log_crop_width_b": 8.194679e-06,
+            "log_mask_area_a": 1.6933274e-05,
+            "log_mask_area_b": 0.000496877357,
+            "log_visibility_a": 4.677261e-05,
+            "log_visibility_b": 0.000459747544,
+            "temporal_gap": 0.00805474519
+          },
+          "max_abs_smd": 0.038527834558
+        },
+        "hard": {
+          "by_control": {
+            "frame_a": 0.039033846046,
+            "frame_b": 0.030033744801,
+            "log_crop_height_a": 8.3654609e-05,
+            "log_crop_height_b": 0.00029948383,
+            "log_crop_width_a": 0.000113131336,
+            "log_crop_width_b": 9.0014628e-05,
+            "log_mask_area_a": 0.000586841838,
+            "log_mask_area_b": 0.001132794588,
+            "log_visibility_a": 0.00081148953,
+            "log_visibility_b": 0.000604702426,
+            "temporal_gap": 0.008019050277
+          },
+          "max_abs_smd": 0.039033846046
+        }
+      },
+      "exact_frame_index_matches": {
+        "easy": 500,
+        "hard": 500
+      },
+      "labels": {
+        "0": 1000,
+        "1": 1000
+      },
+      "negative_difficulty": {
+        "easy": 500,
+        "hard": 500
+      },
+      "target": 2000,
+      "temporal_gap_bins": {
+        "easy": {
+          "long": 166,
+          "medium": 167,
+          "short": 167
+        },
+        "hard": {
+          "long": 167,
+          "medium": 166,
+          "short": 167
+        },
+        "positive": {
+          "long": 333,
+          "medium": 333,
+          "short": 334
+        }
+      },
+      "video_pair_counts": {
+        "maximum": 250,
+        "median": 197.0,
+        "minimum": 143,
+        "videos_represented": 10
+      }
+    },
+    "train": {
+      "control_matching_smd": {
+        "easy": {
+          "by_control": {
+            "frame_a": 0.000566714524,
+            "frame_b": 0.010112960845,
+            "log_crop_height_a": 7.43248e-06,
+            "log_crop_height_b": 1.584974e-05,
+            "log_crop_width_a": 4.720218e-06,
+            "log_crop_width_b": 1.2028112e-05,
+            "log_mask_area_a": 4.3543622e-05,
+            "log_mask_area_b": 1.825036e-06,
+            "log_visibility_a": 2.8641196e-05,
+            "log_visibility_b": 1.1171585e-05,
+            "temporal_gap": 0.01029309436
+          },
+          "max_abs_smd": 0.01029309436
+        },
+        "hard": {
+          "by_control": {
+            "frame_a": 0.000571489361,
+            "frame_b": 0.010199975997,
+            "log_crop_height_a": 2.5488798e-05,
+            "log_crop_height_b": 7.0591463e-05,
+            "log_crop_width_a": 9.278455e-06,
+            "log_crop_width_b": 1.118628e-05,
+            "log_mask_area_a": 0.000496698041,
+            "log_mask_area_b": 0.000469123056,
+            "log_visibility_a": 0.000333276402,
+            "log_visibility_b": 0.000412489347,
+            "temporal_gap": 0.010511211395
+          },
+          "max_abs_smd": 0.010511211395
+        }
+      },
+      "exact_frame_index_matches": {
+        "easy": 1500,
+        "hard": 1500
+      },
+      "labels": {
+        "0": 3000,
+        "1": 3000
+      },
+      "negative_difficulty": {
+        "easy": 1500,
+        "hard": 1500
+      },
+      "target": 6000,
+      "temporal_gap_bins": {
+        "easy": {
+          "long": 500,
+          "medium": 500,
+          "short": 500
+        },
+        "hard": {
+          "long": 500,
+          "medium": 500,
+          "short": 500
+        },
+        "positive": {
+          "long": 1000,
+          "medium": 1000,
+          "short": 1000
+        }
+      },
+      "video_pair_counts": {
+        "maximum": 250,
+        "median": 194.5,
+        "minimum": 113,
+        "videos_represented": 30
+      }
+    }
+  },
+  "seed": 20260727,
+  "version": "1.0.0"
+}

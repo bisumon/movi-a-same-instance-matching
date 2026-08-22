@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MOVi-A Phase 5 error gallery</title>
+<style>:root{--background:#fff;--foreground:#1f2933;--card:#fff;--card-foreground:#1f2933;--primary:#253858;--primary-foreground:#fff;--secondary:#edf2f7;--secondary-foreground:#1f2933;--muted:#edf2f7;--muted-foreground:#52606d;--accent:#e6eef8;--accent-foreground:#1f2933;--border:#cbd2d9;--input:#cbd2d9;--ring:#4c78a8;font-family:system-ui,sans-serif}body{max-width:1180px;margin:0 auto;padding:20px;background:var(--background);color:var(--foreground)}.viz-row,.viz-controls{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}.viz-badge{padding:.15rem .5rem;border-radius:999px;background:var(--secondary);color:var(--secondary-foreground)}.form-label{display:grid;gap:.2rem}.form-select{padding:.35rem;border:1px solid var(--input);background:var(--background);color:var(--foreground)}.table{border-collapse:collapse;width:100%}.table th,.table td{padding:.35rem;border-bottom:1px solid var(--border);text-align:left}.text-end{text-align:right!important}.text-small,figcaption{font-size:.85rem}.table-responsive{overflow-x:auto}</style>
+</head><body><div id="phase5-error-gallery">
+<style>
+#phase5-error-gallery{color:var(--foreground);background:transparent}
+#phase5-error-gallery .p5-toolbar{margin-bottom:1rem}
+#phase5-error-gallery .p5-item{padding:1rem 0;border-top:1px solid var(--border)}
+#phase5-error-gallery .p5-heading{justify-content:flex-start}
+#phase5-error-gallery .p5-diagnosis{margin:.65rem 0}
+#phase5-error-gallery .p5-layout{display:grid;grid-template-columns:minmax(250px,.8fr) minmax(360px,1.2fr);gap:1rem;align-items:start}
+#phase5-error-gallery .p5-crops{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+#phase5-error-gallery figure{margin:0}
+#phase5-error-gallery img{display:block;width:100%;aspect-ratio:1;object-fit:contain;background:var(--muted)}
+#phase5-error-gallery figcaption{margin-top:.3rem;color:var(--muted-foreground)}
+#phase5-error-gallery .p5-controls{display:flex;flex-wrap:wrap;gap:.35rem 1rem;margin-top:.7rem;color:var(--muted-foreground)}
+#phase5-error-gallery .p5-empty{display:none;padding:1rem 0;color:var(--muted-foreground)}
+@media(max-width:700px){#phase5-error-gallery .p5-layout{grid-template-columns:1fr}}
+</style>
+<div class="viz-controls p5-toolbar">
+  <label class="form-label">Method<select id="p5-method" class="form-select"><option value="all">All methods</option><option value="A_rgb_only">A_rgb_only</option><option value="B_rgb_2d">B_rgb_2d</option><option value="C_rgb_2d_3d">C_rgb_2d_3d</option><option value="geometry_only">geometry_only</option></select></label>
+  <label class="form-label">Error<select id="p5-error" class="form-select"><option value="all">Both errors</option><option value="false_positive">False positive</option><option value="false_negative">False negative</option></select></label>
+  <label class="form-label">Gap<select id="p5-gap" class="form-select"><option value="all">All gaps</option><option value="short">Short</option><option value="medium">Medium</option><option value="long">Long</option></select></label>
+  <span id="p5-count" aria-live="polite">Showing 24 of 24</span>
+</div>
+<div id="p5-items">
+<article class="p5-item" data-method="A_rgb_only" data-error="false_positive" data-gap="short">
+  <div class="viz-row p5-heading">
+    <strong>#1 · <code>a794e37bba038cd8b9bb2617</code></strong>
+    <span class="viz-badge">A_rgb_only</span>
+    <span class="viz-badge">false positive</span>
+    <span class="viz-badge">short gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>matched attribute distractor:</strong> Matched-attribute distractor remains similar in appearance and pair controls.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAQMAAgQFBv/EACMQAAICAQMEAwEAAAAAAAAAAAABAgMRBBIhBRMiQRQxYVH/xAAZAQACAwEAAAAAAAAAAAAAAAAABAEDBQL/xAAcEQADAQEAAwEAAAAAAAAAAAAAAQIDESExQRL/2gAMAwEAAhEDEQA/AOKQJAAhCEACYJgiYconjDwBIskBSQdyDjQeCACTBAACTAcABQKKhAAspKWAykInPkaxxdMqu+FnMo7GVXIdppzjKQq7bD3GWjbyLcRcntYVlLXgFbRuhPI1cnPqtwzbXPKMvbJyxuL6XwQKJgWLBWCS4RZAmvElewMtlmGKT3Mre8SK1zNrGUp6I6PrNEeC+RSmTeXlZeTEz5LSmLciAKbtrNensyzDOXI7Sy8kUbT2elsPjOvDmJGg1cwDJGN9HfguKJYvEskCfKJ+gcnUryYiM8M6GopzlnNtW1mthomuCmkjVYW3mRT5L9wZZSaHMW5inYLlaQBec8s1aTmSMEZbmdHRxw0UbUkuFsLydmleBaRSuWIklIx37GwAYQM6ARe0onF1dmJM7F8W4s4urreWWZ25ZzS6Ze7yF2/omUGmKnNo0I2T9i7g1O39FuxtmdWNsdXFyOq1S9EKBkLcM6ejvy0c9aeT+kbdHRKLRn6aOhiZ4dyqWYhkytKxFF2hc7G7PwmwftJtOgM06sox36Pc/o6u0nbT9EoDztnTc+jHb0qTf0eu+On6J8OL9E9ZHDxsekyz9G2nprj6PSrRR/gfjKPoP0w4cirQJLlGmGkUfRt7eCbTkkQqsB2D9oMHIH//2Q==" alt="Left RGB crop for pair a794e37bba038cd8b9bb2617, frame 15"><figcaption>Frame 15 · instance 7</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAQUAAgQDBv/EACQQAAICAgIBBQADAAAAAAAAAAABAhEDBBIxIQUTIkFRFEJh/8QAGQEAAgMBAAAAAAAAAAAAAAAAAAECAwQF/8QAHhEAAgMBAAMBAQAAAAAAAAAAAAECAxEhBBJBEzH/2gAMAwEAAhEDEQA/AM4C1EoYipKLUToYFaJxDzSJ7iDJBqBRKonNMPYY/oaAgeJKEACBJQAXABME5UhpfAJKSRxnmSOWbPX2ZJZW32b6fH3rKJ2YaJZmU95/px5WBs2quKKHNs0RznfHnT+xbKQI5XF9lNlCkuEo2NDyM00EX4Ni68m+EuUTm2VuDNUZewSBYCokV6OGfJUTRLwhftT8MvqjsiM3iMeXLcuyRlaM+SXyJGf+nZXFwwv+mnkCzlzCpAB07Oc1Rbl4KTdoQg4cjU+xzrZLihFHwxlq5OkZPIimi+p4NOyExu0RnMNRSfTFu2uxl2Y9yHwbLqnjITWoRZZUyRkc9mVTZSEzrp8MbXTSpl1IzKRdSADRyKykc+RWc/AxHWMrYw1Yu0KMU/mOtKSpGW+WItrQ0xL4lpAhJcQtnL+ms5RM+6rxs7p0cs65RaJLj0Dyu4msjM8J0NtvWbbdCvLicH0dCq3VjM8oF4zLKZjeZRdEWyv00+yKsZu90rLLaMvvWWjc2RlNIFFs045fIbak34FuvrtteBtr4XFI511nuaYRwY45/Eu5nCPhBbM5YdQNWXAMDPkwKSfgWbmjyTpDoLwqf0STaFh4jY9OycnSOUfTsv4z3EtCMvPE5v0+K/qS/RixHksfp8/xm7W0GmrQ/wD4UV9BWuo/RFybGkjNg1VFLwaVBLoPRLINkgkogRCP/9k=" alt="Right RGB crop for pair a794e37bba038cd8b9bb2617, frame 19"><figcaption>Frame 19 · instance 6</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code> · selected</td><td class="text-end">0.836</td><td class="text-end">0.463</td><td>match · error</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.855</td><td class="text-end">0.432</td><td>match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.481</td><td class="text-end">0.379</td><td>match · error</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.304</td><td class="text-end">0.451</td><td>non-match · correct</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>non-match</strong></span>
+    <span>Relation: matched_shape_color_material</span>
+    <span>Gap: 4 frames</span>
+    <span>Visibility: 150/205 (low)</span>
+    <span>Mask area: 38/51 px</span>
+    <span>Crop: 11×11 / 12×12 px</span>
+    <span>Motion: 2.71 (medium)</span>
+    <span>Max |depth error|: 0.26</span>
+  </div>
+</article>
+<article class="p5-item" data-method="B_rgb_2d" data-error="false_positive" data-gap="short">
+  <div class="viz-row p5-heading">
+    <strong>#2 · <code>ee3fcc32d93e7234272a7c62</code></strong>
+    <span class="viz-badge">B_rgb_2d</span>
+    <span class="viz-badge">false positive</span>
+    <span class="viz-badge">short gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>easy distractor similarity:</strong> A different-attribute distractor still receives an unusually high similarity score.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAgABAwQGBQf/xAAnEAACAQMDBAIDAQEAAAAAAAAAAQIDBBEFEiETMUFRIkIGFYEUYf/EABkBAAMBAQEAAAAAAAAAAAAAAAABBAMCBf/EABwRAQEAAgMBAQAAAAAAAAAAAAABAhEDEiExUf/aAAwDAQACEQMRAD8A4WB8D4HSyACPgd4iLcvYAkmLDF1IJd0C7inHvJAB4foFxfoB31KP2QD1WhH7ICS7X6HwQR1ahUltTWS0lujuXYDCkLAWBYGDYFh+AsElCOaggXSXRbl3M7f3tSjUai+DT3mIUjH6nNbmSXO3JBlnbl5XMudauIt4bKL1y5fdse4abfBRqY9Hctay1PPWbh+WA9TqtcyZVePQFSSwPddbdXTbmrUvI8vGT0mze6yj7wecaHFOqng9DsJZopf8NMGmFWNnA20lwJo0dokFTapyzJ4GXcqaw5ws26ffAsvlLL5Q6rfQ24jIyd7cb2+StK4uJ1ZKbZG1KT5IN6QSaQVFuIHRbL3THVND7u+zmu2bE7CUkdRQQSSwK50d6WlUOg1k2elT3JGRozSlg0+kTSSKuO7jbjruNcjNBLlZEbt0CXJHew6lu0TJchKO9NAGCv6fRrPjBWXY6/5DR2VuEciK+KPOzmskOU1SGHwLBw5MOLAsADQeKiNLpc+EZpLEsmh0b5NIp4bvxtxVp6T+CCyiOPEUhm2VqhIKHDYI67AHD1226icsGVl8Z7Tf31BVLSTx4MFcU5K7ktr7kfPj7tLzT3YR/wCh9GcvqwlaVH9WYarHVQjpL2WFYVX4YUdLrSfZh1v4eqq4WO53vx7moc79LXkuEzuaJp9S1lmaN+HHKX2NOOWV3J8YI2SVHlkbLVaTAkHgSQgTjvhtfYpS0O3nPe0sl4f+isl+lZL9UlotBeEGtJorwi3z7Fz7F1n4NRW/XUl4Qv8AJTj2SLI2OR6g1EKpxj9QuPCwG0M0M0bAZI0A0MP/2Q==" alt="Left RGB crop for pair ee3fcc32d93e7234272a7c62, frame 6"><figcaption>Frame 6 · instance 4</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAwEBAQEBAAAAAAAAAAAAAQMEAgUABgf/xAAjEAACAgICAwEBAAMAAAAAAAAAAQIDBBEhMQUSQRMzIiMk/8QAGQEAAgMBAAAAAAAAAAAAAAAAAgUAAQME/8QAHREBAQEBAAMBAQEAAAAAAAAAAQACEQMxMhIhIv/aAAwDAQACEQMRAD8A/JzVclGXZPKbfSNU12WSS0zhzluEy3Yx/wDOKZRonxouqCTH+xhv3Za9xCgLkKrkwILSGRmkhXrJAaZVUZz22axI+9ySEPjZV4le2SkbYP8ARa4P6X0WPBxrQz1GKPrFBSGcxvkF4KCfRRX4uulb0dLbI82yUYcMDT+TsOnh2iuqX6aj0ajj7QqGRvsaslCxevZcvXsxUJG1FIWshM3GakDBFwTB+KZoHvolJbxk0bxIrGuUgOwxKb2izSPYjSPb6ai39oJjNknjHugolLka5egzLL07QOGiDyMdVl7mQ+R/kyvJ8tW/luLFdmgR+hQsl9pMbVN+wkZX2SlU5My2e+AbBgvbMyfKCZfwlL6Lxkv+cbKW2yPx89UDHY9jTx/JM8fJJ2TeQ/iUfSfP/iFv5ab+W4se2EC+hFkvibrfItG4dlUqV0Bs8ugMGGGzzPcHmSl08Kf+vRSyHDfCLfgz8fyTHx/JLe0Izlung6E6drgntp3F7NNHTkejpy+dSab2HTM59/4X+qQqOYtLZwPi0XE+NKhI1DsTG+Mvo2Eov6ZIlmiVC6AwJpLsHumuwQX1CC+rRmQv9H7aRXRQ7OWjfPgX3bZ8K+6nCi/XZbsXVX+cdGzuycOXZk4cq22Z0n2FgLiuZneKrv3LXJxMnw1sW3FPR9cCco61olXL8+vx8imWkmbx7LY97PsbcKu17cUS2+KritqIDkYfyXFV0muRkFOx6jsujgxc9aOnjePhWk9FGQoZCgw/Hyk05o68KI1x4RRGEYrSRizoMjkSMnpPkBdV/9k=" alt="Right RGB crop for pair ee3fcc32d93e7234272a7c62, frame 11"><figcaption>Frame 11 · instance 1</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.646</td><td class="text-end">0.463</td><td>match · error</td></tr><tr><td><code>B_rgb_2d</code> · selected</td><td class="text-end">0.684</td><td class="text-end">0.432</td><td>match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.652</td><td class="text-end">0.379</td><td>match · error</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.587</td><td class="text-end">0.451</td><td>match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>non-match</strong></span>
+    <span>Relation: mismatched_attributes</span>
+    <span>Gap: 5 frames</span>
+    <span>Visibility: 684/727 (medium)</span>
+    <span>Mask area: 171/183 px</span>
+    <span>Crop: 20×21 / 21×20 px</span>
+    <span>Motion: 4.29 (high)</span>
+    <span>Max |depth error|: 0.26</span>
+  </div>
+</article>
+<article class="p5-item" data-method="C_rgb_2d_3d" data-error="false_positive" data-gap="short">
+  <div class="viz-row p5-heading">
+    <strong>#3 · <code>dadc684204abe876ed5ce676</code></strong>
+    <span class="viz-badge">C_rgb_2d_3d</span>
+    <span class="viz-badge">false positive</span>
+    <span class="viz-badge">short gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>matched attribute distractor:</strong> Matched-attribute distractor remains similar in appearance and pair controls.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAABQYDBAECBwAI/8QAKhAAAgEDBAEEAgEFAAAAAAAAAQIAAwQRBRIhMQYTIkFRBxQjFRcyYZH/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAFxEBAQEBAAAAAAAAAAAAAAAAABEBQf/aAAwDAQACEQMRAD8ABz0yJkDLYgYC56ntpgjWNUNi2FgtPJKjHuA17TPYi9R1xnPJhK2unrkYPcC9ie4l+x0qrdYGe4zWPgNe5UNnuAlZExnM6J/a+6c8GUtW/HN5p9uavYEBJzMzFVDSrmkewZo1Tb1AkmGO1C03AzK93U9OkV+4C9rKi4ViRkiL1MbWIIjLWXeGH3AF1T9KtiBNQIBEN6fX2sOYvI2CIRtauCOYHRNG1AoV5nRdF1hiijfOKWF8UI5jhputiki+6B2e31TKD+Saaherc6fWV23cGc8t/I1CDD8zet5IFt3BfsQOf6q23W6/1kwalbdVOTLOpVhcXtWovyYIp1MVSM/MoY8YGYLv3LPiFiuRBN6mHhFELmqIF1pNtwMQ8BtbMFatT3e6OKEqZZpVMSmp7m6tIDFC5245hOhqO1e4tCqQJIlyR8wGpNXZemM9V1hmQgsYtfs8dy/o2lX3kF9TpWaM3Pu4gWbe8rKajCkagPziDRcvUuXKKSc9Tuul+BUbDRQtWkDWZfdkTm/k3i9fQ796tnS37ucYmpMSrg7g3Uk94xLTVSZVuTu7gUSJQ1FC1A4XMIsOJUr3i0QVK5kUsik4JyhntrD4MLvdq/ApiQMynPtEgHF8dnE13ZzzJq1oKj7s4mBakkKpyTxAl03T7nWL6nQt8nnnE+nPx74haaDpVOtsX1yBnInJvx/o1vpNZbyoQzH4M7LYa3TZRhgBjqbzEpjuFRgWIHMSfIbei9Y7lBhy61ml6fDj/sT9a1ZGqHLCaxCH+vzBt+rU6gAMIM7A9wZqO9m3fUwqCu4Sln5gSu+9yZavLn24J6gK51NaTHHMirxYCRs4+4IfVw3UibUmJ45kBkkH5li0Co4YwVb1mqIGbiWkrFZcDfY6uaIADYEO23kroAA5nO0uiPmTrfMOmm6zHSKvk7Gn/mcwLe621V8loq/1FsdyJ7wse5aHhlyJVuqeaDfckNQrMn+RZzrRLvaT+oykHEHtptNslo8V7KlU7XmDq+hmqfYcCVCdVsLVPnmVqVCmtfrKxvbxbcfcTN08cpU+xmRS6yBVBUYWabvqMt9pSLaYQYxFeoppOUMDcVDM+riQkzBaEWfW/wBzU1j9yuTMboH/2Q==" alt="Left RGB crop for pair dadc684204abe876ed5ce676, frame 10"><figcaption>Frame 10 · instance 1</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAABAECAwUGAP/EACkQAAICAgEDAwQCAwAAAAAAAAECAAMEESEFEjETQVEUIjJhBnEzU4H/xAAaAQEBAAMBAQAAAAAAAAAAAAAAAQMEBQIG/8QAHhEBAQEAAgIDAQAAAAAAAAAAAAECAxESIwQxMkH/2gAMAwEAAhEDEQA/AM7nkqRM/wBcfXT3HzND1LQXW+Zn+o4/1NGjwBOli+itbU9jGL+PEeORLB8Omj8huMLYqDlDOa2QoHMkUSUZGI3C1sDJUfGA+5TAjROJsf49jdmG1mjyJlGyKFB7VMtOn9fupxvTUaQQCMgNVmsr+5hVT71KZs2zLyu9zuWFNs1+W93p2Ph4mceX9q4qfiTBpX12694QLdiYXQM6wLRjG2s/cJmKsvOscrch7PmbqxanXtZdiZvrq2D7MYBF951JyWZ8XynjO+1BlvpuDuCHZPMfZXdWx2hP7kJfR54mF7PBA8ARe7Uj7t+Iu4Eob3irYw8SNf3CMfGuyX7aKzYT8e0BEs9I7HENpz+0bI2IRV0P6ev1Mu0M3+r3kleAhbYXtT4nm5l+2bHNvH5ojFyhcOBoQsPxBHVKFAQaE4WzW3Or1HZ4OS8mJqtLKjqw1YpltKrrXHaZu18+pshgRyBAjj0W+V5kt9mwYIthVp5UlnS98o+oO2HdWeFLw9bYVQxPmBF0TpKZ9hORYKlTkqfeaD6rHxk9HAoFTjy+vMrqEXvJ1zCfbUikZPUu9W091vzH63EEWAPm4916L6IJI86kNeBmEcoRND0msuW0JZDHc+083MrPjl1mdShtSu6ogdRuX9lA8gSl6unaQZkazPW4gbmDHA5lmxEj3IoJcQL5hCJ2yTU7UgfQPvMIkFHDGEQpIs7Ud4EC56CNFpcSq6HWyqzEaB8S0gRs+pX9QxTlUnt/L2hcUSoyNuHk0E+omhIByeN/9m0ZFcadQ39wTI6Vj5A8BP6gZfUSWmR0O6r/AAfeP3K62uyg6tQg/oSDqvyk+4Oja5hePi2ZR+0HUKaG2e0DZlhhdNe5g1g0IZh9MroG2Hc37lpUgUQOpqWqoKo1qSanToAk6dGPcieZUSbnRqOrjYjpFLs/MY9NVn51q37MfOEAB+i41lnfvR+IZTjLUoVFAEmVNyULqBGqa8yTxHCdqAk6Lqd2wP/Z" alt="Right RGB crop for pair dadc684204abe876ed5ce676, frame 15"><figcaption>Frame 15 · instance 0</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.345</td><td class="text-end">0.463</td><td>non-match · correct</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.377</td><td class="text-end">0.432</td><td>non-match · correct</td></tr><tr><td><code>C_rgb_2d_3d</code> · selected</td><td class="text-end">0.457</td><td class="text-end">0.379</td><td>match · error</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.627</td><td class="text-end">0.451</td><td>match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>non-match</strong></span>
+    <span>Relation: matched_shape_color_material</span>
+    <span>Gap: 5 frames</span>
+    <span>Visibility: 1308/2141 (high)</span>
+    <span>Mask area: 320/531 px</span>
+    <span>Crop: 25×29 / 33×37 px</span>
+    <span>Motion: 1.63 (low)</span>
+    <span>Max |depth error|: 0.55</span>
+  </div>
+</article>
+<article class="p5-item" data-method="geometry_only" data-error="false_positive" data-gap="short">
+  <div class="viz-row p5-heading">
+    <strong>#4 · <code>0caa38fa4c015317cb32cedc</code></strong>
+    <span class="viz-badge">geometry_only</span>
+    <span class="viz-badge">false positive</span>
+    <span class="viz-badge">short gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>occlusion truncated mask:</strong> Low visibility or a truncated mask hides cues that separate this distractor.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAAcBAAAAAAAAAAAAAAAAAAECAwQFBgf/xAAoEAACAgIBAwQCAgMAAAAAAAAAAQIDBBEFEiExBhNBYSJRB0IUI1L/xAAYAQEAAwEAAAAAAAAAAAAAAAAAAQMEAv/EAB0RAQEBAAIDAQEAAAAAAAAAAAABAgMRBCExUUH/2gAMAwEAAhEDEQA/AIoTDAASBrYegnJRACiHoSrVsUmmAAB6AAAAAAABoADexXkbD6tIkKlNRREuv86YWRb+mRHJtgOq57JNVxAQ7BsCzjNMXrZAhb0kqu5MgOgAu4YBaBoMADKGrpdKHX2IeTPZKDE5dTEoSn3FABeRyPYbXkOU0iKktvuLrs6SN1thO9R8s57ddLWu9D8ZbKam7cvJZ02LS2ye0dJGwCl0tdhMuxKDE32ZAufcnT8EG5PZIZ0GhKa2CyajHYCb7FXEhLKc7EtjGbl7ethYFbtuT+yrk11FmJ3WlxsL3MRz18GP5jkHi5jrT+TomMlVxj3+jlXPxd3NNL/oxY3q2r9Zi/4/JlZUpEi7lfZ+QsHBdXGqWvgzfKXtWSWyMcurp1cSRrcDm42yUXI0NFkLYp7Xc47jcnOnIXdmw47npe2tyN03+stz+NZrZEyo6RO1pEHMn2Za4VlljjIhZGU1FrZJt7tldlQenogV2Rc5T8mg9Pw9ySbM3bB9ZpPT9irijPzX0u440vI5Kx8BpP4OatvJ5z9/kann8/8A0uO/gz3BUf5HKxl57mSepav+1vJYyq4Pev6nL+Wsby5r7Ox8pR7PAeP6nF8/dnITX2ceP7tTyfEGNTlbst8ZSjFEBQcLUXOJV1xXY1VXl0ux9mVGbZrZaSe0UfKy6dm2MiFZetkec4yIc7X1eRHuvZ0F3wXklcbf7aIdktxBRLSZj5/bRxm+ZzHZZ0pl36J4+V2bCbXyZHMm5ZqX2dV/j/Gj0wlozbnWVsvtofVdKp4Bpeek4Oo9fKT3+zvXrd64qUfo4NL8eSm/seNEclO5NKVsdFxx1Dda7FXJ9dsTScbWvbRo+6cfx//Z" alt="Left RGB crop for pair 0caa38fa4c015317cb32cedc, frame 8"><figcaption>Frame 8 · instance 3</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAwUAAgQBBv/EACUQAAIBBAICAgIDAAAAAAAAAAABAgMEERIhQQUxEyIGURUjMv/EABkBAAIDAQAAAAAAAAAAAAAAAAIEAAEDBf/EAB0RAAMAAwEBAQEAAAAAAAAAAAABAgMRMSESQVH/2gAMAwEAAhEDEQA/AMuCrR3Y5nJZCE14KTmoLLFl35eNBPkjeidNl0lq+Ty/kl9mdufyNPKyK6/klW7M3aDUsJRqqEuWMaVwpdnnZVJN5QejcSi+WB9oL5PRxmn2Fi9lgVW1w54Q5tKW2GGvQX4Gt7duWcDejTcUDt9IJJmpSi/QYAE6uCIrN4iyyGHyVxpTeDxnkbmVSTWT0/km5xaR5G+pyjNsWuvTaZ0LakZOWclqUXn2UlJuWA9vRnJrgBho0U6fBdU+Q9O1nrnAOadOXJmn6Gb7Glyj0Vs1GCPPWNZcDujUzFDGOjG0bHWw+Asbl49mRLZhY0WzcxNyqoHVqZiBTbKVJaxLfCfpkupJJ5EF9CNXOBpe1cppCxJufIhkemNQtoWRsXvloaWtvCGMoNiOpX16MXTZop0bkqShjgVXtFSbcQ+Zfs77XIC8Cfovttqcz0divkihP8a2yhp4+soNJjWO9mNzoc0rZtrg3U6KS5RLRxnTTDzWB0VYniCuH9QyjgDcf5I+EXRNcctmbBqrr7MzM5mTo9HDnR0mCIAIiOkIUQnQS2b+RAw1tH7oOOlVw9T46X9SNc5mGx4po0zZ0p4JPpmcDLcQ4ZtRSrDdBAnnbqWpg+ZbDu7sXPOEK5ePnGWcC2XF9eo3x5NeMGpZR3J10JQXoE9kKOKQwqQTbBN0DSky0aMn0RRTJ9ItGWWMbOllp4M9vZybXA8tLTVLgZxYtdMbv+Gq2jrBB2VjHVIsNC4EiIQsokoqXQGdrGXQdey2SFmCfjoy6Ay8Qn0Nky6aYLlMtNoSfxOOi8fG4fodap9HVBfopSkX9MXUbRQ6NkI6oLql0TUIEGznITUmpCH/2Q==" alt="Right RGB crop for pair 0caa38fa4c015317cb32cedc, frame 12"><figcaption>Frame 12 · instance 2</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.298</td><td class="text-end">0.463</td><td>non-match · correct</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.493</td><td class="text-end">0.432</td><td>match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.838</td><td class="text-end">0.379</td><td>match · error</td></tr><tr><td><code>geometry_only</code> · selected</td><td class="text-end">0.929</td><td class="text-end">0.451</td><td>match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>non-match</strong></span>
+    <span>Relation: mismatched_attributes</span>
+    <span>Gap: 4 frames</span>
+    <span>Visibility: 203/328 (low)</span>
+    <span>Mask area: 50/82 px</span>
+    <span>Crop: 15×13 / 13×15 px</span>
+    <span>Motion: 2.16 (low)</span>
+    <span>Max |depth error|: 0.26</span>
+  </div>
+</article>
+<article class="p5-item" data-method="A_rgb_only" data-error="false_negative" data-gap="short">
+  <div class="viz-row p5-heading">
+    <strong>#5 · <code>3f414578353f5e86e2a9072f</code></strong>
+    <span class="viz-badge">A_rgb_only</span>
+    <span class="viz-badge">false negative</span>
+    <span class="viz-badge">short gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>long gap motion:</strong> Long-gap motion or viewpoint change lowers similarity for the same instance.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAECAwQFBv/EAB8QAAIDAAMBAQEBAAAAAAAAAAABAgMRBCExEgUiof/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8A4IaLQAehogAehpFvCCtTeAW6GkV2hgP0BMNAADQ0BBoAAaJywUpYVSk2XArLGyNS7EyVXoqNUfCWEV4SRlpFoRZ6RcRqIgAtKAGAn4IK5MiyTKbbVWu2aQTajHWUx5cYzwx8jlt6kzG7JN7pm1ZHpqrY2L0t3s83RzJ1vtnX43PhNJN9mVbkySZXGSktTJJ4A5FZOTI9FiIibwaM3LsnGLUUWCHJ5Ma08fZyb+VKxvshfKyU39aVdC0DesNEBFD7HGyVb1MTEQdLi/oyTSkzr08qFiXfZ5f/AAvoushJfOkHp29ImXiXTnFfSNTNRAJxjJdoYYUY+RwY2r+Ucm/gzpe4ei8FOqFi/pAeUep40I7nK/OUt+Ucq7iTpfaMqoDwFsn8pG7i/nTm05LoDNTx53S6R2OJ+copOSNVHFhVFdLS/wA8GIShGKxLBgBoIYAAAAABVbx4XLtF2BgGKP5dUZfSRrhFVxxIkACAY8AiAx4B/9k=" alt="Left RGB crop for pair 3f414578353f5e86e2a9072f, frame 1"><figcaption>Frame 1 · instance 4</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAAECAwQFBgf/xAAiEAACAgIDAQADAQEAAAAAAAAAAQIRAwQFEiExEyJBFFH/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAQIDBAX/xAAbEQEAAwADAQAAAAAAAAAAAAAAAQIRAxIhBP/aAAwDAQACEQMRAD8A8+AwAQAOgEA6E2kAAEabJuNAQCgGAgJdbVmXLtwxOmwZrVQUOhN0AUDaSIOZBtsCTmRbsQASxumaV+yMnwuhkSQTBy8Ykuy8ITl2kQlsR14NyIMTz7EdfBLs6PC8xy8vzS6M289zHe4wkeWk3lk3L0rMt+Omey+uNFU7LiGSNl3OoAbVMQAAWkUzyf8AAJznRV+anRXKTZCUlFW2Br79Y9mzg81y0VBwjL0fI8useNwTPJbWaebK5NlJlvSm+yryZZ5cjcmL4Fisq6H2CgcbRKh14auBjyqmVSlSNOaF+mLK6JEJ5LK5SS9bKM2zGC+nNz7sm3T8I1ON2bcjBM5e3yfjSZVklPKn6cza1czfllZltx01RtZ5ZZv0z/wt/wAuVfUyDwyX1FNdPWYQ+jBqv4Lsgh9koB0OjVwITjaOZuYZU+qOrQnCMvqA8XuYsvZ3dGJKn6e12uPhmXiOLt8LKLckiFolxe3T1E4ZFk8aHmwTxunEt1tSeRXRWY2G/FfrZTPFGX8KZacZfw2ZsbxOmQt0YvT8n1hnxsWVPjEdK2A2UdKvfBRKgo6XiIhRKhUAvgpQU1TRIAMc+Mw5HbSJR4/Fih+qRpoKA8zymp+7aRyGuro9pu68ZYm2jyW1jUczMbxj0/n5O0YoYibXhFozdT//2Q==" alt="Right RGB crop for pair 3f414578353f5e86e2a9072f, frame 5"><figcaption>Frame 5 · instance 4</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code> · selected</td><td class="text-end">0.114</td><td class="text-end">0.463</td><td>non-match · error</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.068</td><td class="text-end">0.432</td><td>non-match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.301</td><td class="text-end">0.379</td><td>non-match · error</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.796</td><td class="text-end">0.451</td><td>match · correct</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>match</strong></span>
+    <span>Relation: same_instance</span>
+    <span>Gap: 4 frames</span>
+    <span>Visibility: 562/401 (medium)</span>
+    <span>Mask area: 140/100 px</span>
+    <span>Crop: 17×21 / 16×20 px</span>
+    <span>Motion: 4.54 (high)</span>
+    <span>Max |depth error|: 0.26</span>
+  </div>
+</article>
+<article class="p5-item" data-method="B_rgb_2d" data-error="false_negative" data-gap="short">
+  <div class="viz-row p5-heading">
+    <strong>#6 · <code>bd6faec7edd1e581319c3474</code></strong>
+    <span class="viz-badge">B_rgb_2d</span>
+    <span class="viz-badge">false negative</span>
+    <span class="viz-badge">short gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>control drift:</strong> The same object&#x27;s 2D or 3D controls drift enough to cross the fixed threshold.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABAABAgUGAwf/xAAtEAABBAEDAwMDAwUAAAAAAAABAAIDEQQFITESQVEGE3EiIzIUFWE0QlJygf/EABoBAAIDAQEAAAAAAAAAAAAAAAIEAAEDBQb/xAAiEQACAgEEAQUAAAAAAAAAAAAAAQIDEQQSITFCE0FRYXH/2gAMAwEAAhEDEQA/AKFK0yVqEHStRSUISTWm7cgfJQ02o4ePfu5DW0oQKtK1RZHqvBhv2h73wgY/Vz58xjGwFjCd0SgwtrNXaVrmxwkja8cOFqQQ9FJNvCJXskok0m9wDsg3xGFpbX4krXKXJgxwDPMIgeLUxuVjvV0xky42B2zOy1issXSyy8yvUuBjX0u949gFS5HrDIdYgj6PBKzhI6uEnONrdQRptQZkavnZV+5MR/qaQjnud+T3O+SopIsBCodhS64zqyo/lcrXSD+oYrRZ6Fps4OO1jj2Rx2Cy4yHMhYQeArzAkMmnGQm6S00nljE6VU42IJ67G6AfqAbKW9PC7xyB8YcO6COBkZWURGw15Se3PR07LI1rdJ4Rbj8gvPvUEvuazMLvpK30jumF7v8AEWvONQk93UZpPJT1a5PPwBkrS5O26mzHlfwwlb4NcELpJGR6ZM870B/KLj0lgP3HX8I1BsJQbKkNPhFYcDnZLD0mlbx4cMY2bfyu7QxvDQFoq8dmirIPB6a7Kx0bKJbJjO/EjZVuTIIm9R/Hui9GyYi6xvfdLT073/Reo1CVDyuUaHT8ARt+4bVzCGsb9IAVdjyWAjo3KKCjwjyWo1Ft7zY8lRNGZcaSMGi8UCsRLo4x8hzZSS6+fK3oag9S05uXD1NH3G8fys6ZqL5PRVySfJkmYsLOGArs0BvAATuY5jyxwpw2KS6KHUOpBRT2iLJJJgdk6hCMrBLC5h8ILT3OhkLOOko+0OKgzWykWH7V4QTTlHCMppZ3P8ZqdPyRJGN91cQvsLPRNEIa+L8e6t8aXqaCls5PK6ir05tDi1NoKmI1MRpQ7pR6xpfut/URD6hyB3WfrzyFvxHtR7rNa9pJgd+phb9B5A7JumzxYxVZ4spC4BR6lAn+UhZ4F/CbGMnTrUg5KHDyJ3UyF/8A0Kyg9N50lF4DGoXNR7ZTml2V9pOYHtI5JWjg9MRsoyzEnwrCLScSICoQ4+Vm74rozdsSk0iKSTFdE8OodyjMdzoZDG/bwrpsAaKa0AeEJqGEXRiWMfcGyU35k38nM1VasjldhjWqYakE4KxGCQak+Fksbo3i2uFFIFStWQpB6TxPeLzIS0/2o2LSdMxKqFvUO6PBVTPIXTO34KNzk+2E5N+4f7+NGKbQHwubs2EcbqvtJCCFu1Jo4jtQ/cXniMBDUPCWyhAyPPJP1soI6NzZGdQ4VMLPCNhyHRw9IbZVMh//2Q==" alt="Left RGB crop for pair bd6faec7edd1e581319c3474, frame 5"><figcaption>Frame 5 · instance 0</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABAECAwUGAAf/xAAsEAABAwMCBQMEAwEAAAAAAAABAAIDBBESBTEUIUFRYQYTIhUyQlIkcYGS/8QAGgEAAgMBAQAAAAAAAAAAAAAAAgQAAQUDBv/EACERAAICAgICAwEAAAAAAAAAAAABAhEDEiExBBMiMkFR/9oADAMBAAIRAxEAPwCsDT1Tw1PFk8YoiEYCf7ebSO6eMQoqqtio4DJI4ADbyrXJAeXTGOHMoKTRYb3sboF/rMtlIFNdvQpzPWjD91NZH65fwPVh4p3RgMa02U8dHlzeq8erqZ27AFI31PQv3eGodGiUwfWKYwjJou1VAcTsFfzazplTEY3TjmqqSekiaXRPD/C5Tx27HMOeWOOtWCucWNu4WCj4mOyindVVRLvbIj6InTNFlrZCXtLGd1zWO3SCn5ukdpcGzCeCowU11bS01VDHVytjZIdymErdIzkrJnZlpLAXHwszrQnlefcvb9V6tS1npBumYRalTh5HyyI3WH9SP0h7ncPXQv8A6K0cOKMVz2NwxpI8+mBYSEM53dG1piDzjI139Kue4dCqkqKZxITch2TC/wApmXlciibJt9kVQROqajEE2CAbdzg0cyVdabVU9K72bgyHqq4/QlJo11DTRmka0gEI+NjWNxaLBDUA/itd3RYQqNcnm/Mz+ybiukNus96ugZPFCXgnHsr66qvULM6HL9VxxfZG5D7IxXA0/Rr/APorhRQj7Q4f6iQPiustGkOUDcIOjknCD9kXiuxU1RNUCcIO913Dgfii8UoapqiaoCkxp4S/Gx2uotOa2WvhAGWTuaI1Jn8Eu8oXRsmV8L/xDkpnXySE81ptHqcLBHCxg2AUoUcLxJE1w6gKUIjyz75B7oHWG5abJ4Rl0PXjLT5R4SsOJI9RHtGNaPiEtk61jbsustUfEsusnWS2UIMxS4p4CUBWWBalYUB7XQ+jBr5duSK1IXpCEJpLhHITsAlcsblYrlXzs3GnVbmMx+5rVaR1cbxuAs/p07YqeSZ5s226A+rHiHOA+PRcd+aMfyPEUm5QNQXgKGpdlTPHcKWSMg3GyhdYtI8LgjQMq8WkcPKRSTsc2oku0gX3TLLWXRoo66Vdiey6xVlipbpq5QsgrWGSEtHMlRUWnysjALfk82R8bQ6QXV9plJ7k2Rb8QOSWzuuRbNxyVmpU8lLoZiANwFmoZXsAB7dV6bUUbaiF0bgOazlRocIeWubiUknQq0aNMMLT0T0oQllbqOm8TTFsYs6+6oJ9Crs/g8gLZHkFHYnqiUmumWm0Yo6JqQ/MlN+makw8wStviV2PcIvbNfoe8jD8NXt3hJXYVrd6Yrc+23sEvtt/UIvfP+l+2Rk6Wmke4FwLT2WtoIfZpgDunMgiHP2xdSF3LkgnklPsCU3LseSAoZomTj5N5907dLZcwD//2Q==" alt="Right RGB crop for pair bd6faec7edd1e581319c3474, frame 10"><figcaption>Frame 10 · instance 0</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.308</td><td class="text-end">0.463</td><td>non-match · error</td></tr><tr><td><code>B_rgb_2d</code> · selected</td><td class="text-end">0.246</td><td class="text-end">0.432</td><td>non-match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.511</td><td class="text-end">0.379</td><td>match · correct</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.740</td><td class="text-end">0.451</td><td>match · correct</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>match</strong></span>
+    <span>Relation: same_instance</span>
+    <span>Gap: 5 frames</span>
+    <span>Visibility: 3252/3071 (high)</span>
+    <span>Mask area: 816/771 px</span>
+    <span>Crop: 40×47 / 40×40 px</span>
+    <span>Motion: 3.47 (medium)</span>
+    <span>Max |depth error|: 0.59</span>
+  </div>
+</article>
+<article class="p5-item" data-method="C_rgb_2d_3d" data-error="false_negative" data-gap="short">
+  <div class="viz-row p5-heading">
+    <strong>#7 · <code>0897564abf51782512199788</code></strong>
+    <span class="viz-badge">C_rgb_2d_3d</span>
+    <span class="viz-badge">false negative</span>
+    <span class="viz-badge">short gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>occlusion truncated mask:</strong> Occlusion- or image-edge-truncated mask removes reliable same-instance cues.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAAEDBAUCBgf/xAAkEAACAgICAwACAwEAAAAAAAAAAQIDBBESIQUxQRQiBhNhUf/EABkBAAMBAQEAAAAAAAAAAAAAAAADBAIBBf/EACARAAIDAAIDAAMAAAAAAAAAAAABAgMREiEiMUETQlH/2gAMAwEAAhEDEQA/AMQBCABh8FsAAYbFsNgAwOeR0LVkZPEzTg0tYegFsYwyMBAAHIAAAAA2kLexc7IwXZuMHL0GxD0Gjz7L5T6XorhUo9iOosQIRGTi9QxpNYzoNgu0I9auxTWkE4cWAxANMAC9Ns5K2bkqqvpnG8Ws6lrxFbMzeFnFMtYWQrK9N9mDZP8Asm5Mmxb5VWJ76PNt83pfCPFYei1oCOi5XQTTJdExsQD0GjgC9D9oNCctMbVY4S6MTgpIAE3sfHf09dPVpA1nRz8MvyVU2t/DUObK42wakjko8lh2MuL08wuumPfwsZuLKqxtLoqp7IGseFyerS/hZbqmo76N2uasgmjyqeu0avjszWoyYmcfptGvoNA7IqHJso5GbrqIlI6WLsiMel7I6uVj2V8emd0+UvR3n51eDS9Nb0X00peUia2z9Yk2RmVYkP3ktnns3+Rasaql0Ynk/LWZVrXJ6M9P7vZQ5/wQon1EAAcLIcmlX1NaPP5NEqLGtdHpvRUzsVW1OSXYqyHJaNrnxeGAmS0tqaaIXTONrjpmnh4TaTkiPi30izkktJVbbbBRWyenET05eyxXTGr4Sf6iiuhR7ZLO5vpHFtkcalv/AA8V5vOldc9Po9N5i5/juKZ5G/FsnGU9M1OXwzCP0pV1Rs7ZJ+Oo+gqg4PTJHLXsmcnpXGCw+ja17DizztPnp3SNTH8g56TPTcGiFxa7L2ha30OL5R2c2S4R5GDJDLChKzlonUVGOktHNNjtWyQys+By0WgS/VjH7izQGB5OXKfEs042LLxz5NctFbya42SZ5rJ8hdG1wjNpENqbfRXW4rNDyCjTdLh/0oztm/hex6nlXLl3s1rPD18E9HYR32Vfjdm8fR//2Q==" alt="Left RGB crop for pair 0897564abf51782512199788, frame 5"><figcaption>Frame 5 · instance 7</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAQIDBAUGAAf/xAAnEAABBAICAgICAgMAAAAAAAABAAIDEQQFEiExQQYTFFFhcQcWI//EABkBAAIDAQAAAAAAAAAAAAAAAAAEAQIFA//EACARAAMBAAICAgMAAAAAAAAAAAABAhEDMRIhBEEFMlH/2gAMAwEAAhEDEQA/AKtciuQAlclIPpgu0AER2uMdKvyNsyC+1DZ8gbLJxBUaicZde13FMwy/ZHyRGQOXElVVzXpEuWuxwoJZaONoK5USuSqQIQAbQtd5XAeUAKe4Mj5FZ/a7lsIIDk/udiIIXNB7WEyJpszJIFkErnVYXmSTPsJcqamk9q31Wole4SG0rTaEuDXuC1+LCzHjDaSHLzfSG44/tiMXHLIwwqm22S7CyP4WiDgHWqXf4P5MDpAPC48Vua0vc+Swf1uwblRAX2rAjvpefavYuxM763Hq1vcWYTwBw/S1prRClg5SCV6QpXKg9pvJkEUTinQ0lQdryMNBRTxaSlrMdt5ZcrLLW2Ras9Nog6nvb2peDqhI/m8dq+hjEDQAFmcvLvpD0cednY8TcdvEBOns2k3aISp2O9LshgkxHN/YRRb2eKAPM9viuxM8yeBa1HxvYfdC1hKZ+XYFxl7Qqb4zOYskMJ9rS4b1CfJOM9DcKASaRa7mwFFNixDbso6TH5TMiXitBk/BciGMu4lZjJ18uvnNg9Fdef47c5IzPH41paRxcBbfCV37VVHt+J4FTYcoSj+1hXxXD9jaaZISggGg9o1S5EhRb0bSbRtAEXaY35WM6xfSw2LEcbbkeBa9FoOicD7WS2GCYs37QPaY4ax4cuSdWmnw3c4Gn+E6fKjal3PGH9KV7WquhB9noGN8vwtj/wA7b2oGy0WPsSXMrteGaz5DNhTBxeev5W21v+RODQHPWumvofVIs9h8K+m5AFnp2OwXEfpaf/d4s2PgSO1U5wizLcCO1S+CORey2fwqotvZoqygymy12qPIwxC4kFRm7AwOq1kc/wCPz9Q3OzYANI8rjQWbx93ZAJVvjZzJR2Vm38e47J8kybfahbPHEkV12prXscLtRsuUEcQuM75Il9B1TPrgpSiO0zhg/X4T5BW1PSMyuzxpzXO9pTA9nfIpQSX2tHoZJmPnvgIPIq1h+RPDaJWbolLDaUqmSqaNK7c/cKJUSWUPN2qcPLfacExryrebJ8tLBs3A3afi27ojVqo+wk+VxFrnSmuyNNXjb41RcpcOzZLILcsUJCz2nWZrmG7S1fHhvUQ6eYepYeXB9Q7Ce+xjvBXnmFtpKA5LUa3KdLGCSquMODk//9k=" alt="Right RGB crop for pair 0897564abf51782512199788, frame 9"><figcaption>Frame 9 · instance 7</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.112</td><td class="text-end">0.463</td><td>non-match · error</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.138</td><td class="text-end">0.432</td><td>non-match · error</td></tr><tr><td><code>C_rgb_2d_3d</code> · selected</td><td class="text-end">0.079</td><td class="text-end">0.379</td><td>non-match · error</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.349</td><td class="text-end">0.451</td><td>non-match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>match</strong></span>
+    <span>Relation: same_instance</span>
+    <span>Gap: 4 frames</span>
+    <span>Visibility: 629/319 (low)</span>
+    <span>Mask area: 158/79 px</span>
+    <span>Crop: 22×23 / 21×14 px</span>
+    <span>Motion: 6.13 (high)</span>
+    <span>Max |depth error|: 0.34</span>
+  </div>
+</article>
+<article class="p5-item" data-method="geometry_only" data-error="false_negative" data-gap="short">
+  <div class="viz-row p5-heading">
+    <strong>#8 · <code>4fc1bec9cf2f3a4fcc66817f</code></strong>
+    <span class="viz-badge">geometry_only</span>
+    <span class="viz-badge">false negative</span>
+    <span class="viz-badge">short gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>long gap motion:</strong> Long-gap motion or viewpoint change lowers similarity for the same instance.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAABAECAwUGAAcI/8QALBAAAQMEAQQABQQDAAAAAAAAAQACAwQFESESBhMxQSIjMlFxBxQVYSRCgf/EABkBAAMBAQEAAAAAAAAAAAAAAAIDBAABBf/EACARAAICAwABBQAAAAAAAAAAAAABAhEDEiExBBMiI0H/2gAMAwEAAhEDEQA/AKoMKf2ypGhP4oAgZzDlRvbpFuaoXN1n7LtmoExgpNIG4XmKkcWuO1TydSxk6cu2gG6NPpIs1H1IwHZVnTX+nmwMha0a0WeVyZG9szeTSnHzhdOi5XJFyxi0AT8KMFSZ0gCEcNKFw+W5Sk6UTz8tyx0wHU0OZnHKzUUJkk4A5K0vUsw75CG6Zt37q5MJGRlIyS16SZXr0ZS9H3Gsj5xscQhKm11tolxJyBC+lunaW20FnHeYzPH2vL/1FdRSzvdAG/8AFLHM2yaOV2Yq1397JBG92lsKepZUQhzSCV5e4FkxcNLS9N3JxeGPKvjIsjI2H5XLuQeAQkymjSwD0/mgWzf2pO7j2lhhLnoWon7cLikMufaFqvihdtDKSirYM5KCtmCv9R3a0/lFWG6Nt8rXk+FXXscat35QbORblKkt10kf2Holx66llo+3FIRr0Viq66z1TiZHk5VaZXcsZK7ZQRxKIEcaic48kba5DFOMfdAhpJwrGgpy2RpKbdDLo39vf3KYE/ZT5QlsOKcD+kWqF1FC8AzXuynumMYy7wnBmEyrj7sBA8oaD2Kusupa7DCgXXWd7cbwVFUQGGU8kjcY8KSbbfSDLJyfQOppjUvLneVCKPi3ACsiQEwnaXbBjJoqzbyXZwnihx6VmCPslIGF3dm3bK5tG0HOEVBH8YACkLNIu305klGkcfkzsbbL+2s/xgPafJVRQHEhAUctQyhp853hYu63WWed3EkBWXSPQhBtG8XJVyIEqrlQ90FzQqJ/KJ3EhbEgEYKrK22tlBLBtJnjvomeO+oog4O9rsBPlt00TvBUYieDggqdwaJ3BoXCUKWOme/0i4ba8kEhcWNsyg2CwQuleBhXVPC2jiLnaU1NRshAcR4VbfK7DODCqYw0VlmHDbor7lWOmmIB0q19KHHOE+I89nyiWtyEDkz2440lRtTG5uyo3VEbPqIWOqOrJS0/Eq2S/Szf7FP2PLWNm/NfTjy4JP5OlbrkF5y64zOP1lNdWTHfMrbHfaPSO5BUjWE026JxzgLC0N5licG8ittZ6p1XECTlbZfpnhl5RO2ijZ4CmDA0eFK5uCmDZRCaoiqHYhKyFwDnynPhaW4SFgwFUPhEuSUqbL/TQ5ZSsPE4RbHaXVFMGHIQ4kLdJbRYnXk//9k=" alt="Left RGB crop for pair 4fc1bec9cf2f3a4fcc66817f, frame 0"><figcaption>Frame 0 · instance 2</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAABQYBBAACAwf/xAApEAABBAICAgIBAwUAAAAAAAABAAIDEQQFEiEGEyIxQRRRYQcjMlKB/8QAGQEAAgMBAAAAAAAAAAAAAAAAAQIAAwQF/8QAHxEAAgICAwEBAQAAAAAAAAAAAAECEQMSBCExUUEi/9oADAMBAAIRAxEAPwBeUObyYVssUICn2yftW4XjpZkwBwsKsxwjNFyDCgqx4XUPCHMmpdRP0lCW3PACrSP5HpcJcosBIFqtFs2mXi8UoFuvQkz/ABUqGObI3k02pTiGLKUgWVWyctuMaJUClfSLCylNLnPIIYnEqAKW02DMaE99pSk3LzOXculrvM90uQ5t9IMe/pVORU5DXj+QRBo5FWDv4XNPEpMZEXGrTHp/HZM1lts2q5ZNV2LLM4ofvDsTH3juDyO/3XPznw5+ojM8J6++kvxTbDxV/OOxS5bfz/O2+MYZySPpZblKVpmXaUnaZQ1G7fHL6pXfmk2xyNnjDmFeXSSkT8we7Tj47sTIwRuK3Ql9NkZfRhkf64y79kt585yJTRRjZTcISL+0vNPzJKM2dDjx/WONITu5S2AgIv8AhA9v8gbRm6Rhm6QvYmtOfkHmOlV22uGFLxb9IthZf6eQj6VDc5QmfayJuzGm9gOx3Fy9A8R3OPiRD20vPL+S7MmkaKa6kckN1Q84bKh78s3sGWwiPikN8pc4raR73D5utVye+lMcFFUGOPRUY4fK0Y0czo8oH8IS1jnEBGNfHwAP5VjdDN0MOfP7QKKGu+JVhgLxa4zt76TXZ18LuKHOukF3EZDSUcA7VLZwe2E0FbNWjnSVoUHx2019qlLiOfdow+P1uIK0cwFYLaMV0ADguBXGaB8fYCYS1q5vhY9vYTKYym7FrlI93Gir8GCS0OIV9mLC190FcaxvGgFHk+D5Ml+A6LEDXXSI48HIgBT6x/CI6vGL5x10pG5MSNtnAn0fErRzbNq3uIfXOKCrV8QtFUdrj+DfSgsD2kFbUppXmIXdngOa4vA6QZ7y0kJ4khbM0tcEvbTTusmILPkxX2iieP8AUAXy8TZ+lBnD2/FbS4MrLEgK4sh4O+iqNSnUhrXuerrXcGgH7KyKEuqguOxJh4n9lNWwxg5ukEodXPktD2AkIrhuGt7ljNj+FY8P32BHGxmUW/8AV6PDieNbeAU+PkQrY/yzuQ4WOMV9PKdhmRZj7a2lReKXpO98GggxXZGLRaBfS87ewsyHRu/BVl2NHE8boa6WUppTSuOaQp6Ioi1K0c/ioErz6yPINkAKsfHobV73FbNlJcO0KBSKLtVBi47nOqwEhbbJ9mW5g+rTf5Pmvgi4tdVpOMHu/uH7KrlSNnGxX2Dnc2OtryER13kGXrnAiZxr+VymxQGkoc8APqkvppe0Gek4n9TsmXC/SyEmxXaEz5XtlMv+3aToX8JhQR+KQyRhSqGUnJn/2Q==" alt="Right RGB crop for pair 4fc1bec9cf2f3a4fcc66817f, frame 3"><figcaption>Frame 3 · instance 2</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.675</td><td class="text-end">0.463</td><td>match · correct</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.736</td><td class="text-end">0.432</td><td>match · correct</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.147</td><td class="text-end">0.379</td><td>non-match · error</td></tr><tr><td><code>geometry_only</code> · selected</td><td class="text-end">0.184</td><td class="text-end">0.451</td><td>non-match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>match</strong></span>
+    <span>Relation: same_instance</span>
+    <span>Gap: 3 frames</span>
+    <span>Visibility: 595/781 (medium)</span>
+    <span>Mask area: 146/195 px</span>
+    <span>Crop: 20×21 / 22×22 px</span>
+    <span>Motion: 8.72 (high)</span>
+    <span>Max |depth error|: 0.56</span>
+  </div>
+</article>
+<article class="p5-item" data-method="A_rgb_only" data-error="false_positive" data-gap="medium">
+  <div class="viz-row p5-heading">
+    <strong>#9 · <code>4dcbfdbfa7d88b8ab0560790</code></strong>
+    <span class="viz-badge">A_rgb_only</span>
+    <span class="viz-badge">false positive</span>
+    <span class="viz-badge">medium gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>occlusion truncated mask:</strong> Low visibility or a truncated mask hides cues that separate this distractor.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAABAUBAgMABv/EACkQAAICAgEEAgAGAwAAAAAAAAECAAMEESEFEjFRE0EGFCMyUnEiQmH/xAAaAQACAwEBAAAAAAAAAAAAAAAAAwECBQQG/8QAIxEAAgEEAgIDAQEAAAAAAAAAAAECAwQREiExQVEFEzIjQv/aAAwDAQACEQMRAD8AS7nblZVrUQ6ZtGBKTfCNZ25h+Zq/lO/M1ngHZldl7GfVN+DfcjchO9/2pxNlxXbzxLpN9HPOcaf6ZluduEDCP8pxwmA4bcnSQpXNJ/6B9ydyHRq20w1IlR6afKLSNyNztwJK75i/NH624fvmB5ugVaQ47cIdRqqi3OXgijFNnLcCM6MWqsD/ABBgtDbUQ6ozohSjExbr5GtXfeF6QSgAHA1NRMkmwjTMfJEkSdToEGGZX3092uRFoMb2DuqZfcTsO1yvqIqLnJsWM8wcfRbcwuzsfH/e4P8AwGBdY6j+Sp+Os7ubwJ5ht1sXZi1rcnZ4E5alVQNBc9Ht9wXPG61PqFTDLHdSI3OOS0Iqb1fkjFfaiMqjE+I2jqNaTxOzs83Ui4ycWHJNlg9Z3CFgJLanalp2oAVinKTsuY+42MB6gnAYRdRcHZZT1qY9nircO9s6zJyCSVOkizJrsrYllIBP2J7at6q+q0vcoaoEEgyPx3k4fV8yi3p+OtSVr2sFHkzzVzWcbjRrg9LolBYNNylqGxNDzLAe5Im6c8W4vKF6q1N2m+4zoPiCZq7CMPqb4z9ygzph+TGvV/Vy9jKo8QpDA6jC0lzPNQJOpyy0AKEQbKTuob3CyJk67BBg1lYJhLWSkeeuQa2fImCV/I/Z2xjdUO9gfBmHwsqlVOj7nnPkLaTe8T1dOeUX1JAltSQJrizG9O+hh9zDDbQ7fUOC7MAVTXlPxwTG034OC9hmKkNqjwIZWYtrcgTX5GP3HGRgZfIq+TKtl1jxFpY+zO3uGQUW+g1s30Jm2Sxg/wDc6Uc0jqp2c598Iixu9pTUvqcREN5NqEdYqKAa86uzxxNxYG8TzykjwdQmu908MZUsOw5le0Fg2uYHTmkkBh5junB+WpXJ8wzgiUFJYYBYzqNovcYDdl5ab/RKj3PRDp6j/YyTgVH9x3LfYxKtaS8HlqOrmt+y4Hn7jVL1dA6HYMOv6Rh2UvusDQ8zy+I7Y3UXpDE170BIzkcoKPSHnyyGyErQu/AEr2zmRWGmAI9QJF9nXAz6rXgfcsvWG+69zdumUWHegn9SB0OvyLDAD//Z" alt="Left RGB crop for pair 4dcbfdbfa7d88b8ab0560790, frame 1"><figcaption>Frame 1 · instance 1</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAQIDBAUGAP/EACsQAAICAQMDAwMEAwAAAAAAAAABAgMRBBIhBTFBIlFhMnGBBhMjkSQ0Q//EABoBAAIDAQEAAAAAAAAAAAAAAAABAgMEBgX/xAAiEQACAgICAQUBAAAAAAAAAAAAAQIDETEEEiETFDJBQlH/2gAMAwEAAhEDEQA/AM3AMD4PCATAB20hc/kAFPDbZPshlROQ0m9EJWQj8mRALS03HLA9K/DJ9JFPuqs7KwCd6aS8iOmaI9X/AAsV1b0yLB4dwkvArT9hFiaZPKWBHIeccEeORDHq2zeJFmMKl2K1SwyU1QisHh8i6bm0n4LC2rtg9ggQyk15JmPZLgGBd7D+57hkAgDvi/AcxYwE/Arin4JXFYzkgncovAhptaFtRD5LFi9JVlOMe7wYzpsktfckEr5jldhzWtHN2PMmwoIoRkBjyAEACEUOQAMnivJUlyyza8VlRsBoh1Ovk62oL8mPG22zUYlNvk09RQ6uMGfTD/NwZY7OhseItm9RxQkSIWCxBIbJqOeewhAeAQyCKEACFcsUMfqABL3xgrPsT3v1kDESRa1FCtg/cxJVS0+p37cs6HBHZRC1crn3MqeDo5RUlhmdDXxS/k9JJX1DS2PEZ8kOq6fuzt5My7p1sM8bflFisf2efPhR/LOhjJSWVJf2Mcn+1fW/TdMkh1XqGneIw3r5JqxGaXEmteTqA5Ofr/Usof7ENv2LtP6g0F3aTT+SWUzPKqcdo1MhTIatRTaswsjh/JLlKP1R/sZWQXPMyJkep1lVL9Ty/gqO3U6l5hHEPDIuSRorpnZpHRYPYCeMx75HKGSGVfusloVrICM+zSVWd4pFS3pa/wCbya8oCOLQCwc7d06UfrrUkU56KuXGzZ9jq3FPuskNmmqs7pICLick9BOEs13z+yZpaOjWzhtc5bfdmvXoKa5ZXP3LGElhLA+zIelF7RRo6fCrmb3v5LOFHiKwvgkwgNciLUsH/9k=" alt="Right RGB crop for pair 4dcbfdbfa7d88b8ab0560790, frame 7"><figcaption>Frame 7 · instance 2</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code> · selected</td><td class="text-end">0.557</td><td class="text-end">0.463</td><td>match · error</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.144</td><td class="text-end">0.432</td><td>non-match · correct</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.087</td><td class="text-end">0.379</td><td>non-match · correct</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.061</td><td class="text-end">0.451</td><td>non-match · correct</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>non-match</strong></span>
+    <span>Relation: mismatched_attributes</span>
+    <span>Gap: 6 frames</span>
+    <span>Visibility: 2469/2173 (high)</span>
+    <span>Mask area: 618/537 px</span>
+    <span>Crop: 38×40 / 28×37 px</span>
+    <span>Motion: 2.90 (medium)</span>
+    <span>Max |depth error|: 0.60</span>
+  </div>
+</article>
+<article class="p5-item" data-method="B_rgb_2d" data-error="false_positive" data-gap="medium">
+  <div class="viz-row p5-heading">
+    <strong>#10 · <code>4eaf79067e28b98e54f52567</code></strong>
+    <span class="viz-badge">B_rgb_2d</span>
+    <span class="viz-badge">false positive</span>
+    <span class="viz-badge">medium gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>matched attribute distractor:</strong> Matched-attribute distractor remains similar in appearance and pair controls.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAwEBAQEBAAAAAAAAAAAAAQMEAgUABgf/xAAjEAACAgICAwEBAAMAAAAAAAAAAQIDBBEhMQUSQRMzIiMk/8QAGQEAAgMBAAAAAAAAAAAAAAAAAgUAAQME/8QAHREBAQEBAAMBAQEAAAAAAAAAAQACEQMxMhIhIv/aAAwDAQACEQMRAD8A/JzVclGXZPKbfSNU12WSS0zhzluEy3Yx/wDOKZRonxouqCTH+xhv3Za9xCgLkKrkwILSGRmkhXrJAaZVUZz22axI+9ySEPjZV4le2SkbYP8ARa4P6X0WPBxrQz1GKPrFBSGcxvkF4KCfRRX4uulb0dLbI82yUYcMDT+TsOnh2iuqX6aj0ajj7QqGRvsaslCxevZcvXsxUJG1FIWshM3GakDBFwTB+KZoHvolJbxk0bxIrGuUgOwxKb2izSPYjSPb6ai39oJjNknjHugolLka5egzLL07QOGiDyMdVl7mQ+R/kyvJ8tW/luLFdmgR+hQsl9pMbVN+wkZX2SlU5My2e+AbBgvbMyfKCZfwlL6Lxkv+cbKW2yPx89UDHY9jTx/JM8fJJ2TeQ/iUfSfP/iFv5ab+W4se2EC+hFkvibrfItG4dlUqV0Bs8ugMGGGzzPcHmSl08Kf+vRSyHDfCLfgz8fyTHx/JLe0Izlung6E6drgntp3F7NNHTkejpy+dSab2HTM59/4X+qQqOYtLZwPi0XE+NKhI1DsTG+Mvo2Eov6ZIlmiVC6AwJpLsHumuwQX1CC+rRmQv9H7aRXRQ7OWjfPgX3bZ8K+6nCi/XZbsXVX+cdGzuycOXZk4cq22Z0n2FgLiuZneKrv3LXJxMnw1sW3FPR9cCco61olXL8+vx8imWkmbx7LY97PsbcKu17cUS2+KritqIDkYfyXFV0muRkFOx6jsujgxc9aOnjePhWk9FGQoZCgw/Hyk05o68KI1x4RRGEYrSRizoMjkSMnpPkBdV/9k=" alt="Left RGB crop for pair 4eaf79067e28b98e54f52567, frame 11"><figcaption>Frame 11 · instance 1</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAMBAgQFBv/EACYQAAICAQQDAAEFAQAAAAAAAAABAhEDBBIhQQUTMVEUIiMyQnH/xAAZAQACAwEAAAAAAAAAAAAAAAABBAACBQP/xAAgEQACAwACAgMBAAAAAAAAAAAAAQIDESFBBBITMVEy/9oADAMBAAIRAxEAPwBFgQTRYAWBDaRDyRXYCFgFvUQXZV6zGu0D2X6D2X6OsgzvW4/yKeujf0q7Irsq7Irs20FCsWZTX0bZZNP6Lp6AUAWEgvNk9cXRzp+SkpUadQ7izkZUlNi98pRXBwuk19GmXkZMo9ZJmfgKEnZJ9ifySfY155S7Fucn2RQFG2yusLl+Q5v6AAAbdJmppWdeD3Rs87he2a5O3p8qcEh3x57wxyie8M0dhRADY0ZMnMWcrUrbI68eUcjyjcHwc7lsDlatiJhyi1pGLHqGWeZtmWZ+GrckHsiZPY2RbZCYa3lRX2ozEohB/taZ0NBmcpJWch/Df42f8iOlTyR0reSPRf4sqiU7xohGoaRmg1+TmeTipWU/VTXZSc3kXIrLyItYKSvi1hza2uqJHZYJMQ3yJPlivZYlMqiQALBYAQhL/qadBKsqMr+D9K6mi0eJItH+j02OdwRcxaebcUaNxqJ6jST1HABukCF5HRkmWJyvkR2NlyKd38CEsiSIqT6LrHJ9ESbDjZHAWh0dLKQxePnIsq5Posq5PozWqGYeJKjXDxcqNOPxrg7Z0jTLdLxplo7Rt7eTYxWLFsQ0eisWDsViw4G9CcjsXuZN2ZRmFV9Nenwwm+TK/hs0H7siR3qzeTrXm8myOix18GR0kEvhs9S2IhQHfVDvqhEdPFdDYwUei9UAQgv+E7iPgBCS2BAWQJ//2Q==" alt="Right RGB crop for pair 4eaf79067e28b98e54f52567, frame 20"><figcaption>Frame 20 · instance 6</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.659</td><td class="text-end">0.463</td><td>match · error</td></tr><tr><td><code>B_rgb_2d</code> · selected</td><td class="text-end">0.885</td><td class="text-end">0.432</td><td>match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.937</td><td class="text-end">0.379</td><td>match · error</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.911</td><td class="text-end">0.451</td><td>match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>non-match</strong></span>
+    <span>Relation: matched_shape_color_material</span>
+    <span>Gap: 9 frames</span>
+    <span>Visibility: 727/540 (medium)</span>
+    <span>Mask area: 183/135 px</span>
+    <span>Crop: 21×20 / 16×20 px</span>
+    <span>Motion: 1.15 (low)</span>
+    <span>Max |depth error|: 0.28</span>
+  </div>
+</article>
+<article class="p5-item" data-method="C_rgb_2d_3d" data-error="false_positive" data-gap="medium">
+  <div class="viz-row p5-heading">
+    <strong>#11 · <code>02f09cf42fb573326d4630a4</code></strong>
+    <span class="viz-badge">C_rgb_2d_3d</span>
+    <span class="viz-badge">false positive</span>
+    <span class="viz-badge">medium gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>easy distractor similarity:</strong> A different-attribute distractor still receives an unusually high similarity score.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABQABAgQGAwf/xAArEAABBAECBQMEAwEAAAAAAAABAAIDBBEFIQYSMUFREyIyFEJhcRVDUqH/xAAZAQADAQEBAAAAAAAAAAAAAAABAgQAAwX/xAAiEQACAgIBBAMBAAAAAAAAAAAAAQIRAxIxBCEyQRMiUbH/2gAMAwEAAhEDEQA/ABGUlHKWVjEspKOUsrGJZSyuFi1DVZzTSBvj8oNLxPG2QhkRIHdBug0H8pZWaPFWOkRXN3Fju0aGyNTNVlLKyB4vkzgNGVodMvt1GmJh1Bwf2spJujNNdy7lLKZJMAbKbKbKHa1qjtLqseyMyPecD8IN0bkISSshZzSvDG+Sgd/iRseY6oy7/R6LN29UuXHEyh+D9vZVDK8f1uXNz/Doo/pdsXJLDy6V5dnseirul8KuZHf4cnxIWcwacflLshqJumx1K4ukc/YbBL0yfkljBSOYyQwGFreDpj6U0B7e5ZZrclaHhsmG7gfeMIRnUkFwuLNckmSyqyYjlU9Uh+o094Ay5u4VtdIGCSYMPRwISy8XYHLX7GGKYq1qFf6a/NFjZrtlVUJZF2rQ2B4CkGhzHsI6jKZJpw4FBjFH0Tnoka5xsFfDQXnA6lW46nM3YLlPJqFRsBvicwbBXNLsugvQuJwA7dXLFTDeiGlhjeCB0KMMikNVI22oapX06D1JnbkZAHdADxnJ6ntrtLUF1WexcnMsgdyMAaPARnQuH6VzhyzqM9tscsRwyMn5KyebVWSxx2ald6m0vN4VdTbYZWaXP6Hv4XXL4OiTN4OgPxPX5bTJ2jZwwf2gJC02rWa1yg5rZQXN3AWbwoY8HbpJ7Y6fojhLClhNhEsHruH1HISjsTWtj2WWvPdByTt+07ozpmoCxAAT7lJ1WOTjsuB8cldFiwRnCGTRjm6K9YcevZVHe/cLn040yNq23+CfUEIc9xzzYU+G6Wnz2Gw3bLoo3DLh2yolvokskZ7uoynrP5jkxBuPIVsk6o5qrNaEi0OGHAEflSAUgF6ZCDrOkxTZdGOR/wDxAZ4HQTOjd1C2HKhGradJNOJohnI3XDJDtaHxVFgHCWFZfUnZ8onY84XEtI7KVqikrWovVqvZjqEuGohZk9POFYI7LlojJK+qERt5uV3u/SE7eOSXJuJJmo1LSAyjzt+eNlw0nSHRRNltYMnUNRtz3zhplA26BD9U1eDTW4eQZSNgl6Hpp4oXm5/gubLs6iR1HT4LMXNIRG5vRyzbgYXOa6QOwdiEO1XiCxbe7L8NPRo6LjVuepEGvIBHlepHHCb+xO5Siux6SAphqYNUwERBg1QnlZWiL3n9Dyupe2Nhe74tGSglqd1uXmOzB8QtRiFq9NZJA9jfA7qmYx1Ks8iq3X8kZWaXs1nCV8TTsMlGNCqNjidYdGA+Q5B/CA0q0t2wCNogdytOx3I0NbsBsFz1V3Q2zaonq1/+O0ua1guLdgAvNbmoS3JXSSlxe7z2C9HnaLFd8bxkEd1k7lKISHLBsu+PD8vvgSU9TLtjfIficIhUr+kQ97eYeCiHptZ8WgKJCthgjDucZZHI/9k=" alt="Left RGB crop for pair 02f09cf42fb573326d4630a4, frame 0"><figcaption>Frame 0 · instance 1</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAwQCBQYBAAf/xAAuEAABBAEDAwMCBQUAAAAAAAABAAIDEQQFEiETMXEGQVEiUhQWMkJhIzRTkaH/xAAaAQACAwEBAAAAAAAAAAAAAAABBAIDBQAG/8QAHhEAAwACAgMBAAAAAAAAAAAAAAECAxEEMRITIUH/2gAMAwEAAhEDEQA/AMDRXaVi70/IDxkWuDQJf89rP9FiHpor15NzaWzGFzZQaPKrpsjHhvZP1EVx7fSO9VBu6nECZmhVcmoE/p4UW6lI1wN8hWLiZALG9m5ijd+HbQUZJGMaQ9wHlZP8y5TY9rTSUl1fImNyOJT3podVIuMt0bZiYuxSjvqKrhqpbw5iZhzYpuLAJ9knkxOXsai9/Atc2lZ4CyTrRfrKcXCKVBabW1Wa5qLsHFIjFvI4ViSqnXI97QfcLUxyqpJiFfEYubOnyHF0sjjfsUHcB7IudDI15c0X4SJfI08xlOufH4VJ7GS/hR3lBa5zjVUnIcB83aZrfKClvo7aQHq+V4SfKsG+n53c/jYgPKFLphx+DM2TwpeFA8kLbDKKAJ8KLsSZjwAaJ7KxxGTxcxADyjvxt0glcfr/AOIVjlTugq3v4Tx2Ssx2h3JRBvPcK6w8CPIxQb+v5S8+mSxHgbvCyaxzv4OK3ovkjqrd0JKcS2cN2K5Mw9Uil9GVlHKXewHuAU5KOUu4WtcUFjCw/tUek32CZLbXNloaO2AEV97/ANpmKGvZSZFymY46RSObOsZwlcvNZA8Md7p2VwhhL/4WWysgy5JJ55SnLyeMaJQts+jaKQ/CaR7p580UZp7wCq309IG6QJD+0LPapmSZGe5weWt7LIzZVjSY5K2a+0LJ5xnBTtRl5icE0uyJmZ204oBTmU2pSlD3WvP1Cj7I0utYuhEaFIidYxHDQosCIiAHlR9THLVi9QkGPldPuSVuD2KxXqOAwZgfXBKzubG9Mtxv8NLiaucTSmRsdZcKSjnl7i4nk8p/QtGg1PTmP37XAJ1/pZwP0y2vLcjkw70/weiXrZoZIzH3QXvG0hPvG8UUjPjOYdzeQt/ZUUGY7+s4BJEJrOd0ZyZOAUCtwtvI+VqYqVSK2tM4ERqhVKTSrysM1TtDC6SicTuwqH1Ji9bDdJVlquwbUMnBlzMZ0bB3SfKW40WY97Ceg378DaR2WrA+Fm9Bjk0dhjmhNH3pXzM7HIt0rWfwV4HnYqWano1IfwZXasUvLq9YLCObpcGcwte3n5WazfTGfiuL8ScyN+xbSl2q7GlKbc9AaT7PnbodYhNPwi5TadRr+xK37mk9+Vzpt+0K5cm0Q9cmIjZnycHGLU5DpGZIbcSP4WtEbftCmGgdkK5Fv9CscopcXRaov4KtoMOOKqaL+UwG8croS9NvssS0RdjskFPaCgv0fAkNvgspsFd3Kto4/9k=" alt="Right RGB crop for pair 02f09cf42fb573326d4630a4, frame 11"><figcaption>Frame 11 · instance 0</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.129</td><td class="text-end">0.463</td><td>non-match · correct</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.156</td><td class="text-end">0.432</td><td>non-match · correct</td></tr><tr><td><code>C_rgb_2d_3d</code> · selected</td><td class="text-end">0.670</td><td class="text-end">0.379</td><td>match · error</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.867</td><td class="text-end">0.451</td><td>match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>non-match</strong></span>
+    <span>Relation: mismatched_attributes</span>
+    <span>Gap: 11 frames</span>
+    <span>Visibility: 4210/2679 (high)</span>
+    <span>Mask area: 1048/671 px</span>
+    <span>Crop: 55×46 / 33×40 px</span>
+    <span>Motion: 2.43 (low)</span>
+    <span>Max |depth error|: 0.53</span>
+  </div>
+</article>
+<article class="p5-item" data-method="geometry_only" data-error="false_positive" data-gap="medium">
+  <div class="viz-row p5-heading">
+    <strong>#12 · <code>ce6ec4e4cadd52d193b0f5a2</code></strong>
+    <span class="viz-badge">geometry_only</span>
+    <span class="viz-badge">false positive</span>
+    <span class="viz-badge">medium gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>matched attribute distractor:</strong> Matched-attribute distractor remains similar in appearance and pair controls.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAIBAwQFBv/EACIQAAIDAAICAgMBAAAAAAAAAAABAgMRBCESMQUTIjJhUf/EABoBAAIDAQEAAAAAAAAAAAAAAAAEAQIDBQb/xAAgEQACAwACAgMBAAAAAAAAAAAAAQIDESExBEESMlFh/9oADAMBAAIRAxEAPwDlEhgYAARg2EN4Sk30QSGiOQrmbx8dyKOxIt0Cn7B4zQSocQViY+AGponDDH7NAAAIAAwlE+iSBZPEUTn2NZPEZZT1nR8an2xe2eFjnpDYiYaP4l0LawbD7MIZXIjE+wTZprt01Qeo5kZYzZTboh5FPtDNc/004TgR7RLOeMCIJvECIt/UlfYH0YrbOyjy0L5YylTO5WsiIzes0KRPkUKZPmaFC1yFctE8hXPsgB28RZTZ+WGWyzojjzbsRSxbEvHs9BT3AaSDiR2tF8qziuLchp3RiuTKkLavxZYkRKOoqu9NDj8hdsyOeHT5lOJs4V9rhNo7FE/khOyOM1Kz+g7f6YFf0Q7/AOjBnhtlfhU+R37McrdHoi7JIHwR0ba27Xh1OJw308E4HBeJtHbprUI4KWWekK2XZ0NRHwjhbojJFsFpWSl2UYCAMEz0hTya/ODR53ncOXk3h6jNM/I4ynF9G1Vjgyso6eJtUq3hmla0ej5fxjlJ4jnWfFy/w6kLYtcizgzDRJ2SSPQ/HcLWm0YuF8ZKNibR6nh0qutdFLbfwQunnBfRXGuCWDy9iN4yU9FBL+jpjaIidABMIGIEz05BK79gK3gAEqoNdpFMuNBv0hpWMT7GXjrKzeRGVEI+khk86QinpO6MI4FkvlIsT0lMRDAZDpjCIdAQf//Z" alt="Left RGB crop for pair ce6ec4e4cadd52d193b0f5a2, frame 10"><figcaption>Frame 10 · instance 7</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAQUAAgQDBv/EACQQAAICAgIBBQADAAAAAAAAAAABAhEDBBIxIQUTIkFRFEJh/8QAGQEAAgMBAAAAAAAAAAAAAAAAAAECAwQF/8QAHhEAAgMBAAMBAQAAAAAAAAAAAAECAxEhBBJBEzH/2gAMAwEAAhEDEQA/AM4C1EoYipKLUToYFaJxDzSJ7iDJBqBRKonNMPYY/oaAgeJKEACBJQAXABME5UhpfAJKSRxnmSOWbPX2ZJZW32b6fH3rKJ2YaJZmU95/px5WBs2quKKHNs0RznfHnT+xbKQI5XF9lNlCkuEo2NDyM00EX4Ni68m+EuUTm2VuDNUZewSBYCokV6OGfJUTRLwhftT8MvqjsiM3iMeXLcuyRlaM+SXyJGf+nZXFwwv+mnkCzlzCpAB07Oc1Rbl4KTdoQg4cjU+xzrZLihFHwxlq5OkZPIimi+p4NOyExu0RnMNRSfTFu2uxl2Y9yHwbLqnjITWoRZZUyRkc9mVTZSEzrp8MbXTSpl1IzKRdSADRyKykc+RWc/AxHWMrYw1Yu0KMU/mOtKSpGW+WItrQ0xL4lpAhJcQtnL+ms5RM+6rxs7p0cs65RaJLj0Dyu4msjM8J0NtvWbbdCvLicH0dCq3VjM8oF4zLKZjeZRdEWyv00+yKsZu90rLLaMvvWWjc2RlNIFFs045fIbak34FuvrtteBtr4XFI511nuaYRwY45/Eu5nCPhBbM5YdQNWXAMDPkwKSfgWbmjyTpDoLwqf0STaFh4jY9OycnSOUfTsv4z3EtCMvPE5v0+K/qS/RixHksfp8/xm7W0GmrQ/wD4UV9BWuo/RFybGkjNg1VFLwaVBLoPRLINkgkogRCP/9k=" alt="Right RGB crop for pair ce6ec4e4cadd52d193b0f5a2, frame 19"><figcaption>Frame 19 · instance 6</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.782</td><td class="text-end">0.463</td><td>match · error</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.901</td><td class="text-end">0.432</td><td>match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.969</td><td class="text-end">0.379</td><td>match · error</td></tr><tr><td><code>geometry_only</code> · selected</td><td class="text-end">0.927</td><td class="text-end">0.451</td><td>match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>non-match</strong></span>
+    <span>Relation: matched_shape_color_material</span>
+    <span>Gap: 9 frames</span>
+    <span>Visibility: 180/205 (low)</span>
+    <span>Mask area: 43/51 px</span>
+    <span>Crop: 12×11 / 12×12 px</span>
+    <span>Motion: 3.19 (medium)</span>
+    <span>Max |depth error|: 0.27</span>
+  </div>
+</article>
+<article class="p5-item" data-method="A_rgb_only" data-error="false_negative" data-gap="medium">
+  <div class="viz-row p5-heading">
+    <strong>#13 · <code>471098d1b1513d7569c5731b</code></strong>
+    <span class="viz-badge">A_rgb_only</span>
+    <span class="viz-badge">false negative</span>
+    <span class="viz-badge">medium gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>long gap motion:</strong> Long-gap motion or viewpoint change lowers similarity for the same instance.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAwABAgQFBgf/xAAnEAACAgIBBAICAgMAAAAAAAAAAQIDBBEhBQYSMRNBFCIjMlFhkf/EABkBAAMBAQEAAAAAAAAAAAAAAAADBAECBf/EABwRAAMBAQEBAQEAAAAAAAAAAAABAhEhAxIxE//aAAwDAQACEQMRAD8AoMHMfZFgBVtiB3plycdgLFCuLc2kH6BBJMl8S97MnK6rCltKS4MzI7lcNpM6UNnWM6d2xp5bD0ZsLeFI8+yO4rLVpMn0vrc1lxjKXDZ1/N4b8s9IXrYgeNbG7EjJPbaCfQo4EIQgAGNsdiS2aA0mq4ucvRyHcfWWpuNUv+Gv1zqcaMeUE9PRwFt0r8huXJ1P6av0hZmWze5NgW/P2y1bV+m9FZrRXhRgyrQ8P4rVNP0MJ8x0Bh6B2t1P8mCrcvR08v7cHlfQ894GStv2z07BujlYkbE+WiX0nGJpYFEJCYs5A/YHLyY41Mm2WNGF3G5xxn4nUrXhqWvDletZk8rJai+Crj4r2m0Tx4+c25+zRhFJLRbHkimfNFeeMnX6Me+vwsZ0mk46MzOxtttDqnnBlTwyRfY8l4vTIt6ECR9tWRl/g77tfqynXGlyOB22vRrduztpzYvnWzi5+kZS09Sl6WvsYHi2fNTF/wCgn2SiQTWin1PFWTjta3waFkeASW00wTzph57kYzxslx19h4rUUanWMePzOSRmHpeb1aWw9RJexra1ODETS3wOGmDlYkvk/VCo6fKb5R0cMWM/7IPHGhFcJCXK0U10x6OkJ+0b3SuiJTT8Q2Liuya0joMepVVrjkR6WpWIVdZxEqa1RWookJvYxIIIW2qMTLyc1170WsuEvHgy74ecWn7ACnk3/PvZQcdMtSr8JaYG2PPBV4Xj+R3jXcBJBqocirqbLNdL2VVSRRVJEoweuA1NMpzSLGLUpNJmtRiQik9E1eqQirFh4qqgmyy/Y/paESN69Yh9GEIRgErIRnFrRk5WM4Sb1wbAO2pWR5QAc1bj+bfAP8P7Zo5cVVJpGfZkOPB0m11Gp4R+NQHVunrQJWeTLVFCnya7dGtthMab+RM3aJOUEUsfEikuC/VDwWjk5JiHYwAMIfQwAf/Z" alt="Left RGB crop for pair 471098d1b1513d7569c5731b, frame 6"><figcaption>Frame 6 · instance 5</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAABAUCAwYBAAf/xAAoEAACAgEEAQMFAAMAAAAAAAAAAQIDEQQFEjEhEzJBBhUiQlEUI3H/xAAaAQACAwEBAAAAAAAAAAAAAAAAAQIDBAUG/8QAIBEAAgICAwEAAwAAAAAAAAAAAAECEQMxBRIhIgQTMv/aAAwDAQACEQMRAD8ABO4yRUsld1/pRyAF/pZPekJrt9jU8ZKV9SQb7Q+rHTH/AKRz0hIvqGH9JLf4P5Dqwpjn0j3pCj75B/J773D+hTChq4YOAun18L+mEyaxkQjjZHJxvJHAAWQeAXX5lW8BKKdRhwZKOxrZhd4lOub8iaGqny9w/wB/pcm8GahpbOfTNVF1Bb1c1+x5a6a/YHlp5pkPRkgodB8dwnn3HLNxmv2AuOCMoOTFSFRpNn3aXNJs2el1HrVo+YaKbptXk32w6hWVryVTRCSHMlhHMll2OJRkpKy3APqPayU71BAk9Sp5ROK9HHYn3GCk3kXV0V8ukMNyeE2JVqHGzs2p0jdBKg2e3xmspAtugx8BtGsXHDZOVsZlqSkixxTEstvk34RKO2S/g5hKP8LOUMdD6Ij+tGcs0Moz8I0uwqVaSYLZxc+httdaeMFWWCUbK8kEkPU+cERcCSxCBVO9I55iBNY3GDFNdr9Voda+H+tmecuNzLMeycdkd0n+Bn8tzHeulzjgAq26y6WYpm2klbNa0VVN57DqsNdlkNlvX6suW13xXtYRyY9diaZDC/p1Hf8ACuj2medM4douXV6ZMg45khztsuEUKItKXka6ODlHwVZ/IlOZ/IfdqnjALK1yPXVtdlWUjmowjbWw5QeDMamtwubNfOPNCLddPwy0ieP+iUdiSWbJpGs+ntDXJLmkZvRUuy7r5Nhttbqivgx8x+V0xdIv012Pftun4rEURlttGPaj1dsnHstTb+TwizZd9hi+7aqmniKFWq2XlnjE03/TqjF9o3YeUzYX47BeGCt2O2M8qLGGi0bpWJI1c6a5LpAlujTf4o7mHnHl+chCdtCLVUKa8IAlpZZ6NFPTceweVUc9HXhkjNXEy6OR8A2s06vWAhHfkmpdfQQv0m2quecDqmvikkVV9hUDyHJ53PJRphotryi+MiqPRakcdlhYvJ3BFHckbGexg7lEWyEngBHroRlFiu6OJMPss/EBs8s9Vw/evrRnyn//2Q==" alt="Right RGB crop for pair 471098d1b1513d7569c5731b, frame 14"><figcaption>Frame 14 · instance 5</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code> · selected</td><td class="text-end">0.103</td><td class="text-end">0.463</td><td>non-match · error</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.167</td><td class="text-end">0.432</td><td>non-match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.500</td><td class="text-end">0.379</td><td>match · correct</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.897</td><td class="text-end">0.451</td><td>match · correct</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>match</strong></span>
+    <span>Relation: same_instance</span>
+    <span>Gap: 8 frames</span>
+    <span>Visibility: 531/316 (low)</span>
+    <span>Mask area: 130/79 px</span>
+    <span>Crop: 21×17 / 14×15 px</span>
+    <span>Motion: 4.66 (high)</span>
+    <span>Max |depth error|: 0.31</span>
+  </div>
+</article>
+<article class="p5-item" data-method="B_rgb_2d" data-error="false_negative" data-gap="medium">
+  <div class="viz-row p5-heading">
+    <strong>#14 · <code>cac5870366e5144cf368c8fb</code></strong>
+    <span class="viz-badge">B_rgb_2d</span>
+    <span class="viz-badge">false negative</span>
+    <span class="viz-badge">medium gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>occlusion truncated mask:</strong> Occlusion- or image-edge-truncated mask removes reliable same-instance cues.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAHAAAAQQDAQAAAAAAAAAAAAAABgEDBAUAAgcI/8QALBAAAgICAQMDAwQCAwAAAAAAAQIAAwQRBRIhMQYTUSJBYQcUFTIkYlKBkf/EABkBAAMBAQEAAAAAAAAAAAAAAAIDBAEABf/EACIRAAICAQMEAwAAAAAAAAAAAAABAhEDEiExBCJBURMUMv/aAAwDAQACEQMRAD8A5umVWTpzpo909Q3uUNeUluYtg/qIR04S31e7Xbs/8ZRh6ltd4/FnbXcMFI2Uj7LdWdWVlV+Yn0t/U7l0ZqXBWpJ8EVqdxl6JPKTUr37wgqK1qGYgfMMPTXFftKPdby0Hf3FOHYHs0T8Qj471Pi3otbaQCRdRlS7ETZfSL6ZNKrUuXqrbqE3kZKJE1Npk444liEh9Aws4pyighu8E6/pbcnVZ71jsZlGcBbyPNU04hXI03btBZOWdWZkB6Se0e4/B/l81ffbVe++5P9R4nH8XStOIQxI7xHytSpD8af6I9PN1kAOO8ktymOlLOxGyOwg0HUgfMbel7bO5OviWfYmlRW3Ss3ty7MrIYsT57TZLXRuzEGO0YTjuEOoltJVu41I5Stk7T5L7g/U1uJYtdrEpOgYmVXmUCysg7nHNa7/ELvSfLtW4psbtCjKhbVh5MmKQyhh4MXUcKOJ9Mcor93IRPsZhTUk8fUXyB+IMtkElbLG3/FrC0t0kCU2Ve1zfW2zLi7Hdr2+NSlyKSlpBkkHuWZUklpGRV1Ed9S44jFS7LrRz2JlSvYyfhXmm1WB8Q5t1sKi6Z6E4D9L8DlOAF1fSbCu9Tlvrj0qeCy3QrobhP6Q/U63hsX2mftrXmDnrf1aOfyGs7d5BHUpIc/NnPrV0xEmcQ5XNXXzIlp25/Mn8VSfeDalzdIQuTp3F3e9jAfAkuVXAEmogy3lEHcRMlTONspHkGTOKIF2j5lzzHH1/tjZWmtQeoc03q3jR7wpK1R0XTCRkBPiV2bx4tBIHeWVTi+oWLFKzzXcWWcoE7sSyo9xGhtT94V2Y6WeRIlnGI3gRiyLyA4eikW9gNbmNYz+Za/xHeOLxI6SPuZuuJ2llRVjNc4Gu0v8ABxfaUdo5j4K0oB5PzJ9FO2AAgOWrZGqNF/wVZWsmWuoxg0+zjL8mSJdBUqJZO2DmfgnoKEbUiAvIYrYuU2x9JPadWesWLphKLl+BXLrJUd4dmAZxvIHGcI52hl6CLFDKdgwezeMvwrCroen7GLg8jZi/SdlfzJsmPVuh0J0EHTM1GqM/GvA0w6pKWvqGwRJHBooTTGwBNgBN/Zb5ERuikbsI1+IKi2baMVOo9hLriuPJYWuOwjHF465BFij6IQ1gKoAGtSvFirdk88nhG2h4HgTNRZkpEDWpmosWacRMnj8fLUrZWD/1B3O9FJcxap+kfELZmphxzTI9JZuOx9nZjC8ZzdZ0FcidTB19hF6v9V/8mNWEmc4xuJ5fIYK5ZAfvCDj/AEtZWQ+Td7g+DCcn/URNTEkjm2xqmiuhAla9IEcEXUzUIE2B3Fmq+ZvOOP/Z" alt="Left RGB crop for pair cac5870366e5144cf368c8fb, frame 10"><figcaption>Frame 10 · instance 3</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABAABAgMFBgf/xAApEAACAgIBBAICAQUBAAAAAAAAAQIDBBEhBRIxQRNRBiIUIzJCUmFx/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAIDBAEF/8QAIBEAAwACAwACAwAAAAAAAAAAAAECAxESITFBUQQTMv/aAAwDAQACEQMRAD8AkMOIU6MLQh9ABEQ4zABCEJuPtgAwufohO+EPYLZ1OEBW0jqTYb/6NuP2YeT1uMd6ZnWde54kLzQ6hnYiHG4+yhMQhcfY0ml7OAOQlOMVywe/LUF5MrJz296kLVpDKWzSuzow9mdf1JvwzKvzkvMjOyOrVw9md5G/CvFT6a9udP3IzsjO4f7GRf1hS8MCnmSn7F036MqXwGZGXJt8gjyJP2yiVjfkg7Bkg5HrzymQeVLfkp0NwjSZwj+TL7KLs1xXkpnYl7AMq/8AV8krvQ8yQzepqO9swcvqje+2RV1K57fJg3ZD2+TP3QtW10gvI6nY213MF/q5UtLfII7O6fJtdKsqhOLlop/KOT2+x8T8bysjTSYfL8XyaYblFnYdG6z0+iC7+0L6n+QdPsoah270QeSmzUplI8xycWWO2pegOTSNbq+RG66Th4MeS2Xl/YjPVJZEYryDWdQgnrZgfz7JeWThZGT3Jm94LSJ8Ga7u+TlMCym0mSryK4rWxrrK7I+TBki16iyXRzme3JsxrKXKXg6TKxu+XBTT07cttE0+PpB426MSrAnLnQQsOda9nQxxIVx8FF8OOEH7NlljSMX5J1/5NEZ5M/8Adl+RW9vgCmtFFpnGtEZ2yfsh3sZtkdjinTfISU/+gveTjM9wqFKT+yam/sFUycZh6dL/AJGicbn9FCZGy1xjwZ8uGKXgyevQmeVCK5ZW8mmfG0YuXZZLetgUbLIS5bPOv8XXgOl8G/dCua40Zt1C29FSy561slG6U/JFY2hpSfoNODRS0g+yG14BZ18lUhaj6NLuHUynY6kexsmEKZZGYKpElI7sAxTFL9iiMmXRkGzoPbU9eDMye6L4ibUprXgEs7ZS8ErjfYAGLVO2aTR1HTegvIS4A+n0wdi4PQegUwXbweZmembMMI5u/wDFZwr32sxcnok65P8AU9hyoV/B/avBy2dVW5v9URVM0OEz/9k=" alt="Right RGB crop for pair cac5870366e5144cf368c8fb, frame 20"><figcaption>Frame 20 · instance 3</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.086</td><td class="text-end">0.463</td><td>non-match · error</td></tr><tr><td><code>B_rgb_2d</code> · selected</td><td class="text-end">0.146</td><td class="text-end">0.432</td><td>non-match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.236</td><td class="text-end">0.379</td><td>non-match · error</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.493</td><td class="text-end">0.451</td><td>match · correct</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>match</strong></span>
+    <span>Relation: same_instance</span>
+    <span>Gap: 10 frames</span>
+    <span>Visibility: 1694/428 (medium)</span>
+    <span>Mask area: 425/102 px</span>
+    <span>Crop: 32×32 / 11×23 px</span>
+    <span>Motion: 3.31 (medium)</span>
+    <span>Max |depth error|: 0.53</span>
+  </div>
+</article>
+<article class="p5-item" data-method="C_rgb_2d_3d" data-error="false_negative" data-gap="medium">
+  <div class="viz-row p5-heading">
+    <strong>#15 · <code>b808965c59db1c8085fc5d97</code></strong>
+    <span class="viz-badge">C_rgb_2d_3d</span>
+    <span class="viz-badge">false negative</span>
+    <span class="viz-badge">medium gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>biased depth estimate:</strong> Biased depth estimate shifts the recovered geometry of the same object.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAABAUCAwYBBwD/xAApEAACAgICAQMEAgMBAAAAAAABAgADBBEFIRIGEzEUIkFRIzIkQmFx/8QAGwEAAwADAQEAAAAAAAAAAAAAAgMEAAEGBQf/xAAgEQACAgEFAQEBAAAAAAAAAAAAAQIRAwQSITFBEwVh/9oADAMBAAIRAxEAPwBMP6mKuQrIJaNtSnKoF1RAHcGUdyoKLpmZZtkzit0Z9nJ9NaQYOG+zcglCitSsXcm2yYDQ/eoXnKWYwOmomyFttE2SO5jXDEv9om3csw6PsEKZFTuB6Ux4RGqvbgTR4FJRAZlhnJXkAbms47JS+geJ/EqxRrliMkvAsz4KWnQNtqH4+JtQSJvPnjgVyFJWLJJdAkmc1qQyW8KSf+R5oynqW0C3axLTlll1CuatN2R4yrH41/bDgQJQ3BRlRXZ9/wAyFaqrSWR/CdH5i6zLIs1uIca4G7vR8mWtSfMGv5QMSu4ta8snzBWBDeW5uEE2ZKToJuvY2+QM1HpvOYkKTuY3yLr18zW+jcKy7IBYHUbOccUd0uhK5Z6Dh0e5p44rQKolOPSKUVYSBOL1uqeon/CqMaMwZTmn+Aj/AJL9QHkbPGkzuCQx2YgOds/uanjasd8DvW9TK5uzaWEpq5m2hSgJhRdGmVc84XkCi/G4mvQ+QIheXcci/wA2+ZV05gSjYafBBN+M47bGoStX2ymuk3ZAQfuBFoxuwriOOfKylGiQTPW+B4RMHGVwujqI/SnDpVWtjr3NvXavj4D4E5f9PWPJL5x6Q/HGuSQ71LB8Tir1OzxBpk6Lhb0DAuaUpQTAuFzfOwbML9Q5C/TED9T6OQmcrq98NFWZie25Oo2420FjudzqBYeoUeza7My1J+ZBUIbcffRAoeotykFOxByuugcjrojW48SIdweH7vIqSOtxfh0Na+5puFqFeSv7keW44pNBQ5NjX/j0qE66heNknYJMDJ3WJ8p0Zx7W7srNFTcHUS2JsS8qw2Y3Rw6yScaYSPGvT+YTcvcecs3u063+Jm+HT2XBMYZuf/rufRyEox29ljCVt8j3FQvLW9Q1mCVA7mXRpugiy9a1Jmc5G822/bC8zIJToyjExfqW77iZZFVmnyFcOwH9po+P19SCJmb6LMPsA6jDis/RBY9wW1kxtL03GSRvPIFBqSWB4N4uqB3C99zkMkNknEsTtWWK3idxth3bQRQexCsazwEnnG0EjydsgUjqDta153uUZLkwjj08xO+fBC3RfRWFXyb5lWTln+oMnmP7Q0Ivc+XcS5WIcrOtZ5jUa8J3kqn7MSA/cI89PjfIp/7EzSoGTaRs83059Rx/uBfxMJnVvx+R4fGjPdMbHV+E+P8AWeP+r6Amc2h+ZPgnToRjm26DeA5UaCs01SWrYu1M8oxcpqbwAZv+DyTdWNnfUj12mt/RHp4cnjHqnqWK2pSx1qSUzxWio//Z" alt="Left RGB crop for pair b808965c59db1c8085fc5d97, frame 8"><figcaption>Frame 8 · instance 3</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABQACAwQGAQf/xAAmEAACAgICAgICAgMAAAAAAAABAgADBBEFIRIxQUIGEyIyFDNx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFxEBAQEBAAAAAAAAAAAAAAAAAAERIf/aAAwDAQACEQMRAD8Az8UUUBRAbi/7KuVmpjqTuBb8QvzGm1R8zN5P5D4kgGUW59m+0DZC1W+Y8KCPcxS/kBUj+Uv4v5D5EAmBpiNGKVsXNS9QdiWuj6gciiigNnTER1GW2BKiYFXOzFprPfcxvI8q9lhUHqW+azW8yAZny3m24DnLWHe40Us3qdVv5+M0vDcIczTa9wM22I477jVLVHe56O/4iTT0vxMlzPDtgudiBDx/LvXYFLdTZ4Gct9Y77nm6r4nYh3hM1ltCkwN0B1ucjaLRZUNSTUDg9QfyL+NZ1CCwZyf9SIGL5Ji1plKuon1CedjliSBGcdUDZp4gqpjN5hiJrOB5hMPxQwTniuqv+Mp4B87x3LeD01/yOtccnr1MJ+RcsuY7ahKyoHE9/Ey+fUFsMzoo+WlMscdaVvGpXWlnPUI4WIVcEiUbPirS9Y3CjeoI4keKgQwfUBqwVycKb0JRzFDg7gAGrVwQRKN1ZoJZeoTuTxfqVchPNYAe697W8TLnHYx8w0YuIf2b1CuMBWomMq1bdiKfGBMnFayw9Qs1m5HobmpAPx8IL7EurUFI0JIdAdRVKXcSoLcYPUKtKWBV4LL7QIC2h3AvJZn6yQDDFgJU6mb5attmBAmULD2ZKPF4FBdG+ZapySvuBeNepzREYuWCI79ymA4b3HAGR/uURHKUQJdaHcuYARrAIItz18dCWuJsd7wfiQa2tAqDUdO1/wCoTsBhq6lDM4/9wPULai0JRjsniihOlg23BsUnSmegNjLZ7EhbjEb6wPPGouT6mN3ePqZ6A3DVt9RGHgaj9BAwQN5+pkiU32deJm5HA1b/AKSZOFrX6iBjcbhrbWGwZo+P4n/HAJEMJhpV6WS9DrUgiC6XUQWSERSj/9k=" alt="Right RGB crop for pair b808965c59db1c8085fc5d97, frame 17"><figcaption>Frame 17 · instance 3</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.109</td><td class="text-end">0.463</td><td>non-match · error</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.204</td><td class="text-end">0.432</td><td>non-match · error</td></tr><tr><td><code>C_rgb_2d_3d</code> · selected</td><td class="text-end">0.101</td><td class="text-end">0.379</td><td>non-match · error</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.448</td><td class="text-end">0.451</td><td>non-match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>match</strong></span>
+    <span>Relation: same_instance</span>
+    <span>Gap: 9 frames</span>
+    <span>Visibility: 346/485 (low)</span>
+    <span>Mask area: 87/120 px</span>
+    <span>Crop: 20×14 / 16×16 px</span>
+    <span>Motion: 3.87 (medium)</span>
+    <span>Max |depth error|: 0.59</span>
+  </div>
+</article>
+<article class="p5-item" data-method="geometry_only" data-error="false_negative" data-gap="medium">
+  <div class="viz-row p5-heading">
+    <strong>#16 · <code>91d152fd418c38b427c69d09</code></strong>
+    <span class="viz-badge">geometry_only</span>
+    <span class="viz-badge">false negative</span>
+    <span class="viz-badge">medium gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>long gap motion:</strong> Long-gap motion or viewpoint change lowers similarity for the same instance.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAABQYBBAACAwf/xAApEAABBAICAgIBAwUAAAAAAAABAAIDEQQFEiEGEyIxQRRRYQcjMlKB/8QAGQEAAgMBAAAAAAAAAAAAAAAAAQIAAwQF/8QAHxEAAgICAwEBAQAAAAAAAAAAAAECEQMSBCExUUEi/9oADAMBAAIRAxEAPwBeUObyYVssUICn2yftW4XjpZkwBwsKsxwjNFyDCgqx4XUPCHMmpdRP0lCW3PACrSP5HpcJcosBIFqtFs2mXi8UoFuvQkz/ABUqGObI3k02pTiGLKUgWVWyctuMaJUClfSLCylNLnPIIYnEqAKW02DMaE99pSk3LzOXculrvM90uQ5t9IMe/pVORU5DXj+QRBo5FWDv4XNPEpMZEXGrTHp/HZM1lts2q5ZNV2LLM4ofvDsTH3juDyO/3XPznw5+ojM8J6++kvxTbDxV/OOxS5bfz/O2+MYZySPpZblKVpmXaUnaZQ1G7fHL6pXfmk2xyNnjDmFeXSSkT8we7Tj47sTIwRuK3Ql9NkZfRhkf64y79kt585yJTRRjZTcISL+0vNPzJKM2dDjx/WONITu5S2AgIv8AhA9v8gbRm6Rhm6QvYmtOfkHmOlV22uGFLxb9IthZf6eQj6VDc5QmfayJuzGm9gOx3Fy9A8R3OPiRD20vPL+S7MmkaKa6kckN1Q84bKh78s3sGWwiPikN8pc4raR73D5utVye+lMcFFUGOPRUY4fK0Y0czo8oH8IS1jnEBGNfHwAP5VjdDN0MOfP7QKKGu+JVhgLxa4zt76TXZ18LuKHOukF3EZDSUcA7VLZwe2E0FbNWjnSVoUHx2019qlLiOfdow+P1uIK0cwFYLaMV0ADguBXGaB8fYCYS1q5vhY9vYTKYym7FrlI93Gir8GCS0OIV9mLC190FcaxvGgFHk+D5Ml+A6LEDXXSI48HIgBT6x/CI6vGL5x10pG5MSNtnAn0fErRzbNq3uIfXOKCrV8QtFUdrj+DfSgsD2kFbUppXmIXdngOa4vA6QZ7y0kJ4khbM0tcEvbTTusmILPkxX2iieP8AUAXy8TZ+lBnD2/FbS4MrLEgK4sh4O+iqNSnUhrXuerrXcGgH7KyKEuqguOxJh4n9lNWwxg5ukEodXPktD2AkIrhuGt7ljNj+FY8P32BHGxmUW/8AV6PDieNbeAU+PkQrY/yzuQ4WOMV9PKdhmRZj7a2lReKXpO98GggxXZGLRaBfS87ewsyHRu/BVl2NHE8boa6WUppTSuOaQp6Ioi1K0c/ioErz6yPINkAKsfHobV73FbNlJcO0KBSKLtVBi47nOqwEhbbJ9mW5g+rTf5Pmvgi4tdVpOMHu/uH7KrlSNnGxX2Dnc2OtryER13kGXrnAiZxr+VymxQGkoc8APqkvppe0Gek4n9TsmXC/SyEmxXaEz5XtlMv+3aToX8JhQR+KQyRhSqGUnJn/2Q==" alt="Left RGB crop for pair 91d152fd418c38b427c69d09, frame 3"><figcaption>Frame 3 · instance 2</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABQACAwQGAQf/xAArEAABBAEDAwMDBQEAAAAAAAABAAIDBBEFEiEGEzFBUWEUIjIHFSNCcTT/xAAYAQADAQEAAAAAAAAAAAAAAAABAgQDAP/EAB4RAAIDAQEBAAMAAAAAAAAAAAABAhEhAxIxEzJR/9oADAMBAAIRAxEAPwCFJLK5uCJx1cSyq1y/BTYTI4By4BawR5CYZIm/k4BY3UusJGOc2PwgUnVdmUkkkJHNCuaPUBJG78SCnbT7LzCv1TajdwSUf07q/uODZ+EFNHe0a9JQ1rUVqMOicDlSlOOdSSSXHERcuEri5nAJ9kwCG7cFSu4k/d6IU3S7GrVH2ZXYaEJ6l1M/UhrTwFQk6stwU+xE77CMKTrJyxEvVylkQXqrWwW3xA5wUMUksr7Mxkd+RVmtps07ctYXD4S3S079Vo2i6MWYxJjaTyvTpNE0CbprvxSNFgNyvMZ6j6x+9paR7p0Wq2YBsD3bf9SSi5amLKLlqYd0bWZKF0wvd9u7Ayt/WsMswh7TnK8edYc6cSZW56Z1IhrY3uzlbwlWM2g2sZrV1cPgH3SJAC3NyvlRWpO3A4/CkVTUziqUZOkK/h57rspfacc+qDl+UZ1eIueXILtwVInZOmSQ8vXrv6eQaYa++5tIA9V5Aw7Si9DVrFYBkchaM+6y6wclhn0i5LDV9aUIrmrSfQw/xj2Cwlqs+u8tcCCF7X0fNptnSnutlpk2+SvMuszANVlEGNueMLHj0fryJzk7ozLTudtRnRLborjATkAoI5rgNwCvaP8A9AJPKrLUl5s9Yhsd2Brh7KtPaLnbWnwoaEh/b93wqccu6w5U3g4aJVbUBurEKxlMkaHxkFF6qA9RibkQeXAoHYplriQFp78JjndkcIfIxpHhQNuLI7cWZwsc04wnMDwfCK9qJzyDwVNHTY4eEzmd+RfCtX1K5BHtikc0f6udia3Lukyc+pRKOnGDnAVgbY24AWTkl8F9fwHTae2OsQBzhDtNgkZqAaQcEo8cv8+FPSqtkstdtxtT827o1hJ15NLViMVAA+oQhry228ei0jQyWptHoFlLjLEFt2Gnario1TgWphOAVYkIcFVkY7PHhMcBNWcwvx6oLKwtKMazWeRvaDwhDJmubh4wVP053qMOkL1FU1gXblZYNrQn9sHkEJpbjjIUrTJ2mO3JDlMAIUrBkoKLZyi2OawlX6zO2R8qKuwZ5CLVaRcdzhwqecPOlXOHnWXK4LI8J0kTJxhzQngYGEsLc2JElxL1THEckLJGkOGcoHf0EvcXxcBaApc4+EAUYK3p1yN2GZwoW1bQ85W9lhjf5AUH0cROdoSNWDyjJw15v7Aq9BSfJxjC0DakQ/qFM2KNv4gBCkgpJFOhpuzBfyioYGjAHC5GOFImCRmLlLtKRdRCf//Z" alt="Right RGB crop for pair 91d152fd418c38b427c69d09, frame 10"><figcaption>Frame 10 · instance 2</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.507</td><td class="text-end">0.463</td><td>match · correct</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.431</td><td class="text-end">0.432</td><td>non-match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.401</td><td class="text-end">0.379</td><td>match · correct</td></tr><tr><td><code>geometry_only</code> · selected</td><td class="text-end">0.419</td><td class="text-end">0.451</td><td>non-match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>match</strong></span>
+    <span>Relation: same_instance</span>
+    <span>Gap: 7 frames</span>
+    <span>Visibility: 781/1315 (medium)</span>
+    <span>Mask area: 195/330 px</span>
+    <span>Crop: 22×22 / 29×26 px</span>
+    <span>Motion: 7.25 (high)</span>
+    <span>Max |depth error|: 0.54</span>
+  </div>
+</article>
+<article class="p5-item" data-method="A_rgb_only" data-error="false_positive" data-gap="long">
+  <div class="viz-row p5-heading">
+    <strong>#17 · <code>36a60e372cf819c4632e1594</code></strong>
+    <span class="viz-badge">A_rgb_only</span>
+    <span class="viz-badge">false positive</span>
+    <span class="viz-badge">long gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>matched attribute distractor:</strong> Matched-attribute distractor remains similar in appearance and pair controls.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAgABBAUGAwf/xAAsEAABBAEDBAEDAwUAAAAAAAABAAIDEQQFEiEGMUFRIhNhcRVCYiMkMjNS/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8AqrT2gStAdpWgS8oCtPap9X16PSSGln1HHwmwOpMLNaN0gjef2oLi0rQhwc3c0gtP3StAVpWhtK0BWlaG0rQNaa01prQFa5ZWQMaBz3H8IyaFnsFn9bzN4c0H4hBmdXy3ZWcXON+lAHxdbeD7RPdvkcT7TUgsMHW83CcC2QyAeCVpsDqyCem5Q2O+yxYC7MZyg9LiyIp2B0b2kH7rpawWC7IheHRPdfolaXD1HI2/12F34QW9pWuP12/RMhG0eioBzXTPNcNQWVprSTII+bNsjpqyerTUw+VoM6TlwVPLjsnFP890GZBskowLV4enIJR/aSkyHw7soeVo+bg/7o9w/gLQQ2M5U7GgDiOFHiFkAgtPoq4wIbeEFppemmRzQGr0DQ+j3ZLQXM4q+yremsJr3MsBeu4EUeHorp2gW1qDwHqjdhavJiN4DTSr4HcKd1o8ydQS5H/ZKrYHigoNAheaYSiUXOnEMJHkqisy5NzjXdRgE9lxLinVDgeiR+FKgz54G7QGvb/LlRUrtBIlh03NNuiLJz5HZBHguxHgh4kHoLn4Tte5nLDSkG16ezWMexu7n0vRszV48fpCcX8y3gLwiLLmhdujeWu9q7xtezcrH+hK4vZ5KDhnw/qMLpHf52aVABJA8skFELUAUKCj5GFFk8kAO9oO6jZeG3KokkEKUEkFJLp80ZJAsKO5rmGnArR0gfBHKKc0JRnbStW02lMdzFwfuoE2DNCe278Kjjae0Btp+QpSMXGfkSDim+0D4+K7JcB2Z7V1FE2GMNaKpKKNsTA1oQZbnxx7mKAcnNixR8zz4Ve/VJJXU0UEGSBlRh37h3UZgA4CDS0lSKk9IBpKkVJUgZKrST2EEeTDhk5cwWijibG3a0UF2sJcIBDU7ow9ha7sU4ICIFBRZWM/GkJAOwrjDiyTG2NJC0hY14pzQ4fdMGNjHxaG/hB//9k=" alt="Left RGB crop for pair 36a60e372cf819c4632e1594, frame 1"><figcaption>Frame 1 · instance 1</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABAABAgMFBgf/xAAsEAABBAEDAgUEAgMAAAAAAAABAAIDBBEFEiExQRMiMlFhBhQVMzVCU3GR/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/8QAGxEBAQEBAAMBAAAAAAAAAAAAAAECAxESITH/2gAMAwEAAhEDEQA/AM3aljCnhNjKCsqqaQQx73K8tQWrPjip5kcAt4kupKl/PgZ90S8dkFqLpPtXCPBysWfVA3LYjwhfyk3uSvf07885uMPPnGrfahZqlphdI8eVAGy0OwVtTag6euWOHULnLFKYvLmjhfNekV9yw91MSA91kmOaM+YFSbI7PUoNYeY4Cuawx8u4WfQe516IE8ErU1fLbIa3jhZ1XblmW/XqXKjJLHC0uldtaO6sAXKfUwsWJAyOQsZ3C24L9V+rYqwMdbEhPGVylzVbNx5c+Q7T/VUyUJY3EtBKHcyRvqaQop9yW9V7vlIEe6CzdlPv46qonB+StbTdAsagN8zTBCP7nugzG7ZnbWt3O/0rWaf4ztojw5dC7Tq8A8CFoL/8ivgrsh7Zd7oORiq/b6pG0jBBROqfyPXsrbPl1oE9yqtTryyXtzGk8LNdMa8PVlzuusxO35XQrF19mZGFbc2IR8BVPrxSepuUQVEhQZ02lwu9AwUFJpDxyHLbcqnjhANoFSvDO512PxAOi6Ca1JOzwm4bWHRoWXRdmR3HRG5RTtaGjA6Jx6kwKcHBUHN3WO/LNPyughqB+H4ycIKetm1vLSV02jVC5m948qDVysvW27mg+y05PIM9ll6s/dXJHZaZYRKgXZUc5CSinymIB4KSWECrRiOQkd0UqIuqvUUgnPpSCkRkINyhThnrNL2jK0442Qs2NHCF01hbTaSEZhAM7zDlAahXc6q7YMn2R6SqOMex0XEjS0qPB6Lr5KdebO+MErPsaC2Q5jdtCDBSRc+lz1zgNL0K5j2fsaWoHj6q8IeJwzwUZWrvsvDWDj3UVFgL3hrRlxW3Q0kDEkv/ABEUdMjrNDnDc/3R6BgA0YaMAJ0kkAuU+VFOqh0kyWUEs/AVEtOvP+xgKuHKsZH7oMl2gxPfmIbW91p1qcdVgDByiBxwnCiocpZU0toQRThLakRhB//Z" alt="Right RGB crop for pair 36a60e372cf819c4632e1594, frame 23"><figcaption>Frame 23 · instance 0</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code> · selected</td><td class="text-end">0.502</td><td class="text-end">0.463</td><td>match · error</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.812</td><td class="text-end">0.432</td><td>match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.501</td><td class="text-end">0.379</td><td>match · error</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.583</td><td class="text-end">0.451</td><td>match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>non-match</strong></span>
+    <span>Relation: matched_shape_color_material</span>
+    <span>Gap: 22 frames</span>
+    <span>Visibility: 1909/2031 (high)</span>
+    <span>Mask area: 477/506 px</span>
+    <span>Crop: 33×40 / 33×34 px</span>
+    <span>Motion: 1.79 (low)</span>
+    <span>Max |depth error|: 0.55</span>
+  </div>
+</article>
+<article class="p5-item" data-method="B_rgb_2d" data-error="false_positive" data-gap="long">
+  <div class="viz-row p5-heading">
+    <strong>#18 · <code>7d8a2e4d0178008c18f0d213</code></strong>
+    <span class="viz-badge">B_rgb_2d</span>
+    <span class="viz-badge">false positive</span>
+    <span class="viz-badge">long gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>easy distractor similarity:</strong> A different-attribute distractor still receives an unusually high similarity score.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABQACAwQGAQf/xAAuEAABBAEDAwMDAgcAAAAAAAABAAIDEQQFEiETMVEGIkEyYXFCoRQVUmKBkbH/xAAZAQACAwEAAAAAAAAAAAAAAAAABAECAwX/xAAfEQACAwEBAQADAQAAAAAAAAAAAQIDETESISIyQVH/2gAMAwEAAhEDEQA/AA9rtptpWgB1rlptpWgB1pWqmXqOLhNuaUA/AHKBT+rCJaigtg+fKhtInNNRaVrMM9Xj9eL+6ss9V4bvrbsRqDGHrStCmeotMfx16P4VzHz8bKNQyhx8I0jCzaVptpWpA5aVpqB+qJsyDpxYz9rXttyrKSj0F9eBDN1fEwQepIC/4aObWcz/AFRkT23HHRb2/KByR5NkvYXfcm1C4vb3aQs/e8NPOE8k75HFz3FxPkpheod67uUaWJC8ppfS41j5HUxtqw3BLRbzZ8KrmkSotlcbnn2hFNEJh1SE7jyaPKiZj03gUnQRuizYn+HLF2aaKB6ETZKSjiduhY7yLT0+KHGe54H3VP1Jj9XBEjR7mH9legFzD8LuY0S40jO9toJO9/kkK2z82Rf+GGTS0Ecgf6Uj27HuZ/SaTFmdYhdiwv7sTBhQjgN4KspI1hg1kbWNpooJ4ZaaHC1YhAc4LOTwsiXHxd57K07BZQ4VnHjAjCUrw0LmWWycvhuliM5mavqTMl0Mcx2x8AAIlh6prGJhszMzHfJhv4Em3i1JpmXh6frUz8zG67JGU0AXyo9V9ZZ7tCk0ExhuHvL2NLKIXXhbN5go4L+mrg4JPhde/lV5JZImXHHv8qk7Vo9217Sw/dTcn604t8W56CNUh6Oc/wAO9ypkIlqc0WSWujNuHf8ACH0qrh1qJeq0xlJJ9LhCDcD5uQ/Hyi0Hgi1PgaqOo1r1BrsVCOYfJ2oUx20phVqcTFycZHo0EwdCCCoJ5bQfSc7bjNbI7v2RFzg/kHhcedDjPBtT9LTmPNJBqEOSzaTE69pF2lrTnarnPypmNY547NCrzTRRuaHOo3xSccxgHa09XTKWOKMpTS6zYKKbEhyBUjAfurG1ODV080Rf0A5OiljXSRPsD4Qoso0eFtNoA57IRqDMHna25PssJ1b+peuSgsAJamkK0YCeyjdC5vcJeUJR6hlST4C9Wi6mnu/s5WaBDRZWxyYxJjSMPyFjpYdsxB5AK3perDKxfdCWJktZCL/wFPLqTyygaHhCWkhOJLuO6tKpN6VU2lhK/Ie51hxtEIcndELPKWkaBJqMgE8wxYj3k8BHNQ9P6ZpWPtxsz+Mcf11SfopmlvEL2WLhtQnCvlODUyaIyxFgdtv5S5cGZ+b1CYoj7R3PlD9iJHR3D6JbSOlZAHABUkAqVwiYXUgmRqcpkLRz4AWkytLynt29Mc/dQ4ugxYz+rKOpL/xVZKG6dp7ZMMOyRb38/gITrHp6Fs5fF7QVqO3woMyMSwHyFelRU/q6E28MP/KKPMikZgRx9+USmZTioSF01XFcQq5NkTQW/SSAPi1YdIXQ7Soa5Th2VyD/2Q==" alt="Left RGB crop for pair 7d8a2e4d0178008c18f0d213, frame 1"><figcaption>Frame 1 · instance 1</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAEDBAUCBv/EACsQAAICAQMDBAEDBQAAAAAAAAABAhEDBAUSITFRBhMiQkEUIzJDUmFigf/EABsBAAIDAQEBAAAAAAAAAAAAAAAFAQIDBAYH/8QAJBEAAgICAgEDBQAAAAAAAAAAAAECEQMSIVEEEzFBBRQiMlL/2gAMAwEAAhEDEQA/AMWhjBtRVgAqHRG88RPUJIzeSC+SnqR7JGmKiu9Q32Ylna79TL7mF0W3h/RYaLmm6RTM79UvBJDcFBdji+oP1cWuPlkQz40+WbmOaosRkjBju6j9SzpNzWolVUean4uWK2aOiPkY5OkzY5ITkV1l/wAieU5aNzGSIs7pFhLqVdW6Z9AyuoMW5XUGVhBYWhWLAALQrXkAGArj5DlHyADJdLk9vJZDyj5GpxXWyso7JovB6yTNuOoXFMHqEY63OEVx8EWTd8ifwxchMvEm3SQ/UlVm1XUyd2lKE1xNivkjL3eF9T1+ZXBi/KrgZfvTruHuz8kf5BC04CT3JeQ5y8nAwA65PyHJ+TkZAHVsE3zSvoxIF/OIAb2l2zSZMKlJfJlqGg02PpGKONA7wItDOK4Q0i+ERV1KO5Y7xt+C17pX1k+WnkaTVxZWXKPO/ZgJfzkMUi0YxAADGhAgAaD7oA/KIA9Ht0rwouX1M3bXcEXvyM4P8UMofqiGUKIc6vTyLbIM8LwujV+wP2PNSVZJCO9QnHK7RHdCqSpi58M6voFnHuf6sPc8xaKgSAcc15ofJf3ImmFM6H9kcri/ujuOPk1UkGr6J1fRt7Y/gX33KO24pY43Jl99+zGGNVHk74KonImrVHVoSas2LlPLtsM8r7MrZ9HotIrz5FH/AKV9+9SQ2yDxRj+4+zPCa3ddXr5t5Zviy8cO3LKOj1Ot33RaW1gUclGRm9UPLaWFI8+kk+7OrNligvgqaGTd8uTsqIZa7M/u0VbCy+segLC1udf1GT4t2z4nfJsoWFk6roDfwer9Tg+rdG1ovWyzR/egos8OpA+pV44snZn/2Q==" alt="Right RGB crop for pair 7d8a2e4d0178008c18f0d213, frame 21"><figcaption>Frame 21 · instance 2</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.259</td><td class="text-end">0.463</td><td>non-match · correct</td></tr><tr><td><code>B_rgb_2d</code> · selected</td><td class="text-end">0.703</td><td class="text-end">0.432</td><td>match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.686</td><td class="text-end">0.379</td><td>match · error</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.794</td><td class="text-end">0.451</td><td>match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>non-match</strong></span>
+    <span>Relation: mismatched_attributes</span>
+    <span>Gap: 20 frames</span>
+    <span>Visibility: 4084/1525 (high)</span>
+    <span>Mask area: 1021/385 px</span>
+    <span>Crop: 51×48 / 25×31 px</span>
+    <span>Motion: 1.55 (low)</span>
+    <span>Max |depth error|: 0.61</span>
+  </div>
+</article>
+<article class="p5-item" data-method="C_rgb_2d_3d" data-error="false_positive" data-gap="long">
+  <div class="viz-row p5-heading">
+    <strong>#19 · <code>8281734176fc2c62b306fd5f</code></strong>
+    <span class="viz-badge">C_rgb_2d_3d</span>
+    <span class="viz-badge">false positive</span>
+    <span class="viz-badge">long gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>biased depth estimate:</strong> Biased depth estimate makes two different objects look geometrically compatible.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAAcBAAAAAAAAAAAAAAAAAAECAwQFBgf/xAAnEAABBAEEAwADAQADAAAAAAABAAIDEQQFITFBBhITFFFhMiIzcv/EABoBAAMBAQEBAAAAAAAAAAAAAAACBAEDBQb/xAAfEQACAgIDAQEBAAAAAAAAAAAAAQIRAyEEEjFBBRP/2gAMAwEAAhEDEQA/AM+jRIIANBC0OUAC0ALS2tb2o+RkMgF2EAP/ADSbANWqXJ19sQItRcPXRkZrY75Kyxuj9NKUSN3VdhEtFAUEEEAEggggADn+JufJjjbsUnKk+WK53dLKZGfK4u3NJXKjtjwvJ4WmXrXyuiqPK1x81i1Dne6UmyojoqKTsUrCo+h5Ez5u0MB7oM9jydgU2RRSXOLRY5Cw1r4dQwp/yMRr/wCJ5UnjGUJdPDCd1d1RpdSBqnQOkSHaC0wHaCCK+f4gCs1mf5tDL5VYcIPwy8BHrM/1noHgqy0drcqAxd0p5vZ7HEhUaMjNH6uIUWRXWq4pgzHtIoBVEg3QjZqmRncpBF7Jxw3TfaYnZf8AiuX6ZvyJ2W4Js2FzDT8j8XNa/wDZXScWQS4bHjsLpEkzKnY6iRokxxC6TeRIIoXH+Jw7C+lR6xqTWgxh26x6Q8F2kkVM7y/Icf6rHQMv4Z4DuDsqgTtcbtKZN8ZWSA9qc9mDSNL5bg+kTcho/wBrFzCl0nLYNW8cYW7lrVzzJiLJHtPSyI+ZfSvcE2Qnn7FMmRnC6EbEu5aR0V0DxzL/ACMJrL/yFgPcHhaPxHL+czmOPKaPpPlVxNl2gjrv9odroSEfNlEWE998Bc3z8x82Y42atbTyXK+GC6O9ysFdgk82kkyjEvo5HO4HlSvyPaIC9woI4RsJHKSilSaN/wCMa/HBp0sMzhxQtZrOnZLkyubwSqd8so/6yQEtkjq35S9fp1/q2qH/AJmV4aO1OHi+Q+L6hpo7qFjyhkzHHoroGn61iyYTYjV1Sl5OXJirojm2c6ysGTEcQ4FFp2ccbUIq2s7ro0nj8WrWWgbqg1HwuTEm+gaf+O6zHzYOlP0RrWzTwyieBjh+k5Sg6R7jD9XDduymAlekn2Vohap0Yry3MEszQ07LOUpOfMZ5ASbpRlzeyyKpUAI0SF7oGFtdWyV2kI2lYaK3UnGyHwvB9io6WBZQ9jI12keWHEkYwnk0uk+sWpaWyT1FvC4ZBF7Zcf8A6XcNHPposA/QC+d/XxRgozj6ZIZh0RsTCAOVHn035nYK8+1ptwEnIUHH/Sy4tSejjKCZ/9k=" alt="Left RGB crop for pair 8281734176fc2c62b306fd5f, frame 4"><figcaption>Frame 4 · instance 3</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAYBBAUCA//EACsQAAICAQMDAwMEAwAAAAAAAAABAgMRBAUhEhNRBjFBFiIkIzJScTM0Qv/EABkBAAIDAQAAAAAAAAAAAAAAAAABAgMEBf/EACIRAAIBAwQDAQEAAAAAAAAAAAABAgMREgQhMTITFFFBM//aAAwDAQACEQMRAD8AXbp9upiVvNTttbjyOuoWaZCtel35ZK5to3aWnGd7i/GicY8o8ptweMGlqL1GxrBVmlN5Iq5ZJRWyK6lk6WDvsoO0l8jI7HCwdpZIcF5OorDEF0X9u0q7qkxw0DgopZWRIr1Lr9i7ot1sjelka2IVFkth8xwRg8NvueooUmWcclpiaseFqzTIU9RxqZDTKbdTFTXtq+WCuobtI7XMbWT/AF2eHcSLF1ErJt4OY6KUiN0WYSbPHuZIc15Lcduk+MHvDaVj7vcMkHjk/wAM3uR8h3EucmzXstcotyZxTsjsvcX+0MkPwz+GSronpRfCNyefk3H6crUsI9JemaoV9eeRZIfhmMOwWKzSJo0f+mZ2w09ijpNPHLLk9jnTVpNMoy/wy/oV9T92paY0TX6EseBUul+ZL+yFTg16TswdUc+x0oJfBPyBQdRHUZdPwTKbk+TgMsQz0U2ekdS61wiumyQHc91rJ9WTqetslErkt/aILjJsrc6cs0scsz9iWdOaWOWao8HCrf0ZRlU3U4/LFrW7XbC92Y4GXrlkra+bdTyOSugoycZbC3hrhgdWfvZzkzHbXAB7gCACQABDDIMA+QAatiX45pY5Zn7EvxzSxyzTHg4dXuzPlEobk+mo1GjP3OvNTJPghDshblLMmATSjNpvAceTKzvR4QEkceUGV5ESJAjjyiePKALAEf3InjygrXXYkgExu2P/AFjQfuyls0OjT8l5+7NMeDhVe7K3bfg87dN3YNNGh0oOlEytCrf6bsttc4vg5+mbfI3fAEMEaFqJpcig/TNvkPpm7+Q35DIsEP2an0UPpi3yT9MW+RuyHUGCD2an0U16Yt/ke1Hpuddik2M+WGWGCE9RUf6VtNpnRWonr0HYE7Gdu5//2Q==" alt="Right RGB crop for pair 8281734176fc2c62b306fd5f, frame 16"><figcaption>Frame 16 · instance 0</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.323</td><td class="text-end">0.463</td><td>non-match · correct</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.834</td><td class="text-end">0.432</td><td>match · error</td></tr><tr><td><code>C_rgb_2d_3d</code> · selected</td><td class="text-end">0.720</td><td class="text-end">0.379</td><td>match · error</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.691</td><td class="text-end">0.451</td><td>match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>non-match</strong></span>
+    <span>Relation: matched_shape_color_material</span>
+    <span>Gap: 12 frames</span>
+    <span>Visibility: 552/1211 (medium)</span>
+    <span>Mask area: 139/291 px</span>
+    <span>Crop: 29×15 / 22×25 px</span>
+    <span>Motion: 3.40 (medium)</span>
+    <span>Max |depth error|: 0.61</span>
+  </div>
+</article>
+<article class="p5-item" data-method="geometry_only" data-error="false_positive" data-gap="long">
+  <div class="viz-row p5-heading">
+    <strong>#20 · <code>3fa7f63912c4f0980356d797</code></strong>
+    <span class="viz-badge">geometry_only</span>
+    <span class="viz-badge">false positive</span>
+    <span class="viz-badge">long gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>easy distractor similarity:</strong> A different-attribute distractor still receives an unusually high similarity score.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAABQYBAgQDAP/EACYQAAICAQQCAgEFAAAAAAAAAAABAgMRBAUSITFREyJBFSMyQoH/xAAYAQADAQEAAAAAAAAAAAAAAAABAgMEAP/EAB8RAQEAAgIDAQEBAAAAAAAAAAEAAhEDIRITMUEyUf/aAAwDAQACEQMRAD8AAHiScZWTrquMlJ2RrWWzHr9ctNF9ixrt/m5NJiuQTGO5rluUIvHJHlr4S/sIMtzsm88md6dysz5YjyamMJ+rnGzwzr8a9idRvc6vyb69/wCS7Ypy/wCx9cwOKRCYN0+6QtazIIxshOOYssI/KaJSzx5IkMKxEpcYMlHHUT41sF0sb9e+TWRYmlNtsOb3PlNgFvyZ37XPlEYrODbRUjHXH7BbS1ZihMnU2NysrSiY5Wyg+mENVHggbN5BjFu9Wusg1hsZdn3CVjSkxSgstB/aYPksFB0y62TlGanDok46WL4LJoaNBQemmBi3CXGtm2IO3R/tsGXRHH7J+6TzYwQwjuPdjB2DOVW7aWHKYf01PGvOAVtlfOxIZPg4UZx+CHI96q4EC3HoFSCe4v7MFsrh8kyr09zQ07NVnHQtaaGZocdkr6Qx/UPyOVQ4wR0xkvxxAhI1Weq/qmCdxbnFpBXUfWLBF1icmmS5XRU4zbKO41T5vCYL+K1vwxzvorsfg5LQ1ekZTk6ruMP2KjjanNDPrHWtN1jwCVSqv4LBE5WzWHnBLI8nc46NQPcZNzYMUvYwajQuz8A23bZxecGjFApI1tDHlYh12ivEUKe26eUbUmh326vjWimHbLl0RBr6kYLPwQaKFzvjyiwFrKpRk2MOM+TLqdKprwT5MPInwy1Lqznst/pov0U4y6Rn+KUfKMbilp2NGScr0Q+ivNA1HdbKKWwhKPgnkiJLkukDV26ukoj8ywM+kjiCAeg00/lTa6GOqHGtGrhH9ocrXx0ewSjxoo3sHseycHsHXVJ1QkvBkt0Kn4RuwSngCDEUg09qb8I5PZ5eg+pInK9CevGb2Mv/AKRL0dqtqcX2gzleieSCceJd5rZadNGteDvjot5IHkoSLJL2S1iGQXqdXKuTwwhdf//Z" alt="Left RGB crop for pair 3fa7f63912c4f0980356d797, frame 3"><figcaption>Frame 3 · instance 2</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAgABAwQFBgf/xAAlEAACAgIBBAICAwAAAAAAAAAAAQIRAwQhBRIiMRMjMkIUQVH/xAAZAQEBAAMBAAAAAAAAAAAAAAAAAQIDBAX/xAAbEQEBAQACAwAAAAAAAAAAAAAAAREDBAISIf/aAAwDAQACEQMRAD8ApCGsVgEhwO6hd6AMRH8iF8iAMci7x1MCVIQKmh7AcEdsFgADKVINIg2H2xKhPLYu60Z38ip0TxzqgqzYrIPnQvmRBP3AvLRA8qI5TsC3HPb9lvHLuRj45eRqa78QJpMEeQqAaKK+6vrZZiQ7fMGUYGS1kJIydDZV5ij6IJE2FbBiFYCtjNj3wBJ8FBY5eRr6vMTBhOshuaTuCAsSFY8wQCiiHa/BlgqbcqiwMjMvIBBZZXIGJBIhxkOFJvghyTpBzlSKuVlQMZ3kOh6e/rRzWN/YdB0+fikKNCb5GtA5ZUrKWTbUX7LJ7Jbi88hS25vtLCINiHdEisicvIKLGz43GTI4zp8kFlD06Ajmgl7CezjS9oKiytorykHn2sX+opZNmNOmZRimjOKmbehK0qOSWWcsyo6rpEX8abFVo7LrDZze5suM3yb2/OsVHLbbcpM6ur461ctx1ymn6H7e5FHDkcmjRx/gccutt+KefWUk+DJ2daUbpHQSVuhnrKftFHI5ceZerKWZbK9WdxLp0H+pHLpEJfqiYPPpR2pP+yxra2eb5TO1l0XHf4okxdKhD9SjD0elW05I38GBYYUiWOBY+Eg2gM7ftwZzuyvJnT70frZzO3xNnodVz8r/2Q==" alt="Right RGB crop for pair 3fa7f63912c4f0980356d797, frame 18"><figcaption>Frame 18 · instance 3</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.398</td><td class="text-end">0.463</td><td>non-match · correct</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.637</td><td class="text-end">0.432</td><td>match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.774</td><td class="text-end">0.379</td><td>match · error</td></tr><tr><td><code>geometry_only</code> · selected</td><td class="text-end">0.870</td><td class="text-end">0.451</td><td>match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>non-match</strong></span>
+    <span>Relation: mismatched_attributes</span>
+    <span>Gap: 15 frames</span>
+    <span>Visibility: 505/278 (low)</span>
+    <span>Mask area: 124/68 px</span>
+    <span>Crop: 15×17 / 13×13 px</span>
+    <span>Motion: 2.50 (low)</span>
+    <span>Max |depth error|: 0.26</span>
+  </div>
+</article>
+<article class="p5-item" data-method="A_rgb_only" data-error="false_negative" data-gap="long">
+  <div class="viz-row p5-heading">
+    <strong>#21 · <code>f964d079975fe8609cd7e5bc</code></strong>
+    <span class="viz-badge">A_rgb_only</span>
+    <span class="viz-badge">false negative</span>
+    <span class="viz-badge">long gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>occlusion truncated mask:</strong> Occlusion- or image-edge-truncated mask removes reliable same-instance cues.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAwABAgUGBAf/xAAoEAACAgIBAwQDAQADAAAAAAABAgADBBEFEiExBiJBURNCYTIHcYH/xAAaAQACAwEBAAAAAAAAAAAAAAABAwACBAUG/8QAIhEAAgMAAwACAwEBAAAAAAAAAAECAxESITEEIgUTQWFx/9oADAMBAAIRAxEAPwClGz8RmsRD7nC/9yg9SZ+dgqDQpVD+wEyb8rnW93uJO4t2JeF1B/09KF1bN0rYC31JblO1As4DH5zFO1q1XZr7lqjB60YfsoMFdnNaSceLJ7i3GlPm+o8XCzVxyQ2+xb6jktKFzuLcFVcl1QsrYMpHmTgIPuLcbcnUA1gBirbY1Qc5eIKWvBgrkdlJil3jLX0dwJXcu2PjgOmlP1OZ8f8AKwus/W1mjXU86Lz0zwmD6o4rO4vKUfmSstUfkmeHctx1vD8zk4Fw1ZSxBE9e9M8s3D8/j5IOk6vf/RMp/wAsYmPler7OSwGDDL8gfE3TXGX/AEMXqOT0RyYfhsvgbNGuzduz9yx4fJORhOCfcjlf/BMlx3F5mPkC2piDrR1LGzOfhq32fc48f2GqLU3n9DP7LDu5/nFwqTTS27G8n6mFusa6wu52xksnIfIuaxztiYMCdOMcAlhoOA5mzDYVu3VWfv4m0pvS+sPWdgzzBWKnYmh4LlmSxamPmSdfLteklDfDZRls/HcCfEilnWAfG47KDOb8mn91bgKi+LLOvJ9nmUXqLJ2Aq+Z1qxUa3A5GOmQumE4Xx/x1sbU5LEjSrYrsNAti02Wddi9R/sMYeihWqfIubpprG2M9KlyZlRV599HG4bXdIB+BPPc7MszMlrXbZJ7Sy9R8u3I5zLW2qUOl18yk8zTGHEalghJDtGEkBGFxxOvDRvzqynRBgKqy7aAlrjUCoDt7oyK0vFGnq5Oo4qAnVijU76L0yKg6HczFdP7NJY+RZgZH5K2LVn/QPxK31cvsvQ218u0amKDouTIpW1P8tCTAYhHvOHnrcp+EtqoOl17gPmdu4joggjYMMZcXoU8Z5QSQdfI8xxNN6h9Pmp2ysZdqe5UTNDe9Ed5rTT7Q9PRwIStC50BFVUbDoCWeNja1od4yMdLpaPjY/SBobMs6aAo20VNAQbMI7hRuaEsHpYiF1oRdk6E5qKMjOyVRAQm+8ucHhTfSczLGl/Wr7/stMXETGT2gbPzK3zVUf9Zgnc7JZHxD4+OMehax8QpETMFXqPgSDZVa2qhPYje5y8cuxE7Ywf2YooopUYIgMpVhtT8TL816cBc34w7eSBNRqPrto9xLxk4stGWGEoxujS60ZY01BBuXOZxS2E20jTfMq2R626XUqZ0a5xkujbXKMl0ImSpRrchVVer+SChrLBXWNsZoePwFxatt3sPkwW28F16VtmksD1hzWoc91GtfUnqS1A5VhqpJUbY+Jzm3OWv0wNqKOe+w2XitO+vIha+Lsu76nXwPGHJYWHuzeZ6PxPphbKgejfaPSxYcG652T6PMNRahAJLpmY9AC1HAhOiQtdKF6n8SEEBowd2HVkD3qN/cCeVxR4JnXjXV5CdVfiFNrwieeAMTjasViwG2PzOzphAscLI232wt76DCyL0hxoiH6Ytd4CrSfTAcfnX8LmraB+SnfdZ7h6J5vjedww2LapsUe5PqeCZ/5y2hoJI8Xk53H3mzBvah/kKfMap6sZin8ZKXOB//2Q==" alt="Left RGB crop for pair f964d079975fe8609cd7e5bc, frame 0"><figcaption>Frame 0 · instance 0</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABAACAwUGAQf/xAAoEAACAQMDAwMFAQAAAAAAAAAAAQIDBBEFEiEGIjETQVEUIzJhcRX/xAAZAQADAQEBAAAAAAAAAAAAAAABAgQDBQD/xAAhEQACAgICAgMBAAAAAAAAAAAAAQIDETEEIRJBEyIyYf/aAAwDAQACEQMRAD8A6d9jgjM8OR1DEPXMsBCOUdyGykqflkF3dwso5bKC41+NVyUZeBox8ngKWTQTvI7Ws+xWOopSfJQ/6sp55HU9RxLlmzoaNPjaLS6qqnH+mW6j5t/6WV3eevOMYv3AddhutoEF6ccZAl0zLUaTVLdgircyyXU7dU9P8c4KOo+WJF5HxhHuaEcOlRgI5Wqxo0HUbxg6vJneqNV+lp+jF+Tx4ptf111nKEZeOCgtq0222/ILcSlOq5N+eSShUxhG1T7DW+yzot7Gdc2mNpy+2NlPk6LZYyejUaqKTYRdTVxRjH4YBGRPCeEskvIpVkf6Lg5fQxa7V8GWrrE2a6s1Om1+jL3kNtZo41fTwwyie2CyIRYRjZz2U5SfsjzfqK6d1fS54TN7qlb0rOXPseZ3891xJ58sPrIJaA5yFRl3jJsdQ/M0r2GvZaQeKQyUuRJ9mCOUjossZLCXIRF5SA4y5CacuAAQPXu9l5szxgrr7EnuQr1tXrkNn30EzkWQ8Z5NU85PakNlNRYpy2xyA1a+ZcDEAHr1deg0n7Hnd1LNV/02eu1fst/ow1xLNRjy0kLP0iOTJbddxA+Qm3RrUh6l2F54I5Mc3hEUmWlLHqXITSlwwJMJpP2ABAGoYjNP5YX9FL/PjUxwyDUaLnKnj5NvT0rf0vSqbeTm8n6yKaY+WTQ3dTatpXNtchV7LNVAk32i+zmlHr9TFuY2vLuNV1HLEEjJ12PPYs9ih3PAbSjhAlst0g5LCKKkbVIUmRSY9kcvJSbMSfJPRl3IFyTUnyAARVxKpTT+T0y3hFdH0jzGf5Ql+z0zT6irdL04fBzuYu0yzjPYLWluqZIan4D85GVfwBHZy1szHUUstIytw+TT9QfmZS5fcPP9Cy/QTZLPIaC2K+2EssqXRvBHGyKXkkfgikaGjGklN4kRD4vkUUNS3Jfo2/Tl2qun+hnlGHoPMWX/AEhWb1CcM8EnLWYplXHeGf/Z" alt="Right RGB crop for pair f964d079975fe8609cd7e5bc, frame 20"><figcaption>Frame 20 · instance 0</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code> · selected</td><td class="text-end">0.121</td><td class="text-end">0.463</td><td>non-match · error</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.086</td><td class="text-end">0.432</td><td>non-match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.174</td><td class="text-end">0.379</td><td>non-match · error</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.136</td><td class="text-end">0.451</td><td>non-match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>match</strong></span>
+    <span>Relation: same_instance</span>
+    <span>Gap: 20 frames</span>
+    <span>Visibility: 1967/1254 (high)</span>
+    <span>Mask area: 492/303 px</span>
+    <span>Crop: 40×40 / 36×14 px</span>
+    <span>Motion: 6.51 (high)</span>
+    <span>Max |depth error|: 0.63</span>
+  </div>
+</article>
+<article class="p5-item" data-method="B_rgb_2d" data-error="false_negative" data-gap="long">
+  <div class="viz-row p5-heading">
+    <strong>#22 · <code>6e7975d1943dc6d39ef3b2ad</code></strong>
+    <span class="viz-badge">B_rgb_2d</span>
+    <span class="viz-badge">false negative</span>
+    <span class="viz-badge">long gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>occlusion truncated mask:</strong> Occlusion- or image-edge-truncated mask removes reliable same-instance cues.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAAEDBAUCBgf/xAAmEAACAQQBAwQDAQAAAAAAAAAAAQIDBBExIRITQQUUMjMVIiNC/8QAGAEBAAMBAAAAAAAAAAAAAAAAAgMEBQH/xAAgEQADAAMAAwADAQAAAAAAAAAAAQIDETESITIEE1FB/9oADAMBAAIRAxEAPwD5HWXXEoVKTi9GvOhKC5RF7fuvGCBV4mxSVLZkKeJnqfQblUqfPBmfiW55waNvZSpxwjmS5YcV+DOvUqner5XJr+iwaplCjZdc1k27WkqEMAnLMv2RZm7XosvYCzlgTLLDKP66QwABqk+BctAAmGRHDKvvT49D6UZlK0dOfKPTY61yULqnGLeEQ5J9FnHlfyyp0RSXA08CyBRZMTW8v6Gi3lIzbf7EaX+URX0aDqwHWxMQds6ddwamR4GhKq2ccomTygFHQzXn5RnV1h4KF0X1ooXWwZPkWPpTAARQLZLbfYjSfxRnW/2I0npEV9JEITGJgOiBbAFsU9OPhNHQMS0NGxPEZz6xLRQutl7wUbrbBl+RY+lTyMXkbKBbJbb5o0X8UZ1sv3NJ6RFXSRC8C8DEA6IEALY56cfCWI2JaGa88RnPpz4KN1sveChdprkORNz6FD0/ZV8gRdzkfcTKTx3/AAs+SLdt8zRaeDJt6yjPLL/u442Q3Nb4Sy0TYYsMj9xFh3kweNfw7tHbBbOe5kcXlihPyRyn6JkMUdAa64Z76Ir3lPNJ4LOBSj1xwxS9PYWeccWpPI4xLV7TVOfBXT4NaZi1vRVdVL0GGhKpI62CiGvx8b/wSy2ieh1TZoQoPBBYwTaNHRn5ohVpFiLprZAqLR3GGCTIFf8AXO9j86EAwGE//9k=" alt="Left RGB crop for pair 6e7975d1943dc6d39ef3b2ad, frame 3"><figcaption>Frame 3 · instance 2</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAQIDBAUGAAf/xAAmEAACAgIBBAICAwEAAAAAAAAAAQIRAwQhBRIxQQYiM1ETYYFS/8QAGQEAAgMBAAAAAAAAAAAAAAAAAQMAAgQF/8QAHhEAAgMBAQEAAwAAAAAAAAAAAAECAxEhMRIEQWH/2gAMAwEAAhEDEQA/AEhCdQAiaOFUCiEE0dQnNljhjb8/oYw7anPkVO2MHjLxhKXUSaBQU0zqGJprUVaz0AKFUCggE0AWCiEHQhoACAGdjYjhj55E7O3HDFpO2VU8kss7k7M91yhxejq6/rrF5Msss7bOi+12hC8ikcxtt6zYlnhOxZO6P9j0cv8A0QMcnGRLTUlZaFkq3wEoKXpJTTVo4jKcosfhNTR0qr1Zz9mOdTiEAoS0aBQ8Qd3djjXZGX2I/V+tY9DE1F/d+DIw6rky7382V8X4Fz35fyXjm9NFKbm7k+TkN48iywU14Y4jkPd6b0LQpCELKhFJj+GbT58DMV7Z08nFIBCbal7BFuErXggLLKPsfhsKXEuApuL1EePhYxkpRtBoi4slStPglJ9ytHVptVi/phsr+WYf5Nr5MWeHfb5KiSUqf6N78h6fHb05ZK+0TBOMsc5RlxTHiy26RuP8c3wXa55MfDI8eVSTpI0+jsrYwKnyjnfkV/L+ka6pasZLQ5FUrYiNJWxMp2ZB45Kd8IRYmwWEguwWIsFkAPRzSj74JuruLwytipTl2xXJaaegox7p+x9MZOWxF2SSWMspQWSDhJcNGC+RdNevuOcVUDfld1rp63dNxivtR0zEebvlEnS6g9Kf9A2tPLrZZQcHwVmWWTursZSUVJYy8Xj1Gz1+pYdqKfek/wBEi+LXgwMMs8Uu6LaZb6XX542o53wYp0NdiaY276afyddEbW3sO1C4SSJH+mZrPRobEt8He6SsmaujPLzJfUfVS59fgudiiSum44OHc1bLEaw4I4Y1EdOjFKKxGNtt6xw7yjjggIebp+DNJuUE2yJl+P6mRfjS/wALWSAQhnM/w/XyXTorc/wdeYys2tB8AwOnnM/jPUNSfdh7ml6LfpmrvZGoZ8biv2a/ua9I5u/SKSrjL1FlNrwga/TYYeX9iWko8JULoDRdLCvoEwifYboID//Z" alt="Right RGB crop for pair 6e7975d1943dc6d39ef3b2ad, frame 16"><figcaption>Frame 16 · instance 2</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.270</td><td class="text-end">0.463</td><td>non-match · error</td></tr><tr><td><code>B_rgb_2d</code> · selected</td><td class="text-end">0.069</td><td class="text-end">0.432</td><td>non-match · error</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.523</td><td class="text-end">0.379</td><td>match · correct</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.569</td><td class="text-end">0.451</td><td>match · correct</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>match</strong></span>
+    <span>Relation: same_instance</span>
+    <span>Gap: 13 frames</span>
+    <span>Visibility: 649/1343 (medium)</span>
+    <span>Mask area: 161/333 px</span>
+    <span>Crop: 20×16 / 28×31 px</span>
+    <span>Motion: 5.51 (high)</span>
+    <span>Max |depth error|: 0.29</span>
+  </div>
+</article>
+<article class="p5-item" data-method="C_rgb_2d_3d" data-error="false_negative" data-gap="long">
+  <div class="viz-row p5-heading">
+    <strong>#23 · <code>94819a0952bddaae7b3c9c99</code></strong>
+    <span class="viz-badge">C_rgb_2d_3d</span>
+    <span class="viz-badge">false negative</span>
+    <span class="viz-badge">long gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>long gap motion:</strong> Long-gap motion or viewpoint change lowers similarity for the same instance.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAQACBAUGAwf/xAAnEAACAQMEAQQDAQEAAAAAAAAAAQIDBBEFEiExQQYTFFEiMmFxgf/EABgBAAMBAQAAAAAAAAAAAAAAAAACAwEE/8QAHREAAwEBAAMBAQAAAAAAAAAAAAECESEDEjFBBP/aAAwDAQACEQMRAD8AohAD2ABEAjXl/RtKblKS3LwAErnyg4f0ZK49X4qOKXCJdh6nhWxv4JV5Eh1DZouhDqdW1rWyqQqJyfjJzc45w2NFzfwypc/RwgCHFCIAGAAFkAs8N/QARr+9hZW0pyeGlwYDUNRrX1xKe5qOeiz9UX8q9f24PiPaKDrojdbwrKzoJYb5Qd0o/o8DWHsmOS7DUrqzrqUqjcfrJsKF98q3VeMv18GF25XJYaXfSts0m+JCNNP2k1d4zcWmpRrrD4ZNznlGNpXDhXTi+DTWF171PD7Oqa0hU4TciyDIhxRpzry2UJtfR0OddZt5/wCGU8Wmpa8POtRble1G35IhJvY5v6n+nBrBzJlxoRBABeAxeJJgHRWZJGAWtknUaNDYN0ppFJp0NrTZb0pYqo2WDRf+EIZTeYIdk6jnGxq0Z/rNP/oy5e22m/4YOjqte1mm5No1Ol6nHU7WUH3gkq9lg7n1emNu8/Nqv7ZHzksdRoune1E15IEobWRRYa0DoLAzTBZO1vHfWSIzJ+lx9yefox/DV9LuhT2RRLo81YnCK4RLtKbnWTXgIQUy6pLFNDxdRQjrOY8wqyTXKLn0y5QucrplFV5kjS+maW6omcy/C7JevaduXvQRlqqw8Pho9LqUo1aThJZMxqegPe5wRtzj1GTW8Muxj5eF2TZ6fWjNrax1KxdOW+awLK9niGfFrIEaFSpNRS7NDp2nu3pKTXZW/Lhb1s4zguLPVqddbZYR0X/NWamTXmRKjDngtdPt/bW5+TnaW0KqU4vJYxjtWPoWZwKrRCCAoTPLZYbXJsPS9P8ABSM3c6d7Ek/6a705BK2TOaHr4Xri6Xb7A0mvy5HNcga4f8OkgRLm2oKm5yilgxurXkXUcYcJFxr+qzinSi8GQqzc5NvydHjhLolV+DJy3PkapSi8xeACRYQvtH1+drNU5vKNrbXFO6pKcHlvweXwXPHZe6RqVWymk5ZTJ34vbqGVZxm5wA52tf5NFVDquTlKH//Z" alt="Left RGB crop for pair 94819a0952bddaae7b3c9c99, frame 1"><figcaption>Frame 1 · instance 1</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAABAYBAwUCAAf/xAAsEAABAwIFBAIBBAMAAAAAAAABAAIDBBEFBhIhURMxQZEiMhYUFWFxIzNS/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECBAUD/8QAIBEAAgICAwEAAwAAAAAAAAAAAAECERIxAyFREzJBYf/aAAwDAQACEQMRAD8AziFFl5cvdoYXcIA6soseEv12Y/0smkNuhfzAcKckVixq34UEHhLH5eweFIzhGfCMkGLGax4UFp4S5+WxqRm6IhGSFixh0u4UaXcLCGbIlZFmiGR4btujJBTNiyiymN4liEgPdSqEW2VFWbQkBE+ULWHayT0NbMOTD4KiNxfa6w6jDYYiRcLWq21ElSIYASXcKX5OxWQBxa43XOk6k7ZsXaFiWnjbtcIcxN8FNL8kYmRvE/0qvwXEu/Sf6VLkj6LFiwWDtdckW8phlydXxneJ3pUvyxWRi7onelX0j6TizCueykueyRpB7LTOCVAP+s+lW7C5t7sOyrNCxY5ZbqzU0rWE3sFtkfIhK2UAWSljvCa3D5laou0eElTLB3QFebBH237oHEB5TloS2d4NVUdHUtlqWhxBT5S53wVukSQCw/hfPcEpYKzF446ggMJX1OTJeAGnYQ9lyOVxualM3R0FRZ5yu9gvAy/9KZM55YLNomekuV2UMJjaem8e0s12BU0RIbJt/a8/qvClAeKjNmWXg/44/SxqzMGXpQQ1jF89rsPjY46Xn2saeIsJs8+1SipDqh+qsSwU30NYsaqqsNcx+gNSZK94P2KHfO8NPyK9Fxf0nIasCdGa15j7Jgd9ilHJz3PqHXTg4fMrp8SqKMfJ3IDrqp0VtKzpax0jgHFGYm2wCx5XfMK5aJjsoqqyppatslOTccIt2ccZ0gan2H8oeU2I2UdQW7Bc3kpy0bYrosfm7F3d3OQ0uYMTl+xKs1NPgKCW8BR14PsCkxCtk3N0M+Sqebm61duAuSG8BUml+hUYr46h3gql1POfBW/Zp8BQWNJ7KlMWIVk+ndE8lwTY77lY+Bx6NwFrn7Fb+P8AEyT2C4ozUy6XZriUJtnj6kRCUcUa+CYkDZVLQlspqH2IVHUKplqC8qszLA4OzWpIK6hXuoUL1gp6wslgx5IK6qjqXQ4kaQp6jeUYMMgjqKOoNbQqNbb90bR0Tp3hxGyag2xOSGHDTohaeVotcHboCJvTiDeFeyQhb0qVGR9s0SLrKxPDhOwmy1VDrFtimISzg51HZcnBjbsmiWNrXdlzZvCmh2K5wZ3C4ODv4KarN4XrNt2SodiocHkt2K4OEyDwU3WZbso0M4RQWKH7VKXjYpkooBFTBpG6L0R/8hesPCaQmzmy9ddWUWVCP//Z" alt="Right RGB crop for pair 94819a0952bddaae7b3c9c99, frame 23"><figcaption>Frame 23 · instance 1</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.170</td><td class="text-end">0.463</td><td>non-match · error</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.317</td><td class="text-end">0.432</td><td>non-match · error</td></tr><tr><td><code>C_rgb_2d_3d</code> · selected</td><td class="text-end">0.054</td><td class="text-end">0.379</td><td>non-match · error</td></tr><tr><td><code>geometry_only</code></td><td class="text-end">0.279</td><td class="text-end">0.451</td><td>non-match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>match</strong></span>
+    <span>Relation: same_instance</span>
+    <span>Gap: 22 frames</span>
+    <span>Visibility: 1114/1194 (high)</span>
+    <span>Mask area: 278/300 px</span>
+    <span>Crop: 29×24 / 25×23 px</span>
+    <span>Motion: 1.36 (low)</span>
+    <span>Max |depth error|: 0.62</span>
+  </div>
+</article>
+<article class="p5-item" data-method="geometry_only" data-error="false_negative" data-gap="long">
+  <div class="viz-row p5-heading">
+    <strong>#24 · <code>b162486ff2464b362b250b05</code></strong>
+    <span class="viz-badge">geometry_only</span>
+    <span class="viz-badge">false negative</span>
+    <span class="viz-badge">long gap</span>
+  </div>
+  <p class="p5-diagnosis"><strong>occlusion truncated mask:</strong> Occlusion- or image-edge-truncated mask removes reliable same-instance cues.</p>
+  <div class="p5-layout">
+    <div class="p5-crops">
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAAECBQYHAwT/xAAqEAACAQQBBAEEAQUAAAAAAAAAAQIDBAURIQYSMUETFDJRYQciQlJxgf/EABoBAAIDAQEAAAAAAAAAAAAAAAADAQQFAgb/xAAiEQACAgIBBAMBAAAAAAAAAAAAAQIDBBESBRMhMSMyQZH/2gAMAwEAAhEDEQA/AIABAABQEAAFD2J+j00LOdeMkvIuyyFa3N6JSb9Fbz1xFSVJPlnkwyU7qNH/ACOuXxNxTuZSmm9EdY3MqGRg+1pxYnmrPMXs18dcYpHrz9hUtbxxcdRfsr9WLNO6gtIZDp2ncwSdTXJnFxDtk014CLHWx/SPkcpI7zRyYwptGpgJ6FHGaAJN+AS5HuUaUHJ+NFe++NMds6S2MdxRocTa2SeJuozqai0zL8tmalTJTjGT7Ys62PVlWxnvbZk5OLbkLk/4WYx0bDUxcL7molyQWV6Opwi6lBLuf4K9ZfyDOaSk9FjxvWNvWa+Wa/6Zfay8Z7QxSa9HXAWVaVtWtrlPtjF62ZznKCtL+tCS/u4Nit8xjay3GcU5fsgM903Y5NutTlFyNCnqUfVq0y131KOpGRz03wcJeSZzuIrY6v2xi+1+yInFp8mzCamuURL8mo+AS2ILvSJyLuzW5mdFbeh21HgjM9d/TYuct6kSK+7bKf1de91dUIv+lmBS5ZN6cixFJeCtSkqk3UfmQ3ti/KBcLQHohoa7ftWh0a9xD7JNCbDbIA70cpf0ZJ/LLX+ybs+rrqg0qlRtL9ldbb9jXBPyLnTXP7IC3ZPqi3ydKMHFdyPBCxheLaaRAwpRi9x8nopXtelxBsIVRrXGHo7i9eGacAAJ6gvgZQh7ErVFStpzb1pGaZK5d1ezm34ZdOp7z6bHai+WUFvubl+Sp06rUXN/paiDAQEax0KAAQAAAASOT0h8fychyekAGqguGm/AHnv66t8fUnvTS4E5seVLRSh9im9U3vzXzop8IgPWjrc1nc3U6rfOzmuTuqHbgolsBRA9DCRQ2IBACgIKBIDoLuehp68dS+WvJABpuit9YX3wUI0ov7izL3+kZv1Ddyu8nODe1BjJJNaZTrW5EYlpB4YAcFsAACAFGigAAKIKBIb0TGFpak568kOlssuMpKNomBKP/9k=" alt="Left RGB crop for pair b162486ff2464b362b250b05, frame 1"><figcaption>Frame 1 · instance 1</figcaption></figure>
+      <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAQMAAgQFBv/EACYQAAICAQMDBAMBAAAAAAAAAAABAhEDBAUSEzFBFCFRUhUiQiP/xAAaAQACAwEBAAAAAAAAAAAAAAABBAACAwYF/8QAIBEAAgIBBQADAAAAAAAAAAAAAAECAxEEEiExUQUTQf/aAAwDAQACEQMRAD8A4QAe5G6IQJDXpdDLUw5IbLaMvgTlraIS2ylyW2tnPJRse050Ult2aJdaqh9TRNr8MwGh70mReCrwZF4ZqrYPpgwxNBLOEl/LKtPyqL5AAgQBIWJRagpe5VvCbIdXbJtJRs6bv5OLoJ1nSO41ZwWre61y9HI9FHZWl5QygNCyLCnCP1KvHj+qGtFaLKT9AKePH5gjFr9NFY+UVR0WheWHUg0N6XUyqsUs8AlHKPOpAaHZ8fDM14F0dzGSklJfomMaDFeS0kq7kjXEw1M9lTZaKyx2mTWVNHS6s15MWlj5NTOIs5Y2hqzyJ6kUCjPAR/qV8B9RGuxnITCIaOtFk6kWZrJboG1EMu4QjfJdzCl7GnUy5Tozs7nRRlGiKkJz7OXr82eD/R0bdunOeL93bEblj4qxu1vmqF/kG/qLQ7O5plWMcLxLjAucjJ5YyEFkIAJAEbAQASs5cYthEarJxxm9EPstjEEnhZMmR3NlSvVsPJM7mK2pLwUF7thcsdpC9oi1Kjr5cSy43Fruc/HGWiy1xtMQ10XKlpF4Pk669kEzLW45JW6GLUYX/aORdcl2hnIyyFOth+6D1cXiaK4fhAkYOcH2kS0+wAhRz9ZO5UbpvjGzmZ3yyWex8TVusc3+GVj4EhQaKnUC52SShGapohLJggiW34p93Qt7XjXabNYbKOKYTF+OX2ZPQV2kzbZORk6YPtByzF6acezB/vDsbbByM3pKX3FB3MxvJnl7SXsKlB3ZvfuUcUa1UwqWILBVtvswOLKuLNzhH4KvHH4NwH//2Q==" alt="Right RGB crop for pair b162486ff2464b362b250b05, frame 15"><figcaption>Frame 15 · instance 1</figcaption></figure>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm"><thead><tr><th>Method</th><th class="text-end">Score</th><th class="text-end">Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>A_rgb_only</code></td><td class="text-end">0.350</td><td class="text-end">0.463</td><td>non-match · error</td></tr><tr><td><code>B_rgb_2d</code></td><td class="text-end">0.578</td><td class="text-end">0.432</td><td>match · correct</td></tr><tr><td><code>C_rgb_2d_3d</code></td><td class="text-end">0.440</td><td class="text-end">0.379</td><td>match · correct</td></tr><tr><td><code>geometry_only</code> · selected</td><td class="text-end">0.184</td><td class="text-end">0.451</td><td>non-match · error</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="p5-controls text-small">
+    <span>Truth: <strong>match</strong></span>
+    <span>Relation: same_instance</span>
+    <span>Gap: 14 frames</span>
+    <span>Visibility: 271/1417 (low)</span>
+    <span>Mask area: 71/355 px</span>
+    <span>Crop: 32×21 / 26×29 px</span>
+    <span>Motion: 3.28 (medium)</span>
+    <span>Max |depth error|: 0.57</span>
+  </div>
+</article></div>
+<p id="p5-empty" class="p5-empty">No selected items match these filters.</p>
+<script>
+(() => {
+  const root = document.getElementById('phase5-error-gallery');
+  const method = root.querySelector('#p5-method');
+  const error = root.querySelector('#p5-error');
+  const gap = root.querySelector('#p5-gap');
+  const count = root.querySelector('#p5-count');
+  const empty = root.querySelector('#p5-empty');
+  const items = Array.from(root.querySelectorAll('.p5-item'));
+  function update() {
+    let visible = 0;
+    items.forEach(item => {
+      const show = (method.value === 'all' || item.dataset.method === method.value)
+        && (error.value === 'all' || item.dataset.error === error.value)
+        && (gap.value === 'all' || item.dataset.gap === gap.value);
+      item.hidden = !show;
+      if (show) visible += 1;
+    });
+    count.textContent = `Showing ${visible} of ${items.length}`;
+    empty.style.display = visible ? 'none' : 'block';
+  }
+  [method, error, gap].forEach(control => control.addEventListener('change', update));
+  update();
+})();
+</script>
+</div>
+</body></html>

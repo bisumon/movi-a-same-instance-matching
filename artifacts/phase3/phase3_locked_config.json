@@ -1,0 +1,257 @@
+{
+  "configurations": {
+    "A_rgb_only": {
+      "C_grid": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "C_tuning": [
+        {
+          "C": 0.01,
+          "dev_auroc": 0.747391
+        },
+        {
+          "C": 0.1,
+          "dev_auroc": 0.747391
+        },
+        {
+          "C": 1.0,
+          "dev_auroc": 0.747391
+        },
+        {
+          "C": 10.0,
+          "dev_auroc": 0.747391
+        },
+        {
+          "C": 100.0,
+          "dev_auroc": 0.747391
+        }
+      ],
+      "dev_achieved_recall": 0.9,
+      "dev_f1_at_selected_threshold": 0.72389380531,
+      "dev_false_match_rate": 0.609,
+      "f1_threshold_selected_on_dev": 0.4627167893231564,
+      "features": [
+        "rgb_cosine_similarity"
+      ],
+      "fit_scope": "train only",
+      "recall_90_threshold_selected_on_dev": 0.3700743525780599,
+      "selected_C": 0.01,
+      "selection_metric": "dev AUROC",
+      "standardizer_fit_scope": "train only"
+    },
+    "B_rgb_2d": {
+      "C_grid": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "C_tuning": [
+        {
+          "C": 0.01,
+          "dev_auroc": 0.827298
+        },
+        {
+          "C": 0.1,
+          "dev_auroc": 0.83216
+        },
+        {
+          "C": 1.0,
+          "dev_auroc": 0.835279
+        },
+        {
+          "C": 10.0,
+          "dev_auroc": 0.835821
+        },
+        {
+          "C": 100.0,
+          "dev_auroc": 0.835894
+        }
+      ],
+      "dev_achieved_recall": 0.9,
+      "dev_f1_at_selected_threshold": 0.775545104746,
+      "dev_false_match_rate": 0.426,
+      "f1_threshold_selected_on_dev": 0.43170553389623967,
+      "features": [
+        "rgb_cosine_similarity",
+        "temporal_gap",
+        "mask_center_dx_abs",
+        "mask_center_dy_abs",
+        "mask_center_distance",
+        "log_mask_area_ratio_abs",
+        "mean_log_mask_area",
+        "log_crop_area_ratio_abs",
+        "mean_log_crop_area",
+        "log_bbox_aspect_ratio_diff_abs",
+        "log_visibility_ratio_abs",
+        "min_log_visibility"
+      ],
+      "fit_scope": "train only",
+      "recall_90_threshold_selected_on_dev": 0.4376130904969784,
+      "selected_C": 100.0,
+      "selection_metric": "dev AUROC",
+      "standardizer_fit_scope": "train only"
+    },
+    "C_rgb_2d_3d": {
+      "C_grid": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "C_tuning": [
+        {
+          "C": 0.01,
+          "dev_auroc": 0.873882
+        },
+        {
+          "C": 0.1,
+          "dev_auroc": 0.880146
+        },
+        {
+          "C": 1.0,
+          "dev_auroc": 0.881231
+        },
+        {
+          "C": 10.0,
+          "dev_auroc": 0.881014
+        },
+        {
+          "C": 100.0,
+          "dev_auroc": 0.880003
+        }
+      ],
+      "dev_achieved_recall": 0.9,
+      "dev_f1_at_selected_threshold": 0.820205479452,
+      "dev_false_match_rate": 0.312,
+      "f1_threshold_selected_on_dev": 0.37928010903953285,
+      "features": [
+        "rgb_cosine_similarity",
+        "temporal_gap",
+        "mask_center_dx_abs",
+        "mask_center_dy_abs",
+        "mask_center_distance",
+        "log_mask_area_ratio_abs",
+        "mean_log_mask_area",
+        "log_crop_area_ratio_abs",
+        "mean_log_crop_area",
+        "log_bbox_aspect_ratio_diff_abs",
+        "log_visibility_ratio_abs",
+        "min_log_visibility",
+        "camera_centroid_dx_abs",
+        "camera_centroid_dy_abs",
+        "camera_centroid_dz_abs",
+        "camera_centroid_distance",
+        "camera_centroid_distance_per_frame",
+        "depth_q05_diff_abs",
+        "depth_q25_diff_abs",
+        "depth_median_diff_abs",
+        "depth_q75_diff_abs",
+        "depth_q95_diff_abs",
+        "depth_iqr_diff_abs",
+        "depth_median_diff_per_frame",
+        "extent_x_diff_abs",
+        "extent_y_diff_abs",
+        "extent_z_diff_abs",
+        "extent_l2_diff",
+        "extent_x_log_ratio_abs",
+        "extent_y_log_ratio_abs",
+        "extent_z_log_ratio_abs"
+      ],
+      "fit_scope": "train only",
+      "recall_90_threshold_selected_on_dev": 0.5048223161175864,
+      "selected_C": 1.0,
+      "selection_metric": "dev AUROC",
+      "standardizer_fit_scope": "train only"
+    },
+    "geometry_only": {
+      "C_grid": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "C_tuning": [
+        {
+          "C": 0.01,
+          "dev_auroc": 0.861278
+        },
+        {
+          "C": 0.1,
+          "dev_auroc": 0.863949
+        },
+        {
+          "C": 1.0,
+          "dev_auroc": 0.863247
+        },
+        {
+          "C": 10.0,
+          "dev_auroc": 0.862702
+        },
+        {
+          "C": 100.0,
+          "dev_auroc": 0.862509
+        }
+      ],
+      "dev_achieved_recall": 0.9,
+      "dev_f1_at_selected_threshold": 0.795661605206,
+      "dev_false_match_rate": 0.372,
+      "f1_threshold_selected_on_dev": 0.45117200198761054,
+      "features": [
+        "temporal_gap",
+        "mask_center_dx_abs",
+        "mask_center_dy_abs",
+        "mask_center_distance",
+        "log_mask_area_ratio_abs",
+        "mean_log_mask_area",
+        "log_crop_area_ratio_abs",
+        "mean_log_crop_area",
+        "log_bbox_aspect_ratio_diff_abs",
+        "log_visibility_ratio_abs",
+        "min_log_visibility",
+        "camera_centroid_dx_abs",
+        "camera_centroid_dy_abs",
+        "camera_centroid_dz_abs",
+        "camera_centroid_distance",
+        "camera_centroid_distance_per_frame",
+        "depth_q05_diff_abs",
+        "depth_q25_diff_abs",
+        "depth_median_diff_abs",
+        "depth_q75_diff_abs",
+        "depth_q95_diff_abs",
+        "depth_iqr_diff_abs",
+        "depth_median_diff_per_frame",
+        "extent_x_diff_abs",
+        "extent_y_diff_abs",
+        "extent_z_diff_abs",
+        "extent_l2_diff",
+        "extent_x_log_ratio_abs",
+        "extent_y_log_ratio_abs",
+        "extent_z_log_ratio_abs"
+      ],
+      "fit_scope": "train only",
+      "recall_90_threshold_selected_on_dev": 0.473062580975553,
+      "selected_C": 0.1,
+      "selection_metric": "dev AUROC",
+      "standardizer_fit_scope": "train only"
+    }
+  },
+  "decision_protocol": {
+    "90_recall_threshold_selection": "highest dev threshold achieving at least 90% recall",
+    "f1_threshold_selection": "maximum dev F1; ties choose higher threshold",
+    "model_fit": "train only",
+    "regularization_selection": "maximum dev AUROC; ties choose smaller C",
+    "test_policy": "no test labels or scores used before this configuration was written"
+  },
+  "input_features_sha256": "42b6679cb9c94c39d401d9bd2c5c7a746ee22c1811d0bc5cbfe6a8858f4ee5d2",
+  "pipeline": "MOVi-A Phase 3 locked model and threshold configuration",
+  "seed": 20260727,
+  "version": "1.0.1"
+}

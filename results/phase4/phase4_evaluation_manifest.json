@@ -1,0 +1,65 @@
+{
+  "checks": {
+    "all_scores_finite": true,
+    "all_test_strata_have_both_classes": true,
+    "bootstrap_replicates": 10000,
+    "phase3_aggregate_metrics_reproduced": true,
+    "prediction_pair_join_exact": true,
+    "split_counts": {
+      "dev": 2000,
+      "test": 2000,
+      "train": 6000
+    },
+    "test_video_count": 10
+  },
+  "inputs": {
+    "diagnostics_sha256": "06530f25e6f28410e0c77f031e9c5ae149ba4735d051b70163436db97db1e056",
+    "locked_config_sha256": "4c99da251dcf6ce47e065a27feaa69a001d61be5007fb4df8313a3a7a0dc112a",
+    "model_inputs_sha256": "a24c92f14be16ec1d1ee33d378708d59701f5178b60ba9374ac08644055b0114",
+    "pairs_sha256": "25b7d6e9b680864e2f6fa4859158b9de50fd15d9866b9f3ee9d5993c48eb3402",
+    "phase3_results_sha256": "3475f15beb8a2c1fe935354827272e264a9d60b4f9de1ac31ea98a665d46d0a5",
+    "predictions_sha256": "9b3cdc350544863e4420740042ef536017f66fbdfe207f45d5adfeb240b3b171",
+    "rgb_manifest_sha256": "828e51dbb129cdcab47dbe556f8c033aecdb92419a7fca6d868594f6b6f85d9f"
+  },
+  "outputs": {
+    "phase4_aggregate_metrics.csv": "83347ab225d5d463f25137e23003762275e6901e9e3d4e54cba767a11d302a40",
+    "phase4_bootstrap_intervals.csv": "898cfff635cb7899ecd11936fd19127ab65bce1344b953cbd20110a25747e945",
+    "phase4_bootstrap_replicates.csv": "7ba8ef611ac594120aac452e4bf783e701338f9ab4b8c0bf6c9ec690f5357c95",
+    "phase4_latency.csv": "348730217ba73decded4cf5578be25a493cff565325a1998f3e0fc98610051fd",
+    "phase4_macro_metrics.csv": "6574b81438bb288e34322b63c6f100bccfb0c5bf222897db2d4d3ccedcdebc9f",
+    "phase4_paired_differences.csv": "14a018c2750054ca7c37b1a68f1de946509e04a2d17fc862d4c83343957784c2",
+    "phase4_per_video_metrics.csv": "e4bcf0e3cf857b2522f82001ff8fd9d795a6720f45d3e1cf5e54a27da6f7f88a",
+    "phase4_primary_comparison.svg": "64b92357bac2bc5c526ad0d534612f7f9abd956116c027b8d884fde3c1271594",
+    "phase4_results.json": "186a7f744572ac5d0f7bc0dde13d46fe36ed442d65769894cd4452666110afcf",
+    "phase4_stratified_metrics.csv": "fd522011e47a495b0f9bc19c5500f9e881c4c7318229e0c4a221a5ccdec597fa"
+  },
+  "pipeline": "MOVi-A Phase 4 locked evaluation",
+  "protocol": {
+    "bootstrap": {
+      "confidence_interval": "two-sided 95% percentile",
+      "paired_across_configurations": true,
+      "replicates": 10000,
+      "resample_size_in_videos": 10,
+      "sampling": "with replacement; sampled clusters retain all within-video pairs",
+      "seed": 20260727,
+      "test_video_count": 10,
+      "unit": "video"
+    },
+    "hard_easy_rule": "all test positives are reused in each comparison; negatives are filtered by difficulty",
+    "model_thresholds": "locked Phase 3 dev-selected thresholds",
+    "motion_diagnostics_use": "evaluation-only; never joined into model features",
+    "no_refitting_or_retuning": true,
+    "primary_comparison": {
+      "augmented": "C_rgb_2d_3d",
+      "baseline": "B_rgb_2d"
+    },
+    "stratum_cutpoints": "training-pair tertiles fixed before application to dev/test"
+  },
+  "runtime": {
+    "numpy": "1.26.4",
+    "platform": "macOS-14.4-x86_64-i386-64bit",
+    "python": "3.12.13",
+    "scikit_learn": "1.7.1"
+  },
+  "version": "1.0.0"
+}

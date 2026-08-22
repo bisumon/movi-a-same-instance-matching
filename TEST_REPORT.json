@@ -1,0 +1,15 @@
+{
+  "command": "python -m unittest discover -s tests -p 'test_*.py' -v",
+  "date": "2026-08-10",
+  "environment": {
+    "Pillow": "12.3.0",
+    "joblib": "1.5.1",
+    "numpy": "1.26.4",
+    "python": "3.12.13",
+    "scikit-learn": "1.7.1",
+    "scipy": "1.17.1"
+  },
+  "selection_smoke_test": "pass",
+  "status": "pass",
+  "tests_run": 23
+}

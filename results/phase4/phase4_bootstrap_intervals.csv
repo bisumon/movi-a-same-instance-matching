@@ -1,0 +1,21 @@
+configuration,metric,point_estimate,bootstrap_mean,bootstrap_standard_error,ci_lower,ci_upper,confidence_level,method,replicates
+A_rgb_only,auroc,0.736519,0.737654144937,0.02928986891,0.683373105386,0.797236493344,0.95,percentile video-cluster bootstrap,10000
+A_rgb_only,pr_auc,0.742481484351,0.745648788144,0.044668145143,0.663065076251,0.837075567291,0.95,percentile video-cluster bootstrap,10000
+A_rgb_only,f1_at_locked_threshold,0.683568075117,0.684414527204,0.030659974722,0.626362672663,0.745160541466,0.95,percentile video-cluster bootstrap,10000
+A_rgb_only,false_match_rate_at_locked_90_recall_threshold,0.563,0.559383613022,0.043944325241,0.466291722956,0.636363636364,0.95,percentile video-cluster bootstrap,10000
+A_rgb_only,achieved_recall_at_locked_90_recall_threshold,0.847,0.8470932,0.015606218926,0.816,0.877,0.95,percentile video-cluster bootstrap,10000
+B_rgb_2d,auroc,0.827765,0.828035174437,0.020607601892,0.787260474634,0.868415235479,0.95,percentile video-cluster bootstrap,10000
+B_rgb_2d,pr_auc,0.809096333946,0.810308925779,0.030896010875,0.750807911298,0.871621117307,0.95,percentile video-cluster bootstrap,10000
+B_rgb_2d,f1_at_locked_threshold,0.762803234501,0.763243159262,0.023718598965,0.716694772344,0.808572397887,0.95,percentile video-cluster bootstrap,10000
+B_rgb_2d,false_match_rate_at_locked_90_recall_threshold,0.374,0.373345537804,0.052138784352,0.269817517676,0.472870835952,0.95,percentile video-cluster bootstrap,10000
+B_rgb_2d,achieved_recall_at_locked_90_recall_threshold,0.845,0.8449393,0.013434912177,0.821,0.872,0.95,percentile video-cluster bootstrap,10000
+C_rgb_2d_3d,auroc,0.888436,0.88878682016,0.020462928011,0.846931566204,0.927054948127,0.95,percentile video-cluster bootstrap,10000
+C_rgb_2d_3d,pr_auc,0.886447403405,0.886521741922,0.027655726171,0.828066404869,0.935466395676,0.95,percentile video-cluster bootstrap,10000
+C_rgb_2d_3d,f1_at_locked_threshold,0.797757654161,0.798327040527,0.026719172673,0.745143829152,0.848732652034,0.95,percentile video-cluster bootstrap,10000
+C_rgb_2d_3d,false_match_rate_at_locked_90_recall_threshold,0.295,0.294148052856,0.040610448491,0.208829565423,0.367704763901,0.95,percentile video-cluster bootstrap,10000
+C_rgb_2d_3d,achieved_recall_at_locked_90_recall_threshold,0.869,0.8692122,0.019032209374,0.831,0.905,0.95,percentile video-cluster bootstrap,10000
+geometry_only,auroc,0.865357,0.865480878821,0.021455490558,0.824877408056,0.908546683588,0.95,percentile video-cluster bootstrap,10000
+geometry_only,pr_auc,0.853473530383,0.854025794518,0.027942576265,0.7957612747,0.905927719604,0.95,percentile video-cluster bootstrap,10000
+geometry_only,f1_at_locked_threshold,0.798769771529,0.799399581837,0.025392169146,0.749028077754,0.848154640408,0.95,percentile video-cluster bootstrap,10000
+geometry_only,false_match_rate_at_locked_90_recall_threshold,0.355,0.354364129679,0.048173601355,0.255433058438,0.442935751129,0.95,percentile video-cluster bootstrap,10000
+geometry_only,achieved_recall_at_locked_90_recall_threshold,0.904,0.9042134,0.018216510219,0.868,0.939,0.95,percentile video-cluster bootstrap,10000

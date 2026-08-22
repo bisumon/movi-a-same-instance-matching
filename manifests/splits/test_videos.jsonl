@@ -1,0 +1,10 @@
+{"capacity_tertile":"medium","num_phase1_observations":183,"object_bin":"07-08","selection_stratum":"07-08|medium","split":"test","video_id":"2481"}
+{"capacity_tertile":"medium","num_phase1_observations":168,"object_bin":"07-08","selection_stratum":"07-08|medium","split":"test","video_id":"2854"}
+{"capacity_tertile":"high","num_phase1_observations":129,"object_bin":"05-06","selection_stratum":"05-06|high","split":"test","video_id":"3851"}
+{"capacity_tertile":"low","num_phase1_observations":199,"object_bin":"09-10","selection_stratum":"09-10|low","split":"test","video_id":"6159"}
+{"capacity_tertile":"medium","num_phase1_observations":135,"object_bin":"05-06","selection_stratum":"05-06|medium","split":"test","video_id":"6268"}
+{"capacity_tertile":"high","num_phase1_observations":95,"object_bin":"03-04","selection_stratum":"03-04|high","split":"test","video_id":"7772"}
+{"capacity_tertile":"high","num_phase1_observations":209,"object_bin":"09-10","selection_stratum":"09-10|high","split":"test","video_id":"8193"}
+{"capacity_tertile":"high","num_phase1_observations":200,"object_bin":"09-10","selection_stratum":"09-10|high","split":"test","video_id":"8879"}
+{"capacity_tertile":"low","num_phase1_observations":211,"object_bin":"09-10","selection_stratum":"09-10|low","split":"test","video_id":"9009"}
+{"capacity_tertile":"low","num_phase1_observations":169,"object_bin":"07-08","selection_stratum":"07-08|low","split":"test","video_id":"9403"}

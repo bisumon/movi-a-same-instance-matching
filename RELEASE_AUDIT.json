@@ -1,0 +1,60 @@
+{
+  "cross_video_pairs": 0,
+  "failure_gallery": {
+    "errors": {
+      "false_negative": 12,
+      "false_positive": 12
+    },
+    "items": 24,
+    "per_configuration": {
+      "A_rgb_only": 6,
+      "B_rgb_2d": 6,
+      "C_rgb_2d_3d": 6,
+      "geometry_only": 6
+    }
+  },
+  "pair_split": {
+    "dev": 2000,
+    "test": 2000,
+    "train": 6000
+  },
+  "phase4_rows": {
+    "aggregate": 8,
+    "bootstrap_intervals": 20,
+    "latency": 11,
+    "paired_differences": 5,
+    "per_video": 40,
+    "strata": 44
+  },
+  "prediction_configurations": [
+    "A_rgb_only",
+    "B_rgb_2d",
+    "C_rgb_2d_3d",
+    "geometry_only"
+  ],
+  "prediction_rows": 10000,
+  "required_deliverables": [
+    "README.md",
+    "requirements.txt",
+    "requirements-lock.txt",
+    "run_main_experiments.sh",
+    "run_experiment.py",
+    "configs/protocol.json",
+    "docs/results_tables.xlsx",
+    "docs/CONCLUSIONS_AND_NEXT_STEPS.docx",
+    "docs/CONCLUSIONS_AND_NEXT_STEPS.md",
+    "docs/REPRODUCIBILITY.md",
+    "docs/SOURCES_AND_LICENSES.md",
+    "failure_gallery/phase5_error_gallery.html",
+    "LICENSE.md",
+    "TEST_REPORT.json"
+  ],
+  "selected_videos": 50,
+  "status": "pass",
+  "third_party_license_files": 23,
+  "video_split": {
+    "dev": 10,
+    "test": 10,
+    "train": 30
+  }
+}

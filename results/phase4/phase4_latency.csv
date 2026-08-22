@@ -1,0 +1,12 @@
+component,configuration,statistic,value,unit
+frozen_rgb_encoder,shared_rgb,forward_ms_per_crop_p50,21.401039874945127,ms/crop
+frozen_rgb_encoder,shared_rgb,forward_ms_per_crop_p95,23.072443187629688,ms/crop
+end_to_end_embedding_extraction,shared_rgb,wall_ms_per_crop,24.701612620727786,ms/crop
+logistic_pair_scoring,A_rgb_only,microseconds_per_pair_p50,0.1068335,microseconds/pair
+logistic_pair_scoring,A_rgb_only,microseconds_per_pair_p95,0.1873574,microseconds/pair
+logistic_pair_scoring,B_rgb_2d,microseconds_per_pair_p50,0.155057,microseconds/pair
+logistic_pair_scoring,B_rgb_2d,microseconds_per_pair_p95,0.164589075,microseconds/pair
+logistic_pair_scoring,C_rgb_2d_3d,microseconds_per_pair_p50,0.21675925,microseconds/pair
+logistic_pair_scoring,C_rgb_2d_3d,microseconds_per_pair_p95,0.348740325,microseconds/pair
+logistic_pair_scoring,geometry_only,microseconds_per_pair_p50,0.19709275,microseconds/pair
+logistic_pair_scoring,geometry_only,microseconds_per_pair_p95,0.317428775,microseconds/pair
