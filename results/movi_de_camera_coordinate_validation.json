@@ -1,0 +1,95 @@
+{
+  "protocol_id": "MOVI-DE-POSE-001",
+  "validation_date": "2026-08-25",
+  "scope": {
+    "movi_d_pilot_videos": 20,
+    "movi_e_pilot_videos": 20,
+    "movi_d_included_observations": 4452,
+    "movi_e_included_observations": 5275
+  },
+  "overall_status": "pass",
+  "gates": {
+    "camera_world_roundtrip": {
+      "status": "pass",
+      "tolerance_scene_units": 1e-8,
+      "movi_d_max_error": 8.758808311222675e-15,
+      "movi_e_max_error": 1.74499372324175e-14
+    },
+    "pixel_reprojection": {
+      "status": "pass",
+      "tolerance_pixels": 1e-6,
+      "movi_d_max_error": 3.552713678800501e-14,
+      "movi_e_max_error": 4.0194366942304644e-14
+    },
+    "rotation_orthonormality": {
+      "status": "pass",
+      "tolerance": 1e-10,
+      "movi_d_max_error": 6.661338147750939e-16,
+      "movi_e_max_error": 1.3322676295501878e-15
+    },
+    "static_world_stability": {
+      "status": "pass",
+      "movi_e_all_observations": {
+        "eligible_static_tracks": 200,
+        "camera_space_median_deviation": 0.2070378782627281,
+        "world_space_median_deviation": 0.04122554047148111,
+        "world_to_camera_ratio": 0.19912076387861014,
+        "videos_world_more_stable": 20,
+        "videos_evaluated": 20
+      },
+      "movi_e_high_visibility_sensitivity": {
+        "definition": "Within each static track, retain observations with annotated visibility at least 75% of that track's maximum; require at least two observations.",
+        "eligible_static_tracks": 200,
+        "camera_space_median_deviation": 0.16060530112426089,
+        "world_space_median_deviation": 0.02789712554632663,
+        "world_to_camera_ratio": 0.1736999049909475
+      },
+      "movi_d_fixed_camera_control": {
+        "eligible_static_tracks": 169,
+        "median_track_world_to_camera_ratio_all": 0.9801928371477032,
+        "median_track_world_to_camera_ratio_high_visibility": 1.0311173512000775
+      }
+    },
+    "convention_assertions": {
+      "status": "pass",
+      "quaternion_order": "wxyz",
+      "transform_direction": "camera-to-world",
+      "cv_camera_axes": "x right, y down, z forward",
+      "kubric_camera_axes": "x right, y up, z backward",
+      "cv_to_kubric_axis_multiplier": [1, -1, -1],
+      "depth_semantics": "radial distance from camera center in raw MOVi/Kubric scene units",
+      "evidence": [
+        "src/movi_de_dataset_adapter.py",
+        "runs/movi_de_pilot/movi_d_phase1/phase1_adapter_manifest.json",
+        "runs/movi_de_pilot/movi_e_phase1/phase1_adapter_manifest.json",
+        "docs/MOVI_DE_DATA_ADAPTER.md"
+      ]
+    },
+    "reason_coded_exclusions": {
+      "status": "pass_for_pilot",
+      "movi_d_excluded_observations": 1044,
+      "movi_e_excluded_observations": 1205,
+      "observed_reason_codes": [
+        "visibility_below_threshold",
+        "mask_area_below_threshold"
+      ],
+      "nonfinite_model_values": 0,
+      "note": "Invalid masked depths are filtered and would produce insufficient_valid_depth_pixels when fewer than 32 valid pixels remain. Corrupt camera poses hard-fail the video rather than producing an observation-level exclusion."
+    }
+  },
+  "camera_motion_falsification_control": {
+    "movi_d_translation_path_range_scene_units": [0.0, 0.0],
+    "movi_d_rotation_range_degrees": [0.0, 2.091309789151873e-6],
+    "movi_e_translation_path_range_scene_units": [0.041592101822911155, 3.418896729887482],
+    "movi_e_rotation_range_degrees": [0.08965943504838313, 31.260274489712042]
+  },
+  "tests": {
+    "command": "PYTHONPATH=/private/tmp/movi_de_pilot_deps python -m unittest tests.test_movi_de_adapter -v",
+    "passed": 7,
+    "failed": 0
+  },
+  "preconfirmatory_hardening": [
+    "Add explicit world_handedness, world_up_axis, cv_to_kubric_axis_multiplier, and raw_scene_unit fields to each extraction manifest.",
+    "Add explicit non_finite_reconstruction and implausible_reconstruction reason codes even though neither occurred in this pilot."
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "artifacts": {
+    "configs/movi_de_phase6_systems.json": {
+      "sha256": "b651dd3587b60e3daece48733ce0c5e33a928386ee91e510eec5481e562354fa",
+      "size_bytes": 9799
+    },
+    "docs/MOVI_DE_PHASE8_REGIME3_D_TO_E_TRANSFER.md": {
+      "sha256": "5c9ba7aa653d72317c772863ad692246e76b6c1846525a7bbaa4f9b7c98bcaf9",
+      "size_bytes": 3855
+    },
+    "manifests/movi_de/phase8_regime1_in_domain_movi_e_freeze.json": {
+      "sha256": "e4afa476ff51b0cda01bbf5d172cd7cf16029e1d553c6246b540c1181c4008a0",
+      "size_bytes": 6062
+    },
+    "manifests/movi_de/phase8_regime2_in_domain_movi_d_freeze.json": {
+      "sha256": "b7aac088e2ea76270e84950d1d86cbecbaad6fad1f04049aecc8ae71fea9f82e",
+      "size_bytes": 5903
+    },
+    "manifests/movi_de/phase8_regime3_reproducibility_audit.json": {
+      "sha256": "6077dd35059ca3e8d1ef240a242b47204977b75dbec1fb51fbe45bb715c95947",
+      "size_bytes": 591
+    },
+    "results/movi_de_phase8_regime3/movi_d_to_e_transfer_locked_config.json": {
+      "sha256": "5c6b502e609e39daf3e421c92b24133ec2e429c582b341f1ce9e489bea293202",
+      "size_bytes": 2207
+    },
+    "results/movi_de_phase8_regime3/movi_d_to_e_transfer_results.csv": {
+      "sha256": "c8d9cde6af30cab0202859efbf005cfb40e32ba68bc673671efc705576507a8a",
+      "size_bytes": 507
+    },
+    "results/movi_de_phase8_regime3/movi_d_to_e_transfer_results.json": {
+      "sha256": "a3099a4055beafb71821d3bae08f292c00025d9c91c7a348ba31e07d3031bf87",
+      "size_bytes": 4333
+    },
+    "runs/movi_de_confirmatory/phase8_regime2/in_domain_movi_d/movi_d_phase8_regime2_models.joblib": {
+      "sha256": "0922da0c3261f6190d81eac42939544dc7d70eac297207f6c5612249325a6776",
+      "size_bytes": 5562
+    },
+    "runs/movi_de_confirmatory/phase8_regime3/d_to_e_transfer/movi_d_to_e_phase8_regime3_locked_config.json": {
+      "sha256": "5c6b502e609e39daf3e421c92b24133ec2e429c582b341f1ce9e489bea293202",
+      "size_bytes": 2207
+    },
+    "runs/movi_de_confirmatory/phase8_regime3/d_to_e_transfer/movi_d_to_e_phase8_regime3_manifest.json": {
+      "sha256": "1511305acc81306c5cfa50b72853ab7eceb9d28e0a3403ef491421133015413a",
+      "size_bytes": 904
+    },
+    "runs/movi_de_confirmatory/phase8_regime3/d_to_e_transfer/movi_d_to_e_phase8_regime3_predictions.jsonl": {
+      "sha256": "4353d829a011d238088c1dfc2628c8f0d30605692af12822e1b945e892d362d6",
+      "size_bytes": 1834689
+    },
+    "runs/movi_de_confirmatory/phase8_regime3/d_to_e_transfer/movi_d_to_e_phase8_regime3_results.csv": {
+      "sha256": "c8d9cde6af30cab0202859efbf005cfb40e32ba68bc673671efc705576507a8a",
+      "size_bytes": 507
+    },
+    "runs/movi_de_confirmatory/phase8_regime3/d_to_e_transfer/movi_d_to_e_phase8_regime3_results.json": {
+      "sha256": "a3099a4055beafb71821d3bae08f292c00025d9c91c7a348ba31e07d3031bf87",
+      "size_bytes": 4333
+    },
+    "src/freeze_movi_d_to_e_phase8_regime3.py": {
+      "sha256": "7360f2d90bf8aebf9626573e03810b3d8be233d3d8e11e7e818c0877d690635f",
+      "size_bytes": 7902
+    },
+    "src/run_movi_d_to_e_phase8_transfer.py": {
+      "sha256": "18d405105939054b1860cdc4bb57ff7a3f2b2fcca5c06269e09fd23870baf8fd",
+      "size_bytes": 14246
+    },
+    "tests/test_movi_d_to_e_phase8_transfer.py": {
+      "sha256": "e9788978650866aab88decc44b1b61912587f2f98cc38266bf18f2773da20151",
+      "size_bytes": 1126
+    }
+  },
+  "bootstrap_replicates": 10000,
+  "change_control": "Regime 3 is frozen. Any source refit, target normalization, target tuning, threshold adjustment, pair change, or post-test feature change requires a replacement lock and is exploratory.",
+  "checks": {
+    "all_2000_scores_recompute_exactly": true,
+    "all_manifest_checks_pass": true,
+    "all_recorded_scores_finite": true,
+    "all_result_checks_pass": true,
+    "exact_10000_bootstrap_replicates": true,
+    "exact_2000_unique_test_predictions": true,
+    "paired_in_domain_C_AUROC_interval_above_zero": true,
+    "paired_in_domain_D_AUROC_interval_spans_zero": true,
+    "prediction_identity_fields_exact": true,
+    "prediction_pair_order_exact": true,
+    "protocol_declares_D_to_E_without_refit": true,
+    "source_fit_and_scaler_scopes_are_MOVi_D_train_only": true,
+    "source_model_bundle_matches_source_lock": true,
+    "source_regime_status_locked": true,
+    "source_regularization_unchanged": true,
+    "source_thresholds_unchanged": true,
+    "transfer_uses_clean_D_only": true
+  },
+  "headline": {
+    "paired_video_cluster_ci_high": 0.00093424392,
+    "paired_video_cluster_ci_low": -0.000983003021,
+    "transfer_AUROC": 0.994029,
+    "transfer_PR_AUC": 0.994561397349,
+    "transfer_minus_in_domain_D_AUROC": -0.000154
+  },
+  "lock_date": "2026-08-25",
+  "lock_id": "MOVI-DE-POSE-001-PHASE8-REGIME3-v1.0.0",
+  "regime": "clean_D_transfer_without_refit",
+  "seed": 20260825,
+  "source_dataset": "movi_d",
+  "status": "locked",
+  "target_dataset": "movi_e",
+  "target_test_pairs": 2000
+}

@@ -1,0 +1,198 @@
+{
+  "capacity": {
+    "dev": {
+      "easy": {
+        "available_unique_candidates": 735683,
+        "capacity_to_target_ratio": 1471.366,
+        "object_motion_capacity": {
+          "dynamic-dynamic": 11220,
+          "dynamic-static": 204372,
+          "static-static": 520091
+        },
+        "passed": true,
+        "target": 500,
+        "temporal_gap_capacity": {
+          "long_12_23": 209410,
+          "medium_6_11": 246794,
+          "short_1_5": 279479
+        },
+        "videos_with_candidates": 30
+      },
+      "hard": {
+        "available_unique_candidates": 31393,
+        "capacity_to_target_ratio": 62.786,
+        "object_motion_capacity": {
+          "dynamic-dynamic": 53,
+          "dynamic-static": 9045,
+          "static-static": 22295
+        },
+        "passed": true,
+        "retained_fraction_of_same_category_candidates": 0.21107375781617696,
+        "same_category_candidates_before_scale_filter": 148730,
+        "target": 500,
+        "temporal_gap_capacity": {
+          "long_12_23": 8993,
+          "medium_6_11": 10430,
+          "short_1_5": 11970
+        },
+        "videos_with_candidates": 30
+      },
+      "positive": {
+        "available_unique_candidates": 80762,
+        "capacity_to_target_ratio": 80.762,
+        "object_motion_capacity": {
+          "dynamic": 12013,
+          "static": 68749
+        },
+        "passed": true,
+        "target": 1000,
+        "temporal_gap_capacity": {
+          "long_12_23": 22079,
+          "medium_6_11": 26993,
+          "short_1_5": 31690
+        },
+        "videos_with_candidates": 30
+      }
+    },
+    "test": {
+      "easy": {
+        "available_unique_candidates": 756877,
+        "capacity_to_target_ratio": 1513.754,
+        "object_motion_capacity": {
+          "dynamic-dynamic": 9861,
+          "dynamic-static": 197535,
+          "static-static": 549481
+        },
+        "passed": true,
+        "target": 500,
+        "temporal_gap_capacity": {
+          "long_12_23": 212354,
+          "medium_6_11": 255793,
+          "short_1_5": 288730
+        },
+        "videos_with_candidates": 30
+      },
+      "hard": {
+        "available_unique_candidates": 35065,
+        "capacity_to_target_ratio": 70.13,
+        "object_motion_capacity": {
+          "dynamic-dynamic": 1021,
+          "dynamic-static": 7543,
+          "static-static": 26501
+        },
+        "passed": true,
+        "retained_fraction_of_same_category_candidates": 0.2207456184528606,
+        "same_category_candidates_before_scale_filter": 158848,
+        "target": 500,
+        "temporal_gap_capacity": {
+          "long_12_23": 9765,
+          "medium_6_11": 11717,
+          "short_1_5": 13583
+        },
+        "videos_with_candidates": 30
+      },
+      "positive": {
+        "available_unique_candidates": 82925,
+        "capacity_to_target_ratio": 82.925,
+        "object_motion_capacity": {
+          "dynamic": 11422,
+          "static": 71503
+        },
+        "passed": true,
+        "target": 1000,
+        "temporal_gap_capacity": {
+          "long_12_23": 22591,
+          "medium_6_11": 27906,
+          "short_1_5": 32428
+        },
+        "videos_with_candidates": 30
+      }
+    },
+    "train": {
+      "easy": {
+        "available_unique_candidates": 2104561,
+        "capacity_to_target_ratio": 1403.0406666666668,
+        "object_motion_capacity": {
+          "dynamic-dynamic": 36258,
+          "dynamic-static": 583752,
+          "static-static": 1484551
+        },
+        "passed": true,
+        "target": 1500,
+        "temporal_gap_capacity": {
+          "long_12_23": 593458,
+          "medium_6_11": 708813,
+          "short_1_5": 802290
+        },
+        "videos_with_candidates": 90
+      },
+      "hard": {
+        "available_unique_candidates": 124643,
+        "capacity_to_target_ratio": 83.09533333333333,
+        "object_motion_capacity": {
+          "dynamic-dynamic": 2548,
+          "dynamic-static": 35360,
+          "static-static": 86735
+        },
+        "passed": true,
+        "retained_fraction_of_same_category_candidates": 0.25001905587181616,
+        "same_category_candidates_before_scale_filter": 498534,
+        "target": 1500,
+        "temporal_gap_capacity": {
+          "long_12_23": 34910,
+          "medium_6_11": 41935,
+          "short_1_5": 47798
+        },
+        "videos_with_candidates": 88
+      },
+      "positive": {
+        "available_unique_candidates": 240883,
+        "capacity_to_target_ratio": 80.29433333333333,
+        "object_motion_capacity": {
+          "dynamic": 38790,
+          "static": 202093
+        },
+        "passed": true,
+        "target": 3000,
+        "temporal_gap_capacity": {
+          "long_12_23": 65137,
+          "medium_6_11": 80705,
+          "short_1_5": 95041
+        },
+        "videos_with_candidates": 90
+      }
+    }
+  },
+  "checks": {
+    "all_150_selected_videos_found": true,
+    "all_pool_kind_capacity_gates_passed": true,
+    "exact_90_30_30_split": true,
+    "train_cutoff_retains_at_least_25_percent": true
+  },
+  "dataset": "movi_e",
+  "failures": [],
+  "hard_negative_cutoff_quantile": 0.25,
+  "hard_negative_cutoff_quantile_method": "higher (smallest observed cutoff retaining at least 25%)",
+  "hard_negative_cutoff_source": "locked training pool only; applied unchanged to development and test",
+  "hard_negative_scale_cutoff_abs_log_area_ratio": 0.461345566502621,
+  "hard_negative_scale_cutoff_equivalent_max_area_ratio": 1.5862068965517242,
+  "pipeline": "MOVi-D/E frozen post-split pair-capacity audit",
+  "protocol_id": "MOVI-DE-POSE-001",
+  "protocol_version": "0.2",
+  "split_counts": {
+    "dev": 30,
+    "test": 30,
+    "train": 90
+  },
+  "status": "pass",
+  "train_same_category_candidates_before_scale_filter": 498534,
+  "train_same_category_candidates_retained": 124643,
+  "train_same_category_retained_fraction": 0.25001905587181616,
+  "very_hard_same_asset_candidates": {
+    "train": 545
+  },
+  "video_manifest": {
+    "path": "manifests/movi_de/confirmatory_movi_e_150.jsonl",
+    "sha256": "bce26601d364645588bcede1780aac2fc78d6421d0446ac97da1c8d641edfc25"
+  }
+}

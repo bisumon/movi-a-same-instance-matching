@@ -1,0 +1,343 @@
+{
+  "combined_manifest": {
+    "path": "manifests/pairs/movi_de/movi_e_all_pairs.jsonl",
+    "sha256": "032e58a140db4b9a44981c88a6bc0385efad2589f53cfd19ee3843d27530bfee"
+  },
+  "dataset": "movi_e",
+  "definition_config": {
+    "path": "configs/movi_de_hard_negatives.json",
+    "sha256": "efe7623a4f9a3a673153dfa9f37c4c51f0f022d10d04d183cc27d21ffd0c727f"
+  },
+  "generator_version": "1.0.0",
+  "hard_negative_cutoff": 0.461345566502621,
+  "pipeline": "MOVi-D/E frozen Phase 5 pair generation",
+  "seed": 20260825,
+  "source_video_manifest": {
+    "path": "manifests/movi_de/confirmatory_movi_e_150.jsonl",
+    "sha256": "bce26601d364645588bcede1780aac2fc78d6421d0446ac97da1c8d641edfc25"
+  },
+  "splits": {
+    "dev": {
+      "actual": 2000,
+      "camera_motion": {
+        "mean_displacement": 0.690350574774,
+        "mean_normalized_displacement": 0.068427406556,
+        "mean_rotation_degrees": 4.055862879683
+      },
+      "checks": {
+        "all_pair_definitions_pass": true,
+        "exact_kind_quotas": true,
+        "exact_temporal_gap_allocations": true,
+        "exact_total": true,
+        "unique_unordered_pairs": true,
+        "video_cap_respected": true,
+        "within_video_only": true
+      },
+      "kind_counts": {
+        "easy": 500,
+        "hard": 500,
+        "positive": 1000
+      },
+      "manifest": {
+        "path": "manifests/pairs/movi_de/movi_e_dev_pairs.jsonl",
+        "sha256": "28c4c90396ebb8438a431ce16bc45c560b445d2a4a96f27d2e4082d0d8a3c0fe"
+      },
+      "max_video_contribution": 67,
+      "sampling": {
+        "fallbacks": [],
+        "max_video_contribution": 67,
+        "min_video_contribution": 66,
+        "video_contribution_counts": {
+          "1233": 67,
+          "1417": 67,
+          "1626": 67,
+          "216": 67,
+          "3792": 66,
+          "3835": 67,
+          "5261": 67,
+          "5436": 67,
+          "5544": 66,
+          "5653": 67,
+          "585": 67,
+          "5852": 67,
+          "5936": 67,
+          "6030": 67,
+          "6181": 67,
+          "6268": 67,
+          "6649": 67,
+          "6755": 66,
+          "7217": 66,
+          "733": 66,
+          "7388": 67,
+          "7410": 67,
+          "7798": 66,
+          "796": 67,
+          "8189": 67,
+          "8193": 66,
+          "9095": 66,
+          "9154": 67,
+          "9717": 66,
+          "9816": 66
+        },
+        "videos_contributing": 30
+      },
+      "split": "dev",
+      "status": "pass",
+      "target": 2000,
+      "temporal_gap_bin_counts": {
+        "easy": {
+          "long_12_23": 166,
+          "medium_6_11": 167,
+          "short_1_5": 167
+        },
+        "hard": {
+          "long_12_23": 166,
+          "medium_6_11": 167,
+          "short_1_5": 167
+        },
+        "positive": {
+          "long_12_23": 333,
+          "medium_6_11": 333,
+          "short_1_5": 334
+        }
+      },
+      "very_hard_same_asset_count": 0,
+      "violations": []
+    },
+    "test": {
+      "actual": 2000,
+      "camera_motion": {
+        "mean_displacement": 0.687585135891,
+        "mean_normalized_displacement": 0.068147652297,
+        "mean_rotation_degrees": 4.030135850557
+      },
+      "checks": {
+        "all_pair_definitions_pass": true,
+        "exact_kind_quotas": true,
+        "exact_temporal_gap_allocations": true,
+        "exact_total": true,
+        "unique_unordered_pairs": true,
+        "video_cap_respected": true,
+        "within_video_only": true
+      },
+      "kind_counts": {
+        "easy": 500,
+        "hard": 500,
+        "positive": 1000
+      },
+      "manifest": {
+        "path": "manifests/pairs/movi_de/movi_e_test_pairs.jsonl",
+        "sha256": "76c21fa1ca5731624d2373dc07ceb9dd2fd8e10f7341b819e9d4bca4af4a6b10"
+      },
+      "max_video_contribution": 67,
+      "sampling": {
+        "fallbacks": [],
+        "max_video_contribution": 67,
+        "min_video_contribution": 66,
+        "video_contribution_counts": {
+          "1055": 66,
+          "145": 66,
+          "1912": 67,
+          "2036": 66,
+          "2470": 66,
+          "262": 67,
+          "2735": 67,
+          "330": 67,
+          "3636": 66,
+          "3796": 66,
+          "4202": 67,
+          "5037": 67,
+          "6015": 67,
+          "6018": 67,
+          "6378": 67,
+          "6576": 67,
+          "6637": 67,
+          "6697": 67,
+          "70": 67,
+          "7242": 66,
+          "7387": 66,
+          "7541": 67,
+          "7550": 67,
+          "7659": 67,
+          "7815": 67,
+          "8070": 67,
+          "8337": 67,
+          "8338": 66,
+          "8799": 67,
+          "8932": 66
+        },
+        "videos_contributing": 30
+      },
+      "split": "test",
+      "status": "pass",
+      "target": 2000,
+      "temporal_gap_bin_counts": {
+        "easy": {
+          "long_12_23": 166,
+          "medium_6_11": 167,
+          "short_1_5": 167
+        },
+        "hard": {
+          "long_12_23": 166,
+          "medium_6_11": 167,
+          "short_1_5": 167
+        },
+        "positive": {
+          "long_12_23": 333,
+          "medium_6_11": 333,
+          "short_1_5": 334
+        }
+      },
+      "very_hard_same_asset_count": 0,
+      "violations": []
+    },
+    "train": {
+      "actual": 6000,
+      "camera_motion": {
+        "mean_displacement": 0.68517437701,
+        "mean_normalized_displacement": 0.069420527532,
+        "mean_rotation_degrees": 4.026202517645
+      },
+      "checks": {
+        "all_pair_definitions_pass": true,
+        "exact_kind_quotas": true,
+        "exact_temporal_gap_allocations": true,
+        "exact_total": true,
+        "unique_unordered_pairs": true,
+        "video_cap_respected": true,
+        "within_video_only": true
+      },
+      "kind_counts": {
+        "easy": 1500,
+        "hard": 1500,
+        "positive": 3000
+      },
+      "manifest": {
+        "path": "manifests/pairs/movi_de/movi_e_train_pairs.jsonl",
+        "sha256": "fefee7590bf4f549ae609b1632f2f1102fcc23bb93ed33c7488d0086ac330ca3"
+      },
+      "max_video_contribution": 67,
+      "sampling": {
+        "fallbacks": [],
+        "max_video_contribution": 67,
+        "min_video_contribution": 66,
+        "video_contribution_counts": {
+          "1168": 66,
+          "1175": 67,
+          "1183": 67,
+          "1595": 66,
+          "1690": 67,
+          "1696": 66,
+          "1767": 67,
+          "1772": 67,
+          "1789": 67,
+          "1894": 67,
+          "1917": 67,
+          "1951": 67,
+          "2063": 66,
+          "2343": 66,
+          "2534": 67,
+          "2657": 66,
+          "2707": 67,
+          "2797": 67,
+          "2822": 67,
+          "2840": 67,
+          "3258": 66,
+          "3349": 66,
+          "3456": 67,
+          "3470": 67,
+          "3509": 67,
+          "3528": 67,
+          "3618": 67,
+          "3677": 67,
+          "3764": 67,
+          "3788": 67,
+          "4044": 66,
+          "4220": 66,
+          "4324": 66,
+          "4454": 66,
+          "45": 66,
+          "4547": 66,
+          "4653": 66,
+          "4778": 67,
+          "4852": 66,
+          "4866": 67,
+          "4949": 66,
+          "4982": 67,
+          "5549": 66,
+          "5619": 67,
+          "5670": 66,
+          "5722": 67,
+          "5903": 67,
+          "5915": 67,
+          "5980": 66,
+          "5984": 67,
+          "621": 66,
+          "6276": 67,
+          "6300": 67,
+          "6321": 67,
+          "6415": 66,
+          "6564": 67,
+          "661": 66,
+          "6657": 67,
+          "6777": 67,
+          "6890": 67,
+          "6953": 67,
+          "7022": 66,
+          "7060": 67,
+          "7175": 67,
+          "7184": 67,
+          "7200": 67,
+          "7335": 67,
+          "7486": 67,
+          "7799": 67,
+          "8080": 67,
+          "8100": 67,
+          "8201": 67,
+          "8203": 67,
+          "8298": 66,
+          "8306": 66,
+          "8502": 67,
+          "8589": 67,
+          "8814": 67,
+          "8953": 67,
+          "9060": 67,
+          "9345": 67,
+          "9403": 67,
+          "9519": 67,
+          "9525": 67,
+          "9603": 67,
+          "9672": 66,
+          "9721": 66,
+          "9809": 67,
+          "9862": 66,
+          "9958": 66
+        },
+        "videos_contributing": 90
+      },
+      "split": "train",
+      "status": "pass",
+      "target": 6000,
+      "temporal_gap_bin_counts": {
+        "easy": {
+          "long_12_23": 500,
+          "medium_6_11": 500,
+          "short_1_5": 500
+        },
+        "hard": {
+          "long_12_23": 500,
+          "medium_6_11": 500,
+          "short_1_5": 500
+        },
+        "positive": {
+          "long_12_23": 1000,
+          "medium_6_11": 1000,
+          "short_1_5": 1000
+        }
+      },
+      "very_hard_same_asset_count": 18,
+      "violations": []
+    }
+  },
+  "status": "pass"
+}

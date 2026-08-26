@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "both_datasets_present": true,
+    "exact_10000_bootstrap_replicates": true,
+    "exact_36_conditions_per_dataset": true,
+    "zero_condition_deltas_and_intervals_are_zero": true
+  },
+  "outputs": {
+    "phase7_pose_noise_combined_results.json": "ffb2058dafde5f0699e38e8da4bfc89f260d13343c507811ddbcd79a3468fa11",
+    "phase7_pose_noise_results_table.csv": "ccd48cd1a18219639ac7ece201fc46f66ce628d46104e1846c3beb20b832f3c9"
+  },
+  "pipeline": "MOVi-D/E Phase 7 summary manifest",
+  "status": "pass"
+}

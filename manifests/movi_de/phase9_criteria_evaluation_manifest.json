@@ -1,0 +1,53 @@
+{
+  "artifacts": {
+    "docs/MOVI_DE_PHASE9_CRITERIA_EVALUATION.md": {
+      "sha256": "c435c5f0e40756970c8571cc5546e467359cf0d208141a8270a0c1239ee6ec65",
+      "size_bytes": 7272
+    },
+    "results/movi_de_phase9/phase9_criteria_evaluation.json": {
+      "sha256": "62b0781c3f2a3f4785cdc00e0852dd228a5d0fc026c815f5fda9b5e23cb13147",
+      "size_bytes": 18825
+    },
+    "results/movi_de_phase9/phase9_criteria_summary.csv": {
+      "sha256": "957f5686098a96c0180da6a281d42648b037673c76515bb1d9b8f971d3dd4380",
+      "size_bytes": 1025
+    },
+    "src/evaluate_movi_de_phase9.py": {
+      "sha256": "45a46ddfefb991ebfb0e31bf34576ed11633042637c647905ced26b01c9bbd4f",
+      "size_bytes": 16641
+    }
+  },
+  "bootstrap_replicates": 10000,
+  "checks": {
+    "all_source_phase_locks_passed": true,
+    "criteria_mapped_to_frozen_protocol": true,
+    "independent_rerun_byte_identical": true,
+    "primary_rule_not_redefined": true,
+    "secondary_statuses_not_promoted_to_confirmatory_rules": true,
+    "train_derived_MOVi_E_motion_tertiles_used": true
+  },
+  "input_locks": {
+    "manifests/movi_de/phase7_pose_noise_study_freeze.json": {
+      "sha256": "265a028aed319d2a560f66f48653fad6ced696e84781adeab7d6b901057b29cc",
+      "size_bytes": 7970
+    },
+    "manifests/movi_de/phase8_regime1_in_domain_movi_e_freeze.json": {
+      "sha256": "e4afa476ff51b0cda01bbf5d172cd7cf16029e1d553c6246b540c1181c4008a0",
+      "size_bytes": 6062
+    },
+    "manifests/movi_de/phase8_regime2_in_domain_movi_d_freeze.json": {
+      "sha256": "b7aac088e2ea76270e84950d1d86cbecbaad6fad1f04049aecc8ae71fea9f82e",
+      "size_bytes": 5903
+    },
+    "manifests/movi_de/phase8_regime3_d_to_e_transfer_freeze.json": {
+      "sha256": "47074ef1f0cd1828fb0a0829078a8abe6a6e018e36bc1993fcc70c2c0333ecdf",
+      "size_bytes": 4888
+    }
+  },
+  "manifest_date": "2026-08-25",
+  "primary_conclusion": "supported",
+  "protocol": "MOVI-DE-POSE-001 v0.2",
+  "seed": 20260825,
+  "status": "pass",
+  "version": "1.0.0"
+}

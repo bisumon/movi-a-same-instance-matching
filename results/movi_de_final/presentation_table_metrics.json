@@ -1,0 +1,41 @@
+{
+  "comparison": "D_pose_aligned_geometry",
+  "datasets": {
+    "movi_d": {
+      "f1_at_locked_max_f1_threshold": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": -0.01009998305371973,
+        "paired_video_cluster_ci_high": 0.0025486600706911685,
+        "paired_video_cluster_ci_low": -0.023813145307498836
+      },
+      "pr_auc": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.0012256036688091942,
+        "paired_video_cluster_ci_high": 0.0038654260248051687,
+        "paired_video_cluster_ci_low": -0.0020477791812211596
+      },
+      "test_pairs": 2000,
+      "video_clusters": 30
+    },
+    "movi_e": {
+      "f1_at_locked_max_f1_threshold": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.011626468769325826,
+        "paired_video_cluster_ci_high": 0.020730565526364625,
+        "paired_video_cluster_ci_low": 0.003076154635294423
+      },
+      "pr_auc": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.002854548304497051,
+        "paired_video_cluster_ci_high": 0.0048075257409948054,
+        "paired_video_cluster_ci_low": 0.0011271451254600607
+      },
+      "test_pairs": 2000,
+      "video_clusters": 30
+    }
+  },
+  "purpose": "presentation-only descriptive intervals; frozen Phase 9 decisions are unchanged",
+  "reference": "C_camera_geometry",
+  "seed": 20260825,
+  "version": "1.0.0"
+}

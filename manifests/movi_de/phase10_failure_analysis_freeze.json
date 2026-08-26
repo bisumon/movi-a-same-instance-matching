@@ -1,0 +1,319 @@
+{
+  "artifacts": {
+    "docs/MOVI_DE_CAMERA_POSE_PROTOCOL_v0.2.md": {
+      "sha256": "0e5c5e3341b68607218083d4e5d38f17e3679cf3641b9e55c4817ba1110f3102",
+      "size_bytes": 24505
+    },
+    "docs/MOVI_DE_PHASE10_FAILURE_ANALYSIS.md": {
+      "sha256": "8791312f3e28e632814acc903344a50818f36253772812b0db91107ee1adb77a",
+      "size_bytes": 4862
+    },
+    "failure_gallery/movi_de_phase10/assets/01_movi_e_4bf52066d2e12f00cb0626da_a.png": {
+      "sha256": "d95dd2560c467641c773048ec653cdaf35478639f9838607b559d1da07417731",
+      "size_bytes": 14620
+    },
+    "failure_gallery/movi_de_phase10/assets/01_movi_e_4bf52066d2e12f00cb0626da_b.png": {
+      "sha256": "66cdf1b7dbb9794c5b3a18df2a2ea477d9e13cf1f80d75d638843df0d214c916",
+      "size_bytes": 14205
+    },
+    "failure_gallery/movi_de_phase10/assets/02_movi_e_8046546595c462a6320c7fc3_a.png": {
+      "sha256": "e021da6614676397038b9217fc65f4723adf71b0e97f06c73eed7100f09fe75f",
+      "size_bytes": 16071
+    },
+    "failure_gallery/movi_de_phase10/assets/02_movi_e_8046546595c462a6320c7fc3_b.png": {
+      "sha256": "fe17ec130ba9efed1371bfdfb55a0e0b2e04a7980761202a6cf5b738e0375890",
+      "size_bytes": 14338
+    },
+    "failure_gallery/movi_de_phase10/assets/03_movi_e_41b348d160a5bf6cfc8236d7_a.png": {
+      "sha256": "4cd2c6a0d6bd522f06a4eb90546985e037d14bcc413cabd735e191529401afd0",
+      "size_bytes": 11448
+    },
+    "failure_gallery/movi_de_phase10/assets/03_movi_e_41b348d160a5bf6cfc8236d7_b.png": {
+      "sha256": "d38c0241175b51fe79de2679b6cdfa2fb7d97890c1ecf5dc5318f764c9ba60c7",
+      "size_bytes": 11436
+    },
+    "failure_gallery/movi_de_phase10/assets/04_movi_e_b32f54423ef3e8ab2ec492fa_a.png": {
+      "sha256": "0705bb0ac1ebf33794948a5f19b63ca78053d19af1cc9cf80f3c0cb2c2f06171",
+      "size_bytes": 12390
+    },
+    "failure_gallery/movi_de_phase10/assets/04_movi_e_b32f54423ef3e8ab2ec492fa_b.png": {
+      "sha256": "24c9d4f0d16e121f874ed7db242b492792291d56998e8bebba3d32f20ab21c9c",
+      "size_bytes": 8712
+    },
+    "failure_gallery/movi_de_phase10/assets/05_movi_e_77461af8237a0d9ccc426bae_a.png": {
+      "sha256": "9383e26b0d5c7ac4de4ec9d526d0e8dec2e4e99211087a28c87425f8b0b827b0",
+      "size_bytes": 11291
+    },
+    "failure_gallery/movi_de_phase10/assets/05_movi_e_77461af8237a0d9ccc426bae_b.png": {
+      "sha256": "54f7fad03dfb2c4d7937540211afdafb175008c6ef2435ead84f06a1cf1f1eb4",
+      "size_bytes": 13943
+    },
+    "failure_gallery/movi_de_phase10/assets/06_movi_e_2506686c1d87b8036c6bdbf8_a.png": {
+      "sha256": "33df8acd6155e227bec32ac359a690b0c2da7b80e56db4c4fae231f305f53176",
+      "size_bytes": 6984
+    },
+    "failure_gallery/movi_de_phase10/assets/06_movi_e_2506686c1d87b8036c6bdbf8_b.png": {
+      "sha256": "f813e3b8ebcb4e78a0617886b822918fe440fb0a4454e2d1912bd41e38f32fa2",
+      "size_bytes": 7007
+    },
+    "failure_gallery/movi_de_phase10/assets/07_movi_e_294210d808502c8f526a3472_a.png": {
+      "sha256": "b332acde69d25471d4ac53eb831f3a0e0c18270470b2534c6c9371e21a4c4f40",
+      "size_bytes": 10129
+    },
+    "failure_gallery/movi_de_phase10/assets/07_movi_e_294210d808502c8f526a3472_b.png": {
+      "sha256": "93bf682dec7e68ac1bae59c80b6ca25252555acb91597f9f762d464de0c39f0b",
+      "size_bytes": 11975
+    },
+    "failure_gallery/movi_de_phase10/assets/08_movi_e_073a1622c6cde7cfb87b511b_a.png": {
+      "sha256": "5d68da5d0151508648d447252bf792511a65efc634b36f4dbccae6fc118e5380",
+      "size_bytes": 10389
+    },
+    "failure_gallery/movi_de_phase10/assets/08_movi_e_073a1622c6cde7cfb87b511b_b.png": {
+      "sha256": "b7b0c5f7c7ae938cfd8971df20321decec9f9b3cef926511800742efa7ee0961",
+      "size_bytes": 10058
+    },
+    "failure_gallery/movi_de_phase10/assets/09_movi_e_e38315516d290d47c84b534f_a.png": {
+      "sha256": "08c329fdb7fb95cea3f09df822406a91da9db65708d969e3233e5008235a7cab",
+      "size_bytes": 10041
+    },
+    "failure_gallery/movi_de_phase10/assets/09_movi_e_e38315516d290d47c84b534f_b.png": {
+      "sha256": "d71b33431dec8af28f62c34367f8e6e7ef43d99eb4c49918a6d59b6af5c598b0",
+      "size_bytes": 15788
+    },
+    "failure_gallery/movi_de_phase10/assets/10_movi_e_3980ddbfac44fa38a2655fe0_a.png": {
+      "sha256": "8dba04607ceeb197cfe2762ab4156adb8fae754cdbd56a4d67e64197181d5945",
+      "size_bytes": 11434
+    },
+    "failure_gallery/movi_de_phase10/assets/10_movi_e_3980ddbfac44fa38a2655fe0_b.png": {
+      "sha256": "f83c91749c39b44962d7a02203ae1b1a76e784c0d74df27e4e8d06c945800f35",
+      "size_bytes": 13405
+    },
+    "failure_gallery/movi_de_phase10/assets/11_movi_e_886e30eb3c7569fbd954c54c_a.png": {
+      "sha256": "5d36d022062d6e2a23764e31c5f4bb90f218044b9c553746db074e214b2b30bf",
+      "size_bytes": 13111
+    },
+    "failure_gallery/movi_de_phase10/assets/11_movi_e_886e30eb3c7569fbd954c54c_b.png": {
+      "sha256": "e7303a8a93678802b4a68b37c35363b6d5b425a1919a3ca9bc4cd78f9de8a2f9",
+      "size_bytes": 13281
+    },
+    "failure_gallery/movi_de_phase10/assets/12_movi_e_ef05607be4b81db472c8208c_a.png": {
+      "sha256": "23bf960f52e53354700cdcb71b2ce2d58b085a1e984a3959b15844aeda2195ab",
+      "size_bytes": 11550
+    },
+    "failure_gallery/movi_de_phase10/assets/12_movi_e_ef05607be4b81db472c8208c_b.png": {
+      "sha256": "05236a7191eb2e19d9da4568ce6d44aa07e90cfe945d8cffde9efc27d930ae8b",
+      "size_bytes": 11507
+    },
+    "failure_gallery/movi_de_phase10/assets/13_movi_d_b141ac19d142257407e7288e_a.png": {
+      "sha256": "8c6800f5c5dac4dff9ace7551ad48b96fc0055e6fd6dc35002e5c5628190fc88",
+      "size_bytes": 16352
+    },
+    "failure_gallery/movi_de_phase10/assets/13_movi_d_b141ac19d142257407e7288e_b.png": {
+      "sha256": "e7407df1a4380f30cf03e98afa61c193bb1129df052ea9d6e83983d65f3cd58c",
+      "size_bytes": 14092
+    },
+    "failure_gallery/movi_de_phase10/assets/14_movi_d_2d06983d96e7bd29aa6f5de4_a.png": {
+      "sha256": "19e8e84a3393e63c17bf153266cc4b5e23af2881a94948537ce457110c3858f0",
+      "size_bytes": 13603
+    },
+    "failure_gallery/movi_de_phase10/assets/14_movi_d_2d06983d96e7bd29aa6f5de4_b.png": {
+      "sha256": "25c1c23c9da19e73db7ca4b519105c29a3ac531068d1d5d557c836adf10d48a6",
+      "size_bytes": 10191
+    },
+    "failure_gallery/movi_de_phase10/assets/15_movi_d_e41fd785bad32aa26b835a20_a.png": {
+      "sha256": "2c0f43da6cb9ab0cdfe2df5241a0a6dc6b7e41dc0887e21cd2aa1aa7cd57394f",
+      "size_bytes": 13421
+    },
+    "failure_gallery/movi_de_phase10/assets/15_movi_d_e41fd785bad32aa26b835a20_b.png": {
+      "sha256": "5d0586b37af17cd46529bc431893a3a7e2e36583fc4e0240f54975a159a51948",
+      "size_bytes": 10020
+    },
+    "failure_gallery/movi_de_phase10/assets/16_movi_d_c10b3db3e2b0044b10e3b7f4_a.png": {
+      "sha256": "2abf0506ffba5423853b2bc6debd90fd5a49f3008b49e09ebb65450ff6b4c73f",
+      "size_bytes": 7946
+    },
+    "failure_gallery/movi_de_phase10/assets/16_movi_d_c10b3db3e2b0044b10e3b7f4_b.png": {
+      "sha256": "5a9c369f9de959928adcf1bb1ec23d81e189df79aff1044d65ed82788bc980d9",
+      "size_bytes": 8175
+    },
+    "failure_gallery/movi_de_phase10/assets/17_movi_d_0afe3711d76ab6cd2ef40406_a.png": {
+      "sha256": "c450d38609f6966d82fcd595cb2274502a647508df60e5aae184eb1f8afc9002",
+      "size_bytes": 9399
+    },
+    "failure_gallery/movi_de_phase10/assets/17_movi_d_0afe3711d76ab6cd2ef40406_b.png": {
+      "sha256": "2f65a8ef49d96224350795bb12869443f735c8e6a80c644149255bc52573ee6b",
+      "size_bytes": 10465
+    },
+    "failure_gallery/movi_de_phase10/assets/18_movi_d_05db8091b8aaa9278833eb14_a.png": {
+      "sha256": "214bebd8de8e5280be85459364037958e73bd50fe54efb4db8d1324032cb1659",
+      "size_bytes": 9334
+    },
+    "failure_gallery/movi_de_phase10/assets/18_movi_d_05db8091b8aaa9278833eb14_b.png": {
+      "sha256": "aea2ed8ba2ee52ba6adbde2602de0b8aede863bdba948af08697f253b3e0ad31",
+      "size_bytes": 12267
+    },
+    "failure_gallery/movi_de_phase10/assets/19_movi_d_62fe3027c0730fc234380992_a.png": {
+      "sha256": "d9ee162e0b325679fa9792292d4f47b018333fc80d371f6f2bba9f9c2afac07a",
+      "size_bytes": 7883
+    },
+    "failure_gallery/movi_de_phase10/assets/19_movi_d_62fe3027c0730fc234380992_b.png": {
+      "sha256": "70897a7956e1c0e5cc9ed124f8da5894b8d5e73a906ecb3fc6d79812bf1ad40b",
+      "size_bytes": 7069
+    },
+    "failure_gallery/movi_de_phase10/assets/20_movi_d_a813444b4926781cf1f689f5_a.png": {
+      "sha256": "8fdbc79cc996cb5b0cccad16a29821f5f2858f9da81109b4efdf299144b31681",
+      "size_bytes": 16327
+    },
+    "failure_gallery/movi_de_phase10/assets/20_movi_d_a813444b4926781cf1f689f5_b.png": {
+      "sha256": "b9f7665398a9fe16a0379fe356c181842070156a0eab4037cadb25ecff75e7f6",
+      "size_bytes": 13663
+    },
+    "failure_gallery/movi_de_phase10/assets/21_movi_d_1898d0539a07088953a69103_a.png": {
+      "sha256": "bb2ebb5f69a0776e77cb219eb10158216e47e27e613ea55d3bdf6a4125ff65d7",
+      "size_bytes": 8996
+    },
+    "failure_gallery/movi_de_phase10/assets/21_movi_d_1898d0539a07088953a69103_b.png": {
+      "sha256": "d009e46d17efd79ffb07441d602854adf5e26c7e72a45900f9114ad0c9a8102c",
+      "size_bytes": 6132
+    },
+    "failure_gallery/movi_de_phase10/assets/22_movi_d_6f5b326004394a9682aa03a0_a.png": {
+      "sha256": "efd4ac784196f987cfb74e6d882e190bb9bba6cb09e0d5f8a5b0bbc8cde4d56f",
+      "size_bytes": 7390
+    },
+    "failure_gallery/movi_de_phase10/assets/22_movi_d_6f5b326004394a9682aa03a0_b.png": {
+      "sha256": "55fe0ac9cf321e393f69d7d5e3f5f8f280b7d9721cb6dfd0070d6ccd411754dc",
+      "size_bytes": 5773
+    },
+    "failure_gallery/movi_de_phase10/assets/23_movi_d_e3f888374fed58012b5263c8_a.png": {
+      "sha256": "5cb296a757474d4b56f2a412edd81ec2ee9a2311b935f20a7505bb2ebe11df4d",
+      "size_bytes": 8188
+    },
+    "failure_gallery/movi_de_phase10/assets/23_movi_d_e3f888374fed58012b5263c8_b.png": {
+      "sha256": "11c84384fb6953621caae149dacdaac0beb0e5635e5c714cb0e199e1fd422612",
+      "size_bytes": 13205
+    },
+    "failure_gallery/movi_de_phase10/assets/24_movi_d_0fb47da97b7a62e9f4acdd33_a.png": {
+      "sha256": "bbe3a3c25591f6ad000974ab2a1a8e04097b0c8a0910052e9cff0459711d3e0e",
+      "size_bytes": 16767
+    },
+    "failure_gallery/movi_de_phase10/assets/24_movi_d_0fb47da97b7a62e9f4acdd33_b.png": {
+      "sha256": "b576e21a313af38960dc7023c76e73543a10355235614d9b4e43796801b04439",
+      "size_bytes": 16208
+    },
+    "failure_gallery/movi_de_phase10/capacity_audit.json": {
+      "sha256": "7e2ce0fb94441815d94d663eab4a55d530cf72c3dfcad8de2ad97c127819109c",
+      "size_bytes": 8164
+    },
+    "failure_gallery/movi_de_phase10/contact_sheet.png": {
+      "sha256": "bf334e856f1652a89a349ab936e59e75e72864eb493b80216321672af90d07d5",
+      "size_bytes": 554286
+    },
+    "failure_gallery/movi_de_phase10/failure_gallery.html": {
+      "sha256": "00e64ebe1f935136ebb69a7a230795ec5d76914c4e1664128620b8ac10de686e",
+      "size_bytes": 46013
+    },
+    "failure_gallery/movi_de_phase10/failure_review.csv": {
+      "sha256": "82bfbf2700c0b99601f91aba026391a2a1a836a20a1a786d4699560651e755b6",
+      "size_bytes": 10396
+    },
+    "failure_gallery/movi_de_phase10/selected_failure_pairs.jsonl": {
+      "sha256": "e4f67fd4248ca4057f1e28603c25af4958120ffe9fc47eba8809c349cfe55302",
+      "size_bytes": 53587
+    },
+    "failure_gallery/movi_de_phase10/selection_manifest.json": {
+      "sha256": "170dff5afa6c919715a6348780853bbc9cd540c7f5d3e18dadd2519aa5a5d97c",
+      "size_bytes": 11218
+    },
+    "manifests/movi_de/phase8_regime1_in_domain_movi_e_freeze.json": {
+      "sha256": "e4afa476ff51b0cda01bbf5d172cd7cf16029e1d553c6246b540c1181c4008a0",
+      "size_bytes": 6062
+    },
+    "manifests/movi_de/phase8_regime2_in_domain_movi_d_freeze.json": {
+      "sha256": "b7aac088e2ea76270e84950d1d86cbecbaad6fad1f04049aecc8ae71fea9f82e",
+      "size_bytes": 5903
+    },
+    "src/freeze_movi_de_phase10_failures.py": {
+      "sha256": "11314084c56875d5e157a76b4898ae2f9d5135dbd317e5da22c462c52198f718",
+      "size_bytes": 8401
+    },
+    "src/select_movi_de_phase10_failures.py": {
+      "sha256": "bc4cfa2dc5c1cb65e285670aab915ac7cdf3ff8858b99ec4cebb63b3e29547e6",
+      "size_bytes": 31653
+    },
+    "tests/test_movi_de_phase10_failures.py": {
+      "sha256": "dae87032a54d20e5b7a5d9c5437e6e0edce62e140bb83a4760d3b6c8fa30a284",
+      "size_bytes": 1488
+    }
+  },
+  "balance": {
+    "cells": {
+      "movi_d|C_camera_geometry|false_negative": 3,
+      "movi_d|C_camera_geometry|false_positive": 3,
+      "movi_d|D_pose_aligned_geometry|false_negative": 3,
+      "movi_d|D_pose_aligned_geometry|false_positive": 3,
+      "movi_e|C_camera_geometry|false_negative": 3,
+      "movi_e|C_camera_geometry|false_positive": 3,
+      "movi_e|D_pose_aligned_geometry|false_negative": 3,
+      "movi_e|D_pose_aligned_geometry|false_positive": 3
+    },
+    "datasets": {
+      "movi_d": 12,
+      "movi_e": 12
+    },
+    "difficulty": {
+      "easy": 6,
+      "hard": 6
+    },
+    "dynamics": {
+      "dynamic": 12,
+      "static": 12
+    },
+    "e_motion": {
+      "high": 5,
+      "low": 5,
+      "medium": 2
+    },
+    "errors": {
+      "false_negative": 12,
+      "false_positive": 12
+    },
+    "gaps": {
+      "long_12_23": 8,
+      "medium_6_11": 8,
+      "short_1_5": 8
+    },
+    "systems": {
+      "C_camera_geometry": 12,
+      "D_pose_aligned_geometry": 12
+    }
+  },
+  "change_control": "Failure analysis is frozen and qualitative. It cannot alter Phase 7-9 predictions, thresholds, metrics, confidence intervals, or conclusions.",
+  "checks": {
+    "HTML_has_24_cards_and_48_images": true,
+    "MOVi_E_motion_capacity_balance": true,
+    "all_48_assets_valid": true,
+    "all_C_D_scores_exact": true,
+    "all_assigned_items_are_errors": true,
+    "all_diagnoses_one_line_and_tagged": true,
+    "all_locked_thresholds_exact": true,
+    "all_pair_identity_fields_exact": true,
+    "capacity_audit_status_pass": true,
+    "contact_sheet_valid": true,
+    "exact_24_unique_pair_ids": true,
+    "exact_FP_FN_balance": true,
+    "exact_dataset_balance": true,
+    "exact_hard_easy_FP_balance": true,
+    "exact_short_medium_long_balance": true,
+    "exact_static_dynamic_balance": true,
+    "exact_system_balance": true,
+    "exact_three_per_primary_cell": true,
+    "no_same_asset_test_negative_capacity": true,
+    "selection_manifest_status_pass": true
+  },
+  "lock_date": "2026-08-25",
+  "lock_id": "MOVI-DE-POSE-001-PHASE10-v1.0.0",
+  "operating_point": "per-system MOVi-D/E development-selected 90%-recall thresholds",
+  "seed": 20260825,
+  "selection_count": 24,
+  "status": "locked"
+}

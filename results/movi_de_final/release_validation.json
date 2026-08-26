@@ -1,0 +1,42 @@
+{
+  "release": "movi_de_camera_pose_extension_v1.0.0",
+  "validated": "2026-08-25",
+  "checks": {
+    "unit_and_integrity_tests": {
+      "passed": true,
+      "tests_run": 52,
+      "command": "python -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    "one_command_runner_smoke": {
+      "passed": true,
+      "source": "checksum-locked completed Phase 7 inputs",
+      "bootstrap_replicates_for_smoke": 100,
+      "outputs": [
+        "MOVi-E in-domain: eight clean systems",
+        "MOVi-D in-domain: eight clean systems",
+        "MOVi-D to MOVi-E clean-D transfer"
+      ],
+      "reproduced_key_values": {
+        "movi_e_primary_success": true,
+        "movi_d_D_minus_C_auroc": 0.001615,
+        "movi_d_to_e_transfer_auroc": 0.994029,
+        "movi_d_to_e_transfer_pr_auc": 0.994561
+      }
+    },
+    "results_workbook": {
+      "passed": true,
+      "sheets_rendered_and_reviewed": 12,
+      "formula_error_scan_matches": 0
+    },
+    "conclusions_docx": {
+      "passed": true,
+      "pages_rendered_and_reviewed": 2,
+      "oracle_geometry_limitation_present": true,
+      "fixed_camera_limitation_present": true
+    },
+    "final_release_counts_and_hashes": {
+      "passed": true,
+      "manifest": "manifests/movi_de/final_release_manifest.json"
+    }
+  }
+}

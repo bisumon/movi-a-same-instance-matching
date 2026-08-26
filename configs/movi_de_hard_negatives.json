@@ -1,0 +1,93 @@
+{
+  "protocol_id": "MOVI-DE-POSE-001",
+  "protocol_version": "0.2",
+  "definition_version": "1.0.0",
+  "status": "locked_after_capacity_audit",
+  "lock_date": "2026-08-25",
+  "seed": 20260825,
+  "scope": {
+    "datasets": [
+      "movi_d",
+      "movi_e"
+    ],
+    "pairing": "within-video and within locked pool only",
+    "pair_identity": "unordered observation-id pair",
+    "label": 0,
+    "negative_difficulty": "hard"
+  },
+  "eligibility": {
+    "both_observations_must_pass_phase1": true,
+    "minimum_visibility_pixels": 32,
+    "minimum_source_mask_area_pixels": 32,
+    "minimum_valid_depth_pixels": 32,
+    "same_dataset": true,
+    "same_locked_pool": true,
+    "same_video": true,
+    "different_frames": true,
+    "different_simulator_instances": true,
+    "same_semantic_category": true
+  },
+  "projected_scale_rule": {
+    "area_measure": "source-resolution unpadded instance segmentation mask area in pixels",
+    "distance": "abs(natural_log(mask_area_a / mask_area_b))",
+    "comparison": "distance <= dataset_cutoff using full-precision values",
+    "cutoff_derivation": "25th percentile of all eligible same-category, different-instance, different-frame, within-video candidates in that dataset's locked training pool",
+    "quantile_method": "higher",
+    "quantile_method_meaning": "smallest observed cutoff that retains at least 25% of training same-category candidates",
+    "development_and_test_rule": "apply the training-derived dataset cutoff unchanged"
+  },
+  "dataset_cutoffs": {
+    "movi_d": {
+      "maximum_absolute_log_area_ratio": 0.4837969513780713,
+      "equivalent_maximum_larger_to_smaller_area_ratio": 1.6222222222222222,
+      "training_same_category_candidates": 365402,
+      "training_candidates_retained": 91354,
+      "training_retained_fraction": 0.25000957849163385
+    },
+    "movi_e": {
+      "maximum_absolute_log_area_ratio": 0.461345566502621,
+      "equivalent_maximum_larger_to_smaller_area_ratio": 1.5862068965517242,
+      "training_same_category_candidates": 498534,
+      "training_candidates_retained": 124643,
+      "training_retained_fraction": 0.25001905587181616
+    }
+  },
+  "pool_quotas_per_dataset": {
+    "train": 1500,
+    "dev": 500,
+    "test": 500
+  },
+  "sampling_constraints": {
+    "quota_level": "locked dataset pool",
+    "every_video_must_contribute": false,
+    "deduplicate_unordered_pairs": true,
+    "cross_video_pairs_allowed": false,
+    "cross_pool_pairs_allowed": false,
+    "silent_cutoff_relaxation_allowed": false,
+    "silent_quota_change_allowed": false,
+    "shortfall_action": "fail pair generation and record a prospective amendment; do not relax the definition"
+  },
+  "very_hard_diagnostic": {
+    "definition": "same asset_id but different simulator instance among qualifying hard negatives",
+    "quota": 0,
+    "role": "diagnostic subgroup only",
+    "include_within_hard_negative_pool": true
+  },
+  "required_pair_controls": [
+    "temporal_gap",
+    "minimum_visibility",
+    "mask_area_a",
+    "mask_area_b",
+    "absolute_log_area_ratio",
+    "category_relation",
+    "asset_relation",
+    "object_dynamic_static_status",
+    "camera_displacement",
+    "relative_camera_rotation",
+    "normalized_camera_displacement"
+  ],
+  "information_boundary": {
+    "category_instance_and_asset_identity_use": "sampling, labels, and diagnostic strata only",
+    "allowed_as_model_features": false
+  }
+}

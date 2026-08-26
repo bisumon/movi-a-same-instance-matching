@@ -1,0 +1,212 @@
+{
+  "protocol_id": "MOVI-DE-POSE-001",
+  "protocol_version": "0.2",
+  "configuration_version": "1.0.0",
+  "status": "frozen_before_confirmatory_feature_construction_or_model_fitting",
+  "freeze_date": "2026-08-25",
+  "seed": 20260825,
+  "shared_training": {
+    "classifier": "standardized logistic regression",
+    "standardizer_fit_scope": "training pool only",
+    "model_fit_scope": "training pool only",
+    "regularization_grid_C": [0.01, 0.1, 1.0, 10.0, 100.0],
+    "regularization_selection": "maximum development AUROC",
+    "regularization_tie_break": "smaller C (stronger regularization)",
+    "recall_threshold": "highest development score threshold achieving at least 90% recall",
+    "f1_threshold": "development threshold maximizing F1; ties choose the higher threshold",
+    "test_policy": "apply the selected model, normalization, and thresholds unchanged",
+    "rgb_encoder": "torchvision ResNet18_Weights.IMAGENET1K_V1 frozen pooled embedding",
+    "rgb_pair_reduction": "cosine similarity of the two 512-dimensional embeddings"
+  },
+  "feature_groups": {
+    "rgb": [
+      "rgb_cosine_similarity"
+    ],
+    "two_d": [
+      "temporal_gap",
+      "mask_center_dx_abs",
+      "mask_center_dy_abs",
+      "mask_center_distance",
+      "log_mask_area_ratio_abs",
+      "mean_log_mask_area",
+      "log_crop_area_ratio_abs",
+      "mean_log_crop_area",
+      "log_bbox_aspect_ratio_diff_abs",
+      "log_visibility_ratio_abs",
+      "min_log_visibility"
+    ],
+    "shared_radial_depth": [
+      "depth_q05_diff_abs",
+      "depth_q25_diff_abs",
+      "depth_median_diff_abs",
+      "depth_q75_diff_abs",
+      "depth_q95_diff_abs",
+      "depth_iqr_diff_abs",
+      "depth_median_diff_per_frame"
+    ],
+    "camera_space_surface_geometry": [
+      "camera_centroid_dx_abs",
+      "camera_centroid_dy_abs",
+      "camera_centroid_dz_abs",
+      "camera_centroid_distance",
+      "camera_centroid_distance_per_frame",
+      "camera_extent_x_diff_abs",
+      "camera_extent_y_diff_abs",
+      "camera_extent_z_diff_abs",
+      "camera_extent_l2_diff",
+      "camera_extent_x_log_ratio_abs",
+      "camera_extent_y_log_ratio_abs",
+      "camera_extent_z_log_ratio_abs"
+    ],
+    "pose_aligned_surface_geometry": [
+      "world_centroid_dx_abs",
+      "world_centroid_dy_abs",
+      "world_centroid_dz_abs",
+      "world_centroid_distance",
+      "world_centroid_distance_per_frame",
+      "world_extent_x_diff_abs",
+      "world_extent_y_diff_abs",
+      "world_extent_z_diff_abs",
+      "world_extent_l2_diff",
+      "world_extent_x_log_ratio_abs",
+      "world_extent_y_log_ratio_abs",
+      "world_extent_z_log_ratio_abs"
+    ],
+    "pose_only": [
+      "camera_displacement_scene_units",
+      "relative_camera_rotation_degrees",
+      "normalized_camera_displacement"
+    ]
+  },
+  "corresponding_geometry_features": [
+    ["camera_centroid_dx_abs", "world_centroid_dx_abs"],
+    ["camera_centroid_dy_abs", "world_centroid_dy_abs"],
+    ["camera_centroid_dz_abs", "world_centroid_dz_abs"],
+    ["camera_centroid_distance", "world_centroid_distance"],
+    ["camera_centroid_distance_per_frame", "world_centroid_distance_per_frame"],
+    ["camera_extent_x_diff_abs", "world_extent_x_diff_abs"],
+    ["camera_extent_y_diff_abs", "world_extent_y_diff_abs"],
+    ["camera_extent_z_diff_abs", "world_extent_z_diff_abs"],
+    ["camera_extent_l2_diff", "world_extent_l2_diff"],
+    ["camera_extent_x_log_ratio_abs", "world_extent_x_log_ratio_abs"],
+    ["camera_extent_y_log_ratio_abs", "world_extent_y_log_ratio_abs"],
+    ["camera_extent_z_log_ratio_abs", "world_extent_z_log_ratio_abs"]
+  ],
+  "systems": {
+    "A_rgb": {
+      "protocol_id": "A",
+      "name": "RGB",
+      "role": "appearance baseline",
+      "feature_groups": ["rgb"],
+      "pose_treatment": "none",
+      "fit_policy": "fit an independent model"
+    },
+    "B_rgb_2d": {
+      "protocol_id": "B",
+      "name": "RGB + 2D",
+      "role": "ordinary 2D control",
+      "feature_groups": ["rgb", "two_d"],
+      "pose_treatment": "none",
+      "fit_policy": "fit an independent model"
+    },
+    "C_camera_geometry": {
+      "protocol_id": "C",
+      "name": "RGB + 2D + camera-space geometry",
+      "role": "pose-unaware geometry baseline",
+      "feature_groups": ["rgb", "two_d", "shared_radial_depth", "camera_space_surface_geometry"],
+      "pose_treatment": "camera pose is not used",
+      "fit_policy": "fit an independent model"
+    },
+    "D_pose_aligned_geometry": {
+      "protocol_id": "D",
+      "name": "RGB + 2D + oracle-pose-aligned visible-surface geometry",
+      "role": "primary system",
+      "feature_groups": ["rgb", "two_d", "shared_radial_depth", "pose_aligned_surface_geometry"],
+      "pose_treatment": "use the provided camera-to-world pose only to transform visible-surface geometry",
+      "fit_policy": "fit an independent model"
+    },
+    "G_camera_geometry_only": {
+      "protocol_id": "G-C",
+      "name": "Camera-space geometry only",
+      "role": "diagnostic; not a production candidate",
+      "feature_groups": ["shared_radial_depth", "camera_space_surface_geometry"],
+      "pose_treatment": "camera pose is not used",
+      "fit_policy": "fit an independent model"
+    },
+    "G_pose_aligned_geometry_only": {
+      "protocol_id": "G-D",
+      "name": "Pose-aligned geometry only",
+      "role": "diagnostic; not a production candidate",
+      "feature_groups": ["shared_radial_depth", "pose_aligned_surface_geometry"],
+      "pose_treatment": "use the provided camera-to-world pose only to transform visible-surface geometry",
+      "fit_policy": "fit an independent model"
+    },
+    "P_pose_only": {
+      "protocol_id": "P",
+      "name": "Pose only",
+      "role": "direct pose-label shortcut control",
+      "feature_groups": ["pose_only"],
+      "pose_treatment": "use relative camera translation and rotation but no RGB, 2D object, depth, or object-geometry feature",
+      "fit_policy": "fit an independent model"
+    },
+    "S_shuffled_pose": {
+      "protocol_id": "S",
+      "name": "Shuffled pose",
+      "role": "negative control",
+      "feature_groups": ["rgb", "two_d", "shared_radial_depth", "pose_aligned_surface_geometry"],
+      "pose_treatment": "replace each frame pose with its deterministic within-dataset-and-split deranged pose before geometry transformation",
+      "fit_policy": "construct shuffled train/dev/test features and fit an independent model on shuffled training features"
+    },
+    "N_noisy_pose": {
+      "protocol_id": "N",
+      "name": "Noisy pose",
+      "role": "sensitivity analysis family",
+      "feature_groups": ["rgb", "two_d", "shared_radial_depth", "pose_aligned_surface_geometry"],
+      "pose_treatment": "perturb each frame pose once per noise condition before geometry transformation and reuse it for every pair containing that frame",
+      "fit_policy": "apply the clean fitted D model and D standardization unchanged; do not refit for noise conditions"
+    }
+  },
+  "shuffled_pose": {
+    "scope": "independently within each dataset and locked split over unique eligible frame keys",
+    "frame_key": ["dataset", "split", "video_id", "frame_index"],
+    "algorithm": "sort frame keys by SHA-256(seed|dataset|split|video_id|frame_index), then cyclically shift the associated poses by one",
+    "fixed_point_policy": "no frame retains its own pose when at least two frame keys exist",
+    "pair_reuse": "the assigned pose is held fixed for all observations and pairs from that frame",
+    "movi_d_note": "shuffling identical fixed-camera poses is expected to be structurally equivalent to clean D geometry"
+  },
+  "noisy_pose": {
+    "translation_standard_deviation_scene_units": [0, 0.01, 0.05, 0.1, 0.25, 0.5],
+    "rotation_standard_deviation_degrees": [0, 0.1, 0.5, 1, 2, 5],
+    "grid": "full Cartesian product (36 conditions)",
+    "seed_scope": "independent deterministic substream per dataset, split, frame key, translation level, and rotation level",
+    "translation_distribution": "independent zero-mean Gaussian noise with the declared standard deviation on each world-coordinate x/y/z camera-position component",
+    "rotation_distribution": "zero-mean Gaussian axis-angle magnitude with the declared standard deviation and an independently sampled uniform unit axis",
+    "rotation_composition": "post-multiply the clean camera-to-world rotation by the sampled camera-local perturbation",
+    "zero_condition": "translation=0 and rotation=0 must be byte-equivalent to clean D features",
+    "pair_reuse": "a perturbed frame pose is held fixed for every observation and pair containing that frame",
+    "unchanged": ["RGB", "masks", "depth", "pair labels", "pair membership"]
+  },
+  "transfer": {
+    "name": "D-to-E transfer",
+    "source": "MOVi-D clean system D training model, training standardization, selected C, and development thresholds",
+    "target": "MOVi-E clean system D feature matrix",
+    "refit_on_movi_e": false,
+    "role": "secondary analysis"
+  },
+  "information_boundary": {
+    "evaluation_or_sampling_only_fields": [
+      "dataset", "split", "video_id", "observation_id", "pair_id", "label",
+      "negative_difficulty", "instance_index", "segmentation_id", "asset_id",
+      "category", "is_dynamic", "object_position", "object_velocity",
+      "gt_world_position", "gt_world_velocity", "diagnosis"
+    ],
+    "identity_fields_allowed_for_integrity_joins": true,
+    "identity_fields_allowed_in_model_matrix": false,
+    "camera_pose_scalar_features_allowed_only_for": ["P_pose_only"],
+    "camera_pose_use_for_geometry_transform_allowed_for": [
+      "D_pose_aligned_geometry", "G_pose_aligned_geometry_only", "S_shuffled_pose", "N_noisy_pose"
+    ],
+    "test_derived_normalization_allowed": false,
+    "test_informed_hyperparameters_or_thresholds_allowed": false
+  }
+}

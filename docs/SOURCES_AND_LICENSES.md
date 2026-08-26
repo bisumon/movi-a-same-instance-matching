@@ -10,6 +10,8 @@ for their intended use.
 | Resource | Use | Source | License/status |
 |---|---|---|---|
 | MOVi-A 128x128 validation | 50-video synthetic benchmark, RGB, masks, depth, calibration and simulator diagnostics | https://github.com/google-research/kubric/tree/main/challenges/movi and `gs://kubric-public/tfds/movi_a/128x128/1.0.0/` | Kubric repository and MOVi generation materials are Apache License 2.0. The public MOVi documentation does not state a separate license in the dataset page; users should retain Kubric attribution and confirm any institutional redistribution requirements. This repository downloads but does not redistribute TFRecords. |
+| MOVi-D 128x128 validation | Fixed-camera control for the camera-pose extension; RGB, masks, depth, intrinsics, camera pose and simulator metadata | https://github.com/google-research/kubric/tree/main/challenges/movi and `gs://kubric-public/tfds/movi_d/128x128/1.0.0/` | Generated and published with Kubric under the upstream Apache-2.0 project terms; no separate dataset-page license was identified. TFRecords are downloaded but are not part of the source-code release. |
+| MOVi-E 128x128 validation | Moving-camera confirmatory data for the camera-pose extension with the same oracle geometry channels | https://github.com/google-research/kubric/tree/main/challenges/movi and `gs://kubric-public/tfds/movi_e/128x128/1.0.0/` | Generated and published with Kubric under the upstream Apache-2.0 project terms; no separate dataset-page license was identified. TFRecords are downloaded but are not part of the source-code release. |
 | CLEVR-style MOVi-A assets | Shapes, colors, materials and fixed-camera synthetic scenes | https://github.com/google-research/kubric/blob/main/challenges/movi/README.md | Documented as part of MOVi-A/Kubric; subject to the upstream terms above. |
 
 Recommended citation: Klaus Greff et al., “Kubric: A Scalable Dataset
@@ -59,5 +61,5 @@ from the tested wheel metadata are retained under `third_party_licenses/`.
 
 The original experiment code and generated tables/gallery have no open-source
 license assigned by this release. See `LICENSE.md`. Generated records derived
-from MOVi-A should retain upstream attribution and remain subject to applicable
+from MOVi-A, MOVi-D, or MOVi-E should retain upstream attribution and remain subject to applicable
 upstream terms. No trademark rights are granted.

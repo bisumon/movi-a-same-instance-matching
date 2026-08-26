@@ -1,0 +1,26 @@
+{
+  "protocol_id": "MOVI-DE-POSE-001",
+  "protocol_version": "0.2",
+  "pair_manifest_version": "1.0.0",
+  "seed": 20260825,
+  "datasets": ["movi_d", "movi_e"],
+  "targets_per_dataset": {
+    "train": {"positive": 3000, "hard": 1500, "easy": 1500},
+    "dev": {"positive": 1000, "hard": 500, "easy": 500},
+    "test": {"positive": 1000, "hard": 500, "easy": 500}
+  },
+  "temporal_gap_bins": {
+    "short_1_5": [1, 5],
+    "medium_6_11": [6, 11],
+    "long_12_23": [12, 23]
+  },
+  "temporal_sampling": "deterministic near-equal allocation within every dataset, pool, and pair kind",
+  "maximum_pairs_per_video": 250,
+  "candidate_retention_per_video_pair_kind_gap_bin": 600,
+  "video_contribution_balancing": "greedily select from the currently least-represented eligible video with seeded SHA-256 tie breaking",
+  "pair_identity": "unordered canonical observation-id pair",
+  "pair_scope": "within one selected video and one locked dataset pool only",
+  "normalized_camera_displacement_definition": "Euclidean frame-to-frame camera translation divided by the mean camera-to-world-origin distance at the two frames",
+  "fixed_camera_roundoff_rule": "when translation is below 1e-12 scene units and relative rotation is below 1e-5 degrees, record both as structural zero motion",
+  "shortfall_action": "fail without changing any cutoff, quota, or locked pool"
+}

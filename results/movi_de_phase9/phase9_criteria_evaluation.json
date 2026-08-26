@@ -1,0 +1,439 @@
+{
+  "criteria": [
+    {
+      "criterion": "Pose-aligned D has higher MOVi-E AUROC than camera-space C.",
+      "decision": true,
+      "evidence": {
+        "D_minus_C_AUROC": 0.003057,
+        "ci_high": 0.005165553178,
+        "ci_low": 0.001131378958
+      },
+      "id": "H1",
+      "interpretation": "The sole confirmatory success rule is met because the full paired 95% interval is above zero.",
+      "status": "supported_primary"
+    },
+    {
+      "criterion": "D reduces false-match rate on MOVi-E without material recall loss.",
+      "decision": null,
+      "evidence": {
+        "D_minus_C_false_match_rate": {
+          "bootstrap_replicates": 10000,
+          "comparison_minus_reference": -0.002,
+          "paired_video_cluster_ci_high": 0.001994017946,
+          "paired_video_cluster_ci_low": -0.006,
+          "valid_replicates": 10000,
+          "video_clusters": 30
+        },
+        "D_minus_C_recall": {
+          "bootstrap_replicates": 10000,
+          "comparison_minus_reference": 0.01,
+          "paired_video_cluster_ci_high": 0.026104417671,
+          "paired_video_cluster_ci_low": -0.005976095618,
+          "valid_replicates": 10000,
+          "video_clusters": 30
+        }
+      },
+      "id": "H2",
+      "interpretation": "Point estimates favor D, but both paired intervals include zero and no materiality margin was frozen.",
+      "status": "directionally_consistent_not_resolved"
+    },
+    {
+      "criterion": "The D-minus-C benefit increases with camera displacement and rotation.",
+      "decision": true,
+      "evidence": {
+        "D_vs_E_difference_in_differences": {
+          "bootstrap_replicates": 10000,
+          "estimand": "(AUROC_D_minus_C_on_MOVi_E) minus (AUROC_D_minus_C_on_MOVi_D)",
+          "paired_video_cluster_ci_high": 0.005585416881,
+          "paired_video_cluster_ci_low": -0.002092499916,
+          "point_estimate": 0.001442,
+          "resampling": "independent video-cluster resampling within MOVi-D and MOVi-E",
+          "status": "descriptive_secondary",
+          "valid_replicates": 10000
+        },
+        "MOVi_E_motion_strata": {
+          "camera_displacement_scene_units": {
+            "high_minus_low_D_minus_C_AUROC": 0.005408405245,
+            "paired_video_cluster_ci_high": 0.011270868484,
+            "paired_video_cluster_ci_low": 0.001037220048,
+            "strata": {
+              "high": {
+                "D_minus_C_AUROC": 0.005110532219,
+                "negatives": 333,
+                "paired_video_cluster_ci_high": 0.010820850299,
+                "paired_video_cluster_ci_low": 0.000659222674,
+                "pairs": 665,
+                "positives": 332,
+                "valid_replicates": 10000
+              },
+              "low": {
+                "D_minus_C_AUROC": -0.000297873026,
+                "negatives": 346,
+                "paired_video_cluster_ci_high": 0.000504464983,
+                "paired_video_cluster_ci_low": -0.001516718846,
+                "pairs": 705,
+                "positives": 359,
+                "valid_replicates": 10000
+              },
+              "medium": {
+                "D_minus_C_AUROC": 0.004698101604,
+                "negatives": 321,
+                "paired_video_cluster_ci_high": 0.00789583501,
+                "paired_video_cluster_ci_low": 0.001668648677,
+                "pairs": 630,
+                "positives": 309,
+                "valid_replicates": 10000
+              }
+            },
+            "train_tertile_cutoffs": [
+              0.282961344703,
+              0.800124761011
+            ],
+            "valid_replicates": 10000
+          },
+          "normalized_camera_displacement": {
+            "high_minus_low_D_minus_C_AUROC": 0.005324722113,
+            "paired_video_cluster_ci_high": 0.010989691214,
+            "paired_video_cluster_ci_low": 0.000879730899,
+            "strata": {
+              "high": {
+                "D_minus_C_AUROC": 0.005317214605,
+                "negatives": 315,
+                "paired_video_cluster_ci_high": 0.01080078712,
+                "paired_video_cluster_ci_low": 0.000823259531,
+                "pairs": 638,
+                "positives": 323,
+                "valid_replicates": 10000
+              },
+              "low": {
+                "D_minus_C_AUROC": -7.507508e-06,
+                "negatives": 360,
+                "paired_video_cluster_ci_high": 0.001109180858,
+                "paired_video_cluster_ci_low": -0.001400118375,
+                "pairs": 730,
+                "positives": 370,
+                "valid_replicates": 10000
+              },
+              "medium": {
+                "D_minus_C_AUROC": 0.004680531195,
+                "negatives": 325,
+                "paired_video_cluster_ci_high": 0.008386743018,
+                "paired_video_cluster_ci_low": 0.001785044736,
+                "pairs": 632,
+                "positives": 307,
+                "valid_replicates": 10000
+              }
+            },
+            "train_tertile_cutoffs": [
+              0.028126539106,
+              0.081638890439
+            ],
+            "valid_replicates": 10000
+          },
+          "relative_camera_rotation_degrees": {
+            "high_minus_low_D_minus_C_AUROC": 0.006070263381,
+            "paired_video_cluster_ci_high": 0.011617004474,
+            "paired_video_cluster_ci_low": 0.001184806646,
+            "strata": {
+              "high": {
+                "D_minus_C_AUROC": 0.006141279383,
+                "negatives": 322,
+                "paired_video_cluster_ci_high": 0.011696569829,
+                "paired_video_cluster_ci_low": 0.001204307016,
+                "pairs": 633,
+                "positives": 311,
+                "valid_replicates": 10000
+              },
+              "low": {
+                "D_minus_C_AUROC": 7.1016002e-05,
+                "negatives": 358,
+                "paired_video_cluster_ci_high": 0.000998971419,
+                "paired_video_cluster_ci_low": -0.000828506079,
+                "pairs": 712,
+                "positives": 354,
+                "valid_replicates": 10000
+              },
+              "medium": {
+                "D_minus_C_AUROC": 0.004141791045,
+                "negatives": 320,
+                "paired_video_cluster_ci_high": 0.007963702739,
+                "paired_video_cluster_ci_low": 0.000853233894,
+                "pairs": 655,
+                "positives": 335,
+                "valid_replicates": 10000
+              }
+            },
+            "train_tertile_cutoffs": [
+              1.525235859179,
+              4.515304084976
+            ],
+            "valid_replicates": 10000
+          }
+        }
+      },
+      "id": "H3",
+      "interpretation": "Motion-stratum conclusions are secondary and use predeclared MOVi-E-training tertiles.",
+      "status": "supported"
+    },
+    {
+      "criterion": "D and C perform similarly on fixed-camera MOVi-D.",
+      "decision": null,
+      "evidence": {
+        "D_minus_C": 0.001615,
+        "estimand": "AUROC_D_minus_C_on_identical_MOVi_D_test_pairs",
+        "interpretation_rule": "descriptive fixed-camera falsification; no equivalence margin was predeclared",
+        "paired_video_cluster_ci_high": 0.004541683212,
+        "paired_video_cluster_ci_low": -0.002037146137
+      },
+      "id": "H4",
+      "interpretation": "The interval spans zero and the point effect is small, but no equivalence margin was frozen.",
+      "status": "consistent_not_equivalence"
+    },
+    {
+      "criterion": "Shuffled pose does not improve over C and impairs correct pose correspondence.",
+      "decision": true,
+      "evidence": {
+        "S_vs_C": {
+          "auroc": {
+            "bootstrap_replicates": 10000,
+            "paired_video_cluster_ci_high": 0.000298008635,
+            "paired_video_cluster_ci_low": -0.003116279762,
+            "system_minus_C": -0.001337
+          },
+          "false_match_rate": {
+            "bootstrap_replicates": 10000,
+            "comparison_minus_reference": 0.011,
+            "paired_video_cluster_ci_high": 0.019095957655,
+            "paired_video_cluster_ci_low": 0.003006012024,
+            "valid_replicates": 10000,
+            "video_clusters": 30
+          },
+          "recall": {
+            "bootstrap_replicates": 10000,
+            "comparison_minus_reference": 0.003,
+            "paired_video_cluster_ci_high": 0.017982017982,
+            "paired_video_cluster_ci_low": -0.012048192771,
+            "valid_replicates": 10000,
+            "video_clusters": 30
+          },
+          "reference": "C_camera_geometry"
+        },
+        "S_vs_D": {
+          "auroc": {
+            "bootstrap_replicates": 10000,
+            "paired_video_cluster_ci_high": -0.002316993265,
+            "paired_video_cluster_ci_low": -0.006759310984,
+            "system_minus_D": -0.004394
+          },
+          "false_match_rate": {
+            "bootstrap_replicates": 10000,
+            "comparison_minus_reference": 0.013,
+            "paired_video_cluster_ci_high": 0.01998001998,
+            "paired_video_cluster_ci_low": 0.006979062812,
+            "valid_replicates": 10000,
+            "video_clusters": 30
+          },
+          "recall": {
+            "bootstrap_replicates": 10000,
+            "comparison_minus_reference": -0.007,
+            "paired_video_cluster_ci_high": 0.008973080758,
+            "paired_video_cluster_ci_low": -0.0249500998,
+            "valid_replicates": 10000,
+            "video_clusters": 30
+          },
+          "reference": "D_pose_aligned_geometry"
+        }
+      },
+      "id": "H5",
+      "interpretation": "S does not beat C and is resolved below clean D, while pose-only P remains at chance.",
+      "status": "supported"
+    },
+    {
+      "criterion": "Pose noise degrades performance as translation and rotation error grow.",
+      "decision": true,
+      "evidence": {
+        "movi_d": {
+          "maximum_combined": {
+            "bootstrap_replicates_requested": 10000,
+            "bootstrap_replicates_valid": 10000,
+            "condition_id": "N_t0p5_r5",
+            "noise_minus_clean_auroc": -0.016296,
+            "paired_video_cluster_ci_high": -0.012198541162,
+            "paired_video_cluster_ci_low": -0.020680473466,
+            "test_AUROC": 0.968656,
+            "test_recall": 0.812,
+            "test_video_clusters": 30
+          },
+          "rotation_5_only": {
+            "bootstrap_replicates_requested": 10000,
+            "bootstrap_replicates_valid": 10000,
+            "condition_id": "N_t0_r5",
+            "noise_minus_clean_auroc": -0.004037,
+            "paired_video_cluster_ci_high": -0.002260448679,
+            "paired_video_cluster_ci_low": -0.006311718103,
+            "test_AUROC": 0.980915,
+            "test_recall": 0.86,
+            "test_video_clusters": 30
+          },
+          "translation_0p5_only": {
+            "bootstrap_replicates_requested": 10000,
+            "bootstrap_replicates_valid": 10000,
+            "condition_id": "N_t0p5_r0",
+            "noise_minus_clean_auroc": -0.009808,
+            "paired_video_cluster_ci_high": -0.006244459131,
+            "paired_video_cluster_ci_low": -0.014090826801,
+            "test_AUROC": 0.975144,
+            "test_recall": 0.828,
+            "test_video_clusters": 30
+          }
+        },
+        "movi_e": {
+          "maximum_combined": {
+            "bootstrap_replicates_requested": 10000,
+            "bootstrap_replicates_valid": 10000,
+            "condition_id": "N_t0p5_r5",
+            "noise_minus_clean_auroc": -0.017111,
+            "paired_video_cluster_ci_high": -0.011294702109,
+            "paired_video_cluster_ci_low": -0.024285454092,
+            "test_AUROC": 0.977072,
+            "test_recall": 0.773,
+            "test_video_clusters": 30
+          },
+          "rotation_5_only": {
+            "bootstrap_replicates_requested": 10000,
+            "bootstrap_replicates_valid": 10000,
+            "condition_id": "N_t0_r5",
+            "noise_minus_clean_auroc": -0.006043,
+            "paired_video_cluster_ci_high": -0.003456515801,
+            "paired_video_cluster_ci_low": -0.009199393429,
+            "test_AUROC": 0.98814,
+            "test_recall": 0.856,
+            "test_video_clusters": 30
+          },
+          "translation_0p5_only": {
+            "bootstrap_replicates_requested": 10000,
+            "bootstrap_replicates_valid": 10000,
+            "condition_id": "N_t0p5_r0",
+            "noise_minus_clean_auroc": -0.007609,
+            "paired_video_cluster_ci_high": -0.004463510284,
+            "paired_video_cluster_ci_low": -0.011319593807,
+            "test_AUROC": 0.986574,
+            "test_recall": 0.85,
+            "test_video_clusters": 30
+          }
+        }
+      },
+      "id": "H6",
+      "interpretation": "Large single-axis and combined endpoints degrade clearly; small errors are tolerated. This is not a claim of strict monotonicity at every grid step.",
+      "status": "supported_graded_endpoint_pattern"
+    },
+    {
+      "criterion": "MOVi-D clean D transfers to MOVi-E without target refitting or threshold adjustment.",
+      "decision": null,
+      "evidence": {
+        "paired_transfer_differences": {
+          "in_domain_C": {
+            "auroc": {
+              "bootstrap_replicates": 10000,
+              "paired_video_cluster_ci_high": 0.005547455358,
+              "paired_video_cluster_ci_low": 0.000639171223,
+              "transfer_minus_reference": 0.002903
+            },
+            "false_match_rate": {
+              "bootstrap_replicates": 10000,
+              "comparison_minus_reference": 0.004,
+              "paired_video_cluster_ci_high": 0.012036410436,
+              "paired_video_cluster_ci_low": -0.002997002997,
+              "valid_replicates": 10000,
+              "video_clusters": 30
+            },
+            "recall": {
+              "bootstrap_replicates": 10000,
+              "comparison_minus_reference": 0.006,
+              "paired_video_cluster_ci_high": 0.023092369478,
+              "paired_video_cluster_ci_low": -0.012012012012,
+              "valid_replicates": 10000,
+              "video_clusters": 30
+            }
+          },
+          "in_domain_D": {
+            "auroc": {
+              "bootstrap_replicates": 10000,
+              "paired_video_cluster_ci_high": 0.00093424392,
+              "paired_video_cluster_ci_low": -0.000983003021,
+              "transfer_minus_reference": -0.000154
+            },
+            "false_match_rate": {
+              "bootstrap_replicates": 10000,
+              "comparison_minus_reference": 0.006,
+              "paired_video_cluster_ci_high": 0.011952191235,
+              "paired_video_cluster_ci_low": 0.001005025126,
+              "valid_replicates": 10000,
+              "video_clusters": 30
+            },
+            "recall": {
+              "bootstrap_replicates": 10000,
+              "comparison_minus_reference": -0.004,
+              "paired_video_cluster_ci_high": 0.006006006006,
+              "paired_video_cluster_ci_low": -0.015968063872,
+              "valid_replicates": 10000,
+              "video_clusters": 30
+            }
+          }
+        },
+        "transfer_test": {
+          "auroc": 0.994029,
+          "calibration": {
+            "brier_score": 0.029024139455,
+            "expected_calibration_error_10_bins": 0.015685939322,
+            "log_loss": 0.101563333925
+          },
+          "f1_at_locked_max_f1_threshold": 0.961909598781,
+          "false_match_rate_at_locked_90_recall_threshold": 0.013,
+          "pr_auc": 0.994561397349,
+          "precision_at_locked_max_f1_threshold": 0.977296181631,
+          "recall_at_locked_90_recall_threshold": 0.912,
+          "recall_at_locked_max_f1_threshold": 0.947
+        }
+      },
+      "id": "TRANSFER",
+      "interpretation": "AUROC is unresolved from in-domain D, but the frozen MOVi-D threshold has a resolved 0.006 higher false-match rate.",
+      "status": "ranking_transfers_threshold_partially_degrades"
+    }
+  ],
+  "criteria_source": "Frozen protocol Sections 1, 3, 4, 11, and 12; the repository contains no separate numbered Phase 9 specification.",
+  "difference_in_differences": {
+    "bootstrap_replicates": 10000,
+    "estimand": "(AUROC_D_minus_C_on_MOVi_E) minus (AUROC_D_minus_C_on_MOVi_D)",
+    "paired_video_cluster_ci_high": 0.005585416881,
+    "paired_video_cluster_ci_low": -0.002092499916,
+    "point_estimate": 0.001442,
+    "resampling": "independent video-cluster resampling within MOVi-D and MOVi-E",
+    "status": "descriptive_secondary",
+    "valid_replicates": 10000
+  },
+  "inputs": {
+    "docs/MOVI_DE_CAMERA_POSE_PROTOCOL_v0.2.md": "0e5c5e3341b68607218083d4e5d38f17e3679cf3641b9e55c4817ba1110f3102",
+    "manifests/pairs/movi_de/movi_d_all_pairs.jsonl": "d2a8584d52da0ce94ec3de8855f26c92ac6a745848d7ba1e67824a6e773db662",
+    "manifests/pairs/movi_de/movi_e_all_pairs.jsonl": "032e58a140db4b9a44981c88a6bc0385efad2589f53cfd19ee3843d27530bfee",
+    "results/movi_de_phase7_pose_noise/phase7_pose_noise_combined_results.json": "ffb2058dafde5f0699e38e8da4bfc89f260d13343c507811ddbcd79a3468fa11",
+    "results/movi_de_phase8_regime1/movi_e_in_domain_results.json": "47078f7cca577623835d82c226234b09132f64719a1d99eaaee3c145a29504c7",
+    "results/movi_de_phase8_regime2/movi_d_in_domain_results.json": "61d800abb9e2dd6d7ece104dc92992fd0105f25c1aeb509807af6d932e5117e5",
+    "results/movi_de_phase8_regime3/movi_d_to_e_transfer_results.json": "a3099a4055beafb71821d3bae08f292c00025d9c91c7a348ba31e07d3031bf87",
+    "runs/movi_de_confirmatory/phase8_regime1/in_domain_movi_e/movi_e_phase8_regime1_predictions.jsonl": "d9767554d0058e2bf9660c5b57f068207c3b42baa1ec71621967bfd9bae3cab0",
+    "runs/movi_de_confirmatory/phase8_regime2/in_domain_movi_d/movi_d_phase8_regime2_predictions.jsonl": "ed3cc397a31b732f7b20e9694d1d06597e7aa0d55ba58579f98419a37bb36278"
+  },
+  "interpretation_limits": [
+    "Oracle simulator masks, depth, intrinsics, and camera poses are used.",
+    "MOVi-D and MOVi-E are independent synthetic samples, not counterfactual renders of the same scenes.",
+    "All pairs are within-video; cross-video re-identification is not tested.",
+    "No practical equivalence or material-recall-loss margins were predeclared.",
+    "Secondary criteria are descriptive unless the frozen primary decision rule explicitly applies."
+  ],
+  "overall_evidence_summary": "Primary hypothesis supported; correspondence and pose-noise controls support the intended mechanism; operational and fixed-camera evidence is directionally consistent but not fully resolved; transfer preserves ranking but not the false-match operating point perfectly.",
+  "pipeline": "MOVi-D/E Phase 9 criteria evaluation",
+  "primary_conclusion": "supported",
+  "primary_success_rule_met": true,
+  "protocol": "MOVI-DE-POSE-001 v0.2",
+  "version": "1.0.0"
+}

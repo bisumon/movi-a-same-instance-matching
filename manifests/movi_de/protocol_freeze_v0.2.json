@@ -1,0 +1,53 @@
+{
+  "protocol_id": "MOVI-DE-POSE-001",
+  "version": "0.2",
+  "freeze_date": "2026-08-25",
+  "status": "approved_and_frozen_before_confirmatory_selection",
+  "confirmatory_results_accessed": false,
+  "pilot_diagnostics_accessed": [
+    "camera-coordinate validation",
+    "feasibility and pair-capacity audit"
+  ],
+  "primary_estimand_changed": false,
+  "primary_success_rule_changed": false,
+  "locked_files": {
+    "protocol_markdown_repository_copy": {
+      "path": "docs/MOVI_DE_CAMERA_POSE_PROTOCOL_v0.2.md",
+      "sha256": "0e5c5e3341b68607218083d4e5d38f17e3679cf3641b9e55c4817ba1110f3102"
+    },
+    "protocol_markdown_deliverable": {
+      "path": "../movi_de_camera_pose_protocol/MOVI_DE_CAMERA_POSE_PROTOCOL_v0.2.md",
+      "sha256": "0e5c5e3341b68607218083d4e5d38f17e3679cf3641b9e55c4817ba1110f3102"
+    },
+    "protocol_word_deliverable": {
+      "path": "../movi_de_camera_pose_protocol/MOVI_DE_CAMERA_POSE_PROTOCOL_v0.2.docx",
+      "sha256": "9dcdad0680da162eb2b82b981730a64b9371c3cf9bb8259212607f58a4b371c6"
+    },
+    "protocol_configuration": {
+      "path": "configs/movi_de_protocol.json",
+      "sha256": "e0f57672e0dc816e24d579a73785f81b004431e8c0f54c9b67944f1a319e3fda"
+    },
+    "coordinate_validation_evidence": {
+      "path": "results/movi_de_camera_coordinate_validation.json",
+      "sha256": "940f4833f63be2af4603b263e35a69cf7681ee3cec950786bfb7e5d3259befd3"
+    },
+    "feasibility_audit_evidence": {
+      "path": "results/movi_de_feasibility_audit.json",
+      "sha256": "1f1a4b1cffc56b53916f5eafc3adc80d0c6758f023b3990ed103993542eb1872"
+    }
+  },
+  "preserved_original_v0_1": {
+    "markdown_sha256": "03db914386b51bb12b6eca694c72f07d7f4cd354eb40b6daad412fca7b289c6b",
+    "word_sha256": "208f75f54384123f886be0c5ccf9ba434ff0f73bebc5543fe13678cd6b74b2b9"
+  },
+  "frozen_decisions": [
+    "Exactly 150 eligible non-pilot videos per dataset",
+    "Independent 90/30/30 train/development/test video splits",
+    "All 20 pilot videos per dataset excluded from every confirmatory pool",
+    "Pool-level 50/25/25 positive/hard-negative/easy-negative quotas",
+    "Dataset-specific hard-negative cutoff derived from locked training data only",
+    "Post-split capacity audit before pair manifest generation",
+    "MOVi-D reported as a zero-motion falsification stratum",
+    "Explicit coordinate-convention manifest fields and reconstruction reason codes"
+  ]
+}

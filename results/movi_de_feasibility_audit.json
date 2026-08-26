@@ -1,0 +1,280 @@
+{
+  "audit": "MOVi-D/E pilot feasibility",
+  "audit_date": "2026-08-25",
+  "compute": {
+    "estimated_300_video_parallel_minutes": 5.703643351793289,
+    "estimated_300_video_sequential_minutes": 10.772654384374619,
+    "estimation_note": "File timestamp span and linear extrapolation; excludes download and later model fitting.",
+    "movi_d_20_video_phase1_write_span_seconds": 40.552088260650635,
+    "movi_e_20_video_phase1_write_span_seconds": 45.62914681434631
+  },
+  "confirmatory_design": {
+    "margin_above_minimum_per_dataset": 80,
+    "minimum_videos_per_dataset": 150,
+    "nonpilot_videos_available_per_dataset": 230,
+    "official_validation_videos_per_dataset": 250,
+    "pairs": {
+      "dev": 2000,
+      "test": 2000,
+      "train": 6000
+    },
+    "pilot_videos_reserved_from_test_per_dataset": 20,
+    "split": {
+      "dev": 30,
+      "test": 30,
+      "train": 90
+    }
+  },
+  "datasets": {
+    "movi_d": {
+      "camera_motion": {
+        "normalized_translation": {
+          "maximum": 0.0,
+          "median": 0.0,
+          "minimum": 0.0,
+          "tertiles": [
+            0.0,
+            0.0
+          ]
+        },
+        "rotation_start_to_end_degrees": {
+          "maximum": 2.091309789151873e-06,
+          "median": 1.2074182697257333e-06,
+          "minimum": 0.0,
+          "tertiles": [
+            0.0,
+            1.2074182697257333e-06
+          ]
+        },
+        "translation_path_scene_units": {
+          "maximum": 0.0,
+          "median": 0.0,
+          "minimum": 0.0,
+          "tertiles": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "dataset": "movi_d",
+      "dynamic_instances_per_video": {
+        "maximum": 3,
+        "median": 2.0,
+        "minimum": 1
+      },
+      "eligibility_rate": 1.0,
+      "eligible_videos": 20,
+      "hard_negative_cutoff_status": "feasibility_only; recompute on locked train pool",
+      "observations": {
+        "excluded": 1044,
+        "exclusion_rate": 0.18995633187772926,
+        "exclusions_by_reason": {
+          "mask_area_below_threshold": 1044,
+          "visibility_below_threshold": 779
+        },
+        "included": 4452,
+        "included_per_video_maximum": 319,
+        "included_per_video_median": 225.5,
+        "included_per_video_minimum": 56
+      },
+      "pair_capacity": {
+        "easy": {
+          "capacity_to_target_ratio": 1152.7874251497005,
+          "object_motion_capacity": {
+            "dynamic-dynamic": 5710,
+            "dynamic-static": 107150,
+            "static-static": 272171
+          },
+          "per_video_maximum": 34960,
+          "per_video_median": 19100.5,
+          "per_video_minimum": 920,
+          "pilot_equivalent_target": 334,
+          "temporal_gap_capacity": {
+            "long_12_23": 108827,
+            "medium_6_11": 129679,
+            "short_1_5": 146525
+          },
+          "total_unique_candidates": 385031,
+          "videos_with_candidates": 20
+        },
+        "hard": {
+          "capacity_to_target_ratio": 62.452095808383234,
+          "object_motion_capacity": {
+            "dynamic-dynamic": 175,
+            "dynamic-static": 6644,
+            "static-static": 14040
+          },
+          "per_video_maximum": 4055,
+          "per_video_median": 707.5,
+          "per_video_minimum": 0,
+          "pilot_equivalent_target": 334,
+          "temporal_gap_capacity": {
+            "long_12_23": 6196,
+            "medium_6_11": 6915,
+            "short_1_5": 7748
+          },
+          "total_unique_candidates": 20859,
+          "videos_with_candidates": 18
+        },
+        "positive": {
+          "capacity_to_target_ratio": 71.63868065967017,
+          "object_motion_capacity": {
+            "dynamic": 7267,
+            "static": 40516
+          },
+          "per_video_maximum": 3533,
+          "per_video_median": 2516.0,
+          "per_video_minimum": 580,
+          "pilot_equivalent_target": 667,
+          "temporal_gap_capacity": {
+            "long_12_23": 13036,
+            "medium_6_11": 15964,
+            "short_1_5": 18783
+          },
+          "total_unique_candidates": 47783,
+          "videos_with_candidates": 20
+        }
+      },
+      "phase1_observed_write_span_seconds": 40.552088260650635,
+      "phase1_output_bytes": 62294969,
+      "pilot_derived_hard_negative_scale_cutoff_abs_log_area_ratio": 0.50125617274984,
+      "pilot_videos": 20,
+      "very_hard_same_asset_candidates": 0
+    },
+    "movi_e": {
+      "camera_motion": {
+        "normalized_translation": {
+          "maximum": 0.3157740131853281,
+          "median": 0.15548802691745173,
+          "minimum": 0.0043436946355335845,
+          "tertiles": [
+            0.10301673012032136,
+            0.217995624533466
+          ]
+        },
+        "rotation_start_to_end_degrees": {
+          "maximum": 31.260274489712042,
+          "median": 10.717338501012073,
+          "minimum": 0.08965943504838313,
+          "tertiles": [
+            7.8121247929395725,
+            13.771777896763442
+          ]
+        },
+        "translation_path_scene_units": {
+          "maximum": 3.418896729887482,
+          "median": 1.737481393853117,
+          "minimum": 0.041592101822911155,
+          "tertiles": [
+            1.092783254757165,
+            2.1261009827967183
+          ]
+        }
+      },
+      "dataset": "movi_e",
+      "dynamic_instances_per_video": {
+        "maximum": 3,
+        "median": 2.0,
+        "minimum": 1
+      },
+      "eligibility_rate": 1.0,
+      "eligible_videos": 20,
+      "hard_negative_cutoff_status": "feasibility_only; recompute on locked train pool",
+      "observations": {
+        "excluded": 1205,
+        "exclusion_rate": 0.18595679012345678,
+        "exclusions_by_reason": {
+          "mask_area_below_threshold": 1205,
+          "visibility_below_threshold": 734
+        },
+        "included": 5275,
+        "included_per_video_maximum": 380,
+        "included_per_video_median": 267.0,
+        "included_per_video_minimum": 131
+      },
+      "pair_capacity": {
+        "easy": {
+          "capacity_to_target_ratio": 1584.61377245509,
+          "object_motion_capacity": {
+            "dynamic-dynamic": 11304,
+            "dynamic-static": 153142,
+            "static-static": 364815
+          },
+          "per_video_maximum": 55179,
+          "per_video_median": 26149.5,
+          "per_video_minimum": 5099,
+          "pilot_equivalent_target": 334,
+          "temporal_gap_capacity": {
+            "long_12_23": 147817,
+            "medium_6_11": 179262,
+            "short_1_5": 202182
+          },
+          "total_unique_candidates": 529261,
+          "videos_with_candidates": 20
+        },
+        "hard": {
+          "capacity_to_target_ratio": 86.05988023952096,
+          "object_motion_capacity": {
+            "dynamic-dynamic": 332,
+            "dynamic-static": 8756,
+            "static-static": 19656
+          },
+          "per_video_maximum": 4977,
+          "per_video_median": 1062.0,
+          "per_video_minimum": 256,
+          "pilot_equivalent_target": 334,
+          "temporal_gap_capacity": {
+            "long_12_23": 8096,
+            "medium_6_11": 9672,
+            "short_1_5": 10976
+          },
+          "total_unique_candidates": 28744,
+          "videos_with_candidates": 20
+        },
+        "positive": {
+          "capacity_to_target_ratio": 86.42728635682158,
+          "object_motion_capacity": {
+            "dynamic": 9376,
+            "static": 48271
+          },
+          "per_video_maximum": 4327,
+          "per_video_median": 2914.5,
+          "per_video_minimum": 1070,
+          "pilot_equivalent_target": 667,
+          "temporal_gap_capacity": {
+            "long_12_23": 15745,
+            "medium_6_11": 19367,
+            "short_1_5": 22535
+          },
+          "total_unique_candidates": 57647,
+          "videos_with_candidates": 20
+        }
+      },
+      "phase1_observed_write_span_seconds": 45.62914681434631,
+      "phase1_output_bytes": 72752741,
+      "pilot_derived_hard_negative_scale_cutoff_abs_log_area_ratio": 0.5226951993213745,
+      "pilot_videos": 20,
+      "very_hard_same_asset_candidates": 0
+    }
+  },
+  "overall_status": "feasible_with_preserved_constraints",
+  "protocol_id": "MOVI-DE-POSE-001",
+  "required_constraints": [
+    "Pool-level rather than every-video hard-negative quotas",
+    "Train-only hard-negative scale cutoff and continuous stratum boundaries",
+    "Pilot videos excluded from confirmatory test",
+    "Post-split capacity audit before pair manifests are locked",
+    "Same-asset negatives remain diagnostic-only without a quota"
+  ],
+  "stopping_rules_triggered": [],
+  "storage": {
+    "estimated_300_video_phase1_gib": 0.9432973572984338,
+    "estimated_full_raw_gib": 3.947218246757984,
+    "estimation_note": "Linear pilot extrapolation; actual compression and object counts vary by shard/video.",
+    "pilot_phase1_bytes": 135047710,
+    "pilot_phase1_gib": 0.1257729809731245,
+    "pilot_raw_bytes": 529786665,
+    "pilot_raw_gib": 0.493402280844748
+  },
+  "version": "1.0.0"
+}

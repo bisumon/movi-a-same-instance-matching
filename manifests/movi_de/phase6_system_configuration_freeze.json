@@ -1,0 +1,72 @@
+{
+  "artifacts": {
+    "configs/movi_de_phase6_systems.json": {
+      "sha256": "b651dd3587b60e3daece48733ce0c5e33a928386ee91e510eec5481e562354fa"
+    },
+    "docs/MOVI_DE_CAMERA_POSE_PROTOCOL_v0.2.md": {
+      "sha256": "0e5c5e3341b68607218083d4e5d38f17e3679cf3641b9e55c4817ba1110f3102"
+    },
+    "docs/MOVI_DE_PHASE6_SYSTEM_CONFIGURATIONS.md": {
+      "sha256": "82819f28f455f06c9093c6a56a6e6d06d5d32d18b9d306a059e898b7c817b0ee"
+    },
+    "manifests/movi_de/phase5_pair_manifest_freeze.json": {
+      "sha256": "a32590de357ff0fd77293dc8429e8305a128af685df89af36cf29b0e5c82c186"
+    },
+    "manifests/movi_de/phase6_resolved_system_configurations.json": {
+      "sha256": "c4fae747cb3fca200f36f3313a2881c51b8de30edcb6fedbf1f2f9377e4d536e"
+    },
+    "manifests/movi_de/protocol_freeze_v0.2.json": {
+      "sha256": "812929ff26515b8509f3254d57a7582945b2bb9c61f3dee7393678f77bc96a36"
+    },
+    "src/validate_movi_de_phase6_systems.py": {
+      "sha256": "725fbd0f1aefc63a91c2e40c0edaf11c82091f5c08a135a94d33b06f5cfa2a24"
+    },
+    "tests/test_movi_de_phase6_systems.py": {
+      "sha256": "3199841c36c6bdba70d9b30267a6e7714d8f26c1c2eb231168dbbcce306b5e69"
+    }
+  },
+  "change_control": "Any change to feature membership, pose treatment, perturbation grid, fit policy, tuning, or thresholds requires a prospective amendment and replacement lock before confirmatory model fitting.",
+  "checks": {
+    "D_S_N_feature_dimensions_and_names_equal": true,
+    "all_system_groups_exist": true,
+    "camera_world_correspondence_complete": true,
+    "camera_world_geometry_dimensions_equal": true,
+    "direct_pose_scalars_restricted_to_P": true,
+    "exact_36_unique_noise_conditions": true,
+    "exact_system_set": true,
+    "feature_names_unique_across_catalog": true,
+    "geometry_only_variants_equal_width": true,
+    "geometry_only_variants_exclude_rgb_and_2d": true,
+    "no_evaluation_only_fields_in_feature_catalog": true,
+    "noisy_pose_uses_clean_D_without_refitting": true,
+    "pose_only_contains_only_pose_features": true,
+    "primary_C_D_dimensions_equal": true,
+    "primary_C_D_shared_noncoordinate_features": true,
+    "protocol_and_version": true,
+    "regularization_grid_frozen": true,
+    "resolved_system_features_unique": true,
+    "rotation_grid_frozen": true,
+    "seed": true,
+    "shuffled_pose_is_independently_fit": true,
+    "transfer_has_no_E_refit": true,
+    "transform_pose_users_exact": true,
+    "translation_grid_frozen": true,
+    "zero_noise_condition_present": true
+  },
+  "lock_date": "2026-08-25",
+  "lock_id": "MOVI-DE-POSE-001-PHASE6-SYSTEMS-v1.0.0",
+  "noise_condition_count": 36,
+  "seed": 20260825,
+  "status": "locked",
+  "systems": [
+    "A_rgb",
+    "B_rgb_2d",
+    "C_camera_geometry",
+    "D_pose_aligned_geometry",
+    "G_camera_geometry_only",
+    "G_pose_aligned_geometry_only",
+    "N_noisy_pose",
+    "P_pose_only",
+    "S_shuffled_pose"
+  ]
+}

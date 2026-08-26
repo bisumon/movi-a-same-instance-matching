@@ -1,0 +1,13 @@
+{
+  "audit": "independent MOVi-D-to-MOVi-E transfer rerun",
+  "audit_date": "2026-08-25",
+  "seed": 20260825,
+  "status": "pass",
+  "checks": {
+    "transfer_lock_byte_identical": true,
+    "all_2000_prediction_rows_byte_identical": true,
+    "aggregate_metric_csv_byte_identical": true,
+    "all_non_latency_machine_readable_results_identical": true
+  },
+  "note": "Single-pass latency is excluded from byte comparison because it depends on transient load. All substantive inputs, source-model provenance, thresholds, scores, metrics, and paired confidence intervals reproduced exactly."
+}

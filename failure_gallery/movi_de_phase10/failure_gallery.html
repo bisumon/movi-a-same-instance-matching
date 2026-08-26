@@ -1,0 +1,486 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MOVi-D/E Phase 10 failure gallery</title><style>
+:root{--ink:#17212b;--muted:#52606d;--line:#d9e2ec;--soft:#f3f7fa;--accent:#245b78;--bad:#a23b32;--ok:#27724b;font-family:Inter,system-ui,-apple-system,sans-serif}*{box-sizing:border-box}body{max-width:1200px;margin:auto;padding:28px;color:var(--ink);background:#fff}header{border-bottom:3px solid var(--accent);padding-bottom:18px}h1{margin:.1rem 0 .5rem;font-size:2rem}header p{max-width:900px;color:var(--muted)}.summary{display:flex;gap:.5rem 1.2rem;flex-wrap:wrap;margin-top:1rem}.filters{position:sticky;top:0;background:#fff;padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:.75rem;align-items:end;z-index:2}label{display:grid;gap:.2rem;font-size:.85rem;color:var(--muted)}select{padding:.45rem;border:1px solid var(--line);border-radius:5px;background:#fff}.card{padding:24px 0;border-bottom:1px solid var(--line)}.badges{display:flex;gap:.4rem;align-items:center;flex-wrap:wrap}.badges span{background:#e6f0f5;color:#17475f;border-radius:999px;padding:.2rem .55rem;font-size:.82rem}h2{font-size:1.15rem;margin:.7rem 0 .25rem}.diagnosis{margin:.2rem 0 1rem}.content{display:grid;grid-template-columns:minmax(300px,.9fr) minmax(420px,1.1fr);gap:22px;align-items:start}.crops{display:grid;grid-template-columns:1fr 1fr;gap:12px}figure{margin:0}img{width:100%;aspect-ratio:1;object-fit:contain;background:var(--soft);border:1px solid var(--line);image-rendering:auto}figcaption{font-size:.82rem;color:var(--muted);margin-top:.25rem}table{border-collapse:collapse;width:100%;font-size:.88rem}th,td{padding:.48rem;border-bottom:1px solid var(--line);text-align:left}th{background:var(--soft)}.bad{color:var(--bad);font-weight:700}.ok{color:var(--ok)}.controls{display:flex;gap:.35rem 1rem;flex-wrap:wrap;margin-top:12px;font-size:.82rem;color:var(--muted)}.note{background:var(--soft);border-left:4px solid var(--accent);padding:12px 16px;margin-top:14px}[hidden]{display:none!important}@media(max-width:780px){body{padding:16px}.content{grid-template-columns:1fr}.filters{position:static;flex-wrap:wrap}}
+</style></head><body><header><h1>Phase 10 · MOVi-D/E failure analysis</h1><p>Twenty-four unique locked-test errors at each system’s development-selected 90%-recall threshold. Selection is balanced across datasets, systems, false positives/negatives, dynamics, negative difficulty, and camera motion where capacity permits.</p><div class="summary"><strong>24 unique pairs</strong><span>12 MOVi-D / 12 MOVi-E</span><span>12 C / 12 D</span><span>12 FP / 12 FN</span><span>12 static / 12 dynamic</span></div><p class="note"><strong>Interpret diagnoses as review hypotheses.</strong> They are deterministic rule-based labels assigned after metrics were locked, not adjudicated causal ground truth. Gallery selection cannot change any reported result.</p></header>
+<div class="filters"><label>Dataset<select id="dataset"><option value="all">Both</option><option value="movi_d">MOVi-D</option><option value="movi_e">MOVi-E</option></select></label><label>System<select id="system"><option value="all">C and D</option><option value="C_camera_geometry">C</option><option value="D_pose_aligned_geometry">D</option></select></label><label>Error<select id="error"><option value="all">FP and FN</option><option value="false_positive">False positive</option><option value="false_negative">False negative</option></select></label><label>Motion<select id="motion"><option value="all">All</option><option value="zero">Zero</option><option value="low">Low</option><option value="medium">Medium</option><option value="high">High</option></select></label><strong id="count">Showing 24 of 24</strong></div>
+<main>
+<article class="card" data-dataset="movi_e" data-system="C_camera_geometry" data-error="false_positive" data-motion="low">
+  <div class="badges"><strong>#01</strong><span>MOVI_E</span><span>C</span><span>false positive</span><span>low motion</span></div>
+  <h2>Ambiguous Appearance</h2>
+  <p class="diagnosis">Different-category objects still produce an unusually match-like appearance and geometry score.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/01_movi_e_4bf52066d2e12f00cb0626da_a.png" alt="First crop for 4bf52066d2e12f00cb0626da"><figcaption>Frame 14 · instance 4</figcaption></figure>
+      <figure><img src="assets/01_movi_e_4bf52066d2e12f00cb0626da_b.png" alt="Second crop for 4bf52066d2e12f00cb0626da"><figcaption>Frame 19 · instance 2</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code> · reviewed</td><td>0.9216</td><td>0.7944</td><td class="bad">match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code></td><td>0.9303</td><td>0.8433</td><td class="bad">match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>non-match</strong></span><span>Pair: <code>4bf52066d2e12f00cb0626da</code></span><span>Video: 145</span>
+    <span>Gap: 5 (short)</span><span>Difficulty: easy</span>
+    <span>Dynamics: static-static</span><span>Visibility: 1363/1786</span>
+    <span>Mask area: 338/441 px</span><span>Depth pixels: 338/441</span>
+    <span>Camera translation: 0.201</span><span>Rotation: 1.026°</span>
+    <span>Normalized translation: 0.0177</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_e" data-system="C_camera_geometry" data-error="false_positive" data-motion="medium">
+  <div class="badges"><strong>#02</strong><span>MOVI_E</span><span>C</span><span>false positive</span><span>medium motion</span></div>
+  <h2>Ambiguous Appearance</h2>
+  <p class="diagnosis">Different-category objects still produce an unusually match-like appearance and geometry score.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/02_movi_e_8046546595c462a6320c7fc3_a.png" alt="First crop for 8046546595c462a6320c7fc3"><figcaption>Frame 6 · instance 0</figcaption></figure>
+      <figure><img src="assets/02_movi_e_8046546595c462a6320c7fc3_b.png" alt="Second crop for 8046546595c462a6320c7fc3"><figcaption>Frame 20 · instance 1</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code> · reviewed</td><td>0.8668</td><td>0.7944</td><td class="bad">match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code></td><td>0.6423</td><td>0.8433</td><td class="ok">non-match · correct</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>non-match</strong></span><span>Pair: <code>8046546595c462a6320c7fc3</code></span><span>Video: 8799</span>
+    <span>Gap: 14 (long)</span><span>Difficulty: easy</span>
+    <span>Dynamics: dynamic-static</span><span>Visibility: 2358/1670</span>
+    <span>Mask area: 592/417 px</span><span>Depth pixels: 592/417</span>
+    <span>Camera translation: 0.315</span><span>Rotation: 2.824°</span>
+    <span>Normalized translation: 0.0270</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_e" data-system="C_camera_geometry" data-error="false_positive" data-motion="high">
+  <div class="badges"><strong>#03</strong><span>MOVI_E</span><span>C</span><span>false positive</span><span>high motion</span></div>
+  <h2>Matched Category Distractor</h2>
+  <p class="diagnosis">Matched-category, similar-scale distractor remains compatible in appearance and geometry.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/03_movi_e_41b348d160a5bf6cfc8236d7_a.png" alt="First crop for 41b348d160a5bf6cfc8236d7"><figcaption>Frame 12 · instance 8</figcaption></figure>
+      <figure><img src="assets/03_movi_e_41b348d160a5bf6cfc8236d7_b.png" alt="Second crop for 41b348d160a5bf6cfc8236d7"><figcaption>Frame 18 · instance 6</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code> · reviewed</td><td>0.9362</td><td>0.7944</td><td class="bad">match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code></td><td>0.8872</td><td>0.8433</td><td class="bad">match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>non-match</strong></span><span>Pair: <code>41b348d160a5bf6cfc8236d7</code></span><span>Video: 8932</span>
+    <span>Gap: 6 (medium)</span><span>Difficulty: hard</span>
+    <span>Dynamics: static-static</span><span>Visibility: 471/447</span>
+    <span>Mask area: 112/108 px</span><span>Depth pixels: 112/108</span>
+    <span>Camera translation: 0.808</span><span>Rotation: 8.139°</span>
+    <span>Normalized translation: 0.0790</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_e" data-system="D_pose_aligned_geometry" data-error="false_positive" data-motion="medium">
+  <div class="badges"><strong>#04</strong><span>MOVI_E</span><span>D</span><span>false positive</span><span>medium motion</span></div>
+  <h2>Occlusion Truncated Mask</h2>
+  <p class="diagnosis">Low support or an image-edge-truncated mask hides cues that separate these objects.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/04_movi_e_b32f54423ef3e8ab2ec492fa_a.png" alt="First crop for b32f54423ef3e8ab2ec492fa"><figcaption>Frame 11 · instance 5</figcaption></figure>
+      <figure><img src="assets/04_movi_e_b32f54423ef3e8ab2ec492fa_b.png" alt="Second crop for b32f54423ef3e8ab2ec492fa"><figcaption>Frame 17 · instance 10</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code></td><td>0.9657</td><td>0.7944</td><td class="bad">match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code> · reviewed</td><td>0.9157</td><td>0.8433</td><td class="bad">match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>non-match</strong></span><span>Pair: <code>b32f54423ef3e8ab2ec492fa</code></span><span>Video: 8070</span>
+    <span>Gap: 6 (medium)</span><span>Difficulty: easy</span>
+    <span>Dynamics: dynamic-static</span><span>Visibility: 926/205</span>
+    <span>Mask area: 229/50 px</span><span>Depth pixels: 229/50</span>
+    <span>Camera translation: 0.665</span><span>Rotation: 4.649°</span>
+    <span>Normalized translation: 0.0799</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_e" data-system="D_pose_aligned_geometry" data-error="false_positive" data-motion="low">
+  <div class="badges"><strong>#05</strong><span>MOVI_E</span><span>D</span><span>false positive</span><span>low motion</span></div>
+  <h2>Matched Category Distractor</h2>
+  <p class="diagnosis">Matched-category, similar-scale distractor remains compatible in appearance and geometry.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/05_movi_e_77461af8237a0d9ccc426bae_a.png" alt="First crop for 77461af8237a0d9ccc426bae"><figcaption>Frame 4 · instance 0</figcaption></figure>
+      <figure><img src="assets/05_movi_e_77461af8237a0d9ccc426bae_b.png" alt="Second crop for 77461af8237a0d9ccc426bae"><figcaption>Frame 11 · instance 4</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code></td><td>0.7359</td><td>0.7944</td><td class="ok">non-match · correct</td></tr><tr><td><code>D_pose_aligned_geometry</code> · reviewed</td><td>0.8979</td><td>0.8433</td><td class="bad">match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>non-match</strong></span><span>Pair: <code>77461af8237a0d9ccc426bae</code></span><span>Video: 70</span>
+    <span>Gap: 7 (medium)</span><span>Difficulty: hard</span>
+    <span>Dynamics: dynamic-static</span><span>Visibility: 2303/1654</span>
+    <span>Mask area: 576/414 px</span><span>Depth pixels: 576/414</span>
+    <span>Camera translation: 0.084</span><span>Rotation: 0.581°</span>
+    <span>Normalized translation: 0.0074</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_e" data-system="D_pose_aligned_geometry" data-error="false_positive" data-motion="high">
+  <div class="badges"><strong>#06</strong><span>MOVI_E</span><span>D</span><span>false positive</span><span>high motion</span></div>
+  <h2>Matched Category Distractor</h2>
+  <p class="diagnosis">Matched-category, similar-scale distractor remains compatible in appearance and geometry.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/06_movi_e_2506686c1d87b8036c6bdbf8_a.png" alt="First crop for 2506686c1d87b8036c6bdbf8"><figcaption>Frame 0 · instance 2</figcaption></figure>
+      <figure><img src="assets/06_movi_e_2506686c1d87b8036c6bdbf8_b.png" alt="Second crop for 2506686c1d87b8036c6bdbf8"><figcaption>Frame 19 · instance 10</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code></td><td>0.7844</td><td>0.7944</td><td class="ok">non-match · correct</td></tr><tr><td><code>D_pose_aligned_geometry</code> · reviewed</td><td>0.8583</td><td>0.8433</td><td class="bad">match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>non-match</strong></span><span>Pair: <code>2506686c1d87b8036c6bdbf8</code></span><span>Video: 2735</span>
+    <span>Gap: 19 (long)</span><span>Difficulty: hard</span>
+    <span>Dynamics: static-static</span><span>Visibility: 309/202</span>
+    <span>Mask area: 75/48 px</span><span>Depth pixels: 75/48</span>
+    <span>Camera translation: 2.353</span><span>Rotation: 13.351°</span>
+    <span>Normalized translation: 0.2317</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_e" data-system="C_camera_geometry" data-error="false_negative" data-motion="low">
+  <div class="badges"><strong>#07</strong><span>MOVI_E</span><span>C</span><span>false negative</span><span>low motion</span></div>
+  <h2>Long Gap Motion</h2>
+  <p class="diagnosis">Object motion or a long temporal gap shifts appearance and visible geometry below threshold.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/07_movi_e_294210d808502c8f526a3472_a.png" alt="First crop for 294210d808502c8f526a3472"><figcaption>Frame 12 · instance 2</figcaption></figure>
+      <figure><img src="assets/07_movi_e_294210d808502c8f526a3472_b.png" alt="Second crop for 294210d808502c8f526a3472"><figcaption>Frame 15 · instance 2</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code> · reviewed</td><td>0.7692</td><td>0.7944</td><td class="bad">non-match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code></td><td>0.8249</td><td>0.8433</td><td class="bad">non-match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>match</strong></span><span>Pair: <code>294210d808502c8f526a3472</code></span><span>Video: 1912</span>
+    <span>Gap: 3 (short)</span><span>Difficulty: positive</span>
+    <span>Dynamics: dynamic-dynamic</span><span>Visibility: 1175/1488</span>
+    <span>Mask area: 299/377 px</span><span>Depth pixels: 299/377</span>
+    <span>Camera translation: 0.040</span><span>Rotation: 0.191°</span>
+    <span>Normalized translation: 0.0041</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_e" data-system="C_camera_geometry" data-error="false_negative" data-motion="high">
+  <div class="badges"><strong>#08</strong><span>MOVI_E</span><span>C</span><span>false negative</span><span>high motion</span></div>
+  <h2>Camera Motion Misalignment</h2>
+  <p class="diagnosis">Camera-space geometry drifts under high camera motion while pose-aligned D remains correct.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/08_movi_e_073a1622c6cde7cfb87b511b_a.png" alt="First crop for 073a1622c6cde7cfb87b511b"><figcaption>Frame 0 · instance 6</figcaption></figure>
+      <figure><img src="assets/08_movi_e_073a1622c6cde7cfb87b511b_b.png" alt="Second crop for 073a1622c6cde7cfb87b511b"><figcaption>Frame 10 · instance 6</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code> · reviewed</td><td>0.5287</td><td>0.7944</td><td class="bad">non-match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code></td><td>0.9439</td><td>0.8433</td><td class="ok">match · correct</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>match</strong></span><span>Pair: <code>073a1622c6cde7cfb87b511b</code></span><span>Video: 6015</span>
+    <span>Gap: 10 (medium)</span><span>Difficulty: positive</span>
+    <span>Dynamics: dynamic-dynamic</span><span>Visibility: 656/495</span>
+    <span>Mask area: 170/125 px</span><span>Depth pixels: 170/125</span>
+    <span>Camera translation: 1.184</span><span>Rotation: 4.911°</span>
+    <span>Normalized translation: 0.1302</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_e" data-system="C_camera_geometry" data-error="false_negative" data-motion="high">
+  <div class="badges"><strong>#09</strong><span>MOVI_E</span><span>C</span><span>false negative</span><span>high motion</span></div>
+  <h2>Camera Motion Misalignment</h2>
+  <p class="diagnosis">Camera-space geometry drifts under high camera motion while pose-aligned D remains correct.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/09_movi_e_e38315516d290d47c84b534f_a.png" alt="First crop for e38315516d290d47c84b534f"><figcaption>Frame 1 · instance 1</figcaption></figure>
+      <figure><img src="assets/09_movi_e_e38315516d290d47c84b534f_b.png" alt="Second crop for e38315516d290d47c84b534f"><figcaption>Frame 22 · instance 1</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code> · reviewed</td><td>0.5275</td><td>0.7944</td><td class="bad">non-match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code></td><td>0.8464</td><td>0.8433</td><td class="ok">match · correct</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>match</strong></span><span>Pair: <code>e38315516d290d47c84b534f</code></span><span>Video: 6015</span>
+    <span>Gap: 21 (long)</span><span>Difficulty: positive</span>
+    <span>Dynamics: static-static</span><span>Visibility: 1143/3386</span>
+    <span>Mask area: 275/840 px</span><span>Depth pixels: 275/840</span>
+    <span>Camera translation: 2.487</span><span>Rotation: 8.895°</span>
+    <span>Normalized translation: 0.2541</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_e" data-system="D_pose_aligned_geometry" data-error="false_negative" data-motion="low">
+  <div class="badges"><strong>#10</strong><span>MOVI_E</span><span>D</span><span>false negative</span><span>low motion</span></div>
+  <h2>Biased Depth Estimate</h2>
+  <p class="diagnosis">Visible-surface depth or centroid changes unusually strongly across the two observations.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/10_movi_e_3980ddbfac44fa38a2655fe0_a.png" alt="First crop for 3980ddbfac44fa38a2655fe0"><figcaption>Frame 14 · instance 2</figcaption></figure>
+      <figure><img src="assets/10_movi_e_3980ddbfac44fa38a2655fe0_b.png" alt="Second crop for 3980ddbfac44fa38a2655fe0"><figcaption>Frame 18 · instance 2</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code></td><td>0.4703</td><td>0.7944</td><td class="bad">non-match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code> · reviewed</td><td>0.6468</td><td>0.8433</td><td class="bad">non-match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>match</strong></span><span>Pair: <code>3980ddbfac44fa38a2655fe0</code></span><span>Video: 5037</span>
+    <span>Gap: 4 (short)</span><span>Difficulty: positive</span>
+    <span>Dynamics: static-static</span><span>Visibility: 466/1839</span>
+    <span>Mask area: 114/459 px</span><span>Depth pixels: 114/459</span>
+    <span>Camera translation: 0.234</span><span>Rotation: 1.078°</span>
+    <span>Normalized translation: 0.0230</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_e" data-system="D_pose_aligned_geometry" data-error="false_negative" data-motion="low">
+  <div class="badges"><strong>#11</strong><span>MOVI_E</span><span>D</span><span>false negative</span><span>low motion</span></div>
+  <h2>Biased Depth Estimate</h2>
+  <p class="diagnosis">Visible-surface depth or centroid changes unusually strongly across the two observations.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/11_movi_e_886e30eb3c7569fbd954c54c_a.png" alt="First crop for 886e30eb3c7569fbd954c54c"><figcaption>Frame 7 · instance 10</figcaption></figure>
+      <figure><img src="assets/11_movi_e_886e30eb3c7569fbd954c54c_b.png" alt="Second crop for 886e30eb3c7569fbd954c54c"><figcaption>Frame 11 · instance 10</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code></td><td>0.9124</td><td>0.7944</td><td class="ok">match · correct</td></tr><tr><td><code>D_pose_aligned_geometry</code> · reviewed</td><td>0.6374</td><td>0.8433</td><td class="bad">non-match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>match</strong></span><span>Pair: <code>886e30eb3c7569fbd954c54c</code></span><span>Video: 2470</span>
+    <span>Gap: 4 (short)</span><span>Difficulty: positive</span>
+    <span>Dynamics: dynamic-dynamic</span><span>Visibility: 835/806</span>
+    <span>Mask area: 205/193 px</span><span>Depth pixels: 205/193</span>
+    <span>Camera translation: 0.212</span><span>Rotation: 1.712°</span>
+    <span>Normalized translation: 0.0188</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_e" data-system="D_pose_aligned_geometry" data-error="false_negative" data-motion="high">
+  <div class="badges"><strong>#12</strong><span>MOVI_E</span><span>D</span><span>false negative</span><span>high motion</span></div>
+  <h2>Pose Transform Error</h2>
+  <p class="diagnosis">Possible pose-transform or visible-surface instability makes D miss a pair that C retains.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/12_movi_e_ef05607be4b81db472c8208c_a.png" alt="First crop for ef05607be4b81db472c8208c"><figcaption>Frame 8 · instance 5</figcaption></figure>
+      <figure><img src="assets/12_movi_e_ef05607be4b81db472c8208c_b.png" alt="Second crop for ef05607be4b81db472c8208c"><figcaption>Frame 22 · instance 5</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code></td><td>0.8051</td><td>0.7944</td><td class="ok">match · correct</td></tr><tr><td><code>D_pose_aligned_geometry</code> · reviewed</td><td>0.4836</td><td>0.8433</td><td class="bad">non-match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>match</strong></span><span>Pair: <code>ef05607be4b81db472c8208c</code></span><span>Video: 6378</span>
+    <span>Gap: 14 (long)</span><span>Difficulty: positive</span>
+    <span>Dynamics: static-static</span><span>Visibility: 307/405</span>
+    <span>Mask area: 79/105 px</span><span>Depth pixels: 79/105</span>
+    <span>Camera translation: 1.200</span><span>Rotation: 5.842°</span>
+    <span>Normalized translation: 0.1060</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_d" data-system="C_camera_geometry" data-error="false_positive" data-motion="zero">
+  <div class="badges"><strong>#13</strong><span>MOVI_D</span><span>C</span><span>false positive</span><span>zero motion</span></div>
+  <h2>Ambiguous Appearance</h2>
+  <p class="diagnosis">Different-category objects still produce an unusually match-like appearance and geometry score.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/13_movi_d_b141ac19d142257407e7288e_a.png" alt="First crop for b141ac19d142257407e7288e"><figcaption>Frame 2 · instance 2</figcaption></figure>
+      <figure><img src="assets/13_movi_d_b141ac19d142257407e7288e_b.png" alt="Second crop for b141ac19d142257407e7288e"><figcaption>Frame 15 · instance 4</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code> · reviewed</td><td>0.7674</td><td>0.6962</td><td class="bad">match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code></td><td>0.9768</td><td>0.7905</td><td class="bad">match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>non-match</strong></span><span>Pair: <code>b141ac19d142257407e7288e</code></span><span>Video: 3916</span>
+    <span>Gap: 13 (long)</span><span>Difficulty: easy</span>
+    <span>Dynamics: dynamic-static</span><span>Visibility: 3148/1029</span>
+    <span>Mask area: 785/260 px</span><span>Depth pixels: 785/260</span>
+    <span>Camera translation: 0.000</span><span>Rotation: 0.000°</span>
+    <span>Normalized translation: 0.0000</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_d" data-system="C_camera_geometry" data-error="false_positive" data-motion="zero">
+  <div class="badges"><strong>#14</strong><span>MOVI_D</span><span>C</span><span>false positive</span><span>zero motion</span></div>
+  <h2>Matched Category Distractor</h2>
+  <p class="diagnosis">Matched-category, similar-scale distractor remains compatible in appearance and geometry.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/14_movi_d_2d06983d96e7bd29aa6f5de4_a.png" alt="First crop for 2d06983d96e7bd29aa6f5de4"><figcaption>Frame 5 · instance 4</figcaption></figure>
+      <figure><img src="assets/14_movi_d_2d06983d96e7bd29aa6f5de4_b.png" alt="Second crop for 2d06983d96e7bd29aa6f5de4"><figcaption>Frame 20 · instance 2</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code> · reviewed</td><td>0.8732</td><td>0.6962</td><td class="bad">match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code></td><td>0.9627</td><td>0.7905</td><td class="bad">match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>non-match</strong></span><span>Pair: <code>2d06983d96e7bd29aa6f5de4</code></span><span>Video: 3702</span>
+    <span>Gap: 15 (long)</span><span>Difficulty: hard</span>
+    <span>Dynamics: dynamic-static</span><span>Visibility: 4174/3413</span>
+    <span>Mask area: 1042/860 px</span><span>Depth pixels: 1042/860</span>
+    <span>Camera translation: 0.000</span><span>Rotation: 0.000°</span>
+    <span>Normalized translation: 0.0000</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_d" data-system="C_camera_geometry" data-error="false_positive" data-motion="zero">
+  <div class="badges"><strong>#15</strong><span>MOVI_D</span><span>C</span><span>false positive</span><span>zero motion</span></div>
+  <h2>Matched Category Distractor</h2>
+  <p class="diagnosis">Matched-category, similar-scale distractor remains compatible in appearance and geometry.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/15_movi_d_e41fd785bad32aa26b835a20_a.png" alt="First crop for e41fd785bad32aa26b835a20"><figcaption>Frame 16 · instance 7</figcaption></figure>
+      <figure><img src="assets/15_movi_d_e41fd785bad32aa26b835a20_b.png" alt="Second crop for e41fd785bad32aa26b835a20"><figcaption>Frame 21 · instance 5</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code> · reviewed</td><td>0.8790</td><td>0.6962</td><td class="bad">match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code></td><td>0.7500</td><td>0.7905</td><td class="ok">non-match · correct</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>non-match</strong></span><span>Pair: <code>e41fd785bad32aa26b835a20</code></span><span>Video: 8337</span>
+    <span>Gap: 5 (short)</span><span>Difficulty: hard</span>
+    <span>Dynamics: static-static</span><span>Visibility: 997/1223</span>
+    <span>Mask area: 250/300 px</span><span>Depth pixels: 250/300</span>
+    <span>Camera translation: 0.000</span><span>Rotation: 0.000°</span>
+    <span>Normalized translation: 0.0000</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_d" data-system="D_pose_aligned_geometry" data-error="false_positive" data-motion="zero">
+  <div class="badges"><strong>#16</strong><span>MOVI_D</span><span>D</span><span>false positive</span><span>zero motion</span></div>
+  <h2>Occlusion Truncated Mask</h2>
+  <p class="diagnosis">Low support or an image-edge-truncated mask hides cues that separate these objects.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/16_movi_d_c10b3db3e2b0044b10e3b7f4_a.png" alt="First crop for c10b3db3e2b0044b10e3b7f4"><figcaption>Frame 1 · instance 4</figcaption></figure>
+      <figure><img src="assets/16_movi_d_c10b3db3e2b0044b10e3b7f4_b.png" alt="Second crop for c10b3db3e2b0044b10e3b7f4"><figcaption>Frame 8 · instance 10</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code></td><td>0.4180</td><td>0.6962</td><td class="ok">non-match · correct</td></tr><tr><td><code>D_pose_aligned_geometry</code> · reviewed</td><td>0.7943</td><td>0.7905</td><td class="bad">match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>non-match</strong></span><span>Pair: <code>c10b3db3e2b0044b10e3b7f4</code></span><span>Video: 9403</span>
+    <span>Gap: 7 (medium)</span><span>Difficulty: easy</span>
+    <span>Dynamics: dynamic-static</span><span>Visibility: 752/411</span>
+    <span>Mask area: 194/102 px</span><span>Depth pixels: 194/102</span>
+    <span>Camera translation: 0.000</span><span>Rotation: 0.000°</span>
+    <span>Normalized translation: 0.0000</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_d" data-system="D_pose_aligned_geometry" data-error="false_positive" data-motion="zero">
+  <div class="badges"><strong>#17</strong><span>MOVI_D</span><span>D</span><span>false positive</span><span>zero motion</span></div>
+  <h2>Occlusion Truncated Mask</h2>
+  <p class="diagnosis">Low support or an image-edge-truncated mask hides cues that separate these objects.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/17_movi_d_0afe3711d76ab6cd2ef40406_a.png" alt="First crop for 0afe3711d76ab6cd2ef40406"><figcaption>Frame 6 · instance 6</figcaption></figure>
+      <figure><img src="assets/17_movi_d_0afe3711d76ab6cd2ef40406_b.png" alt="Second crop for 0afe3711d76ab6cd2ef40406"><figcaption>Frame 11 · instance 4</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code></td><td>0.9036</td><td>0.6962</td><td class="bad">match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code> · reviewed</td><td>0.9187</td><td>0.7905</td><td class="bad">match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>non-match</strong></span><span>Pair: <code>0afe3711d76ab6cd2ef40406</code></span><span>Video: 7200</span>
+    <span>Gap: 5 (short)</span><span>Difficulty: easy</span>
+    <span>Dynamics: static-static</span><span>Visibility: 420/632</span>
+    <span>Mask area: 104/160 px</span><span>Depth pixels: 104/160</span>
+    <span>Camera translation: 0.000</span><span>Rotation: 0.000°</span>
+    <span>Normalized translation: 0.0000</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_d" data-system="D_pose_aligned_geometry" data-error="false_positive" data-motion="zero">
+  <div class="badges"><strong>#18</strong><span>MOVI_D</span><span>D</span><span>false positive</span><span>zero motion</span></div>
+  <h2>Matched Category Distractor</h2>
+  <p class="diagnosis">Matched-category, similar-scale distractor remains compatible in appearance and geometry.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/18_movi_d_05db8091b8aaa9278833eb14_a.png" alt="First crop for 05db8091b8aaa9278833eb14"><figcaption>Frame 8 · instance 1</figcaption></figure>
+      <figure><img src="assets/18_movi_d_05db8091b8aaa9278833eb14_b.png" alt="Second crop for 05db8091b8aaa9278833eb14"><figcaption>Frame 18 · instance 0</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code></td><td>0.9406</td><td>0.6962</td><td class="bad">match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code> · reviewed</td><td>0.8892</td><td>0.7905</td><td class="bad">match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>non-match</strong></span><span>Pair: <code>05db8091b8aaa9278833eb14</code></span><span>Video: 3188</span>
+    <span>Gap: 10 (medium)</span><span>Difficulty: hard</span>
+    <span>Dynamics: static-static</span><span>Visibility: 2745/4467</span>
+    <span>Mask area: 688/1110 px</span><span>Depth pixels: 688/1110</span>
+    <span>Camera translation: 0.000</span><span>Rotation: 0.000°</span>
+    <span>Normalized translation: 0.0000</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_d" data-system="C_camera_geometry" data-error="false_negative" data-motion="zero">
+  <div class="badges"><strong>#19</strong><span>MOVI_D</span><span>C</span><span>false negative</span><span>zero motion</span></div>
+  <h2>Biased Depth Estimate</h2>
+  <p class="diagnosis">Visible-surface depth or centroid changes unusually strongly across the two observations.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/19_movi_d_62fe3027c0730fc234380992_a.png" alt="First crop for 62fe3027c0730fc234380992"><figcaption>Frame 9 · instance 4</figcaption></figure>
+      <figure><img src="assets/19_movi_d_62fe3027c0730fc234380992_b.png" alt="Second crop for 62fe3027c0730fc234380992"><figcaption>Frame 20 · instance 4</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code> · reviewed</td><td>0.0076</td><td>0.6962</td><td class="bad">non-match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code></td><td>0.0102</td><td>0.7905</td><td class="bad">non-match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>match</strong></span><span>Pair: <code>62fe3027c0730fc234380992</code></span><span>Video: 4199</span>
+    <span>Gap: 11 (medium)</span><span>Difficulty: positive</span>
+    <span>Dynamics: dynamic-dynamic</span><span>Visibility: 657/559</span>
+    <span>Mask area: 165/142 px</span><span>Depth pixels: 165/142</span>
+    <span>Camera translation: 0.000</span><span>Rotation: 0.000°</span>
+    <span>Normalized translation: 0.0000</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_d" data-system="C_camera_geometry" data-error="false_negative" data-motion="zero">
+  <div class="badges"><strong>#20</strong><span>MOVI_D</span><span>C</span><span>false negative</span><span>zero motion</span></div>
+  <h2>Long Gap Motion</h2>
+  <p class="diagnosis">Object motion or a long temporal gap shifts appearance and visible geometry below threshold.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/20_movi_d_a813444b4926781cf1f689f5_a.png" alt="First crop for a813444b4926781cf1f689f5"><figcaption>Frame 19 · instance 2</figcaption></figure>
+      <figure><img src="assets/20_movi_d_a813444b4926781cf1f689f5_b.png" alt="Second crop for a813444b4926781cf1f689f5"><figcaption>Frame 22 · instance 2</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code> · reviewed</td><td>0.5485</td><td>0.6962</td><td class="bad">non-match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code></td><td>0.7379</td><td>0.7905</td><td class="bad">non-match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>match</strong></span><span>Pair: <code>a813444b4926781cf1f689f5</code></span><span>Video: 7175</span>
+    <span>Gap: 3 (short)</span><span>Difficulty: positive</span>
+    <span>Dynamics: dynamic-dynamic</span><span>Visibility: 3731/3807</span>
+    <span>Mask area: 928/945 px</span><span>Depth pixels: 928/945</span>
+    <span>Camera translation: 0.000</span><span>Rotation: 0.000°</span>
+    <span>Normalized translation: 0.0000</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_d" data-system="C_camera_geometry" data-error="false_negative" data-motion="zero">
+  <div class="badges"><strong>#21</strong><span>MOVI_D</span><span>C</span><span>false negative</span><span>zero motion</span></div>
+  <h2>Long Gap Motion</h2>
+  <p class="diagnosis">Object motion or a long temporal gap shifts appearance and visible geometry below threshold.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/21_movi_d_1898d0539a07088953a69103_a.png" alt="First crop for 1898d0539a07088953a69103"><figcaption>Frame 0 · instance 2</figcaption></figure>
+      <figure><img src="assets/21_movi_d_1898d0539a07088953a69103_b.png" alt="Second crop for 1898d0539a07088953a69103"><figcaption>Frame 19 · instance 2</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code> · reviewed</td><td>0.4778</td><td>0.6962</td><td class="bad">non-match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code></td><td>0.4590</td><td>0.7905</td><td class="bad">non-match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>match</strong></span><span>Pair: <code>1898d0539a07088953a69103</code></span><span>Video: 4262</span>
+    <span>Gap: 19 (long)</span><span>Difficulty: positive</span>
+    <span>Dynamics: static-static</span><span>Visibility: 2514/1546</span>
+    <span>Mask area: 625/383 px</span><span>Depth pixels: 625/383</span>
+    <span>Camera translation: 0.000</span><span>Rotation: 0.000°</span>
+    <span>Normalized translation: 0.0000</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_d" data-system="D_pose_aligned_geometry" data-error="false_negative" data-motion="zero">
+  <div class="badges"><strong>#22</strong><span>MOVI_D</span><span>D</span><span>false negative</span><span>zero motion</span></div>
+  <h2>Occlusion Truncated Mask</h2>
+  <p class="diagnosis">Occlusion or image-edge truncation removes reliable same-instance surface evidence.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/22_movi_d_6f5b326004394a9682aa03a0_a.png" alt="First crop for 6f5b326004394a9682aa03a0"><figcaption>Frame 5 · instance 9</figcaption></figure>
+      <figure><img src="assets/22_movi_d_6f5b326004394a9682aa03a0_b.png" alt="Second crop for 6f5b326004394a9682aa03a0"><figcaption>Frame 8 · instance 9</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code></td><td>0.0684</td><td>0.6962</td><td class="bad">non-match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code> · reviewed</td><td>0.1145</td><td>0.7905</td><td class="bad">non-match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>match</strong></span><span>Pair: <code>6f5b326004394a9682aa03a0</code></span><span>Video: 9599</span>
+    <span>Gap: 3 (short)</span><span>Difficulty: positive</span>
+    <span>Dynamics: dynamic-dynamic</span><span>Visibility: 427/317</span>
+    <span>Mask area: 107/78 px</span><span>Depth pixels: 107/78</span>
+    <span>Camera translation: 0.000</span><span>Rotation: 0.000°</span>
+    <span>Normalized translation: 0.0000</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_d" data-system="D_pose_aligned_geometry" data-error="false_negative" data-motion="zero">
+  <div class="badges"><strong>#23</strong><span>MOVI_D</span><span>D</span><span>false negative</span><span>zero motion</span></div>
+  <h2>Biased Depth Estimate</h2>
+  <p class="diagnosis">Visible-surface depth or centroid changes unusually strongly across the two observations.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/23_movi_d_e3f888374fed58012b5263c8_a.png" alt="First crop for e3f888374fed58012b5263c8"><figcaption>Frame 5 · instance 5</figcaption></figure>
+      <figure><img src="assets/23_movi_d_e3f888374fed58012b5263c8_b.png" alt="Second crop for e3f888374fed58012b5263c8"><figcaption>Frame 11 · instance 5</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code></td><td>0.3514</td><td>0.6962</td><td class="bad">non-match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code> · reviewed</td><td>0.1869</td><td>0.7905</td><td class="bad">non-match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>match</strong></span><span>Pair: <code>e3f888374fed58012b5263c8</code></span><span>Video: 8932</span>
+    <span>Gap: 6 (medium)</span><span>Difficulty: positive</span>
+    <span>Dynamics: static-static</span><span>Visibility: 148/955</span>
+    <span>Mask area: 37/243 px</span><span>Depth pixels: 37/243</span>
+    <span>Camera translation: 0.000</span><span>Rotation: 0.000°</span>
+    <span>Normalized translation: 0.0000</span>
+  </div>
+</article>
+<article class="card" data-dataset="movi_d" data-system="D_pose_aligned_geometry" data-error="false_negative" data-motion="zero">
+  <div class="badges"><strong>#24</strong><span>MOVI_D</span><span>D</span><span>false negative</span><span>zero motion</span></div>
+  <h2>Long Gap Motion</h2>
+  <p class="diagnosis">Object motion or a long temporal gap shifts appearance and visible geometry below threshold.</p>
+  <div class="content">
+    <div class="crops">
+      <figure><img src="assets/24_movi_d_0fb47da97b7a62e9f4acdd33_a.png" alt="First crop for 0fb47da97b7a62e9f4acdd33"><figcaption>Frame 3 · instance 0</figcaption></figure>
+      <figure><img src="assets/24_movi_d_0fb47da97b7a62e9f4acdd33_b.png" alt="Second crop for 0fb47da97b7a62e9f4acdd33"><figcaption>Frame 22 · instance 0</figcaption></figure>
+    </div>
+    <div class="tablewrap"><table><thead><tr><th>System</th><th>Score</th><th>Threshold</th><th>Decision</th></tr></thead><tbody><tr><td><code>C_camera_geometry</code></td><td>0.6734</td><td>0.6962</td><td class="bad">non-match · error</td></tr><tr><td><code>D_pose_aligned_geometry</code> · reviewed</td><td>0.7877</td><td>0.7905</td><td class="bad">non-match · error</td></tr></tbody></table></div>
+  </div>
+  <div class="controls">
+    <span>Truth: <strong>match</strong></span><span>Pair: <code>0fb47da97b7a62e9f4acdd33</code></span><span>Video: 8589</span>
+    <span>Gap: 19 (long)</span><span>Difficulty: positive</span>
+    <span>Dynamics: static-static</span><span>Visibility: 16522/24687</span>
+    <span>Mask area: 4156/6174 px</span><span>Depth pixels: 4156/6174</span>
+    <span>Camera translation: 0.000</span><span>Rotation: 0.000°</span>
+    <span>Normalized translation: 0.0000</span>
+  </div>
+</article></main><script>(()=>{const cards=[...document.querySelectorAll('.card')];const controls=['dataset','system','error','motion'].map(x=>document.getElementById(x));function update(){let n=0;cards.forEach(c=>{const show=controls.every(x=>x.value==='all'||c.dataset[x.id]===x.value);c.hidden=!show;if(show)n++});document.getElementById('count').textContent=`Showing ${n} of ${cards.length}`;}controls.forEach(x=>x.addEventListener('change',update));update();})();</script></body></html>

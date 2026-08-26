@@ -1,0 +1,66 @@
+{
+  "datasets": {
+    "movi_d": {
+      "candidate_inventory": {
+        "filename": "pilot_movi_d_candidate_inventory.jsonl",
+        "sha256": "661be8dbe540c4e984674a6c428b5199ad94f9eea7e479818c07fd9a5bb5b6de"
+      },
+      "downloaded_candidate_videos": 31,
+      "files": [
+        {
+          "gcs_md5_base64": "vbsWHDYg9tCt9ETjAdX9jQ==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00003-of-00016",
+          "sha256": "0e11b6b0fe3f286c2468be3d638e30f5afff3f674720163e8089eb2c573a97e5",
+          "size_bytes": 126837874
+        },
+        {
+          "gcs_md5_base64": "/NMCP9mmb7L5nj5VkU39dw==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00008-of-00016",
+          "sha256": "577573986cb73469ea1c48908d5dbaed3eab429ffffd2b9577ecd7d538bb6043",
+          "size_bytes": 129889011
+        }
+      ],
+      "pilot_manifest": {
+        "filename": "pilot_movi_d_20.jsonl",
+        "sha256": "8d27f87c0fb6d6774141152b030943e190bab352ca2dc81854549edcbaf7b791",
+        "video_count": 20
+      },
+      "selected_shard_indices": [3, 8]
+    },
+    "movi_e": {
+      "candidate_inventory": {
+        "filename": "pilot_movi_e_candidate_inventory.jsonl",
+        "sha256": "254f903bdc4f6c11e9a64ab61a719a96de1e9996163df943b079be394017cec3"
+      },
+      "downloaded_candidate_videos": 32,
+      "files": [
+        {
+          "gcs_md5_base64": "g4nI+EGkj7/hwx+vdK7Rfg==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00008-of-00016",
+          "sha256": "e136827661a184a8ad766130c1595855a91b3fe7c2a0a4b72e50b4c3b73b8981",
+          "size_bytes": 138798140
+        },
+        {
+          "gcs_md5_base64": "EhkLOlJbDAeJk9XBCWPprQ==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00013-of-00016",
+          "sha256": "0de871e6ac32000276ebe4ad9021000be8261a3727dd621abb1b03bb34e7ed42",
+          "size_bytes": 134163491
+        }
+      ],
+      "pilot_manifest": {
+        "filename": "pilot_movi_e_20.jsonl",
+        "sha256": "144fb0426713c97897fa098b02e0e42af4ba7f4bfd1327e8f64c71604787896c",
+        "video_count": 20
+      },
+      "selected_shard_indices": [8, 13]
+    }
+  },
+  "pipeline": "MOVi-D/E seeded pilot download",
+  "public_bucket": "kubric-public",
+  "public_validation_shard_count_per_dataset": 16,
+  "resolution": "128x128",
+  "seed": 20260825,
+  "selection_rule": "Seeded maximin coverage of object count, dynamic count, visibility, camera translation, and camera rotation",
+  "source_version": "1.0.0",
+  "videos_per_dataset": 20
+}

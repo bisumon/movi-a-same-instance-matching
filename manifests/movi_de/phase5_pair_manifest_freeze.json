@@ -1,0 +1,137 @@
+{
+  "artifacts": {
+    "configs/movi_de_hard_negatives.json": {
+      "sha256": "efe7623a4f9a3a673153dfa9f37c4c51f0f022d10d04d183cc27d21ffd0c727f"
+    },
+    "configs/movi_de_phase5_pairs.json": {
+      "sha256": "abbb970ac9a653f0ef7a1fb4ad14aa270c69823da0c3617bb19de7678e218ece"
+    },
+    "docs/MOVI_DE_PHASE5_PAIR_MANIFESTS.md": {
+      "sha256": "331c8c299f1eb3f9b1193123ef26d4ad2cda18e64d0f05e447be78666111d7d4"
+    },
+    "manifests/movi_de/confirmatory_video_pool_freeze.json": {
+      "sha256": "e6ecc48f821b3d5c69e85383582c919b63210384a78d7e1cae31e66f73fd5dd8"
+    },
+    "manifests/movi_de/hard_negative_definition_freeze.json": {
+      "sha256": "31f867a9683e9e0881b795c297062d22404a675eee25caff4f7d270bf3fba3db"
+    },
+    "manifests/movi_de/protocol_freeze_v0.2.json": {
+      "sha256": "812929ff26515b8509f3254d57a7582945b2bb9c61f3dee7393678f77bc96a36"
+    },
+    "manifests/pairs/movi_de/movi_d_all_pairs.jsonl": {
+      "rows": 10000,
+      "sha256": "d2a8584d52da0ce94ec3de8855f26c92ac6a745848d7ba1e67824a6e773db662"
+    },
+    "manifests/pairs/movi_de/movi_d_dev_pairs.jsonl": {
+      "rows": 2000,
+      "sha256": "8a8d0626c9dbee28531bf943d72b2d3fa37b1a13fef65b20e8b8b266a32381a4"
+    },
+    "manifests/pairs/movi_de/movi_d_pair_generation_audit.json": {
+      "sha256": "6ce7813426f5fef3ada3f7d81fb8936623d23cca91924fd1af7500214b26c6b9"
+    },
+    "manifests/pairs/movi_de/movi_d_test_pairs.jsonl": {
+      "rows": 2000,
+      "sha256": "5510d1f8aefd21ba8b489040c684e5c0d6c10c9c0df3192384f10ac9f22ad0f6"
+    },
+    "manifests/pairs/movi_de/movi_d_train_pairs.jsonl": {
+      "rows": 6000,
+      "sha256": "f2cef719a1ccd4d74805a855775c2671d9022d91196adc1694ee80cc67db7047"
+    },
+    "manifests/pairs/movi_de/movi_e_all_pairs.jsonl": {
+      "rows": 10000,
+      "sha256": "032e58a140db4b9a44981c88a6bc0385efad2589f53cfd19ee3843d27530bfee"
+    },
+    "manifests/pairs/movi_de/movi_e_dev_pairs.jsonl": {
+      "rows": 2000,
+      "sha256": "28c4c90396ebb8438a431ce16bc45c560b445d2a4a96f27d2e4082d0d8a3c0fe"
+    },
+    "manifests/pairs/movi_de/movi_e_pair_generation_audit.json": {
+      "sha256": "3bd3e7649f8751916e524901e4d300125566c88d7ed42d25b7810817c89377db"
+    },
+    "manifests/pairs/movi_de/movi_e_test_pairs.jsonl": {
+      "rows": 2000,
+      "sha256": "76c21fa1ca5731624d2373dc07ceb9dd2fd8e10f7341b819e9d4bca4af4a6b10"
+    },
+    "manifests/pairs/movi_de/movi_e_train_pairs.jsonl": {
+      "rows": 6000,
+      "sha256": "fefee7590bf4f549ae609b1632f2f1102fcc23bb93ed33c7488d0086ac330ca3"
+    },
+    "manifests/pairs/movi_de/reproducibility_audit.json": {
+      "sha256": "0ed22e6d61fc56bec7d44cf7a459011d6d00d123d45e417fd41b79ef67fbb9d4"
+    },
+    "src/generate_movi_de_phase5_pairs.py": {
+      "sha256": "1014c40528983de54bb499b0a5412f757e9f3930e28be289ded1392f66d72b8a"
+    },
+    "src/verify_and_freeze_movi_de_phase5_pairs.py": {
+      "sha256": "319c2044d9db4771b30dc1bfee3bfa4d6c5635161219444bf3979501794c3c0b"
+    }
+  },
+  "change_control": "Any change to pair membership, labels, controls, source pools, hard-negative cutoffs, or sampling configuration requires a prospective amendment and replacement lock before model fitting.",
+  "checks": {
+    "all_20000_pair_ids_globally_unique": true,
+    "all_20000_unordered_pairs_unique_within_dataset": true,
+    "all_expanded_checks_pass": true,
+    "exact_total_pairs": true,
+    "movi_d_combined_matches_splits": true,
+    "movi_d_dev_definitions": true,
+    "movi_d_dev_eligibility_controls": true,
+    "movi_d_dev_exact_quotas": true,
+    "movi_d_dev_locked_video_scope": true,
+    "movi_d_dev_observation_ids_bind_dataset_video_frame_instance": true,
+    "movi_d_dev_pair_ids_bind_unordered_observations": true,
+    "movi_d_dev_same_video_pair_schema": true,
+    "movi_d_dev_unique_pair_ids": true,
+    "movi_d_fixed_camera_zero": true,
+    "movi_d_generator_audit_pass": true,
+    "movi_d_moving_camera_nonzero": true,
+    "movi_d_test_definitions": true,
+    "movi_d_test_eligibility_controls": true,
+    "movi_d_test_exact_quotas": true,
+    "movi_d_test_locked_video_scope": true,
+    "movi_d_test_observation_ids_bind_dataset_video_frame_instance": true,
+    "movi_d_test_pair_ids_bind_unordered_observations": true,
+    "movi_d_test_same_video_pair_schema": true,
+    "movi_d_test_unique_pair_ids": true,
+    "movi_d_train_definitions": true,
+    "movi_d_train_eligibility_controls": true,
+    "movi_d_train_exact_quotas": true,
+    "movi_d_train_locked_video_scope": true,
+    "movi_d_train_observation_ids_bind_dataset_video_frame_instance": true,
+    "movi_d_train_pair_ids_bind_unordered_observations": true,
+    "movi_d_train_same_video_pair_schema": true,
+    "movi_d_train_unique_pair_ids": true,
+    "movi_e_combined_matches_splits": true,
+    "movi_e_dev_definitions": true,
+    "movi_e_dev_eligibility_controls": true,
+    "movi_e_dev_exact_quotas": true,
+    "movi_e_dev_locked_video_scope": true,
+    "movi_e_dev_observation_ids_bind_dataset_video_frame_instance": true,
+    "movi_e_dev_pair_ids_bind_unordered_observations": true,
+    "movi_e_dev_same_video_pair_schema": true,
+    "movi_e_dev_unique_pair_ids": true,
+    "movi_e_fixed_camera_zero": true,
+    "movi_e_generator_audit_pass": true,
+    "movi_e_moving_camera_nonzero": true,
+    "movi_e_test_definitions": true,
+    "movi_e_test_eligibility_controls": true,
+    "movi_e_test_exact_quotas": true,
+    "movi_e_test_locked_video_scope": true,
+    "movi_e_test_observation_ids_bind_dataset_video_frame_instance": true,
+    "movi_e_test_pair_ids_bind_unordered_observations": true,
+    "movi_e_test_same_video_pair_schema": true,
+    "movi_e_test_unique_pair_ids": true,
+    "movi_e_train_definitions": true,
+    "movi_e_train_eligibility_controls": true,
+    "movi_e_train_exact_quotas": true,
+    "movi_e_train_locked_video_scope": true,
+    "movi_e_train_observation_ids_bind_dataset_video_frame_instance": true,
+    "movi_e_train_pair_ids_bind_unordered_observations": true,
+    "movi_e_train_same_video_pair_schema": true,
+    "movi_e_train_unique_pair_ids": true
+  },
+  "lock_date": "2026-08-25",
+  "lock_id": "MOVI-DE-POSE-001-PHASE5-PAIRS-v1.0.0",
+  "seed": 20260825,
+  "status": "locked",
+  "total_pairs": 20000
+}

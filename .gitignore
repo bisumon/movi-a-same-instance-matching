@@ -1,7 +1,10 @@
 .DS_Store
 .venv/
+.venv-movi-de/
 __pycache__/
 *.py[cod]
+~$*.docx
+*.inspect.ndjson
 runs/
 data/
 work/

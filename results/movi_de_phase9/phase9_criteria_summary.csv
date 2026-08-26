@@ -1,0 +1,8 @@
+criterion,status,formal_decision,interpretation
+H1,supported_primary,True,The sole confirmatory success rule is met because the full paired 95% interval is above zero.
+H2,directionally_consistent_not_resolved,,"Point estimates favor D, but both paired intervals include zero and no materiality margin was frozen."
+H3,supported,True,Motion-stratum conclusions are secondary and use predeclared MOVi-E-training tertiles.
+H4,consistent_not_equivalence,,"The interval spans zero and the point effect is small, but no equivalence margin was frozen."
+H5,supported,True,"S does not beat C and is resolved below clean D, while pose-only P remains at chance."
+H6,supported_graded_endpoint_pattern,True,Large single-axis and combined endpoints degrade clearly; small errors are tolerated. This is not a claim of strict monotonicity at every grid step.
+TRANSFER,ranking_transfers_threshold_partially_degrades,,"AUROC is unresolved from in-domain D, but the frozen MOVi-D threshold has a resolved 0.006 higher false-match rate."

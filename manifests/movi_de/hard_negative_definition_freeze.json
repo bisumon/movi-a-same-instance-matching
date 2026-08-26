@@ -1,0 +1,85 @@
+{
+  "protocol_id": "MOVI-DE-POSE-001",
+  "protocol_version": "0.2",
+  "definition_version": "1.0.0",
+  "freeze_date": "2026-08-25",
+  "status": "locked_after_predefinition_capacity_audit",
+  "confirmatory_model_results_accessed": false,
+  "definition": {
+    "relation": "same dataset, pool, and video; different frames and simulator instances; same semantic category",
+    "scale_distance": "abs(natural_log(source_mask_area_a / source_mask_area_b))",
+    "comparison": "inclusive less-than-or-equal using full precision",
+    "movi_d_cutoff": 0.4837969513780713,
+    "movi_e_cutoff": 0.461345566502621,
+    "cutoff_source": "dataset-specific locked training pool 25th percentile using higher quantile method",
+    "development_test_policy": "apply training cutoff unchanged",
+    "unordered_pair_deduplication": true
+  },
+  "capacity_gate": {
+    "movi_d": {
+      "train": {
+        "target": 1500,
+        "available": 91354
+      },
+      "dev": {
+        "target": 500,
+        "available": 30325
+      },
+      "test": {
+        "target": 500,
+        "available": 23664
+      }
+    },
+    "movi_e": {
+      "train": {
+        "target": 1500,
+        "available": 124643
+      },
+      "dev": {
+        "target": 500,
+        "available": 31393
+      },
+      "test": {
+        "target": 500,
+        "available": 35065
+      }
+    },
+    "all_pools_passed": true
+  },
+  "locked_artifacts": {
+    "definition_configuration": {
+      "path": "configs/movi_de_hard_negatives.json",
+      "sha256": "efe7623a4f9a3a673153dfa9f37c4c51f0f022d10d04d183cc27d21ffd0c727f"
+    },
+    "definition_document": {
+      "path": "docs/MOVI_DE_HARD_NEGATIVE_DEFINITION.md",
+      "sha256": "ef48ad9d93ad8fe36c8b1f655b301518aeee4c15d74aef565cc2af0f75206a4a"
+    },
+    "protocol_freeze": {
+      "path": "manifests/movi_de/protocol_freeze_v0.2.json",
+      "sha256": "812929ff26515b8509f3254d57a7582945b2bb9c61f3dee7393678f77bc96a36"
+    },
+    "video_pool_freeze": {
+      "path": "manifests/movi_de/confirmatory_video_pool_freeze.json",
+      "sha256": "e6ecc48f821b3d5c69e85383582c919b63210384a78d7e1cae31e66f73fd5dd8"
+    },
+    "movi_d_capacity_audit": {
+      "path": "manifests/movi_de/confirmatory_movi_d_post_split_capacity_audit.json",
+      "sha256": "848c8c8429e1e7dbd849ad9257fef5b997d82e4916ee38af1627b0784424fd7d"
+    },
+    "movi_e_capacity_audit": {
+      "path": "manifests/movi_de/confirmatory_movi_e_post_split_capacity_audit.json",
+      "sha256": "9b75f8231c71bbfa95dc331cfc213abac70409dcaf508972f2451ee977160075"
+    }
+  },
+  "checks": {
+    "training_cutoff_retains_at_least_25_percent_movi_d": true,
+    "training_cutoff_retains_at_least_25_percent_movi_e": true,
+    "training_cutoff_applied_unchanged_to_dev_and_test": true,
+    "all_hard_negative_pool_quotas_supported": true,
+    "temporal_gap_capacity_present_in_every_pool": true,
+    "static_dynamic_capacity_present": true,
+    "same_asset_subgroup_remains_diagnostic_only": true
+  },
+  "change_control": "Pair generation must fail rather than relax this definition. Any modification requires a prospective amendment and a replacement freeze before pair manifests are generated."
+}

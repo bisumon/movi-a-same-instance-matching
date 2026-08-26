@@ -1,0 +1,725 @@
+{
+  "aggregate": {
+    "A_rgb": {
+      "dev": {
+        "auroc": 0.938978,
+        "calibration": {
+          "brier_score": 0.092069361276,
+          "expected_calibration_error_10_bins": 0.060960058294,
+          "log_loss": 0.311512771132
+        },
+        "f1_at_locked_max_f1_threshold": 0.879109762266,
+        "false_match_rate_at_locked_90_recall_threshold": 0.194,
+        "pr_auc": 0.954570894263,
+        "precision_at_locked_max_f1_threshold": 0.88945752303,
+        "recall_at_locked_90_recall_threshold": 0.9,
+        "recall_at_locked_max_f1_threshold": 0.869
+      },
+      "test": {
+        "auroc": 0.935493,
+        "calibration": {
+          "brier_score": 0.094750601776,
+          "expected_calibration_error_10_bins": 0.048305970165,
+          "log_loss": 0.320249415308
+        },
+        "f1_at_locked_max_f1_threshold": 0.86794407043,
+        "false_match_rate_at_locked_90_recall_threshold": 0.168,
+        "pr_auc": 0.951954606624,
+        "precision_at_locked_max_f1_threshold": 0.900107411386,
+        "recall_at_locked_90_recall_threshold": 0.882,
+        "recall_at_locked_max_f1_threshold": 0.838
+      }
+    },
+    "B_rgb_2d": {
+      "dev": {
+        "auroc": 0.972715,
+        "calibration": {
+          "brier_score": 0.061442049012,
+          "expected_calibration_error_10_bins": 0.023416626809,
+          "log_loss": 0.209968135033
+        },
+        "f1_at_locked_max_f1_threshold": 0.915412558381,
+        "false_match_rate_at_locked_90_recall_threshold": 0.072,
+        "pr_auc": 0.977254138738,
+        "precision_at_locked_max_f1_threshold": 0.95145631068,
+        "recall_at_locked_90_recall_threshold": 0.9,
+        "recall_at_locked_max_f1_threshold": 0.882
+      },
+      "test": {
+        "auroc": 0.971199,
+        "calibration": {
+          "brier_score": 0.06394086401,
+          "expected_calibration_error_10_bins": 0.030692006338,
+          "log_loss": 0.216630875568
+        },
+        "f1_at_locked_max_f1_threshold": 0.916102136529,
+        "false_match_rate_at_locked_90_recall_threshold": 0.067,
+        "pr_auc": 0.975732426988,
+        "precision_at_locked_max_f1_threshold": 0.956474428727,
+        "recall_at_locked_90_recall_threshold": 0.9,
+        "recall_at_locked_max_f1_threshold": 0.879
+      }
+    },
+    "C_camera_geometry": {
+      "dev": {
+        "auroc": 0.982697,
+        "calibration": {
+          "brier_score": 0.049581596829,
+          "expected_calibration_error_10_bins": 0.026055589828,
+          "log_loss": 0.166566264137
+        },
+        "f1_at_locked_max_f1_threshold": 0.934203917629,
+        "false_match_rate_at_locked_90_recall_threshold": 0.039,
+        "pr_auc": 0.985589628124,
+        "precision_at_locked_max_f1_threshold": 0.938446014127,
+        "recall_at_locked_90_recall_threshold": 0.9,
+        "recall_at_locked_max_f1_threshold": 0.93
+      },
+      "test": {
+        "auroc": 0.983337,
+        "calibration": {
+          "brier_score": 0.050965278563,
+          "expected_calibration_error_10_bins": 0.012856796651,
+          "log_loss": 0.166051399201
+        },
+        "f1_at_locked_max_f1_threshold": 0.933333333333,
+        "false_match_rate_at_locked_90_recall_threshold": 0.034,
+        "pr_auc": 0.984805570073,
+        "precision_at_locked_max_f1_threshold": 0.93567839196,
+        "recall_at_locked_90_recall_threshold": 0.881,
+        "recall_at_locked_max_f1_threshold": 0.931
+      }
+    },
+    "D_pose_aligned_geometry": {
+      "dev": {
+        "auroc": 0.986772,
+        "calibration": {
+          "brier_score": 0.045319140874,
+          "expected_calibration_error_10_bins": 0.023429285738,
+          "log_loss": 0.15142650139
+        },
+        "f1_at_locked_max_f1_threshold": 0.939501779359,
+        "false_match_rate_at_locked_90_recall_threshold": 0.022,
+        "pr_auc": 0.988422818661,
+        "precision_at_locked_max_f1_threshold": 0.955532574974,
+        "recall_at_locked_90_recall_threshold": 0.9,
+        "recall_at_locked_max_f1_threshold": 0.924
+      },
+      "test": {
+        "auroc": 0.984952,
+        "calibration": {
+          "brier_score": 0.05081261286,
+          "expected_calibration_error_10_bins": 0.02445113072,
+          "log_loss": 0.162319576823
+        },
+        "f1_at_locked_max_f1_threshold": 0.92323335028,
+        "false_match_rate_at_locked_90_recall_threshold": 0.032,
+        "pr_auc": 0.986031173742,
+        "precision_at_locked_max_f1_threshold": 0.93898655636,
+        "recall_at_locked_90_recall_threshold": 0.875,
+        "recall_at_locked_max_f1_threshold": 0.908
+      }
+    },
+    "G_camera_geometry_only": {
+      "dev": {
+        "auroc": 0.980063,
+        "calibration": {
+          "brier_score": 0.054536900589,
+          "expected_calibration_error_10_bins": 0.034669722853,
+          "log_loss": 0.185461174028
+        },
+        "f1_at_locked_max_f1_threshold": 0.93278179938,
+        "false_match_rate_at_locked_90_recall_threshold": 0.031,
+        "pr_auc": 0.983541282787,
+        "precision_at_locked_max_f1_threshold": 0.96573875803,
+        "recall_at_locked_90_recall_threshold": 0.9,
+        "recall_at_locked_max_f1_threshold": 0.902
+      },
+      "test": {
+        "auroc": 0.979617,
+        "calibration": {
+          "brier_score": 0.056504063115,
+          "expected_calibration_error_10_bins": 0.023853424545,
+          "log_loss": 0.187832125242
+        },
+        "f1_at_locked_max_f1_threshold": 0.918101199791,
+        "false_match_rate_at_locked_90_recall_threshold": 0.034,
+        "pr_auc": 0.982192078627,
+        "precision_at_locked_max_f1_threshold": 0.959651035987,
+        "recall_at_locked_90_recall_threshold": 0.878,
+        "recall_at_locked_max_f1_threshold": 0.88
+      }
+    },
+    "G_pose_aligned_geometry_only": {
+      "dev": {
+        "auroc": 0.984055,
+        "calibration": {
+          "brier_score": 0.049729683041,
+          "expected_calibration_error_10_bins": 0.030915348969,
+          "log_loss": 0.169502139403
+        },
+        "f1_at_locked_max_f1_threshold": 0.93381221139,
+        "false_match_rate_at_locked_90_recall_threshold": 0.031,
+        "pr_auc": 0.986057679046,
+        "precision_at_locked_max_f1_threshold": 0.958904109589,
+        "recall_at_locked_90_recall_threshold": 0.9,
+        "recall_at_locked_max_f1_threshold": 0.91
+      },
+      "test": {
+        "auroc": 0.979247,
+        "calibration": {
+          "brier_score": 0.059052178864,
+          "expected_calibration_error_10_bins": 0.022846411014,
+          "log_loss": 0.19671470254
+        },
+        "f1_at_locked_max_f1_threshold": 0.918283963228,
+        "false_match_rate_at_locked_90_recall_threshold": 0.057,
+        "pr_auc": 0.980629423155,
+        "precision_at_locked_max_f1_threshold": 0.938413361169,
+        "recall_at_locked_90_recall_threshold": 0.885,
+        "recall_at_locked_max_f1_threshold": 0.899
+      }
+    },
+    "P_pose_only": {
+      "dev": {
+        "auroc": 0.5,
+        "calibration": {
+          "brier_score": 0.25,
+          "expected_calibration_error_10_bins": 0.0,
+          "log_loss": 0.69314718056
+        },
+        "f1_at_locked_max_f1_threshold": 0.666666666667,
+        "false_match_rate_at_locked_90_recall_threshold": 1.0,
+        "pr_auc": 0.5,
+        "precision_at_locked_max_f1_threshold": 0.5,
+        "recall_at_locked_90_recall_threshold": 1.0,
+        "recall_at_locked_max_f1_threshold": 1.0
+      },
+      "test": {
+        "auroc": 0.5,
+        "calibration": {
+          "brier_score": 0.25,
+          "expected_calibration_error_10_bins": 0.0,
+          "log_loss": 0.69314718056
+        },
+        "f1_at_locked_max_f1_threshold": 0.666666666667,
+        "false_match_rate_at_locked_90_recall_threshold": 1.0,
+        "pr_auc": 0.5,
+        "precision_at_locked_max_f1_threshold": 0.5,
+        "recall_at_locked_90_recall_threshold": 1.0,
+        "recall_at_locked_max_f1_threshold": 1.0
+      }
+    },
+    "S_shuffled_pose": {
+      "dev": {
+        "auroc": 0.981954,
+        "calibration": {
+          "brier_score": 0.051187490933,
+          "expected_calibration_error_10_bins": 0.019095121715,
+          "log_loss": 0.172833288287
+        },
+        "f1_at_locked_max_f1_threshold": 0.93272635306,
+        "false_match_rate_at_locked_90_recall_threshold": 0.038,
+        "pr_auc": 0.984647332023,
+        "precision_at_locked_max_f1_threshold": 0.943705220061,
+        "recall_at_locked_90_recall_threshold": 0.9,
+        "recall_at_locked_max_f1_threshold": 0.922
+      },
+      "test": {
+        "auroc": 0.982156,
+        "calibration": {
+          "brier_score": 0.053113538702,
+          "expected_calibration_error_10_bins": 0.020641980487,
+          "log_loss": 0.173357392639
+        },
+        "f1_at_locked_max_f1_threshold": 0.922998470168,
+        "false_match_rate_at_locked_90_recall_threshold": 0.041,
+        "pr_auc": 0.983948905179,
+        "precision_at_locked_max_f1_threshold": 0.941727367326,
+        "recall_at_locked_90_recall_threshold": 0.879,
+        "recall_at_locked_max_f1_threshold": 0.905
+      }
+    }
+  },
+  "checks": {
+    "all_models_fit_train_only": true,
+    "all_pose_only_inputs_structural_zero": true,
+    "all_scores_finite": true,
+    "all_selection_and_thresholds_dev_only": true,
+    "bootstrap_replicates": 10000,
+    "clean_D_reproduces_phase7": true,
+    "exact_video_disjoint_pair_counts": true,
+    "test_scored_after_lock": true
+  },
+  "clean_D_phase7_reproduction": {
+    "all_10000_scores_match_phase7_zero_noise": true,
+    "f1_threshold_matches_phase7": true,
+    "recall_threshold_matches_phase7": true,
+    "selected_C_matches_phase7": true
+  },
+  "dataset": "movi_d",
+  "fixed_camera_falsification": {
+    "D_minus_C": 0.001615,
+    "estimand": "AUROC_D_minus_C_on_identical_MOVi_D_test_pairs",
+    "interpretation_rule": "descriptive fixed-camera falsification; no equivalence margin was predeclared",
+    "paired_video_cluster_ci_high": 0.004541683212,
+    "paired_video_cluster_ci_low": -0.002037146137
+  },
+  "paired_differences_vs_C": {
+    "A_rgb": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": -0.033471481776,
+        "paired_video_cluster_ci_low": -0.063134038594,
+        "system_minus_reference": -0.047844
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.134,
+        "paired_video_cluster_ci_high": 0.176470588235,
+        "paired_video_cluster_ci_low": 0.092629482072,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.001,
+        "paired_video_cluster_ci_high": 0.02,
+        "paired_video_cluster_ci_low": -0.019,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "C_camera_geometry"
+    },
+    "B_rgb_2d": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": -0.007235014495,
+        "paired_video_cluster_ci_low": -0.018061179806,
+        "system_minus_reference": -0.012138
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.033,
+        "paired_video_cluster_ci_high": 0.049900199601,
+        "paired_video_cluster_ci_low": 0.017927840875,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.019,
+        "paired_video_cluster_ci_high": 0.034068136273,
+        "paired_video_cluster_ci_low": 0.004995004995,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "C_camera_geometry"
+    },
+    "C_camera_geometry": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": 0.0,
+        "paired_video_cluster_ci_low": 0.0,
+        "system_minus_reference": 0.0
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.0,
+        "paired_video_cluster_ci_high": 0.0,
+        "paired_video_cluster_ci_low": 0.0,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.0,
+        "paired_video_cluster_ci_high": 0.0,
+        "paired_video_cluster_ci_low": 0.0,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "C_camera_geometry"
+    },
+    "D_pose_aligned_geometry": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": 0.004541683212,
+        "paired_video_cluster_ci_low": -0.002037146137,
+        "system_minus_reference": 0.001615
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": -0.002,
+        "paired_video_cluster_ci_high": 0.01000025025,
+        "paired_video_cluster_ci_low": -0.013958125623,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": -0.006,
+        "paired_video_cluster_ci_high": 0.008937660038,
+        "paired_video_cluster_ci_low": -0.02002002002,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "C_camera_geometry"
+    },
+    "G_camera_geometry_only": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": 0.001086237951,
+        "paired_video_cluster_ci_low": -0.009346119864,
+        "system_minus_reference": -0.00372
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.0,
+        "paired_video_cluster_ci_high": 0.015968063872,
+        "paired_video_cluster_ci_low": -0.021,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": -0.003,
+        "paired_video_cluster_ci_high": 0.012,
+        "paired_video_cluster_ci_low": -0.019076305221,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "C_camera_geometry"
+    },
+    "G_pose_aligned_geometry_only": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": 0.002452126597,
+        "paired_video_cluster_ci_low": -0.013015196687,
+        "system_minus_reference": -0.00409
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.023,
+        "paired_video_cluster_ci_high": 0.055944055944,
+        "paired_video_cluster_ci_low": -0.007992207792,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.004,
+        "paired_video_cluster_ci_high": 0.022954091816,
+        "paired_video_cluster_ci_low": -0.01497005988,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "C_camera_geometry"
+    },
+    "P_pose_only": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": -0.476993936986,
+        "paired_video_cluster_ci_low": -0.488817163189,
+        "system_minus_reference": -0.483337
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.966,
+        "paired_video_cluster_ci_high": 0.985,
+        "paired_video_cluster_ci_low": 0.943886368524,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.119,
+        "paired_video_cluster_ci_high": 0.148851148851,
+        "paired_video_cluster_ci_low": 0.092,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "C_camera_geometry"
+    },
+    "S_shuffled_pose": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": 0.000719463982,
+        "paired_video_cluster_ci_low": -0.003094398995,
+        "system_minus_reference": -0.001181
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.007,
+        "paired_video_cluster_ci_high": 0.014,
+        "paired_video_cluster_ci_low": 0.000998003992,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": -0.002,
+        "paired_video_cluster_ci_high": 0.01002004008,
+        "paired_video_cluster_ci_low": -0.013013013013,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "C_camera_geometry"
+    }
+  },
+  "paired_differences_vs_D": {
+    "A_rgb": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": -0.035518945015,
+        "paired_video_cluster_ci_low": -0.063690731957,
+        "system_minus_reference": -0.049459
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.136,
+        "paired_video_cluster_ci_high": 0.18392160804,
+        "paired_video_cluster_ci_low": 0.089730807577,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.007,
+        "paired_video_cluster_ci_high": 0.030969030969,
+        "paired_video_cluster_ci_low": -0.016016016016,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "D_pose_aligned_geometry"
+    },
+    "B_rgb_2d": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": -0.008231494053,
+        "paired_video_cluster_ci_low": -0.019401332551,
+        "system_minus_reference": -0.013753
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.035,
+        "paired_video_cluster_ci_high": 0.056830929368,
+        "paired_video_cluster_ci_low": 0.014070351759,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.025,
+        "paired_video_cluster_ci_high": 0.042085223607,
+        "paired_video_cluster_ci_low": 0.008,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "D_pose_aligned_geometry"
+    },
+    "C_camera_geometry": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": 0.002037146137,
+        "paired_video_cluster_ci_low": -0.004541683212,
+        "system_minus_reference": -0.001615
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.002,
+        "paired_video_cluster_ci_high": 0.013986013986,
+        "paired_video_cluster_ci_low": -0.01,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.006,
+        "paired_video_cluster_ci_high": 0.020080321285,
+        "paired_video_cluster_ci_low": -0.008,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "D_pose_aligned_geometry"
+    },
+    "D_pose_aligned_geometry": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": 0.0,
+        "paired_video_cluster_ci_low": 0.0,
+        "system_minus_reference": 0.0
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.0,
+        "paired_video_cluster_ci_high": 0.0,
+        "paired_video_cluster_ci_low": 0.0,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.0,
+        "paired_video_cluster_ci_high": 0.0,
+        "paired_video_cluster_ci_low": 0.0,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "D_pose_aligned_geometry"
+    },
+    "G_camera_geometry_only": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": -0.00078959953,
+        "paired_video_cluster_ci_low": -0.009839396819,
+        "system_minus_reference": -0.005335
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.002,
+        "paired_video_cluster_ci_high": 0.019960578344,
+        "paired_video_cluster_ci_low": -0.016966067864,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.003,
+        "paired_video_cluster_ci_high": 0.02004008016,
+        "paired_video_cluster_ci_low": -0.016048144433,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "D_pose_aligned_geometry"
+    },
+    "G_pose_aligned_geometry_only": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": -0.001203553212,
+        "paired_video_cluster_ci_low": -0.011607845215,
+        "system_minus_reference": -0.005705
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.025,
+        "paired_video_cluster_ci_high": 0.051948051948,
+        "paired_video_cluster_ci_low": 0.001989901682,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.01,
+        "paired_video_cluster_ci_high": 0.024,
+        "paired_video_cluster_ci_low": -0.003992015968,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "D_pose_aligned_geometry"
+    },
+    "P_pose_only": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": -0.477514838456,
+        "paired_video_cluster_ci_low": -0.490657728955,
+        "system_minus_reference": -0.484952
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.968,
+        "paired_video_cluster_ci_high": 0.98502994012,
+        "paired_video_cluster_ci_low": 0.948103792415,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.125,
+        "paired_video_cluster_ci_high": 0.157003928929,
+        "paired_video_cluster_ci_low": 0.095904095904,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "D_pose_aligned_geometry"
+    },
+    "S_shuffled_pose": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": 0.000813696432,
+        "paired_video_cluster_ci_low": -0.005602291122,
+        "system_minus_reference": -0.002796
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.009,
+        "paired_video_cluster_ci_high": 0.021021021021,
+        "paired_video_cluster_ci_low": -0.003003003003,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.004,
+        "paired_video_cluster_ci_high": 0.018,
+        "paired_video_cluster_ci_low": -0.00998003992,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "reference": "D_pose_aligned_geometry"
+    }
+  },
+  "pipeline": "MOVi-D Phase 8 regime 2 fixed-camera in-domain evaluation",
+  "regime": "train_dev_test_on_video_disjoint_MOVi-D_pools",
+  "scoring_latency": {
+    "A_rgb": {
+      "batch_size": 2000,
+      "microseconds_per_pair_p50": 0.1342365,
+      "microseconds_per_pair_p95": 0.301600325,
+      "repetitions": 50
+    },
+    "B_rgb_2d": {
+      "batch_size": 2000,
+      "microseconds_per_pair_p50": 0.16958025,
+      "microseconds_per_pair_p95": 0.270777825,
+      "repetitions": 50
+    },
+    "C_camera_geometry": {
+      "batch_size": 2000,
+      "microseconds_per_pair_p50": 0.44564775,
+      "microseconds_per_pair_p95": 0.6147136,
+      "repetitions": 50
+    },
+    "D_pose_aligned_geometry": {
+      "batch_size": 2000,
+      "microseconds_per_pair_p50": 0.42791625,
+      "microseconds_per_pair_p95": 0.63099575,
+      "repetitions": 50
+    },
+    "G_camera_geometry_only": {
+      "batch_size": 2000,
+      "microseconds_per_pair_p50": 0.35383275,
+      "microseconds_per_pair_p95": 0.73908775,
+      "repetitions": 50
+    },
+    "G_pose_aligned_geometry_only": {
+      "batch_size": 2000,
+      "microseconds_per_pair_p50": 0.195086,
+      "microseconds_per_pair_p95": 0.346052425,
+      "repetitions": 50
+    },
+    "P_pose_only": {
+      "batch_size": 2000,
+      "microseconds_per_pair_p50": 0.139515,
+      "microseconds_per_pair_p95": 0.228628075,
+      "repetitions": 50
+    },
+    "S_shuffled_pose": {
+      "batch_size": 2000,
+      "microseconds_per_pair_p50": 0.27059875,
+      "microseconds_per_pair_p95": 0.462605175,
+      "repetitions": 50
+    }
+  },
+  "version": "1.0.0"
+}

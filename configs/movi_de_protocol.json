@@ -1,0 +1,90 @@
+{
+  "approval": {
+    "approved_date": "2026-08-25",
+    "approved_in_codex_task": true,
+    "protocol_id": "MOVI-DE-POSE-001",
+    "status": "approved_and_frozen_before_confirmatory_selection",
+    "version": "0.2"
+  },
+  "amendment_0_2": {
+    "approved_date": "2026-08-25",
+    "confirmatory_results_accessed": false,
+    "pilot_diagnostics_accessed": [
+      "camera-coordinate validation",
+      "feasibility and pair-capacity audit"
+    ],
+    "primary_estimand_changed": false,
+    "primary_success_rule_changed": false,
+    "status": "approved_and_frozen_in_codex_task"
+  },
+  "confirmatory_design": {
+    "capacity_audit_required_after_split_before_pair_generation": true,
+    "dev_pairs_per_dataset": 2000,
+    "dev_videos_per_dataset": 30,
+    "easy_negative_fraction": 0.25,
+    "hard_negative_fraction": 0.25,
+    "pair_quotas_apply_at_pool_level": true,
+    "positive_fraction": 0.5,
+    "test_pairs_per_dataset": 2000,
+    "test_videos_per_dataset": 30,
+    "total_nonpilot_videos_per_dataset": 150,
+    "train_pairs_per_dataset": 6000,
+    "train_videos_per_dataset": 90,
+    "video_selection_pool_after_pilot_exclusion": 230
+  },
+  "datasets": {
+    "fixed_camera_control": "movi_d",
+    "moving_camera_condition": "movi_e",
+    "resolution": "128x128",
+    "source_split": "validation"
+  },
+  "phase1_adapter": {
+    "camera_quaternion_order": "wxyz",
+    "camera_transform": "camera-to-world",
+    "cv_to_kubric_axis_multiplier": [
+      1,
+      -1,
+      -1
+    ],
+    "crop_padding": 0.15,
+    "crop_size": 96,
+    "max_reprojection_error_pixels": 1e-06,
+    "max_rotation_orthonormality_error": 1e-10,
+    "max_roundtrip_error_scene_units": 1e-08,
+    "min_mask_area": 32,
+    "min_visibility_pixels": 32,
+    "pose_aligned_representation": "oracle-pose-aligned visible-surface geometry",
+    "reconstruction_reason_codes_required": [
+      "non_finite_reconstruction",
+      "implausible_reconstruction"
+    ],
+    "scene_unit_convention": "raw Kubric/MOVi scene units with no rescaling",
+    "world_handedness": "right-handed Kubric/Blender world coordinates",
+    "world_up_axis": "+Z"
+  },
+  "pilot": {
+    "confirmatory_pool_eligible": false,
+    "permanently_excluded_from": [
+      "confirmatory_train",
+      "confirmatory_dev",
+      "confirmatory_test"
+    ],
+    "videos_per_dataset": 20
+  },
+  "sampling_and_strata": {
+    "continuous_boundaries_source": "locked training pool only",
+    "hard_negative_scale_cutoff_scope": "computed independently per dataset from its locked training pool",
+    "movi_d_camera_motion_strata": "single zero-motion falsification stratum",
+    "movi_e_camera_motion_strata": "train-derived tertiles",
+    "same_asset_negative_quota": 0,
+    "same_asset_negative_role": "diagnostic-only"
+  },
+  "primary_comparison": {
+    "estimand": "AUROC_D_minus_C_on_identical_MOVi_E_test_pairs",
+    "primary_metric": "AUROC",
+    "success_rule": "paired two-sided 95% video-cluster bootstrap confidence interval lies entirely above zero",
+    "system_c": "RGB + 2D + pose-unaware camera-space geometry",
+    "system_d": "RGB + 2D + oracle-pose-aligned world geometry"
+  },
+  "seed": 20260825
+}

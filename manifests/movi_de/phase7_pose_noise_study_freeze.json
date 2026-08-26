@@ -1,0 +1,168 @@
+{
+  "artifacts": {
+    "configs/movi_de_phase6_systems.json": {
+      "sha256": "b651dd3587b60e3daece48733ce0c5e33a928386ee91e510eec5481e562354fa",
+      "size_bytes": 9799
+    },
+    "docs/MOVI_DE_PHASE7_POSE_NOISE_STUDY.md": {
+      "sha256": "3496f61615936f35dcfeb1edcfdcd31b1c3e7c304653a986b193306c452cd5e7",
+      "size_bytes": 5019
+    },
+    "manifests/movi_de/phase5_pair_manifest_freeze.json": {
+      "sha256": "a32590de357ff0fd77293dc8429e8305a128af685df89af36cf29b0e5c82c186",
+      "size_bytes": 6191
+    },
+    "manifests/movi_de/phase6_system_configuration_freeze.json": {
+      "sha256": "ed008072b3e6e0a094c36f106a6359468c2a6e2a909dd92214059c4ed7c7ea0d",
+      "size_bytes": 2899
+    },
+    "manifests/movi_de/phase7_reproducibility_audit.json": {
+      "sha256": "702438b8ef64dafbc8cd4b9c43323b382ee831a5a509f706195cf2677700e4cc",
+      "size_bytes": 791
+    },
+    "results/movi_de_phase7_pose_noise/phase7_pose_noise_combined_results.json": {
+      "sha256": "ffb2058dafde5f0699e38e8da4bfc89f260d13343c507811ddbcd79a3468fa11",
+      "size_bytes": 113539
+    },
+    "results/movi_de_phase7_pose_noise/phase7_pose_noise_results_table.csv": {
+      "sha256": "ccd48cd1a18219639ac7ece201fc46f66ce628d46104e1846c3beb20b832f3c9",
+      "size_bytes": 15079
+    },
+    "results/movi_de_phase7_pose_noise/phase7_pose_noise_summary_manifest.json": {
+      "sha256": "85ba9bb2d1c0131e58b4e2cfa641ad9ae64fe14f87fdde37b6993e93be9eb98e",
+      "size_bytes": 521
+    },
+    "runs/movi_de_confirmatory/phase7/movi_d_pair_observations/phase7_observation_filter_manifest.json": {
+      "sha256": "3d891c43e8fcd17c09c54f691b8d6f534ecdc2536a64548f9bd6b2ebfa1eb6b4",
+      "size_bytes": 845
+    },
+    "runs/movi_de_confirmatory/phase7/movi_d_phase1/phase1_adapter_manifest.json": {
+      "sha256": "a05fa621c6584a2b918c7d447ce2839ea4b494dc3c0751d99257dc2b6bcdc35f",
+      "size_bytes": 5860
+    },
+    "runs/movi_de_confirmatory/phase7/movi_d_pose_noise/movi_d_phase7_clean_D_locked_config.json": {
+      "sha256": "b245ae02e11195b1ef659e68c97716d63a810e19a27b94210997c7f3bb48d0d1",
+      "size_bytes": 1995
+    },
+    "runs/movi_de_confirmatory/phase7/movi_d_pose_noise/movi_d_phase7_clean_D_model.joblib": {
+      "sha256": "89ce289ef45c5921cc6c155b458e0ee15eb1425a1281a3242695b20a798bdbed",
+      "size_bytes": 2210
+    },
+    "runs/movi_de_confirmatory/phase7/movi_d_pose_noise/movi_d_phase7_pose_noise_features.npz": {
+      "sha256": "23ddd382ab2dbae50c85d825babf53e9a68630e4e69f45fe645ec522066341a5",
+      "size_bytes": 16373952
+    },
+    "runs/movi_de_confirmatory/phase7/movi_d_pose_noise/movi_d_phase7_pose_noise_manifest.json": {
+      "sha256": "2c11b03005d7ae8b30622cfc2e63db77089f3543b4cf87bc5fc8fa71a8bef408",
+      "size_bytes": 1523
+    },
+    "runs/movi_de_confirmatory/phase7/movi_d_pose_noise/movi_d_phase7_pose_noise_predictions.jsonl": {
+      "sha256": "c2453dfa15becf0c0a58ee006c0b8f0ea9b0050291217df8e1a2033e90ce79e4",
+      "size_bytes": 11152979
+    },
+    "runs/movi_de_confirmatory/phase7/movi_d_pose_noise/movi_d_phase7_pose_noise_results.csv": {
+      "sha256": "c4932e8cb2f69660717545b6b9f24cc03a5815aff9dc840c6acf00085dc68d47",
+      "size_bytes": 6048
+    },
+    "runs/movi_de_confirmatory/phase7/movi_d_pose_noise/movi_d_phase7_pose_noise_results.json": {
+      "sha256": "aff90d4af5ba4ef3960e553a44e2a2a48350ef92a3b3d1277c3b90e9348206de",
+      "size_bytes": 37651
+    },
+    "runs/movi_de_confirmatory/phase7/movi_d_rgb_embeddings/rgb_embedding_manifest.json": {
+      "sha256": "73533f2fc451c8a3468cef5e5f48a3ab5037bc5c0e5b6491677c1571a9f01aeb",
+      "size_bytes": 2302
+    },
+    "runs/movi_de_confirmatory/phase7/movi_e_pair_observations/phase7_observation_filter_manifest.json": {
+      "sha256": "0650785463c5136434d25999cb9cb09bf34e275addda2895eb113adb0297d9cd",
+      "size_bytes": 845
+    },
+    "runs/movi_de_confirmatory/phase7/movi_e_phase1/phase1_adapter_manifest.json": {
+      "sha256": "59d3cedee5ae41e05fe7fef648e2f41a06e41c74728bdbd9c8cdadb0900a1f19",
+      "size_bytes": 5898
+    },
+    "runs/movi_de_confirmatory/phase7/movi_e_pose_noise/movi_e_phase7_clean_D_locked_config.json": {
+      "sha256": "839e34e7d44fb662b91effdd21f8369a2ee8da9ff2943ecb204d22d98e89662b",
+      "size_bytes": 1994
+    },
+    "runs/movi_de_confirmatory/phase7/movi_e_pose_noise/movi_e_phase7_clean_D_model.joblib": {
+      "sha256": "14e64a28ed9d4fa359b59046fbb3eeeaa82a52d16dbdf0ff8f8fd182c2af4217",
+      "size_bytes": 2215
+    },
+    "runs/movi_de_confirmatory/phase7/movi_e_pose_noise/movi_e_phase7_pose_noise_features.npz": {
+      "sha256": "99d78db1c696a1cef8735e7653e62303b9c9d85b928c82a59e303e6c9740efb9",
+      "size_bytes": 16532520
+    },
+    "runs/movi_de_confirmatory/phase7/movi_e_pose_noise/movi_e_phase7_pose_noise_manifest.json": {
+      "sha256": "12565bdc5fc00cc9bbd7fe07f36528d9a99c65124b65e5a945144afbc1290312",
+      "size_bytes": 1523
+    },
+    "runs/movi_de_confirmatory/phase7/movi_e_pose_noise/movi_e_phase7_pose_noise_predictions.jsonl": {
+      "sha256": "6ea8cdd2bb56ca0bf53f779ed4ac3c8de1e53bfb06779ac40ff296201fa40d23",
+      "size_bytes": 11184658
+    },
+    "runs/movi_de_confirmatory/phase7/movi_e_pose_noise/movi_e_phase7_pose_noise_results.csv": {
+      "sha256": "fe994b3b3909cbb99fc82a3377c090ffc46dc6c878b7e88c85a06924c282241e",
+      "size_bytes": 6031
+    },
+    "runs/movi_de_confirmatory/phase7/movi_e_pose_noise/movi_e_phase7_pose_noise_results.json": {
+      "sha256": "55bd9d5ace8ade456c1ac3913a7b51eecf474cce425b5ea1af05010c8f3dfb63",
+      "size_bytes": 37607
+    },
+    "runs/movi_de_confirmatory/phase7/movi_e_rgb_embeddings/rgb_embedding_manifest.json": {
+      "sha256": "3ee5d87d2a3908974495e026eb47058acb2aabfa91fe890a11b7c5d382a2c339",
+      "size_bytes": 2302
+    },
+    "src/freeze_movi_de_phase7_pose_noise.py": {
+      "sha256": "dc3645ef87708ec0e8bb2281186fcb7be62d5c9ca14a4601edb171d4c5c25934",
+      "size_bytes": 6101
+    },
+    "src/prepare_movi_de_phase7_observations.py": {
+      "sha256": "fb7e99901ad0d588e03ca422d0f102064cf53d9887f02dd783c47f0907a5e03a",
+      "size_bytes": 3504
+    },
+    "src/run_movi_de_phase7_pose_noise.py": {
+      "sha256": "30bff2fcbb1b3f3cb824ea63e803d4876b4348ea85644b48eeb3314fb3194600",
+      "size_bytes": 23657
+    },
+    "src/summarize_movi_de_phase7_pose_noise.py": {
+      "sha256": "4692f407beb3653fc2861cd1c4b124bd554f25e88cd8ec60c569f22897c3695a",
+      "size_bytes": 8768
+    },
+    "tests/test_movi_de_phase7_pose_noise.py": {
+      "sha256": "c1a2ac79d5eadcf499c6eb0422080315e7223c0b7b062918d31d76055635537d",
+      "size_bytes": 3478
+    }
+  },
+  "bootstrap_replicates": 10000,
+  "change_control": "Phase 7 is frozen. Any change to perturbations, sufficient-statistic propagation, pair membership, clean model fitting, thresholds, scoring, or bootstrap analysis requires a prospective amendment and replacement lock.",
+  "checks": {
+    "movi_d_all_condition_scores_present": true,
+    "movi_d_all_internal_result_checks_pass": true,
+    "movi_d_clean_model_not_refit": true,
+    "movi_d_exact_10000_predictions": true,
+    "movi_d_exact_36_conditions": true,
+    "movi_d_output_manifest_checks_pass": true,
+    "movi_d_pair_membership_labels_and_videos_unchanged": true,
+    "movi_d_prediction_pair_ids_exact": true,
+    "movi_d_zero_noise_checks": true,
+    "movi_e_all_condition_scores_present": true,
+    "movi_e_all_internal_result_checks_pass": true,
+    "movi_e_clean_model_not_refit": true,
+    "movi_e_exact_10000_predictions": true,
+    "movi_e_exact_36_conditions": true,
+    "movi_e_output_manifest_checks_pass": true,
+    "movi_e_pair_membership_labels_and_videos_unchanged": true,
+    "movi_e_prediction_pair_ids_exact": true,
+    "movi_e_zero_noise_checks": true,
+    "summary_checks_pass": true
+  },
+  "conditions_per_dataset": 36,
+  "datasets": [
+    "movi_d",
+    "movi_e"
+  ],
+  "lock_date": "2026-08-25",
+  "lock_id": "MOVI-DE-POSE-001-PHASE7-NOISE-v1.0.0",
+  "seed": 20260825,
+  "status": "locked"
+}

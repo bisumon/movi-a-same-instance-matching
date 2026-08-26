@@ -1,0 +1,14 @@
+{
+  "audit": "complete independent feature-construction and modeling rerun",
+  "audit_date": "2026-08-25",
+  "seed": 20260825,
+  "status": "pass",
+  "checks": {
+    "feature_npz_byte_identical": true,
+    "shuffled_pose_assignment_byte_identical": true,
+    "locked_model_and_threshold_configuration_byte_identical": true,
+    "all_10000_prediction_rows_byte_identical": true,
+    "aggregate_metric_csv_byte_identical": true
+  },
+  "note": "Runtime latency values are intentionally excluded from byte comparison because they depend on transient system load. All substantive features, assignments, selected hyperparameters, thresholds, scores, and metrics reproduced exactly."
+}

@@ -1,0 +1,802 @@
+{
+  "balance_features": [
+    "eligible_instance_count",
+    "eligible_dynamic_instance_count",
+    "mean_eligible_visibility_pixels",
+    "camera_translation_scene_units",
+    "camera_rotation_degrees"
+  ],
+  "coincident_numeric_video_ids_across_datasets": 93,
+  "cross_dataset_note": "MOVi-D and MOVi-E are independent samples; coincident numeric video IDs do not imply paired scenes.",
+  "datasets": {
+    "movi_d": {
+      "pilot_manifest": {
+        "path": "manifests/movi_de/pilot_movi_d_20.jsonl",
+        "sha256": "8d27f87c0fb6d6774141152b030943e190bab352ca2dc81854549edcbaf7b791"
+      },
+      "selection_audit": {
+        "checks": {
+          "all_selected_confirmatory_eligible": true,
+          "exact_90_30_30_split": true,
+          "exactly_20_pilot_videos_excluded": true,
+          "exactly_250_inventory_videos": true,
+          "no_pilot_selected": true,
+          "split_balance_gate_passed": true,
+          "unique_selected_video_ids": true
+        },
+        "confirmatory_eligible_nonpilot_videos": 228,
+        "dataset": "movi_d",
+        "feature_summaries": {
+          "all_eligible_nonpilot": {
+            "camera_rotation_degrees": {
+              "maximum": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "minimum": 0.0
+            },
+            "camera_translation_scene_units": {
+              "maximum": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "minimum": 0.0
+            },
+            "eligible_dynamic_instance_count": {
+              "maximum": 3.0,
+              "mean": 2.06140350877193,
+              "median": 2.0,
+              "minimum": 1.0
+            },
+            "eligible_instance_count": {
+              "maximum": 18.0,
+              "mean": 10.017543859649123,
+              "median": 10.0,
+              "minimum": 3.0
+            },
+            "mean_eligible_visibility_pixels": {
+              "maximum": 26225.793103448275,
+              "mean": 2616.1157243748507,
+              "median": 2086.5587267801857,
+              "minimum": 518.3825136612022
+            }
+          },
+          "dev": {
+            "camera_rotation_degrees": {
+              "maximum": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "minimum": 0.0
+            },
+            "camera_translation_scene_units": {
+              "maximum": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "minimum": 0.0
+            },
+            "eligible_dynamic_instance_count": {
+              "maximum": 3.0,
+              "mean": 2.066666666666667,
+              "median": 2.0,
+              "minimum": 1.0
+            },
+            "eligible_instance_count": {
+              "maximum": 17.0,
+              "mean": 10.0,
+              "median": 9.5,
+              "minimum": 3.0
+            },
+            "mean_eligible_visibility_pixels": {
+              "maximum": 18951.092307692306,
+              "mean": 2625.6086948782554,
+              "median": 1832.7890256631754,
+              "minimum": 999.6625
+            }
+          },
+          "selected": {
+            "camera_rotation_degrees": {
+              "maximum": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "minimum": 0.0
+            },
+            "camera_translation_scene_units": {
+              "maximum": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "minimum": 0.0
+            },
+            "eligible_dynamic_instance_count": {
+              "maximum": 3.0,
+              "mean": 2.06,
+              "median": 2.0,
+              "minimum": 1.0
+            },
+            "eligible_instance_count": {
+              "maximum": 18.0,
+              "mean": 10.006666666666666,
+              "median": 10.0,
+              "minimum": 3.0
+            },
+            "mean_eligible_visibility_pixels": {
+              "maximum": 26225.793103448275,
+              "mean": 2625.6101295849953,
+              "median": 2061.2073923144308,
+              "minimum": 518.3825136612022
+            }
+          },
+          "test": {
+            "camera_rotation_degrees": {
+              "maximum": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "minimum": 0.0
+            },
+            "camera_translation_scene_units": {
+              "maximum": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "minimum": 0.0
+            },
+            "eligible_dynamic_instance_count": {
+              "maximum": 3.0,
+              "mean": 2.066666666666667,
+              "median": 2.0,
+              "minimum": 1.0
+            },
+            "eligible_instance_count": {
+              "maximum": 15.0,
+              "mean": 10.0,
+              "median": 9.5,
+              "minimum": 3.0
+            },
+            "mean_eligible_visibility_pixels": {
+              "maximum": 4635.163265306122,
+              "mean": 2625.1837099181535,
+              "median": 2439.75,
+              "minimum": 956.7594501718213
+            }
+          },
+          "train": {
+            "camera_rotation_degrees": {
+              "maximum": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "minimum": 0.0
+            },
+            "camera_translation_scene_units": {
+              "maximum": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "minimum": 0.0
+            },
+            "eligible_dynamic_instance_count": {
+              "maximum": 3.0,
+              "mean": 2.0555555555555554,
+              "median": 2.0,
+              "minimum": 1.0
+            },
+            "eligible_instance_count": {
+              "maximum": 18.0,
+              "mean": 10.011111111111111,
+              "median": 10.0,
+              "minimum": 3.0
+            },
+            "mean_eligible_visibility_pixels": {
+              "maximum": 26225.793103448275,
+              "mean": 2625.7527477095227,
+              "median": 2055.5046831955924,
+              "minimum": 518.3825136612022
+            }
+          }
+        },
+        "inventory_videos": 250,
+        "maximum_active_split_smd": 0.008432566092135387,
+        "maximum_allowed_split_smd": 0.2,
+        "outputs": {
+          "audit": {
+            "path": "manifests/movi_de/confirmatory_movi_d_selection_audit.json",
+            "sha256": "c707ad6a50d664118fb87a96db6bfd1fd2834bfd840f79232f184477bb274c23"
+          },
+          "combined": {
+            "path": "manifests/movi_de/confirmatory_movi_d_150.jsonl",
+            "sha256": "da9310c19d01e6cbaa966b4109161f0a300ec83c5d818f0d09fdbac00dc2b2c4"
+          },
+          "inventory": {
+            "path": "manifests/movi_de/confirmatory_movi_d_inventory_250.jsonl",
+            "sha256": "6d6d4a19f46fa46faf33e3323dc8cc2a7abe460e8525bbc8b49b4996d1fc1269"
+          },
+          "pools": {
+            "dev": {
+              "path": "manifests/movi_de/confirmatory_movi_d_dev_30.jsonl",
+              "sha256": "33155cf56cc0d359100e159f6203352ed41189de719ff9aaeeb41c5b1832f1f2"
+            },
+            "test": {
+              "path": "manifests/movi_de/confirmatory_movi_d_test_30.jsonl",
+              "sha256": "050a7a6ad3442ae50f6ef4aaa4748b859d4eb04e233ff111448d893efc0ad6ed"
+            },
+            "train": {
+              "path": "manifests/movi_de/confirmatory_movi_d_train_90.jsonl",
+              "sha256": "7d7c6745291a6741c1daca6be808efb08e838d6389c56119efbe0a82a91ab3d6"
+            }
+          }
+        },
+        "pilot_videos_excluded": 20,
+        "seed": 20260825,
+        "selected_videos": 150,
+        "selection_balance_smd_vs_all_eligible": {
+          "camera_rotation_degrees": null,
+          "camera_translation_scene_units": null,
+          "eligible_dynamic_instance_count": 0.0017650819744080982,
+          "eligible_instance_count": 0.00397069363918892,
+          "mean_eligible_visibility_pixels": 0.003410908553430855
+        },
+        "split_balance_smd_vs_selected": {
+          "dev": {
+            "camera_rotation_degrees": null,
+            "camera_translation_scene_units": null,
+            "eligible_dynamic_instance_count": 0.008002611043992705,
+            "eligible_instance_count": 0.002181798345291221,
+            "mean_eligible_visibility_pixels": 4.621359360868591e-07
+          },
+          "test": {
+            "camera_rotation_degrees": null,
+            "camera_translation_scene_units": null,
+            "eligible_dynamic_instance_count": 0.008432566092135387,
+            "eligible_instance_count": 0.002400023252732941,
+            "mean_eligible_visibility_pixels": 0.00019238639663059356
+          },
+          "train": {
+            "camera_rotation_degrees": null,
+            "camera_translation_scene_units": null,
+            "eligible_dynamic_instance_count": 0.005624490979011286,
+            "eligible_instance_count": 0.0016239484243929572,
+            "mean_eligible_visibility_pixels": 4.556640040295642e-05
+          }
+        },
+        "split_counts": {
+          "dev": 30,
+          "test": 30,
+          "train": 90
+        }
+      },
+      "source_directory": "/Users/ceci/Documents/Codex/2026-07-27/ple/outputs/movi_a_research_repository/runs/movi_de_confirmatory/data/movi_d_validation",
+      "source_files": [
+        {
+          "filename": "dataset_info.json",
+          "gcs_md5_base64": "7EZwWTCkjzTgMiRJcT/3Sg==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/dataset_info.json",
+          "sha256": "cef3022f391bf0d2cba0148c64df77c8f3897ccf67615db3010b34cd5a4d299e",
+          "size_bytes": 22812
+        },
+        {
+          "filename": "features.json",
+          "gcs_md5_base64": "nxed+P/ZITOaB3GSAReo/A==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/features.json",
+          "sha256": "1bfac8cdf40f903638b16c55b5bc450d4e3309b828fe3e8913aaa6a0b78a9071",
+          "size_bytes": 20557
+        },
+        {
+          "filename": "instances-category.labels.txt",
+          "gcs_md5_base64": "wX09rHWJXs0cnYZQvPWfCg==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/instances-category.labels.txt",
+          "sha256": "fc8780d114f680c34759da0919777bbf6b1c5315655fe389786c1c686b99708d",
+          "size_bytes": 164
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00000-of-00016",
+          "gcs_md5_base64": "h2LZI3lQQueIdE/PoRe3Xg==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00000-of-00016",
+          "sha256": "c9e2563990750064c64d6b58d8c44e1c868d3e95b60568742e98136fdf38ea8a",
+          "size_bytes": 136738295
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00001-of-00016",
+          "gcs_md5_base64": "QYW7V1W/P5cMX9iZ2sx8kA==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00001-of-00016",
+          "sha256": "cff8ea90586ce4d7c561ae588e14ca9926b6f2a1c45c0348b3dd9d598b35db21",
+          "size_bytes": 128548495
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00002-of-00016",
+          "gcs_md5_base64": "4m3XIKqdreSwIb1LHDJ+6g==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00002-of-00016",
+          "sha256": "66422aa4fbdf1645cf242ae44ff1ee4f955696ebb68367bdb4736a70cc5ab748",
+          "size_bytes": 136580026
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00003-of-00016",
+          "gcs_md5_base64": "vbsWHDYg9tCt9ETjAdX9jQ==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00003-of-00016",
+          "sha256": "0e11b6b0fe3f286c2468be3d638e30f5afff3f674720163e8089eb2c573a97e5",
+          "size_bytes": 126837874
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00004-of-00016",
+          "gcs_md5_base64": "LHL4DbQ7xOCQpIBd5uUV4A==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00004-of-00016",
+          "sha256": "9ac777566cd0508d096bfe48539d7f32aca1556925a952d7792b4cf172fa47b3",
+          "size_bytes": 131968198
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00005-of-00016",
+          "gcs_md5_base64": "Lo2uFDfy2kWLpmkwq1qlFA==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00005-of-00016",
+          "sha256": "1f7ab625ae1a38dc87f7217584644a034079f2e0a16ee1ff3efa68eea296fc7a",
+          "size_bytes": 135592050
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00006-of-00016",
+          "gcs_md5_base64": "h7ohX839OABLxNuIgmtaAA==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00006-of-00016",
+          "sha256": "3ab47fe2c378e017afcae8c22adddf9a142139035eebc0602fea8e94070d854c",
+          "size_bytes": 126775423
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00007-of-00016",
+          "gcs_md5_base64": "ED70y+ThmmK9mRqgIfYVIA==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00007-of-00016",
+          "sha256": "c15d0ef956362a5de97fea12a9a159be4105b65419c06e746fabf802698187e4",
+          "size_bytes": 133901170
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00008-of-00016",
+          "gcs_md5_base64": "/NMCP9mmb7L5nj5VkU39dw==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00008-of-00016",
+          "sha256": "577573986cb73469ea1c48908d5dbaed3eab429ffffd2b9577ecd7d538bb6043",
+          "size_bytes": 129889011
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00009-of-00016",
+          "gcs_md5_base64": "mW5WIjTm01TiJySQHlUfoQ==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00009-of-00016",
+          "sha256": "83d0ed2d1ee45d52142ddccb26d561867f46b033569e02a1d00a0af625e5f222",
+          "size_bytes": 124273444
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00010-of-00016",
+          "gcs_md5_base64": "lRHbuf7XlmnYJ8ngj/uFSQ==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00010-of-00016",
+          "sha256": "24c93e145b1ce521ccfe4ee5392131e477c68f291866a68ca8f104a25eab48a1",
+          "size_bytes": 135614391
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00011-of-00016",
+          "gcs_md5_base64": "nfbDKVcfgvQSWnpODJ6+nA==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00011-of-00016",
+          "sha256": "a7faab4da99020dec6a5035b3369ec187f1fd590becdb0b836f79eed9cbcb318",
+          "size_bytes": 141050647
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00012-of-00016",
+          "gcs_md5_base64": "ITrfPHKxnhtQ724v8Xnt5w==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00012-of-00016",
+          "sha256": "13b7fbcdcd7a02e07b309384f611185f5ad274ee085ba3f308853d0eded23e6f",
+          "size_bytes": 124330943
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00013-of-00016",
+          "gcs_md5_base64": "vnac8lg+d9JTennJglDegg==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00013-of-00016",
+          "sha256": "52269b19701dfc791d6cf9433e4bf2fd35d2c9b56716f37c85e3209539d4eed8",
+          "size_bytes": 134139522
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00014-of-00016",
+          "gcs_md5_base64": "L3gIyG550POPYyV6WV27Sg==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00014-of-00016",
+          "sha256": "67d601b914e81bc5f975088b2cb9966b9de8364386c007152cfd703fe8a912fa",
+          "size_bytes": 127130211
+        },
+        {
+          "filename": "movi_d-validation.tfrecord-00015-of-00016",
+          "gcs_md5_base64": "pYR2/FfX7YGnKm43wM4QrQ==",
+          "gcs_name": "tfds/movi_d/128x128/1.0.0/movi_d-validation.tfrecord-00015-of-00016",
+          "sha256": "1c2023c981d32b0814c79a6f318ae4dbb09f52318fd12bbc66916dc7c257232f",
+          "size_bytes": 133166753
+        }
+      ]
+    },
+    "movi_e": {
+      "pilot_manifest": {
+        "path": "manifests/movi_de/pilot_movi_e_20.jsonl",
+        "sha256": "144fb0426713c97897fa098b02e0e42af4ba7f4bfd1327e8f64c71604787896c"
+      },
+      "selection_audit": {
+        "checks": {
+          "all_selected_confirmatory_eligible": true,
+          "exact_90_30_30_split": true,
+          "exactly_20_pilot_videos_excluded": true,
+          "exactly_250_inventory_videos": true,
+          "no_pilot_selected": true,
+          "split_balance_gate_passed": true,
+          "unique_selected_video_ids": true
+        },
+        "confirmatory_eligible_nonpilot_videos": 230,
+        "dataset": "movi_e",
+        "feature_summaries": {
+          "all_eligible_nonpilot": {
+            "camera_rotation_degrees": {
+              "maximum": 50.90008210159787,
+              "mean": 10.384121973099795,
+              "median": 9.36360272440092,
+              "minimum": 0.11197538489291577
+            },
+            "camera_translation_scene_units": {
+              "maximum": 3.5168398808414496,
+              "mean": 1.7704842093081503,
+              "median": 1.6818380923082117,
+              "minimum": 0.03203542616164605
+            },
+            "eligible_dynamic_instance_count": {
+              "maximum": 3.0,
+              "mean": 1.882608695652174,
+              "median": 2.0,
+              "minimum": 0.0
+            },
+            "eligible_instance_count": {
+              "maximum": 19.0,
+              "mean": 11.756521739130434,
+              "median": 11.5,
+              "minimum": 4.0
+            },
+            "mean_eligible_visibility_pixels": {
+              "maximum": 6458.74,
+              "mean": 1658.3316203893073,
+              "median": 1489.6598979329274,
+              "minimum": 434.55445544554453
+            }
+          },
+          "dev": {
+            "camera_rotation_degrees": {
+              "maximum": 50.90008210159787,
+              "mean": 10.360000884637296,
+              "median": 9.009640682016204,
+              "minimum": 0.856584234486494
+            },
+            "camera_translation_scene_units": {
+              "maximum": 3.5168398808414496,
+              "mean": 1.7612116212280413,
+              "median": 1.5673742295643192,
+              "minimum": 0.14507783882027278
+            },
+            "eligible_dynamic_instance_count": {
+              "maximum": 3.0,
+              "mean": 1.9,
+              "median": 2.0,
+              "minimum": 1.0
+            },
+            "eligible_instance_count": {
+              "maximum": 19.0,
+              "mean": 11.733333333333333,
+              "median": 11.5,
+              "minimum": 6.0
+            },
+            "mean_eligible_visibility_pixels": {
+              "maximum": 6458.74,
+              "mean": 1663.0561232154466,
+              "median": 1500.8553719008264,
+              "minimum": 434.55445544554453
+            }
+          },
+          "selected": {
+            "camera_rotation_degrees": {
+              "maximum": 50.90008210159787,
+              "mean": 10.341874498954285,
+              "median": 9.32236720683003,
+              "minimum": 0.13792459008107694
+            },
+            "camera_translation_scene_units": {
+              "maximum": 3.5168398808414496,
+              "mean": 1.7613131605545924,
+              "median": 1.7121691835061847,
+              "minimum": 0.07815522417609777
+            },
+            "eligible_dynamic_instance_count": {
+              "maximum": 3.0,
+              "mean": 1.8866666666666667,
+              "median": 2.0,
+              "minimum": 0.0
+            },
+            "eligible_instance_count": {
+              "maximum": 19.0,
+              "mean": 11.746666666666666,
+              "median": 11.0,
+              "minimum": 4.0
+            },
+            "mean_eligible_visibility_pixels": {
+              "maximum": 6458.74,
+              "mean": 1663.1700865145533,
+              "median": 1474.1042944785277,
+              "minimum": 434.55445544554453
+            }
+          },
+          "test": {
+            "camera_rotation_degrees": {
+              "maximum": 30.575227191564167,
+              "mean": 10.327623770938892,
+              "median": 9.476707729108265,
+              "minimum": 0.4352877933018828
+            },
+            "camera_translation_scene_units": {
+              "maximum": 3.46854245387044,
+              "mean": 1.759275859165553,
+              "median": 1.7828316396867743,
+              "minimum": 0.11266194060455029
+            },
+            "eligible_dynamic_instance_count": {
+              "maximum": 3.0,
+              "mean": 1.9,
+              "median": 2.0,
+              "minimum": 1.0
+            },
+            "eligible_instance_count": {
+              "maximum": 18.0,
+              "mean": 11.766666666666667,
+              "median": 11.5,
+              "minimum": 7.0
+            },
+            "mean_eligible_visibility_pixels": {
+              "maximum": 5778.079646017699,
+              "mean": 1661.5495355235412,
+              "median": 1469.5893401321546,
+              "minimum": 725.203125
+            }
+          },
+          "train": {
+            "camera_rotation_degrees": {
+              "maximum": 37.84744730196848,
+              "mean": 10.340582613065077,
+              "median": 9.457536653933957,
+              "minimum": 0.13792459008107694
+            },
+            "camera_translation_scene_units": {
+              "maximum": 3.491176357100328,
+              "mean": 1.7620261074597894,
+              "median": 1.779256137963776,
+              "minimum": 0.07815522417609777
+            },
+            "eligible_dynamic_instance_count": {
+              "maximum": 3.0,
+              "mean": 1.8777777777777778,
+              "median": 2.0,
+              "minimum": 0.0
+            },
+            "eligible_instance_count": {
+              "maximum": 18.0,
+              "mean": 11.744444444444444,
+              "median": 11.0,
+              "minimum": 4.0
+            },
+            "mean_eligible_visibility_pixels": {
+              "maximum": 4864.386666666666,
+              "mean": 1663.7482579445932,
+              "median": 1458.1146588402144,
+              "minimum": 649.279792746114
+            }
+          }
+        },
+        "inventory_videos": 250,
+        "maximum_active_split_smd": 0.016392514108835726,
+        "maximum_allowed_split_smd": 0.2,
+        "outputs": {
+          "audit": {
+            "path": "manifests/movi_de/confirmatory_movi_e_selection_audit.json",
+            "sha256": "1c0fd3c9dfe4f5fe10ce216915d65e99e4fc4c0a91bbc3c2e5aa6fe724542b44"
+          },
+          "combined": {
+            "path": "manifests/movi_de/confirmatory_movi_e_150.jsonl",
+            "sha256": "bce26601d364645588bcede1780aac2fc78d6421d0446ac97da1c8d641edfc25"
+          },
+          "inventory": {
+            "path": "manifests/movi_de/confirmatory_movi_e_inventory_250.jsonl",
+            "sha256": "dd560f3892b323170db5c92da5f61dda176b685bfaa129e750191396b2338031"
+          },
+          "pools": {
+            "dev": {
+              "path": "manifests/movi_de/confirmatory_movi_e_dev_30.jsonl",
+              "sha256": "3b429765d0565f30cc4f37180ded37c2a1364b6961cb39015be8741e47a7c08b"
+            },
+            "test": {
+              "path": "manifests/movi_de/confirmatory_movi_e_test_30.jsonl",
+              "sha256": "afe2d33bd195e9ebb8a7be19ffb13f25afd811452313d2ed97792fda307790ce"
+            },
+            "train": {
+              "path": "manifests/movi_de/confirmatory_movi_e_train_90.jsonl",
+              "sha256": "e6503c21506884a3b6b416fec71ab5dfaf3e6a25fba5bd16954d3b090dc95148"
+            }
+          }
+        },
+        "pilot_videos_excluded": 20,
+        "seed": 20260825,
+        "selected_videos": 150,
+        "selection_balance_smd_vs_all_eligible": {
+          "camera_rotation_degrees": 0.005723073290708131,
+          "camera_translation_scene_units": 0.009296196177722236,
+          "eligible_dynamic_instance_count": 0.004939034647347305,
+          "eligible_instance_count": 0.003411646553370335,
+          "mean_eligible_visibility_pixels": 0.0059651357226984955
+        },
+        "split_balance_smd_vs_selected": {
+          "dev": {
+            "camera_rotation_degrees": 0.0021251122198191062,
+            "camera_translation_scene_units": 9.72349084195588e-05,
+            "eligible_dynamic_instance_count": 0.015981320058749516,
+            "eligible_instance_count": 0.004370585706325291,
+            "mean_eligible_visibility_pixels": 0.00011861749172028498
+          },
+          "test": {
+            "camera_rotation_degrees": 0.0018695238467299525,
+            "camera_translation_scene_units": 0.002002746303969014,
+            "eligible_dynamic_instance_count": 0.016392514108835726,
+            "eligible_instance_count": 0.006749330617107127,
+            "mean_eligible_visibility_pixels": 0.0018050951544504102
+          },
+          "train": {
+            "camera_rotation_degrees": 0.00018063865365664628,
+            "camera_translation_scene_units": 0.0007358942820028978,
+            "eligible_dynamic_instance_count": 0.010735625285266968,
+            "eligible_instance_count": 0.000759891250728288,
+            "mean_eligible_visibility_pixels": 0.0007497116439728921
+          }
+        },
+        "split_counts": {
+          "dev": 30,
+          "test": 30,
+          "train": 90
+        }
+      },
+      "source_directory": "/Users/ceci/Documents/Codex/2026-07-27/ple/outputs/movi_a_research_repository/runs/movi_de_confirmatory/data/movi_e_validation",
+      "source_files": [
+        {
+          "filename": "dataset_info.json",
+          "gcs_md5_base64": "4utPgr9JdGfU9OgT25p9Dg==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/dataset_info.json",
+          "sha256": "ce20be95d7c7636cff38bb495e9a18e54618089d01c6f188f3e52613a1b7bd42",
+          "size_bytes": 23136
+        },
+        {
+          "filename": "features.json",
+          "gcs_md5_base64": "rmXEJ3oNM7kXigwUryG2Lg==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/features.json",
+          "sha256": "33c165b5604214edb059e18866159e5089e3a1612650b2cd3fb12034ba6af8a7",
+          "size_bytes": 20557
+        },
+        {
+          "filename": "instances-category.labels.txt",
+          "gcs_md5_base64": "wX09rHWJXs0cnYZQvPWfCg==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/instances-category.labels.txt",
+          "sha256": "fc8780d114f680c34759da0919777bbf6b1c5315655fe389786c1c686b99708d",
+          "size_bytes": 164
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00000-of-00016",
+          "gcs_md5_base64": "mPXBCQG6+3x3c2XvGKs4PA==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00000-of-00016",
+          "sha256": "b2218943ac5aaa600ed28256114ea51b30606869bd9934f2f9f6483be7b378a4",
+          "size_bytes": 134332340
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00001-of-00016",
+          "gcs_md5_base64": "GLmNtO4dUYTnnhuwZ/WIKg==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00001-of-00016",
+          "sha256": "207cd5ad49d0e43563d427669551924e0e108a459757a18f314949141522bba3",
+          "size_bytes": 125502220
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00002-of-00016",
+          "gcs_md5_base64": "bwub4HPC945tQ6HgcHE2cA==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00002-of-00016",
+          "sha256": "c55fa4940f27d6897ea0ef2a76bdb490cd50a7be1fc56985e574fb35d237ec17",
+          "size_bytes": 138335701
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00003-of-00016",
+          "gcs_md5_base64": "XIIrqfomdJ4X0sqIsVqbKA==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00003-of-00016",
+          "sha256": "9ea8b48c41ea351d9b796628c98691177b8c5a06f49cf0880bbf2e7c3d851012",
+          "size_bytes": 125533328
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00004-of-00016",
+          "gcs_md5_base64": "HCTNJ/vwm/Lze5U/paE+8w==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00004-of-00016",
+          "sha256": "1303740c2a7c90db3b34f8fc3f8fd5d399d4e5014483a2d24a780395e7f8254e",
+          "size_bytes": 133832339
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00005-of-00016",
+          "gcs_md5_base64": "Y7JzVo3t2ucc4J7zv70dBA==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00005-of-00016",
+          "sha256": "37febdf4795ddcde76ef2102a1743b15a51c4810d9fc698760d94ebd32e9e0ac",
+          "size_bytes": 130401313
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00006-of-00016",
+          "gcs_md5_base64": "f62fvqmw0mvtNX5JGtvNqg==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00006-of-00016",
+          "sha256": "dff258fd16df8dde39a5628972c487fd046d162912e5bc8a38bb2021c8ef1514",
+          "size_bytes": 130173829
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00007-of-00016",
+          "gcs_md5_base64": "IYl3S8A5gx88ujOCaEwD5Q==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00007-of-00016",
+          "sha256": "cdd1a4ef9b17d04abe61201373ac74c8e927ab9493634f5e074aa1101c7fb5c8",
+          "size_bytes": 136505893
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00008-of-00016",
+          "gcs_md5_base64": "g4nI+EGkj7/hwx+vdK7Rfg==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00008-of-00016",
+          "sha256": "e136827661a184a8ad766130c1595855a91b3fe7c2a0a4b72e50b4c3b73b8981",
+          "size_bytes": 138798140
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00009-of-00016",
+          "gcs_md5_base64": "pD5EO5bOUlsL49T+RZuMdg==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00009-of-00016",
+          "sha256": "823a837e2e76f762858d108305be67aa1d5d3897c5fa564df1ce726b8f3f2dfb",
+          "size_bytes": 124581523
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00010-of-00016",
+          "gcs_md5_base64": "C6ou2r6qc1p0GESQW5Q+5g==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00010-of-00016",
+          "sha256": "0801f9ccec2e6eb763325be2a03bd9f7b3fe24a9cb873ac6677e7a74d493a3d1",
+          "size_bytes": 136901255
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00011-of-00016",
+          "gcs_md5_base64": "MYQfM7De9MECnczWJijZDQ==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00011-of-00016",
+          "sha256": "91bc8a999904d1c6ce116171583161a4c1a9780e3c1667baa9b9bf39f44bffd7",
+          "size_bytes": 131847348
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00012-of-00016",
+          "gcs_md5_base64": "IWTe9sfPSNfnM7AGe/edkg==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00012-of-00016",
+          "sha256": "f323abc12d6b3523003f0dec13aa0cdced731c19c10289b1e95aee78df012e42",
+          "size_bytes": 126804496
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00013-of-00016",
+          "gcs_md5_base64": "EhkLOlJbDAeJk9XBCWPprQ==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00013-of-00016",
+          "sha256": "0de871e6ac32000276ebe4ad9021000be8261a3727dd621abb1b03bb34e7ed42",
+          "size_bytes": 134163491
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00014-of-00016",
+          "gcs_md5_base64": "FW4lPQyXSAotZ5nDvoi+0Q==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00014-of-00016",
+          "sha256": "dcb62f5f0b369f144a7d7eae98936216fee38f8433ee81a162b53764ec42495f",
+          "size_bytes": 123127096
+        },
+        {
+          "filename": "movi_e-validation.tfrecord-00015-of-00016",
+          "gcs_md5_base64": "ngvMOpkmDobJVfPwGHQnqA==",
+          "gcs_name": "tfds/movi_e/128x128/1.0.0/movi_e-validation.tfrecord-00015-of-00016",
+          "sha256": "c882f2c6e851bc709b44e4124e3eb91ee27b3116197aeccb963a6808a2498878",
+          "size_bytes": 137029559
+        }
+      ]
+    }
+  },
+  "eligibility_thresholds": {
+    "minimum_instances_with_two_eligible_observations": 2,
+    "minimum_mask_area_pixels": 32,
+    "minimum_valid_depth_pixels": 32,
+    "minimum_visibility_pixels": 32
+  },
+  "pipeline": "MOVi-D/E confirmatory video selection and split lock",
+  "protocol_id": "MOVI-DE-POSE-001",
+  "protocol_version": "0.2",
+  "seed": 20260825,
+  "selection_count_per_dataset": 150,
+  "split_counts": {
+    "dev": 30,
+    "test": 30,
+    "train": 90
+  },
+  "version": "1.0.0"
+}

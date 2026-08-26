@@ -1,0 +1,240 @@
+{
+  "checks": {
+    "all_selected_confirmatory_eligible": true,
+    "exact_90_30_30_split": true,
+    "exactly_20_pilot_videos_excluded": true,
+    "exactly_250_inventory_videos": true,
+    "no_pilot_selected": true,
+    "split_balance_gate_passed": true,
+    "unique_selected_video_ids": true
+  },
+  "confirmatory_eligible_nonpilot_videos": 228,
+  "dataset": "movi_d",
+  "feature_summaries": {
+    "all_eligible_nonpilot": {
+      "camera_rotation_degrees": {
+        "maximum": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0
+      },
+      "camera_translation_scene_units": {
+        "maximum": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0
+      },
+      "eligible_dynamic_instance_count": {
+        "maximum": 3.0,
+        "mean": 2.06140350877193,
+        "median": 2.0,
+        "minimum": 1.0
+      },
+      "eligible_instance_count": {
+        "maximum": 18.0,
+        "mean": 10.017543859649123,
+        "median": 10.0,
+        "minimum": 3.0
+      },
+      "mean_eligible_visibility_pixels": {
+        "maximum": 26225.793103448275,
+        "mean": 2616.1157243748507,
+        "median": 2086.5587267801857,
+        "minimum": 518.3825136612022
+      }
+    },
+    "dev": {
+      "camera_rotation_degrees": {
+        "maximum": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0
+      },
+      "camera_translation_scene_units": {
+        "maximum": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0
+      },
+      "eligible_dynamic_instance_count": {
+        "maximum": 3.0,
+        "mean": 2.066666666666667,
+        "median": 2.0,
+        "minimum": 1.0
+      },
+      "eligible_instance_count": {
+        "maximum": 17.0,
+        "mean": 10.0,
+        "median": 9.5,
+        "minimum": 3.0
+      },
+      "mean_eligible_visibility_pixels": {
+        "maximum": 18951.092307692306,
+        "mean": 2625.6086948782554,
+        "median": 1832.7890256631754,
+        "minimum": 999.6625
+      }
+    },
+    "selected": {
+      "camera_rotation_degrees": {
+        "maximum": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0
+      },
+      "camera_translation_scene_units": {
+        "maximum": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0
+      },
+      "eligible_dynamic_instance_count": {
+        "maximum": 3.0,
+        "mean": 2.06,
+        "median": 2.0,
+        "minimum": 1.0
+      },
+      "eligible_instance_count": {
+        "maximum": 18.0,
+        "mean": 10.006666666666666,
+        "median": 10.0,
+        "minimum": 3.0
+      },
+      "mean_eligible_visibility_pixels": {
+        "maximum": 26225.793103448275,
+        "mean": 2625.6101295849953,
+        "median": 2061.2073923144308,
+        "minimum": 518.3825136612022
+      }
+    },
+    "test": {
+      "camera_rotation_degrees": {
+        "maximum": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0
+      },
+      "camera_translation_scene_units": {
+        "maximum": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0
+      },
+      "eligible_dynamic_instance_count": {
+        "maximum": 3.0,
+        "mean": 2.066666666666667,
+        "median": 2.0,
+        "minimum": 1.0
+      },
+      "eligible_instance_count": {
+        "maximum": 15.0,
+        "mean": 10.0,
+        "median": 9.5,
+        "minimum": 3.0
+      },
+      "mean_eligible_visibility_pixels": {
+        "maximum": 4635.163265306122,
+        "mean": 2625.1837099181535,
+        "median": 2439.75,
+        "minimum": 956.7594501718213
+      }
+    },
+    "train": {
+      "camera_rotation_degrees": {
+        "maximum": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0
+      },
+      "camera_translation_scene_units": {
+        "maximum": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0
+      },
+      "eligible_dynamic_instance_count": {
+        "maximum": 3.0,
+        "mean": 2.0555555555555554,
+        "median": 2.0,
+        "minimum": 1.0
+      },
+      "eligible_instance_count": {
+        "maximum": 18.0,
+        "mean": 10.011111111111111,
+        "median": 10.0,
+        "minimum": 3.0
+      },
+      "mean_eligible_visibility_pixels": {
+        "maximum": 26225.793103448275,
+        "mean": 2625.7527477095227,
+        "median": 2055.5046831955924,
+        "minimum": 518.3825136612022
+      }
+    }
+  },
+  "inventory_videos": 250,
+  "maximum_active_split_smd": 0.008432566092135387,
+  "maximum_allowed_split_smd": 0.2,
+  "outputs": {
+    "combined": {
+      "path": "manifests/movi_de/confirmatory_movi_d_150.jsonl",
+      "sha256": "da9310c19d01e6cbaa966b4109161f0a300ec83c5d818f0d09fdbac00dc2b2c4"
+    },
+    "inventory": {
+      "path": "manifests/movi_de/confirmatory_movi_d_inventory_250.jsonl",
+      "sha256": "6d6d4a19f46fa46faf33e3323dc8cc2a7abe460e8525bbc8b49b4996d1fc1269"
+    },
+    "pools": {
+      "dev": {
+        "path": "manifests/movi_de/confirmatory_movi_d_dev_30.jsonl",
+        "sha256": "33155cf56cc0d359100e159f6203352ed41189de719ff9aaeeb41c5b1832f1f2"
+      },
+      "test": {
+        "path": "manifests/movi_de/confirmatory_movi_d_test_30.jsonl",
+        "sha256": "050a7a6ad3442ae50f6ef4aaa4748b859d4eb04e233ff111448d893efc0ad6ed"
+      },
+      "train": {
+        "path": "manifests/movi_de/confirmatory_movi_d_train_90.jsonl",
+        "sha256": "7d7c6745291a6741c1daca6be808efb08e838d6389c56119efbe0a82a91ab3d6"
+      }
+    }
+  },
+  "pilot_videos_excluded": 20,
+  "seed": 20260825,
+  "selected_videos": 150,
+  "selection_balance_smd_vs_all_eligible": {
+    "camera_rotation_degrees": null,
+    "camera_translation_scene_units": null,
+    "eligible_dynamic_instance_count": 0.0017650819744080982,
+    "eligible_instance_count": 0.00397069363918892,
+    "mean_eligible_visibility_pixels": 0.003410908553430855
+  },
+  "split_balance_smd_vs_selected": {
+    "dev": {
+      "camera_rotation_degrees": null,
+      "camera_translation_scene_units": null,
+      "eligible_dynamic_instance_count": 0.008002611043992705,
+      "eligible_instance_count": 0.002181798345291221,
+      "mean_eligible_visibility_pixels": 4.621359360868591e-07
+    },
+    "test": {
+      "camera_rotation_degrees": null,
+      "camera_translation_scene_units": null,
+      "eligible_dynamic_instance_count": 0.008432566092135387,
+      "eligible_instance_count": 0.002400023252732941,
+      "mean_eligible_visibility_pixels": 0.00019238639663059356
+    },
+    "train": {
+      "camera_rotation_degrees": null,
+      "camera_translation_scene_units": null,
+      "eligible_dynamic_instance_count": 0.005624490979011286,
+      "eligible_instance_count": 0.0016239484243929572,
+      "mean_eligible_visibility_pixels": 4.556640040295642e-05
+    }
+  },
+  "split_counts": {
+    "dev": 30,
+    "test": 30,
+    "train": 90
+  }
+}

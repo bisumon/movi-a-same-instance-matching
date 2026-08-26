@@ -1,0 +1,83 @@
+{
+  "protocol_id": "MOVI-DE-POSE-001",
+  "protocol_version": "0.2",
+  "freeze_date": "2026-08-25",
+  "seed": 20260825,
+  "status": "locked_after_post_split_capacity_audit",
+  "confirmatory_model_results_accessed": false,
+  "datasets": {
+    "movi_d": {
+      "selected_videos": 150,
+      "split_counts": {
+        "train": 90,
+        "dev": 30,
+        "test": 30
+      },
+      "eligible_nonpilot_candidates": 228,
+      "maximum_selection_smd": 0.00397069363918892,
+      "maximum_split_smd": 0.008432566092135387,
+      "hard_negative_train_cutoff_abs_log_area_ratio": 0.4837969513780713,
+      "post_split_capacity_status": "pass"
+    },
+    "movi_e": {
+      "selected_videos": 150,
+      "split_counts": {
+        "train": 90,
+        "dev": 30,
+        "test": 30
+      },
+      "eligible_nonpilot_candidates": 230,
+      "maximum_selection_smd": 0.009296196177722236,
+      "maximum_split_smd": 0.016392514108835726,
+      "hard_negative_train_cutoff_abs_log_area_ratio": 0.461345566502621,
+      "post_split_capacity_status": "pass"
+    }
+  },
+  "locked_artifacts": {
+    "protocol_freeze": {
+      "path": "manifests/movi_de/protocol_freeze_v0.2.json",
+      "sha256": "812929ff26515b8509f3254d57a7582945b2bb9c61f3dee7393678f77bc96a36"
+    },
+    "source_and_selection_lock": {
+      "path": "manifests/movi_de/confirmatory_video_pool_lock.json",
+      "sha256": "9335ed5d478ba4ede34a81f006b390119e21303552b0c4b5d324b3d5cedc0400"
+    },
+    "movi_d_selected_manifest": {
+      "path": "manifests/movi_de/confirmatory_movi_d_150.jsonl",
+      "sha256": "da9310c19d01e6cbaa966b4109161f0a300ec83c5d818f0d09fdbac00dc2b2c4"
+    },
+    "movi_e_selected_manifest": {
+      "path": "manifests/movi_de/confirmatory_movi_e_150.jsonl",
+      "sha256": "bce26601d364645588bcede1780aac2fc78d6421d0446ac97da1c8d641edfc25"
+    },
+    "movi_d_selection_audit": {
+      "path": "manifests/movi_de/confirmatory_movi_d_selection_audit.json",
+      "sha256": "c707ad6a50d664118fb87a96db6bfd1fd2834bfd840f79232f184477bb274c23"
+    },
+    "movi_e_selection_audit": {
+      "path": "manifests/movi_de/confirmatory_movi_e_selection_audit.json",
+      "sha256": "1c0fd3c9dfe4f5fe10ce216915d65e99e4fc4c0a91bbc3c2e5aa6fe724542b44"
+    },
+    "movi_d_post_split_capacity_audit": {
+      "path": "manifests/movi_de/confirmatory_movi_d_post_split_capacity_audit.json",
+      "sha256": "848c8c8429e1e7dbd849ad9257fef5b997d82e4916ee38af1627b0784424fd7d"
+    },
+    "movi_e_post_split_capacity_audit": {
+      "path": "manifests/movi_de/confirmatory_movi_e_post_split_capacity_audit.json",
+      "sha256": "9b75f8231c71bbfa95dc331cfc213abac70409dcaf508972f2451ee977160075"
+    }
+  },
+  "checks": {
+    "all_500_source_videos_inventoried": true,
+    "all_40_pilot_videos_excluded": true,
+    "all_selected_videos_technically_eligible": true,
+    "exactly_150_unique_videos_per_dataset": true,
+    "exact_90_30_30_splits_per_dataset": true,
+    "no_within_dataset_pool_overlap": true,
+    "selection_and_split_balance_passed": true,
+    "post_split_pair_capacity_passed": true,
+    "repeated_run_pool_files_byte_identical": true,
+    "source_and_output_checksum_audit_passed": true
+  },
+  "change_control": "Any modification to a selected video ID or split assignment requires a prospective protocol amendment and a replacement freeze manifest before pair generation."
+}

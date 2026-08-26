@@ -1,0 +1,65 @@
+{
+  "checks": {
+    "all_eight_systems_reported": true,
+    "paired_by_identical_test_pairs": true,
+    "test_only_metrics": true,
+    "train_only_boundaries": true,
+    "video_cluster_bootstrap": true
+  },
+  "counts": {
+    "aggregate_rows": 320,
+    "paired_interval_rows": 40
+  },
+  "inputs": {
+    "movi_d": {
+      "locked_config_sha256": "a05834011299928be330e887f0c3cb3850027fa51cc28e48d6f2e3f8edb8bc1f",
+      "pairs_sha256": "d2a8584d52da0ce94ec3de8855f26c92ac6a745848d7ba1e67824a6e773db662",
+      "predictions_sha256": "ed3cc397a31b732f7b20e9694d1d06597e7aa0d55ba58579f98419a37bb36278",
+      "train_derived_boundaries": {
+        "minimum_visibility": [
+          480.0,
+          1424.0
+        ],
+        "temporal_gap": [
+          5.666666666666515,
+          11.33333333333303
+        ]
+      }
+    },
+    "movi_e": {
+      "locked_config_sha256": "f76483eba0826574cce21fc4ada1e935f934e8ac1606449018a444d47672c1f8",
+      "pairs_sha256": "032e58a140db4b9a44981c88a6bc0385efad2589f53cfd19ee3843d27530bfee",
+      "predictions_sha256": "d9767554d0058e2bf9660c5b57f068207c3b42baa1ec71621967bfd9bae3cab0",
+      "train_derived_boundaries": {
+        "camera_displacement_scene_units": [
+          0.282961344703,
+          0.800124761011
+        ],
+        "minimum_visibility": [
+          418.0,
+          1177.0
+        ],
+        "normalized_camera_displacement": [
+          0.028126539105666665,
+          0.081638890439
+        ],
+        "relative_camera_rotation_degrees": [
+          1.5252358591793331,
+          4.515304084976333
+        ],
+        "temporal_gap": [
+          5.666666666666515,
+          11.33333333333303
+        ]
+      }
+    }
+  },
+  "note": "Does not change locked Phase 9 hypothesis decisions; continuous boundaries use training pairs only.",
+  "outputs": {
+    "pair_strata_d_minus_c_intervals.csv": "034a213a981c791ab0a75d516abf8c10163e0fb566b9bb2d818f5a30618db667",
+    "pair_strata_results.csv": "1029dd35447934cd609143252928cddca7e385057cc54d3836919cff08bd1c7b"
+  },
+  "pipeline": "Descriptive release reporting for all Phase 0 predeclared pair strata",
+  "seed": 20260825,
+  "version": "1.0.0"
+}

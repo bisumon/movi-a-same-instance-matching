@@ -1,0 +1,124 @@
+{
+  "checks": {
+    "all_scores_finite": true,
+    "bootstrap_replicates": 10000,
+    "exact_2000_unique_test_predictions": true,
+    "exact_feature_name_and_order_match": true,
+    "no_MOVi_E_refit_or_renormalization": true,
+    "only_locked_MOVi_E_test_pairs_scored": true,
+    "source_model_applied_unchanged": true,
+    "source_regime_authoritatively_locked": true,
+    "source_regularization_applied_unchanged": true,
+    "source_standardizer_applied_unchanged": true,
+    "source_thresholds_applied_unchanged": true
+  },
+  "in_domain_MOVi_E_benchmarks": {
+    "in_domain_C": {
+      "auroc": 0.991126,
+      "calibration": {
+        "brier_score": 0.036706536026,
+        "expected_calibration_error_10_bins": 0.022086968789,
+        "log_loss": 0.123690138474
+      },
+      "f1_at_locked_max_f1_threshold": 0.948979591837,
+      "false_match_rate_at_locked_90_recall_threshold": 0.009,
+      "pr_auc": 0.99191525256,
+      "precision_at_locked_max_f1_threshold": 0.96875,
+      "recall_at_locked_90_recall_threshold": 0.906,
+      "recall_at_locked_max_f1_threshold": 0.93
+    },
+    "in_domain_D": {
+      "auroc": 0.994183,
+      "calibration": {
+        "brier_score": 0.030781175289,
+        "expected_calibration_error_10_bins": 0.021950095743,
+        "log_loss": 0.103470807911
+      },
+      "f1_at_locked_max_f1_threshold": 0.960606060606,
+      "false_match_rate_at_locked_90_recall_threshold": 0.007,
+      "pr_auc": 0.994769800865,
+      "precision_at_locked_max_f1_threshold": 0.970408163265,
+      "recall_at_locked_90_recall_threshold": 0.916,
+      "recall_at_locked_max_f1_threshold": 0.951
+    }
+  },
+  "paired_transfer_differences": {
+    "in_domain_C": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": 0.005547455358,
+        "paired_video_cluster_ci_low": 0.000639171223,
+        "transfer_minus_reference": 0.002903
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.004,
+        "paired_video_cluster_ci_high": 0.012036410436,
+        "paired_video_cluster_ci_low": -0.002997002997,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.006,
+        "paired_video_cluster_ci_high": 0.023092369478,
+        "paired_video_cluster_ci_low": -0.012012012012,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      }
+    },
+    "in_domain_D": {
+      "auroc": {
+        "bootstrap_replicates": 10000,
+        "paired_video_cluster_ci_high": 0.00093424392,
+        "paired_video_cluster_ci_low": -0.000983003021,
+        "transfer_minus_reference": -0.000154
+      },
+      "false_match_rate": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": 0.006,
+        "paired_video_cluster_ci_high": 0.011952191235,
+        "paired_video_cluster_ci_low": 0.001005025126,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      },
+      "recall": {
+        "bootstrap_replicates": 10000,
+        "comparison_minus_reference": -0.004,
+        "paired_video_cluster_ci_high": 0.006006006006,
+        "paired_video_cluster_ci_low": -0.015968063872,
+        "valid_replicates": 10000,
+        "video_clusters": 30
+      }
+    }
+  },
+  "pipeline": "Phase 8 regime 3 MOVi-D-to-MOVi-E clean-D transfer",
+  "scoring_latency": {
+    "batch_size": 2000,
+    "microseconds_per_pair_single_pass": 1.0985135
+  },
+  "source_dataset": "movi_d",
+  "system": "D_pose_aligned_geometry",
+  "target_dataset": "movi_e",
+  "threshold_provenance": {
+    "MOVi-E_adjustment": "none",
+    "max_f1_threshold": "MOVi-D development",
+    "recall_90_threshold": "MOVi-D development",
+    "selected_C": "MOVi-D development"
+  },
+  "transfer_test": {
+    "auroc": 0.994029,
+    "calibration": {
+      "brier_score": 0.029024139455,
+      "expected_calibration_error_10_bins": 0.015685939322,
+      "log_loss": 0.101563333925
+    },
+    "f1_at_locked_max_f1_threshold": 0.961909598781,
+    "false_match_rate_at_locked_90_recall_threshold": 0.013,
+    "pr_auc": 0.994561397349,
+    "precision_at_locked_max_f1_threshold": 0.977296181631,
+    "recall_at_locked_90_recall_threshold": 0.912,
+    "recall_at_locked_max_f1_threshold": 0.947
+  },
+  "version": "1.0.0"
+}

@@ -1,0 +1,446 @@
+{
+  "dataset": "movi_d",
+  "decision_protocol": {
+    "normalization_and_fit": "train only",
+    "regularization_and_thresholds": "development only",
+    "test_policy": "test evaluated only after this lock was written"
+  },
+  "inputs": {
+    "features_sha256": "cdbeb738858e8529212f2a4d17406ca14f262d44efe5a1b32f23afcd988ce6aa",
+    "pairs_sha256": "d2a8584d52da0ce94ec3de8855f26c92ac6a745848d7ba1e67824a6e773db662",
+    "system_config_sha256": "b651dd3587b60e3daece48733ce0c5e33a928386ee91e510eec5481e562354fa"
+  },
+  "pipeline": "MOVi-D Phase 8 regime 2 lock written before test scoring",
+  "regime": "in_domain_video_disjoint_fixed_camera",
+  "seed": 20260825,
+  "systems": {
+    "A_rgb": {
+      "C_tuning": [
+        {
+          "C": 0.01,
+          "dev_auroc": 0.938978
+        },
+        {
+          "C": 0.1,
+          "dev_auroc": 0.938978
+        },
+        {
+          "C": 1.0,
+          "dev_auroc": 0.938978
+        },
+        {
+          "C": 10.0,
+          "dev_auroc": 0.938978
+        },
+        {
+          "C": 100.0,
+          "dev_auroc": 0.938978
+        }
+      ],
+      "development_achieved_recall": 0.9,
+      "development_false_match_rate": 0.194,
+      "development_max_f1": 0.879109762266,
+      "features": [
+        "rgb_cosine_similarity"
+      ],
+      "fit_scope": "MOVi-D training pairs only",
+      "max_f1_threshold": 0.44668984625348673,
+      "recall_90_threshold": 0.3538142702604107,
+      "selected_C": 0.01,
+      "selection_metric": "development AUROC; ties choose smaller C",
+      "standardizer_scope": "MOVi-D training pairs only"
+    },
+    "B_rgb_2d": {
+      "C_tuning": [
+        {
+          "C": 0.01,
+          "dev_auroc": 0.969413
+        },
+        {
+          "C": 0.1,
+          "dev_auroc": 0.971736
+        },
+        {
+          "C": 1.0,
+          "dev_auroc": 0.972614
+        },
+        {
+          "C": 10.0,
+          "dev_auroc": 0.972715
+        },
+        {
+          "C": 100.0,
+          "dev_auroc": 0.972675
+        }
+      ],
+      "development_achieved_recall": 0.9,
+      "development_false_match_rate": 0.072,
+      "development_max_f1": 0.915412558381,
+      "features": [
+        "rgb_cosine_similarity",
+        "temporal_gap",
+        "mask_center_dx_abs",
+        "mask_center_dy_abs",
+        "mask_center_distance",
+        "log_mask_area_ratio_abs",
+        "mean_log_mask_area",
+        "log_crop_area_ratio_abs",
+        "mean_log_crop_area",
+        "log_bbox_aspect_ratio_diff_abs",
+        "log_visibility_ratio_abs",
+        "min_log_visibility"
+      ],
+      "fit_scope": "MOVi-D training pairs only",
+      "max_f1_threshold": 0.5994552339207164,
+      "recall_90_threshold": 0.4865198978504071,
+      "selected_C": 10.0,
+      "selection_metric": "development AUROC; ties choose smaller C",
+      "standardizer_scope": "MOVi-D training pairs only"
+    },
+    "C_camera_geometry": {
+      "C_tuning": [
+        {
+          "C": 0.01,
+          "dev_auroc": 0.978923
+        },
+        {
+          "C": 0.1,
+          "dev_auroc": 0.981765
+        },
+        {
+          "C": 1.0,
+          "dev_auroc": 0.982577
+        },
+        {
+          "C": 10.0,
+          "dev_auroc": 0.982632
+        },
+        {
+          "C": 100.0,
+          "dev_auroc": 0.982697
+        }
+      ],
+      "development_achieved_recall": 0.9,
+      "development_false_match_rate": 0.039,
+      "development_max_f1": 0.934203917629,
+      "features": [
+        "rgb_cosine_similarity",
+        "temporal_gap",
+        "mask_center_dx_abs",
+        "mask_center_dy_abs",
+        "mask_center_distance",
+        "log_mask_area_ratio_abs",
+        "mean_log_mask_area",
+        "log_crop_area_ratio_abs",
+        "mean_log_crop_area",
+        "log_bbox_aspect_ratio_diff_abs",
+        "log_visibility_ratio_abs",
+        "min_log_visibility",
+        "depth_q05_diff_abs",
+        "depth_q25_diff_abs",
+        "depth_median_diff_abs",
+        "depth_q75_diff_abs",
+        "depth_q95_diff_abs",
+        "depth_iqr_diff_abs",
+        "depth_median_diff_per_frame",
+        "camera_centroid_dx_abs",
+        "camera_centroid_dy_abs",
+        "camera_centroid_dz_abs",
+        "camera_centroid_distance",
+        "camera_centroid_distance_per_frame",
+        "camera_extent_x_diff_abs",
+        "camera_extent_y_diff_abs",
+        "camera_extent_z_diff_abs",
+        "camera_extent_l2_diff",
+        "camera_extent_x_log_ratio_abs",
+        "camera_extent_y_log_ratio_abs",
+        "camera_extent_z_log_ratio_abs"
+      ],
+      "fit_scope": "MOVi-D training pairs only",
+      "max_f1_threshold": 0.5014318915903628,
+      "recall_90_threshold": 0.6962462972904153,
+      "selected_C": 100.0,
+      "selection_metric": "development AUROC; ties choose smaller C",
+      "standardizer_scope": "MOVi-D training pairs only"
+    },
+    "D_pose_aligned_geometry": {
+      "C_tuning": [
+        {
+          "C": 0.01,
+          "dev_auroc": 0.982661
+        },
+        {
+          "C": 0.1,
+          "dev_auroc": 0.985591
+        },
+        {
+          "C": 1.0,
+          "dev_auroc": 0.986598
+        },
+        {
+          "C": 10.0,
+          "dev_auroc": 0.986772
+        },
+        {
+          "C": 100.0,
+          "dev_auroc": 0.98667
+        }
+      ],
+      "development_achieved_recall": 0.9,
+      "development_false_match_rate": 0.022,
+      "development_max_f1": 0.939501779359,
+      "features": [
+        "rgb_cosine_similarity",
+        "temporal_gap",
+        "mask_center_dx_abs",
+        "mask_center_dy_abs",
+        "mask_center_distance",
+        "log_mask_area_ratio_abs",
+        "mean_log_mask_area",
+        "log_crop_area_ratio_abs",
+        "mean_log_crop_area",
+        "log_bbox_aspect_ratio_diff_abs",
+        "log_visibility_ratio_abs",
+        "min_log_visibility",
+        "depth_q05_diff_abs",
+        "depth_q25_diff_abs",
+        "depth_median_diff_abs",
+        "depth_q75_diff_abs",
+        "depth_q95_diff_abs",
+        "depth_iqr_diff_abs",
+        "depth_median_diff_per_frame",
+        "world_centroid_dx_abs",
+        "world_centroid_dy_abs",
+        "world_centroid_dz_abs",
+        "world_centroid_distance",
+        "world_centroid_distance_per_frame",
+        "world_extent_x_diff_abs",
+        "world_extent_y_diff_abs",
+        "world_extent_z_diff_abs",
+        "world_extent_l2_diff",
+        "world_extent_x_log_ratio_abs",
+        "world_extent_y_log_ratio_abs",
+        "world_extent_z_log_ratio_abs"
+      ],
+      "fit_scope": "MOVi-D training pairs only",
+      "max_f1_threshold": 0.6500617736951679,
+      "recall_90_threshold": 0.790494637825973,
+      "selected_C": 10.0,
+      "selection_metric": "development AUROC; ties choose smaller C",
+      "standardizer_scope": "MOVi-D training pairs only"
+    },
+    "G_camera_geometry_only": {
+      "C_tuning": [
+        {
+          "C": 0.01,
+          "dev_auroc": 0.974773
+        },
+        {
+          "C": 0.1,
+          "dev_auroc": 0.978761
+        },
+        {
+          "C": 1.0,
+          "dev_auroc": 0.979869
+        },
+        {
+          "C": 10.0,
+          "dev_auroc": 0.980056
+        },
+        {
+          "C": 100.0,
+          "dev_auroc": 0.980063
+        }
+      ],
+      "development_achieved_recall": 0.9,
+      "development_false_match_rate": 0.031,
+      "development_max_f1": 0.93278179938,
+      "features": [
+        "depth_q05_diff_abs",
+        "depth_q25_diff_abs",
+        "depth_median_diff_abs",
+        "depth_q75_diff_abs",
+        "depth_q95_diff_abs",
+        "depth_iqr_diff_abs",
+        "depth_median_diff_per_frame",
+        "camera_centroid_dx_abs",
+        "camera_centroid_dy_abs",
+        "camera_centroid_dz_abs",
+        "camera_centroid_distance",
+        "camera_centroid_distance_per_frame",
+        "camera_extent_x_diff_abs",
+        "camera_extent_y_diff_abs",
+        "camera_extent_z_diff_abs",
+        "camera_extent_l2_diff",
+        "camera_extent_x_log_ratio_abs",
+        "camera_extent_y_log_ratio_abs",
+        "camera_extent_z_log_ratio_abs"
+      ],
+      "fit_scope": "MOVi-D training pairs only",
+      "max_f1_threshold": 0.6856503112046074,
+      "recall_90_threshold": 0.6971510561026337,
+      "selected_C": 100.0,
+      "selection_metric": "development AUROC; ties choose smaller C",
+      "standardizer_scope": "MOVi-D training pairs only"
+    },
+    "G_pose_aligned_geometry_only": {
+      "C_tuning": [
+        {
+          "C": 0.01,
+          "dev_auroc": 0.978792
+        },
+        {
+          "C": 0.1,
+          "dev_auroc": 0.98312
+        },
+        {
+          "C": 1.0,
+          "dev_auroc": 0.984055
+        },
+        {
+          "C": 10.0,
+          "dev_auroc": 0.983822
+        },
+        {
+          "C": 100.0,
+          "dev_auroc": 0.983693
+        }
+      ],
+      "development_achieved_recall": 0.9,
+      "development_false_match_rate": 0.031,
+      "development_max_f1": 0.93381221139,
+      "features": [
+        "depth_q05_diff_abs",
+        "depth_q25_diff_abs",
+        "depth_median_diff_abs",
+        "depth_q75_diff_abs",
+        "depth_q95_diff_abs",
+        "depth_iqr_diff_abs",
+        "depth_median_diff_per_frame",
+        "world_centroid_dx_abs",
+        "world_centroid_dy_abs",
+        "world_centroid_dz_abs",
+        "world_centroid_distance",
+        "world_centroid_distance_per_frame",
+        "world_extent_x_diff_abs",
+        "world_extent_y_diff_abs",
+        "world_extent_z_diff_abs",
+        "world_extent_l2_diff",
+        "world_extent_x_log_ratio_abs",
+        "world_extent_y_log_ratio_abs",
+        "world_extent_z_log_ratio_abs"
+      ],
+      "fit_scope": "MOVi-D training pairs only",
+      "max_f1_threshold": 0.7132085274143107,
+      "recall_90_threshold": 0.7514469559080066,
+      "selected_C": 1.0,
+      "selection_metric": "development AUROC; ties choose smaller C",
+      "standardizer_scope": "MOVi-D training pairs only"
+    },
+    "P_pose_only": {
+      "C_tuning": [
+        {
+          "C": 0.01,
+          "dev_auroc": 0.5
+        },
+        {
+          "C": 0.1,
+          "dev_auroc": 0.5
+        },
+        {
+          "C": 1.0,
+          "dev_auroc": 0.5
+        },
+        {
+          "C": 10.0,
+          "dev_auroc": 0.5
+        },
+        {
+          "C": 100.0,
+          "dev_auroc": 0.5
+        }
+      ],
+      "development_achieved_recall": 1.0,
+      "development_false_match_rate": 1.0,
+      "development_max_f1": 0.666666666667,
+      "features": [
+        "camera_displacement_scene_units",
+        "relative_camera_rotation_degrees",
+        "normalized_camera_displacement"
+      ],
+      "fit_scope": "MOVi-D training pairs only",
+      "max_f1_threshold": 0.49999999999999994,
+      "recall_90_threshold": 0.49999999999999994,
+      "selected_C": 0.01,
+      "selection_metric": "development AUROC; ties choose smaller C",
+      "standardizer_scope": "MOVi-D training pairs only"
+    },
+    "S_shuffled_pose": {
+      "C_tuning": [
+        {
+          "C": 0.01,
+          "dev_auroc": 0.976926
+        },
+        {
+          "C": 0.1,
+          "dev_auroc": 0.980129
+        },
+        {
+          "C": 1.0,
+          "dev_auroc": 0.981585
+        },
+        {
+          "C": 10.0,
+          "dev_auroc": 0.981954
+        },
+        {
+          "C": 100.0,
+          "dev_auroc": 0.981945
+        }
+      ],
+      "development_achieved_recall": 0.9,
+      "development_false_match_rate": 0.038,
+      "development_max_f1": 0.93272635306,
+      "features": [
+        "rgb_cosine_similarity",
+        "temporal_gap",
+        "mask_center_dx_abs",
+        "mask_center_dy_abs",
+        "mask_center_distance",
+        "log_mask_area_ratio_abs",
+        "mean_log_mask_area",
+        "log_crop_area_ratio_abs",
+        "mean_log_crop_area",
+        "log_bbox_aspect_ratio_diff_abs",
+        "log_visibility_ratio_abs",
+        "min_log_visibility",
+        "depth_q05_diff_abs",
+        "depth_q25_diff_abs",
+        "depth_median_diff_abs",
+        "depth_q75_diff_abs",
+        "depth_q95_diff_abs",
+        "depth_iqr_diff_abs",
+        "depth_median_diff_per_frame",
+        "world_centroid_dx_abs",
+        "world_centroid_dy_abs",
+        "world_centroid_dz_abs",
+        "world_centroid_distance",
+        "world_centroid_distance_per_frame",
+        "world_extent_x_diff_abs",
+        "world_extent_y_diff_abs",
+        "world_extent_z_diff_abs",
+        "world_extent_l2_diff",
+        "world_extent_x_log_ratio_abs",
+        "world_extent_y_log_ratio_abs",
+        "world_extent_z_log_ratio_abs"
+      ],
+      "fit_scope": "MOVi-D training pairs only",
+      "max_f1_threshold": 0.5771522881686262,
+      "recall_90_threshold": 0.6849863828793945,
+      "selected_C": 10.0,
+      "selection_metric": "development AUROC; ties choose smaller C",
+      "standardizer_scope": "MOVi-D training pairs only"
+    }
+  },
+  "version": "1.0.0"
+}

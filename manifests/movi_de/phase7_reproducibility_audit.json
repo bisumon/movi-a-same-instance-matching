@@ -1,0 +1,17 @@
+{
+  "audit": "independent complete rerun after audit-label correction",
+  "audit_date": "2026-08-25",
+  "seed": 20260825,
+  "status": "pass",
+  "checks": {
+    "movi_d_feature_artifact_byte_identical": true,
+    "movi_d_prediction_artifact_byte_identical": true,
+    "movi_d_clean_D_lock_byte_identical": true,
+    "movi_d_metric_csv_byte_identical": true,
+    "movi_e_feature_artifact_byte_identical": true,
+    "movi_e_prediction_artifact_byte_identical": true,
+    "movi_e_clean_D_lock_byte_identical": true,
+    "movi_e_metric_csv_byte_identical": true
+  },
+  "note": "The rerun changed only an audit key from a negative boolean formulation to an affirmative passing formulation. Every substantive feature, score, selected model setting, threshold, and metric row was byte-identical."
+}

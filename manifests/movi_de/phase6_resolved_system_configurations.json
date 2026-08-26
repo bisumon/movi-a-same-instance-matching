@@ -1,0 +1,527 @@
+{
+  "configuration_version": "1.0.0",
+  "noisy_pose_conditions": [
+    {
+      "condition_id": "N_t0_r0",
+      "rotation_std_degrees": 0.0,
+      "translation_std_scene_units": 0.0
+    },
+    {
+      "condition_id": "N_t0_r0p1",
+      "rotation_std_degrees": 0.1,
+      "translation_std_scene_units": 0.0
+    },
+    {
+      "condition_id": "N_t0_r0p5",
+      "rotation_std_degrees": 0.5,
+      "translation_std_scene_units": 0.0
+    },
+    {
+      "condition_id": "N_t0_r1",
+      "rotation_std_degrees": 1.0,
+      "translation_std_scene_units": 0.0
+    },
+    {
+      "condition_id": "N_t0_r2",
+      "rotation_std_degrees": 2.0,
+      "translation_std_scene_units": 0.0
+    },
+    {
+      "condition_id": "N_t0_r5",
+      "rotation_std_degrees": 5.0,
+      "translation_std_scene_units": 0.0
+    },
+    {
+      "condition_id": "N_t0p01_r0",
+      "rotation_std_degrees": 0.0,
+      "translation_std_scene_units": 0.01
+    },
+    {
+      "condition_id": "N_t0p01_r0p1",
+      "rotation_std_degrees": 0.1,
+      "translation_std_scene_units": 0.01
+    },
+    {
+      "condition_id": "N_t0p01_r0p5",
+      "rotation_std_degrees": 0.5,
+      "translation_std_scene_units": 0.01
+    },
+    {
+      "condition_id": "N_t0p01_r1",
+      "rotation_std_degrees": 1.0,
+      "translation_std_scene_units": 0.01
+    },
+    {
+      "condition_id": "N_t0p01_r2",
+      "rotation_std_degrees": 2.0,
+      "translation_std_scene_units": 0.01
+    },
+    {
+      "condition_id": "N_t0p01_r5",
+      "rotation_std_degrees": 5.0,
+      "translation_std_scene_units": 0.01
+    },
+    {
+      "condition_id": "N_t0p05_r0",
+      "rotation_std_degrees": 0.0,
+      "translation_std_scene_units": 0.05
+    },
+    {
+      "condition_id": "N_t0p05_r0p1",
+      "rotation_std_degrees": 0.1,
+      "translation_std_scene_units": 0.05
+    },
+    {
+      "condition_id": "N_t0p05_r0p5",
+      "rotation_std_degrees": 0.5,
+      "translation_std_scene_units": 0.05
+    },
+    {
+      "condition_id": "N_t0p05_r1",
+      "rotation_std_degrees": 1.0,
+      "translation_std_scene_units": 0.05
+    },
+    {
+      "condition_id": "N_t0p05_r2",
+      "rotation_std_degrees": 2.0,
+      "translation_std_scene_units": 0.05
+    },
+    {
+      "condition_id": "N_t0p05_r5",
+      "rotation_std_degrees": 5.0,
+      "translation_std_scene_units": 0.05
+    },
+    {
+      "condition_id": "N_t0p1_r0",
+      "rotation_std_degrees": 0.0,
+      "translation_std_scene_units": 0.1
+    },
+    {
+      "condition_id": "N_t0p1_r0p1",
+      "rotation_std_degrees": 0.1,
+      "translation_std_scene_units": 0.1
+    },
+    {
+      "condition_id": "N_t0p1_r0p5",
+      "rotation_std_degrees": 0.5,
+      "translation_std_scene_units": 0.1
+    },
+    {
+      "condition_id": "N_t0p1_r1",
+      "rotation_std_degrees": 1.0,
+      "translation_std_scene_units": 0.1
+    },
+    {
+      "condition_id": "N_t0p1_r2",
+      "rotation_std_degrees": 2.0,
+      "translation_std_scene_units": 0.1
+    },
+    {
+      "condition_id": "N_t0p1_r5",
+      "rotation_std_degrees": 5.0,
+      "translation_std_scene_units": 0.1
+    },
+    {
+      "condition_id": "N_t0p25_r0",
+      "rotation_std_degrees": 0.0,
+      "translation_std_scene_units": 0.25
+    },
+    {
+      "condition_id": "N_t0p25_r0p1",
+      "rotation_std_degrees": 0.1,
+      "translation_std_scene_units": 0.25
+    },
+    {
+      "condition_id": "N_t0p25_r0p5",
+      "rotation_std_degrees": 0.5,
+      "translation_std_scene_units": 0.25
+    },
+    {
+      "condition_id": "N_t0p25_r1",
+      "rotation_std_degrees": 1.0,
+      "translation_std_scene_units": 0.25
+    },
+    {
+      "condition_id": "N_t0p25_r2",
+      "rotation_std_degrees": 2.0,
+      "translation_std_scene_units": 0.25
+    },
+    {
+      "condition_id": "N_t0p25_r5",
+      "rotation_std_degrees": 5.0,
+      "translation_std_scene_units": 0.25
+    },
+    {
+      "condition_id": "N_t0p5_r0",
+      "rotation_std_degrees": 0.0,
+      "translation_std_scene_units": 0.5
+    },
+    {
+      "condition_id": "N_t0p5_r0p1",
+      "rotation_std_degrees": 0.1,
+      "translation_std_scene_units": 0.5
+    },
+    {
+      "condition_id": "N_t0p5_r0p5",
+      "rotation_std_degrees": 0.5,
+      "translation_std_scene_units": 0.5
+    },
+    {
+      "condition_id": "N_t0p5_r1",
+      "rotation_std_degrees": 1.0,
+      "translation_std_scene_units": 0.5
+    },
+    {
+      "condition_id": "N_t0p5_r2",
+      "rotation_std_degrees": 2.0,
+      "translation_std_scene_units": 0.5
+    },
+    {
+      "condition_id": "N_t0p5_r5",
+      "rotation_std_degrees": 5.0,
+      "translation_std_scene_units": 0.5
+    }
+  ],
+  "protocol_id": "MOVI-DE-POSE-001",
+  "protocol_version": "0.2",
+  "seed": 20260825,
+  "systems": {
+    "A_rgb": {
+      "feature_groups": [
+        "rgb"
+      ],
+      "fit_policy": "fit an independent model",
+      "name": "RGB",
+      "pose_treatment": "none",
+      "protocol_id": "A",
+      "resolved_feature_count": 1,
+      "resolved_features": [
+        "rgb_cosine_similarity"
+      ],
+      "role": "appearance baseline"
+    },
+    "B_rgb_2d": {
+      "feature_groups": [
+        "rgb",
+        "two_d"
+      ],
+      "fit_policy": "fit an independent model",
+      "name": "RGB + 2D",
+      "pose_treatment": "none",
+      "protocol_id": "B",
+      "resolved_feature_count": 12,
+      "resolved_features": [
+        "rgb_cosine_similarity",
+        "temporal_gap",
+        "mask_center_dx_abs",
+        "mask_center_dy_abs",
+        "mask_center_distance",
+        "log_mask_area_ratio_abs",
+        "mean_log_mask_area",
+        "log_crop_area_ratio_abs",
+        "mean_log_crop_area",
+        "log_bbox_aspect_ratio_diff_abs",
+        "log_visibility_ratio_abs",
+        "min_log_visibility"
+      ],
+      "role": "ordinary 2D control"
+    },
+    "C_camera_geometry": {
+      "feature_groups": [
+        "rgb",
+        "two_d",
+        "shared_radial_depth",
+        "camera_space_surface_geometry"
+      ],
+      "fit_policy": "fit an independent model",
+      "name": "RGB + 2D + camera-space geometry",
+      "pose_treatment": "camera pose is not used",
+      "protocol_id": "C",
+      "resolved_feature_count": 31,
+      "resolved_features": [
+        "rgb_cosine_similarity",
+        "temporal_gap",
+        "mask_center_dx_abs",
+        "mask_center_dy_abs",
+        "mask_center_distance",
+        "log_mask_area_ratio_abs",
+        "mean_log_mask_area",
+        "log_crop_area_ratio_abs",
+        "mean_log_crop_area",
+        "log_bbox_aspect_ratio_diff_abs",
+        "log_visibility_ratio_abs",
+        "min_log_visibility",
+        "depth_q05_diff_abs",
+        "depth_q25_diff_abs",
+        "depth_median_diff_abs",
+        "depth_q75_diff_abs",
+        "depth_q95_diff_abs",
+        "depth_iqr_diff_abs",
+        "depth_median_diff_per_frame",
+        "camera_centroid_dx_abs",
+        "camera_centroid_dy_abs",
+        "camera_centroid_dz_abs",
+        "camera_centroid_distance",
+        "camera_centroid_distance_per_frame",
+        "camera_extent_x_diff_abs",
+        "camera_extent_y_diff_abs",
+        "camera_extent_z_diff_abs",
+        "camera_extent_l2_diff",
+        "camera_extent_x_log_ratio_abs",
+        "camera_extent_y_log_ratio_abs",
+        "camera_extent_z_log_ratio_abs"
+      ],
+      "role": "pose-unaware geometry baseline"
+    },
+    "D_pose_aligned_geometry": {
+      "feature_groups": [
+        "rgb",
+        "two_d",
+        "shared_radial_depth",
+        "pose_aligned_surface_geometry"
+      ],
+      "fit_policy": "fit an independent model",
+      "name": "RGB + 2D + oracle-pose-aligned visible-surface geometry",
+      "pose_treatment": "use the provided camera-to-world pose only to transform visible-surface geometry",
+      "protocol_id": "D",
+      "resolved_feature_count": 31,
+      "resolved_features": [
+        "rgb_cosine_similarity",
+        "temporal_gap",
+        "mask_center_dx_abs",
+        "mask_center_dy_abs",
+        "mask_center_distance",
+        "log_mask_area_ratio_abs",
+        "mean_log_mask_area",
+        "log_crop_area_ratio_abs",
+        "mean_log_crop_area",
+        "log_bbox_aspect_ratio_diff_abs",
+        "log_visibility_ratio_abs",
+        "min_log_visibility",
+        "depth_q05_diff_abs",
+        "depth_q25_diff_abs",
+        "depth_median_diff_abs",
+        "depth_q75_diff_abs",
+        "depth_q95_diff_abs",
+        "depth_iqr_diff_abs",
+        "depth_median_diff_per_frame",
+        "world_centroid_dx_abs",
+        "world_centroid_dy_abs",
+        "world_centroid_dz_abs",
+        "world_centroid_distance",
+        "world_centroid_distance_per_frame",
+        "world_extent_x_diff_abs",
+        "world_extent_y_diff_abs",
+        "world_extent_z_diff_abs",
+        "world_extent_l2_diff",
+        "world_extent_x_log_ratio_abs",
+        "world_extent_y_log_ratio_abs",
+        "world_extent_z_log_ratio_abs"
+      ],
+      "role": "primary system"
+    },
+    "G_camera_geometry_only": {
+      "feature_groups": [
+        "shared_radial_depth",
+        "camera_space_surface_geometry"
+      ],
+      "fit_policy": "fit an independent model",
+      "name": "Camera-space geometry only",
+      "pose_treatment": "camera pose is not used",
+      "protocol_id": "G-C",
+      "resolved_feature_count": 19,
+      "resolved_features": [
+        "depth_q05_diff_abs",
+        "depth_q25_diff_abs",
+        "depth_median_diff_abs",
+        "depth_q75_diff_abs",
+        "depth_q95_diff_abs",
+        "depth_iqr_diff_abs",
+        "depth_median_diff_per_frame",
+        "camera_centroid_dx_abs",
+        "camera_centroid_dy_abs",
+        "camera_centroid_dz_abs",
+        "camera_centroid_distance",
+        "camera_centroid_distance_per_frame",
+        "camera_extent_x_diff_abs",
+        "camera_extent_y_diff_abs",
+        "camera_extent_z_diff_abs",
+        "camera_extent_l2_diff",
+        "camera_extent_x_log_ratio_abs",
+        "camera_extent_y_log_ratio_abs",
+        "camera_extent_z_log_ratio_abs"
+      ],
+      "role": "diagnostic; not a production candidate"
+    },
+    "G_pose_aligned_geometry_only": {
+      "feature_groups": [
+        "shared_radial_depth",
+        "pose_aligned_surface_geometry"
+      ],
+      "fit_policy": "fit an independent model",
+      "name": "Pose-aligned geometry only",
+      "pose_treatment": "use the provided camera-to-world pose only to transform visible-surface geometry",
+      "protocol_id": "G-D",
+      "resolved_feature_count": 19,
+      "resolved_features": [
+        "depth_q05_diff_abs",
+        "depth_q25_diff_abs",
+        "depth_median_diff_abs",
+        "depth_q75_diff_abs",
+        "depth_q95_diff_abs",
+        "depth_iqr_diff_abs",
+        "depth_median_diff_per_frame",
+        "world_centroid_dx_abs",
+        "world_centroid_dy_abs",
+        "world_centroid_dz_abs",
+        "world_centroid_distance",
+        "world_centroid_distance_per_frame",
+        "world_extent_x_diff_abs",
+        "world_extent_y_diff_abs",
+        "world_extent_z_diff_abs",
+        "world_extent_l2_diff",
+        "world_extent_x_log_ratio_abs",
+        "world_extent_y_log_ratio_abs",
+        "world_extent_z_log_ratio_abs"
+      ],
+      "role": "diagnostic; not a production candidate"
+    },
+    "N_noisy_pose": {
+      "feature_groups": [
+        "rgb",
+        "two_d",
+        "shared_radial_depth",
+        "pose_aligned_surface_geometry"
+      ],
+      "fit_policy": "apply the clean fitted D model and D standardization unchanged; do not refit for noise conditions",
+      "name": "Noisy pose",
+      "pose_treatment": "perturb each frame pose once per noise condition before geometry transformation and reuse it for every pair containing that frame",
+      "protocol_id": "N",
+      "resolved_feature_count": 31,
+      "resolved_features": [
+        "rgb_cosine_similarity",
+        "temporal_gap",
+        "mask_center_dx_abs",
+        "mask_center_dy_abs",
+        "mask_center_distance",
+        "log_mask_area_ratio_abs",
+        "mean_log_mask_area",
+        "log_crop_area_ratio_abs",
+        "mean_log_crop_area",
+        "log_bbox_aspect_ratio_diff_abs",
+        "log_visibility_ratio_abs",
+        "min_log_visibility",
+        "depth_q05_diff_abs",
+        "depth_q25_diff_abs",
+        "depth_median_diff_abs",
+        "depth_q75_diff_abs",
+        "depth_q95_diff_abs",
+        "depth_iqr_diff_abs",
+        "depth_median_diff_per_frame",
+        "world_centroid_dx_abs",
+        "world_centroid_dy_abs",
+        "world_centroid_dz_abs",
+        "world_centroid_distance",
+        "world_centroid_distance_per_frame",
+        "world_extent_x_diff_abs",
+        "world_extent_y_diff_abs",
+        "world_extent_z_diff_abs",
+        "world_extent_l2_diff",
+        "world_extent_x_log_ratio_abs",
+        "world_extent_y_log_ratio_abs",
+        "world_extent_z_log_ratio_abs"
+      ],
+      "role": "sensitivity analysis family"
+    },
+    "P_pose_only": {
+      "feature_groups": [
+        "pose_only"
+      ],
+      "fit_policy": "fit an independent model",
+      "name": "Pose only",
+      "pose_treatment": "use relative camera translation and rotation but no RGB, 2D object, depth, or object-geometry feature",
+      "protocol_id": "P",
+      "resolved_feature_count": 3,
+      "resolved_features": [
+        "camera_displacement_scene_units",
+        "relative_camera_rotation_degrees",
+        "normalized_camera_displacement"
+      ],
+      "role": "direct pose-label shortcut control"
+    },
+    "S_shuffled_pose": {
+      "feature_groups": [
+        "rgb",
+        "two_d",
+        "shared_radial_depth",
+        "pose_aligned_surface_geometry"
+      ],
+      "fit_policy": "construct shuffled train/dev/test features and fit an independent model on shuffled training features",
+      "name": "Shuffled pose",
+      "pose_treatment": "replace each frame pose with its deterministic within-dataset-and-split deranged pose before geometry transformation",
+      "protocol_id": "S",
+      "resolved_feature_count": 31,
+      "resolved_features": [
+        "rgb_cosine_similarity",
+        "temporal_gap",
+        "mask_center_dx_abs",
+        "mask_center_dy_abs",
+        "mask_center_distance",
+        "log_mask_area_ratio_abs",
+        "mean_log_mask_area",
+        "log_crop_area_ratio_abs",
+        "mean_log_crop_area",
+        "log_bbox_aspect_ratio_diff_abs",
+        "log_visibility_ratio_abs",
+        "min_log_visibility",
+        "depth_q05_diff_abs",
+        "depth_q25_diff_abs",
+        "depth_median_diff_abs",
+        "depth_q75_diff_abs",
+        "depth_q95_diff_abs",
+        "depth_iqr_diff_abs",
+        "depth_median_diff_per_frame",
+        "world_centroid_dx_abs",
+        "world_centroid_dy_abs",
+        "world_centroid_dz_abs",
+        "world_centroid_distance",
+        "world_centroid_distance_per_frame",
+        "world_extent_x_diff_abs",
+        "world_extent_y_diff_abs",
+        "world_extent_z_diff_abs",
+        "world_extent_l2_diff",
+        "world_extent_x_log_ratio_abs",
+        "world_extent_y_log_ratio_abs",
+        "world_extent_z_log_ratio_abs"
+      ],
+      "role": "negative control"
+    }
+  },
+  "validation_checks": {
+    "D_S_N_feature_dimensions_and_names_equal": true,
+    "all_system_groups_exist": true,
+    "camera_world_correspondence_complete": true,
+    "camera_world_geometry_dimensions_equal": true,
+    "direct_pose_scalars_restricted_to_P": true,
+    "exact_36_unique_noise_conditions": true,
+    "exact_system_set": true,
+    "feature_names_unique_across_catalog": true,
+    "geometry_only_variants_equal_width": true,
+    "geometry_only_variants_exclude_rgb_and_2d": true,
+    "no_evaluation_only_fields_in_feature_catalog": true,
+    "noisy_pose_uses_clean_D_without_refitting": true,
+    "pose_only_contains_only_pose_features": true,
+    "primary_C_D_dimensions_equal": true,
+    "primary_C_D_shared_noncoordinate_features": true,
+    "protocol_and_version": true,
+    "regularization_grid_frozen": true,
+    "resolved_system_features_unique": true,
+    "rotation_grid_frozen": true,
+    "seed": true,
+    "shuffled_pose_is_independently_fit": true,
+    "transfer_has_no_E_refit": true,
+    "transform_pose_users_exact": true,
+    "translation_grid_frozen": true,
+    "zero_noise_condition_present": true
+  }
+}

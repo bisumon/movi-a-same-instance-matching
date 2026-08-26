@@ -1,0 +1,135 @@
+{
+  "artifacts": {
+    "configs/movi_de_phase6_systems.json": {
+      "sha256": "b651dd3587b60e3daece48733ce0c5e33a928386ee91e510eec5481e562354fa",
+      "size_bytes": 9799
+    },
+    "docs/MOVI_DE_PHASE8_REGIME2_IN_DOMAIN_MOVI_D.md": {
+      "sha256": "cbbb0c55239f945c3fb9cd43e38b19e752bcbd3fd660d8d73a11100e0b37572b",
+      "size_bytes": 3953
+    },
+    "manifests/movi_de/phase5_pair_manifest_freeze.json": {
+      "sha256": "a32590de357ff0fd77293dc8429e8305a128af685df89af36cf29b0e5c82c186",
+      "size_bytes": 6191
+    },
+    "manifests/movi_de/phase6_system_configuration_freeze.json": {
+      "sha256": "ed008072b3e6e0a094c36f106a6359468c2a6e2a909dd92214059c4ed7c7ea0d",
+      "size_bytes": 2899
+    },
+    "manifests/movi_de/phase7_pose_noise_study_freeze.json": {
+      "sha256": "265a028aed319d2a560f66f48653fad6ced696e84781adeab7d6b901057b29cc",
+      "size_bytes": 7970
+    },
+    "manifests/movi_de/phase8_regime2_reproducibility_audit.json": {
+      "sha256": "9fe72ff9cf93e02a6fb995d0c94c543039a89741fe285ab7f64f6d953439bbcc",
+      "size_bytes": 638
+    },
+    "results/movi_de_phase8_regime2/movi_d_in_domain_locked_config.json": {
+      "sha256": "a05834011299928be330e887f0c3cb3850027fa51cc28e48d6f2e3f8edb8bc1f",
+      "size_bytes": 12790
+    },
+    "results/movi_de_phase8_regime2/movi_d_in_domain_results.csv": {
+      "sha256": "53e33e26256d1b3eb3b832bd93a46894da5a42e9f657cfb9ff4d0453102ae2d6",
+      "size_bytes": 2307
+    },
+    "results/movi_de_phase8_regime2/movi_d_in_domain_results.json": {
+      "sha256": "61d800abb9e2dd6d7ece104dc92992fd0105f25c1aeb509807af6d932e5117e5",
+      "size_bytes": 25424
+    },
+    "runs/movi_de_confirmatory/phase8_regime2/features/movi_d_phase8_feature_manifest.json": {
+      "sha256": "3510f3f9909c0bbe71f4242150f48263c12c8517cff026332f8c8a7818a41822",
+      "size_bytes": 7549
+    },
+    "runs/movi_de_confirmatory/phase8_regime2/features/movi_d_phase8_in_domain_features.npz": {
+      "sha256": "cdbeb738858e8529212f2a4d17406ca14f262d44efe5a1b32f23afcd988ce6aa",
+      "size_bytes": 4827010
+    },
+    "runs/movi_de_confirmatory/phase8_regime2/features/movi_d_phase8_shuffled_pose_assignment.jsonl": {
+      "sha256": "4d8e98ea53f103bcaec0466a83ab21a592a0cfd179c860bf0cef73e6b2c6b4cf",
+      "size_bytes": 576230
+    },
+    "runs/movi_de_confirmatory/phase8_regime2/in_domain_movi_d/movi_d_phase8_regime2_locked_config.json": {
+      "sha256": "a05834011299928be330e887f0c3cb3850027fa51cc28e48d6f2e3f8edb8bc1f",
+      "size_bytes": 12790
+    },
+    "runs/movi_de_confirmatory/phase8_regime2/in_domain_movi_d/movi_d_phase8_regime2_manifest.json": {
+      "sha256": "a31a66c21a863d39e85d5b4c54767dd434613f8d95bc7b176a51cb1f282196e0",
+      "size_bytes": 1610
+    },
+    "runs/movi_de_confirmatory/phase8_regime2/in_domain_movi_d/movi_d_phase8_regime2_models.joblib": {
+      "sha256": "0922da0c3261f6190d81eac42939544dc7d70eac297207f6c5612249325a6776",
+      "size_bytes": 5562
+    },
+    "runs/movi_de_confirmatory/phase8_regime2/in_domain_movi_d/movi_d_phase8_regime2_predictions.jsonl": {
+      "sha256": "ed3cc397a31b732f7b20e9694d1d06597e7aa0d55ba58579f98419a37bb36278",
+      "size_bytes": 10215108
+    },
+    "runs/movi_de_confirmatory/phase8_regime2/in_domain_movi_d/movi_d_phase8_regime2_results.csv": {
+      "sha256": "53e33e26256d1b3eb3b832bd93a46894da5a42e9f657cfb9ff4d0453102ae2d6",
+      "size_bytes": 2307
+    },
+    "runs/movi_de_confirmatory/phase8_regime2/in_domain_movi_d/movi_d_phase8_regime2_results.json": {
+      "sha256": "61d800abb9e2dd6d7ece104dc92992fd0105f25c1aeb509807af6d932e5117e5",
+      "size_bytes": 25424
+    },
+    "src/build_movi_d_phase8_in_domain_features.py": {
+      "sha256": "ab7e21fcf8c5e6b3f94920d69389519da827c60438a6db96fc9303050ec3aae4",
+      "size_bytes": 9765
+    },
+    "src/freeze_movi_d_phase8_regime2.py": {
+      "sha256": "37fead6e7062f0a1aa224796d073488dd794b743fd4fbd04e6d799800e1dfc5f",
+      "size_bytes": 6502
+    },
+    "src/run_movi_d_phase8_in_domain.py": {
+      "sha256": "b67895d80e9e092834eb99d121607073d03d74786f406bebd062b855f9584c08",
+      "size_bytes": 13827
+    },
+    "tests/test_movi_d_phase8_in_domain.py": {
+      "sha256": "41dc62f0c684fc20c753e93a641f24fc933d9223a2cfa55813d20c83e0a2accd",
+      "size_bytes": 1676
+    }
+  },
+  "bootstrap_replicates": 10000,
+  "change_control": "Regime 2 is frozen. Post-test changes to pools, features, shuffle, fitting, thresholds, scoring, or inference are exploratory and require a replacement lock.",
+  "checks": {
+    "all_models_train_only": true,
+    "all_pair_camera_motion_controls_zero": true,
+    "clean_D_phase7_reproduced": true,
+    "exact_10000_unique_predictions": true,
+    "exact_6000_2000_2000_pair_split": true,
+    "exact_90_30_30_video_split": true,
+    "exact_system_scores": true,
+    "feature_checks_pass": true,
+    "fixed_camera_D_minus_C_interval_spans_zero": true,
+    "locked_system_set": true,
+    "output_checks_pass": true,
+    "pair_videos_match_locked_split": true,
+    "pose_only_exact_chance": true,
+    "prediction_identity_fields_unchanged": true,
+    "prediction_pair_ids_exact": true,
+    "result_checks_pass": true
+  },
+  "dataset": "movi_d",
+  "fixed_camera_falsification": {
+    "D_minus_C": 0.001615,
+    "estimand": "AUROC_D_minus_C_on_identical_MOVi_D_test_pairs",
+    "interpretation_rule": "descriptive fixed-camera falsification; no equivalence margin was predeclared",
+    "paired_video_cluster_ci_high": 0.004541683212,
+    "paired_video_cluster_ci_low": -0.002037146137
+  },
+  "lock_date": "2026-08-25",
+  "lock_id": "MOVI-DE-POSE-001-PHASE8-REGIME2-v1.0.0",
+  "regime": "in_domain_video_disjoint_fixed_camera",
+  "seed": 20260825,
+  "status": "locked",
+  "systems": [
+    "A_rgb",
+    "B_rgb_2d",
+    "C_camera_geometry",
+    "D_pose_aligned_geometry",
+    "G_camera_geometry_only",
+    "G_pose_aligned_geometry_only",
+    "P_pose_only",
+    "S_shuffled_pose"
+  ]
+}

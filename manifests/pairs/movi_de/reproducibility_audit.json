@@ -1,0 +1,21 @@
+{
+  "audit": "clean independent regeneration and byte comparison",
+  "audit_date": "2026-08-25",
+  "seed": 20260825,
+  "status": "pass",
+  "checks": {
+    "movi_d_train_byte_identical": true,
+    "movi_d_dev_byte_identical": true,
+    "movi_d_test_byte_identical": true,
+    "movi_d_combined_byte_identical": true,
+    "movi_e_train_byte_identical": true,
+    "movi_e_dev_byte_identical": true,
+    "movi_e_test_byte_identical": true,
+    "movi_e_combined_byte_identical": true
+  },
+  "combined_manifest_sha256": {
+    "movi_d": "d2a8584d52da0ce94ec3de8855f26c92ac6a745848d7ba1e67824a6e773db662",
+    "movi_e": "032e58a140db4b9a44981c88a6bc0385efad2589f53cfd19ee3843d27530bfee"
+  },
+  "comparison": "cmp against a second complete decode and generation into an independent temporary output directory"
+}
